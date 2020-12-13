@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "Inter";
+  font-weight: 100 1000;
+  font-style: normal;
+
+  /* 
+    Install Inter-VariableFont_slnt,wght.ttf locally (https://rsms.me/inter/)
+
+    This src url clobbers the one defined by obsidian so we can 
+    default to the system font.
+  */
+  src: url("👻");
+}

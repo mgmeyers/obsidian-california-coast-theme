@@ -1,0 +1,295 @@
+.CodeMirror-sizer {
+  margin-left: 0 !important;
+  border-right-width: 0px !important;
+}
+
+.CodeMirror-scroll {
+  padding-left: var(--header-width);
+  padding-right: calc(var(--header-width) * 2);
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+.cm-s-obsidian .CodeMirror-gutters {
+  width: 18px;
+  left: 0 !important;
+  padding-right: 0;
+  transform: translateX(calc(var(--header-width) - 2.25em));
+}
+
+.CodeMirror-gutter-elt {
+  width: unset !important;
+  position: static;
+}
+
+.CodeMirror-gutter-wrapper {
+  padding: 5px 0;
+  height: 100%;
+  width: 18px;
+  left: -2.25em !important;
+}
+
+.CodeMirror-foldgutter-open,
+.CodeMirror-foldgutter-folded {
+  cursor: pointer;
+}
+
+.CodeMirror-foldgutter-open:after,
+.CodeMirror-foldgutter-folded:after {
+  line-height: 1.8;
+}
+
+html .CodeMirror-lines {
+  padding-top: 5em;
+}
+
+div:not(.CodeMirror-activeline)
+  > pre.HyperMD-header
+  .cm-formatting-header:not(:only-child) {
+  color: transparent !important;
+}
+
+div:not(.CodeMirror-activeline)
+  > pre.HyperMD-header
+  .cm-formatting-header:not(:only-child):after {
+  font-family: var(--text);
+  color: var(--text-fainter);
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.cm-s-obsidian pre.HyperMD-header > span > span:first-child:not(:only-child) {
+  position: absolute;
+  left: 0;
+  transform: translate3d(-100%, 0, 0);
+  font-size: 11px !important;
+  display: block;
+  height: 100%;
+}
+
+.empty-state-title,
+.markdown-preview-view h1,
+.HyperMD-header-1,
+.HyperMD-header-1 *,
+.cm-header-1 {
+  font-size: 40px !important;
+  font-weight: 500 !important;
+}
+
+pre.HyperMD-header .cm-formatting-header-1:not(:only-child) {
+  line-height: calc(40px * 1.88);
+}
+
+.cm-s-obsidian pre.HyperMD-header-1 {
+  line-height: 1.4 !important;
+}
+
+.markdown-preview-view h2,
+.HyperMD-header-2 *,
+.HyperMD-header-2,
+.cm-header-2 {
+  font-size: 30px !important;
+  font-weight: 500 !important;
+}
+
+pre.HyperMD-header .cm-formatting-header-2:not(:only-child) {
+  line-height: calc(30px * 1.87);
+}
+
+.markdown-preview-view h3,
+.HyperMD-header-3 *,
+.HyperMD-header-3,
+.cm-header-3 {
+  font-weight: 500 !important;
+  font-size: 23px !important;
+}
+
+pre.HyperMD-header .cm-formatting-header-3:not(:only-child) {
+  line-height: calc(23px * 1.8);
+}
+
+.markdown-preview-view h4,
+.HyperMD-header-4 *,
+.HyperMD-header-4,
+.cm-header-4 {
+  font-variant: unset;
+  text-transform: unset;
+  letter-spacing: unset;
+  font-weight: 500 !important;
+  font-size: 22px !important;
+}
+
+pre.HyperMD-header .cm-formatting-header-4:not(:only-child) {
+  line-height: calc(22px * 1.8);
+}
+
+.markdown-preview-view h5,
+.HyperMD-header-5 *,
+.HyperMD-header-5,
+.cm-header-5 {
+  font-variant: unset;
+  text-transform: unset;
+  letter-spacing: unset;
+  font-weight: 500 !important;
+  font-size: 18px !important;
+}
+
+pre.HyperMD-header .cm-formatting-header-5:not(:only-child) {
+  line-height: calc(18px * 1.8);
+}
+
+.markdown-preview-view h6,
+.HyperMD-header-6 *,
+.HyperMD-header-6,
+.cm-header-6 {
+  font-variant: unset;
+  text-transform: unset;
+  letter-spacing: unset;
+  color: unset;
+  font-style: italic;
+  font-weight: 500 !important;
+  font-size: 18px !important;
+}
+
+pre.HyperMD-header .cm-formatting-header-6:not(:only-child) {
+  line-height: calc(18px * 1.8);
+}
+
+.cm-s-obsidian span.cm-url.cm-string:not(.cm-hmd-footnote-url) {
+  color: var(--text-accent-faint);
+}
+
+.cm-s-obsidian span.cm-link {
+  color: var(--text-accent);
+}
+
+.cm-s-obsidian pre.HyperMD-footnote span.cm-link.cm-hmd-footnote {
+  color: var(--text-accent);
+}
+
+.cm-s-obsidian pre.HyperMD-footnote span.cm-link.cm-hmd-footnote.cm-formatting {
+  color: var(--text-muted);
+}
+
+.cm-s-obsidian span.cm-footref,
+.cm-s-obsidian span.cm-blockid {
+  vertical-align: unset;
+  margin-top: 0;
+  font-size: unset;
+}
+
+.cm-formatting-list-ul {
+  color: var(--text-faint) !important;
+}
+.cm-formatting-list-ol {
+  color: var(--text-normal) !important;
+  font-weight: 500;
+}
+
+.cm-formatting-quote {
+  color: transparent !important;
+}
+
+.cm-s-obsidian,
+.markdown-preview-view {
+  font-family: var(--text-editor);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.88889;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "ss01", "cv05", "cv07", "case";
+}
+
+.cm-s-obsidian pre.HyperMD-list-line {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.cm-s-obsidian span.cm-formatting-list-ul {
+  color: transparent !important;
+  position: relative;
+}
+
+.CodeMirror-cursor {
+  border-left: 2px solid var(--text-accent);
+  transform: translateX(-0.5px);
+}
+
+.cm-hmd-list-indent > .cm-tab {
+  display: inline-block;
+}
+
+.cm-hmd-list-indent > .cm-tab:after {
+  content: " ";
+  display: block;
+  width: 1px;
+  position: absolute;
+  top: 0;
+  transform: translate3d(-1.5px, 0, 0);
+  background: var(--shade-plus-darker);
+  height: 100%;
+}
+
+.cm-s-obsidian span.cm-formatting-link {
+  color: var(--text-faintest);
+  display: inline-block;
+  padding: 0 1px;
+  font-weight: 600;
+}
+
+.cm-s-obsidian span.cm-comment {
+  font-style: italic;
+}
+
+.cm-s-obsidian span.cm-quote {
+  color: var(--text-normal);
+  font-style: italic;
+}
+
+.cm-s-obsidian span.cm-builtin,
+.cm-s-obsidian span.cm-hr {
+  color: transparent;
+}
+
+.cm-s-obsidian .HyperMD-hr-bg:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: var(--text-fainter);
+  top: 50%;
+}
+
+.CodeMirror-foldmarker {
+  font-size: 0;
+  color: transparent;
+}
+
+.cm-s-obsidian .cm-formatting-hashtag {
+  font-family: var(--text-editor) !important;
+}
+
+.cm-s-obsidian span.cm-hashtag,
+.frontmatter-container .tag,
+.tag {
+  color: var(--text-accent);
+  margin: 0;
+  text-align: unset;
+  vertical-align: unset;
+}
+
+span.cm-hashtag.cm-hashtag-begin {
+  font-size: unset;
+  border-radius: 0;
+  padding: 0;
+  border: none;
+}
+
+span.cm-hashtag.cm-hashtag-end {
+  font-size: unset;
+  border-radius: 0;
+  padding: 0;
+  border: none;
+}
