@@ -46,3 +46,8 @@ To match the screenshots, use these settings:
 - Swap rotated header direction: **yes**
 - Toggle stacking: **yes**
 - Spine width: **42**
+
+
+## Contributing
+
+I've mainly tweaked obsidians CSS for my own use case. Feel free to contribute if I've missed something or something seems off for you. PRs welcome!
