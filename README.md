@@ -6,9 +6,9 @@
 
 ![Screen Shot 5](screenshots/Screen%20Shot%202020-12-13%20at%203.35.27%20PM.png)
 
-![Screen Shot 3](screenshots/Screen%20Shot%202020-12-13%20at%203.32.59%20PM.png | width=300)
+![Screen Shot 3](screenshots/Screen%20Shot%202020-12-13%20at%203.32.59%20PM.png)
 
-![Screen Shot 4](screenshots/Screen%20Shot%202020-12-13%20at%203.34.09%20PM.png | width=300)
+![Screen Shot 4](screenshots/Screen%20Shot%202020-12-13%20at%203.34.09%20PM.png)
 
 ## Instructions
 
