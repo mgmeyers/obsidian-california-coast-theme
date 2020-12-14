@@ -16,7 +16,7 @@ These CSS files are snippets to be applied on top of @kepano 's [minimal theme](
 
 They also rely on the [hider plugin](https://github.com/kepano/obsidian-hider) and the [sliding panes plugin](https://github.com/deathau/sliding-panes-obsidian).
 
-You'll also need to install the variable version of the [Inter font](https://rsms.me/inter/) and the [boxicon font](https://unpkg.com/boxicons@2.0.7/fonts/boxicons.ttf)
+Lastly, you'll need to install the variable version of the [Inter font](https://rsms.me/inter/) and the [boxicon font](https://unpkg.com/boxicons@2.0.7/fonts/boxicons.ttf)
 
 ### Core plugins
 
