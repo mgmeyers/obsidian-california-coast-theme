@@ -214,6 +214,8 @@ button,
 
 .nav-file-title-content:only-child:before,
 .search-result-collapse-indicator + span:before {
+  position: relative;
+  top: 1px;
   padding-right: 4px;
 }
 
@@ -270,55 +272,6 @@ body.plugin-sliding-panes-rotate-header
 
 .view-header-title:before {
   display: none;
-}
-
-html
-  > body.plugin-sliding-panes-stacking
-  .workspace
-  > .mod-root
-  > .workspace-leaf,
-body.plugin-sliding-panes .workspace-split.mod-vertical > .workspace-leaf {
-  box-shadow: var(--shade-plus-darker) -1px -0px !important;
-}
-
-html
-  > body.plugin-sliding-panes-rotate-header
-  .workspace
-  > .mod-root
-  > .workspace-leaf
-  > .workspace-leaf-content
-  > .view-header {
-  display: flex;
-  align-items: center;
-}
-
-html
-  > body.plugin-sliding-panes-rotate-header
-  .workspace
-  > .mod-root
-  > .workspace-leaf
-  > .workspace-leaf-content
-  > .view-header
-  > .view-header-title-container
-  > .view-header-title {
-  line-height: 1;
-  padding: 10px 6px;
-  transform: translate3d(1.5px, 0, 0);
-}
-
-html
-  > body.plugin-sliding-panes-rotate-header.plugin-sliding-panes-header-alt
-  .workspace
-  > .mod-root
-  > .workspace-leaf
-  > .workspace-leaf-content
-  > .view-header
-  .view-header-title-container {
-  display: flex;
-  align-items: center;
-  margin: 0 0;
-  width: 100%;
-  max-width: unset;
 }
 
 html .hider-frameless .workspace-split.mod-left-split > .workspace-tabs {
@@ -396,6 +349,131 @@ html .hider-frameless .workspace-split.mod-left-split > .workspace-tabs {
   top: 0;
 }
 
+.titlebar-button-container.mod-left {
+  display: none;
+}
+
+.view-header {
+  height: unset;
+  display: flex;
+  align-items: center;
+  padding: 10px 10px 10px !important;
+}
+
+.workspace-split.mod-left-split.is-collapsed + .mod-root .view-header {
+  padding-top: 28px !important;
+}
+
+.view-header-icon {
+  align-items: center;
+  border-radius: var(--radius-s);
+  color: var(--color-40);
+  cursor: grab;
+  display: flex;
+  justify-content: center;
+  line-height: 1;
+  opacity: 1 !important;
+  padding: 4px 6px !important;
+  position: static;
+  top: 0;
+}
+
+.view-header-icon:hover {
+  color: var(--text-muted);
+  background-color: var(--shade-plus-darker);
+}
+
+.view-header-title-container {
+  position: static;
+  margin: 0;
+  width: unset;
+  line-height: 1;
+  height: unset;
+}
+
+.view-header-title {
+  padding: 0;
+  line-height: 1;
+  margin-left: 7px;
+}
+
+.view-actions {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.view-actions .view-action {
+  align-items: center;
+  border-radius: var(--radius-s);
+  color: var(--color-40);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  line-height: 1;
+  margin: 0 0 0 5px;
+  opacity: 1;
+  padding: 4px 6px;
+  position: static;
+}
+
+.view-action:hover {
+  color: var(--text-muted);
+  background-color: var(--shade-plus-darker);
+}
+
+html
+  > body.plugin-sliding-panes-stacking
+  .workspace
+  > .mod-root
+  > .workspace-leaf,
+body.plugin-sliding-panes .workspace-split.mod-vertical > .workspace-leaf {
+  box-shadow: var(--shade-plus-darker) -1px -0px !important;
+}
+
+html
+  > body.plugin-sliding-panes-rotate-header
+  .workspace
+  > .mod-root
+  > .workspace-leaf
+  > .workspace-leaf-content
+  > .view-header {
+    padding: 0 !important;
+  display: flex;
+  align-items: center;
+}
+
+html
+  > body.plugin-sliding-panes-rotate-header
+  .workspace
+  > .mod-root
+  > .workspace-leaf
+  > .workspace-leaf-content
+  > .view-header
+  > .view-header-title-container
+  > .view-header-title {
+  line-height: 1;
+  padding: 10px 6px;
+  margin: 0;
+  transform: translate3d(1.5px, 0, 0);
+}
+
+html
+  > body.plugin-sliding-panes-rotate-header.plugin-sliding-panes-header-alt
+  .workspace
+  > .mod-root
+  > .workspace-leaf
+  > .workspace-leaf-content
+  > .view-header
+  .view-header-title-container {
+  display: flex;
+  align-items: center;
+  margin: 0 0;
+  width: 100%;
+  max-width: unset;
+}
+
 body.plugin-sliding-panes-rotate-header
   .workspace
   > .mod-root
@@ -406,16 +484,6 @@ body.plugin-sliding-panes-rotate-header
   display: none;
 }
 
-.titlebar-button-container.mod-left {
-  display: none;
-}
-
-div:not(.CodeMirror-activeline)
-  > pre.HyperMD-header
-  .cm-formatting-header:not(:only-child) {
-  color: transparent;
-}
-
 html
   > body.plugin-sliding-panes-rotate-header
   .workspace
@@ -424,27 +492,7 @@ html
   > .workspace-leaf-content
   > .view-header
   .view-header-icon {
-  color: var(--color-40);
-  display: flex;
-  align-items: center;
-  line-height: 1;
   margin: 28px 0 17px;
-  padding: 4px 6px !important;
-  border-radius: var(--radius-s);
-  cursor: grab;
-  opacity: 1;
-  top: 0;
-}
-
-body.plugin-sliding-panes-rotate-header
-  .workspace
-  > .mod-root
-  > .workspace-leaf
-  > .workspace-leaf-content
-  > .view-header
-  .view-header-icon:hover {
-  color: var(--text-muted);
-  background-color: var(--shade-plus-darker);
 }
 
 body.plugin-sliding-panes-rotate-header
@@ -456,14 +504,18 @@ body.plugin-sliding-panes-rotate-header
   > .view-header
   .view-actions {
   width: 100%;
-  margin: 0 0 47px;
+  margin: 0 0 28px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.view-action {
-  cursor: pointer;
+body.plugin-sliding-panes-rotate-header .workspace-split.mod-left-split.is-collapsed + .mod-root
+> .workspace-leaf
+> .workspace-leaf-content
+> .view-header
+.view-actions {
+  margin-bottom: 47px !important;
 }
 
 body.plugin-sliding-panes-rotate-header
@@ -473,33 +525,24 @@ body.plugin-sliding-panes-rotate-header
   > .workspace-leaf-content
   > .view-header
   .view-action {
-  color: var(--color-40);
-  opacity: 1;
-  border-radius: var(--radius-s);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 1;
   margin: 5px 0 0 0 !important;
-  padding: 4px 6px;
-}
-
-body.plugin-sliding-panes-rotate-header
-  .workspace
-  > .mod-root
-  > .workspace-leaf
-  > .workspace-leaf-content
-  > .view-header
-  .view-action:hover {
-  color: var(--text-muted);
-  background-color: var(--shade-plus-darker);
 }
 
 .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
   border-left: 1px solid transparent;
 }
 
-.workspace-split.mod-vertical > * > .workspace-leaf-resize-handle,
+.workspace-split.mod-vertical > * > .workspace-leaf-resize-handle {
+  border-right: 1px solid var(--shade-plus-darker);
+}
+.workspace-split.mod-root.mod-vertical .workspace-leaf-resize-handle {
+  border-width: 1px;
+}
+
+.workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle {
+  border-bottom: 1px solid var(--shade-plus-darker);
+}
+
 .workspace-split.mod-left-split > .workspace-leaf-resize-handle {
   border-right: transparent;
 }
@@ -598,6 +641,7 @@ body.plugin-sliding-panes-rotate-header
 }
 
 .search-input-container {
+  flex-grow: 1;
   width: auto;
   margin: 0;
   padding: 10px 10px;
@@ -816,27 +860,28 @@ body.plugin-sliding-panes-rotate-header
   background-color: var(--color-3);
 }
 
-.workspace-leaf-content .search-input, 
-.workspace-leaf-content .search-input:hover, 
-.workspace-leaf-content .search-input:focus {
+.workspace-leaf-content .search-input-container input, 
+.workspace-leaf-content .search-input-container input:hover, 
+.workspace-leaf-content .search-input-container input:focus {
+  font-size: 13px;
   padding: 6px 10px;
   line-height: 1;
   height: auto;
   border-radius: var(--radius-m);
 }
 
-.workspace-leaf-content .search-input, .document-search-input, .document-replace-input {
+.workspace-leaf-content .search-input-container input, .document-search-input, .document-replace-input {
   background-color: var(--color-0);
   border: 1px solid var(--color-10);
 }
 
-.workspace-leaf-content .search-input:hover,
+.workspace-leaf-content .search-input-container input:hover,
 .document-search-input:hover,
 .document-replace-input:hover {
   border: 1px solid var(--color-10);
 }
 
-.workspace-leaf-content .search-input:focus,
+.workspace-leaf-content .search-input-container input:focus,
 .document-search-input:focus,
 .document-replace-input:focus {
   border: 1px solid rgba(var(--accent-rgb), 0.5);
@@ -951,4 +996,14 @@ input.document-replace-input {
 
 .tooltip {
   animation: unset !important;
+}
+
+.workspace-leaf-content .setting-item {
+  padding: 0;
+  border: none;
+}
+
+.workspace-leaf-content .setting-item-control {
+  flex-shrink: 0;
+  flex-grow: 1;
 }
