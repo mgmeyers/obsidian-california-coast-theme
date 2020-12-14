@@ -4,11 +4,11 @@
 
 ![Screen Shot 2](screenshots/Screen%20Shot%202020-12-13%20at%203.32.13%20PM.png)
 
-![Screen Shot 5](screenshots/Screen%20Shot%202020-12-13%20at%203.35.27%20PM.png)
+![Screen Shot 3](screenshots/Screen%20Shot%202020-12-13%20at%203.35.27%20PM.png)
 
-<img src="https://github.com/mgmeyers/obsidian-california-coast-theme/raw/main/screenshots/Screen%20Shot%202020-12-13%20at%203.35.27%20PM.png" alt="Screen Shot 5" style="max-width:50%;">
+<img src="https://github.com/mgmeyers/obsidian-california-coast-theme/raw/main/screenshots/Screen%20Shot%202020-12-13%20at%203.35.27%20PM.png" alt="Screen Shot 4" width="300" />
 
-<img src="https://github.com/mgmeyers/obsidian-california-coast-theme/raw/main/screenshots/Screen%20Shot%202020-12-13%20at%203.34.09%20PM.png" alt="Screen Shot 5" style="max-width:50%;">
+<img src="https://github.com/mgmeyers/obsidian-california-coast-theme/raw/main/screenshots/Screen%20Shot%202020-12-13%20at%203.34.09%20PM.png" alt="Screen Shot 5" width="300" />
 
 ## Instructions
 
