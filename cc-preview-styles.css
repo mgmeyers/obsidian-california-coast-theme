@@ -7,10 +7,6 @@
   padding-top: 5em;
 }
 
-.suggestion-container {
-  display: none;
-}
-
 .markdown-preview-section * {
   line-height: 1.8888888889;
   margin: 0rem 0rem 1.8888888889rem;
