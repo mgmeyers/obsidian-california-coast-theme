@@ -35,6 +35,8 @@
   transform: rotate(-90deg);
 }
 
+.workspace-ribbon.mod-right .workspace-ribbon-collapse-btn > svg,
+.workspace-ribbon.mod-left .workspace-ribbon-collapse-btn > svg,
 .markdown-preview-view .collapse-indicator > svg,
 .view-header-icon > svg,
 .view-action[aria-label="Preview (Ctrl/Cmd+Click to open in new pane)"] > svg,
@@ -78,6 +80,8 @@
   display: none;
 }
 
+.workspace-ribbon.mod-right .workspace-ribbon-collapse-btn:after,
+.workspace-ribbon.mod-left .workspace-ribbon-collapse-btn:after,
 .document-search-close-button:before,
 .external-link:before,
 .markdown-preview-view .collapse-indicator:before,
@@ -264,6 +268,18 @@
 
 .side-dock-ribbon-action[aria-label="Settings"]:after {
   content: "\e9d0";
+}
+
+.side-dock-ribbon-action[aria-label="Settings"]:after {
+  content: "\e9d0";
+}
+
+.workspace-ribbon.mod-left .workspace-ribbon-collapse-btn:after {
+  content: "\ec8c";
+}
+
+.workspace-ribbon.mod-right .workspace-ribbon-collapse-btn:after {
+  content: "\ec8f";
 }
 
 .cm-formatting-quote:before, .markdown-preview-section blockquote:before {

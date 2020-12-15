@@ -109,7 +109,7 @@
 }
 
 .markdown-preview-section hr {
-  margin-top: var(--editor-line-height-rem);
+  margin-top: var(--editor-line-height-rem);;
   margin-bottom: var(--editor-line-height-rem);
   box-sizing: content-box;
   border: 0;
@@ -141,11 +141,13 @@
 }
 
 .markdown-preview-section ul {
+  margin: 0;
   padding-inline-start: 1.2em;
   list-style: disc;
 }
 
 .markdown-preview-section ol {
+  margin: 0;
   padding-inline-start: 1.2em;
   list-style: decimal;
 }
