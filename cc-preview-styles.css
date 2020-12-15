@@ -24,6 +24,10 @@
   margin: 0rem 0rem var(--editor-line-height-rem);
 }
 
+.markdown-preview-section > div .math * {
+  margin-bottom: 0;
+}
+
 .markdown-preview-pusher + div h1,
 .markdown-preview-pusher + div h2,
 .markdown-preview-pusher + div h3,
@@ -100,9 +104,13 @@
   font-weight: normal;
 }
 
+.markdown-preview-section mjx-container[jax="CHTML"][display="true"] {
+  margin: 0;
+}
+
 .markdown-preview-section hr {
-  margin-top: 3.7777777778rem;
-  margin-bottom: 3.7777777778rem;
+  margin-top: var(--editor-line-height-rem);
+  margin-bottom: var(--editor-line-height-rem);
   box-sizing: content-box;
   border: 0;
   color: #222;
