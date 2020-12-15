@@ -5,6 +5,12 @@
     "Roboto Mono", monospace;
   --text: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto;
 
+  --editor-font-size: 18px;
+  --editor-line-height: 1.88889;
+  --editor-line-height-rem: 1.88889rem;
+  --editor-font-weight: 400;
+  --editor-font-features: "ss01", "cv05", "cv07", "case";
+
   --max-width: 100%;
   --line-width: 40rem;
 

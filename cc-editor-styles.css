@@ -4,8 +4,8 @@
 }
 
 .CodeMirror-scroll {
-  padding-left: 3rem;
-  padding-right: 3rem;
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
   margin-right: 0;
   margin-bottom: 0;
 }
@@ -45,6 +45,10 @@
 }
 
 html .CodeMirror-lines {
+  padding-top: 2.5rem;
+}
+
+html .plugin-sliding-panes-rotate-header .CodeMirror-lines {
   padding-top: 5rem;
 }
 
@@ -186,9 +190,11 @@ pre.HyperMD-header .cm-formatting-header-6:not(:only-child) {
 .cm-formatting-list-ul {
   color: var(--text-faint) !important;
 }
+
 .cm-formatting-list-ol {
   color: var(--text-normal) !important;
-  font-weight: 500;
+  position: relative;
+  left: -7px;
 }
 
 .cm-formatting-quote {
@@ -198,12 +204,12 @@ pre.HyperMD-header .cm-formatting-header-6:not(:only-child) {
 .cm-s-obsidian,
 .markdown-preview-view {
   font-family: var(--text-editor);
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.88889;
+  font-size: var(--editor-font-size);
+  font-weight: var(--editor-font-weight);
+  line-height: var(--editor-line-height);
+  font-feature-settings: var(--editor-font-features);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-feature-settings: "ss01", "cv05", "cv07", "case";
 }
 
 .cm-s-obsidian pre.HyperMD-list-line {
@@ -234,6 +240,11 @@ pre.HyperMD-header .cm-formatting-header-6:not(:only-child) {
   transform: translate3d(-1.5px, 0, 0);
   background: var(--shade-plus-darker);
   height: 100%;
+}
+
+.cm-formatting-strong, .cm-formatting-em {
+  color: var(--color-20);
+  font-size: 14px;
 }
 
 .cm-s-obsidian span.cm-formatting-link {
