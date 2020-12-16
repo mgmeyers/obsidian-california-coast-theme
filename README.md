@@ -14,9 +14,17 @@
 
 These CSS files are snippets to be applied on top of @kepano 's [minimal theme](https://github.com/kepano/obsidian-minimal)
 
-They also rely on the [hider plugin](https://github.com/kepano/obsidian-hider) and the [sliding panes plugin](https://github.com/deathau/sliding-panes-obsidian).
+You can find the individual snippets in the `./snippets` folder, or you can use one of these combined snippets:
 
-Lastly, you'll need to install the variable version of the [Inter font](https://rsms.me/inter/) and the [boxicon font](https://unpkg.com/boxicons@2.0.7/fonts/boxicons.ttf)
+You'll need to install the [boxicon font](https://unpkg.com/boxicons@2.0.7/fonts/boxicons.ttf) to use the `cc-boxicons` snippet and any of the combined snippets.
+
+1. `california-coast.default.css`: Uses the default system font for the editor
+2. `california-coast.inter.css`: Uses the Inter font for the editor
+   - **Note**: it is recommended to install the the [variable version of Inter](https://rsms.me/inter/)
+3. `california-coast.lora.css`: Uses the [Lora](https://fonts.google.com/specimen/Lora) font for the editor. Lora must be installed on your system for this to work.
+
+**Note**: These snippets were designed to be used with the [hider plugin](https://github.com/kepano/obsidian-hider) and the [sliding panes plugin](https://github.com/deathau/sliding-panes-obsidian). They may work fine without them, but may also have issues.
+
 
 ### Core plugins
 
