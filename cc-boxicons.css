@@ -295,7 +295,6 @@
   left: 0;
   display: block;
   transform: translate3d(-56%, -50%, 0);
-  color: var(--text-muted);
   font-size: 6px;
   content: "\ec9b";
 }

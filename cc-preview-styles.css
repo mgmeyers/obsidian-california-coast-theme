@@ -85,19 +85,19 @@
   margin-bottom: 0.9444444444rem;
 }
 
-.markdown-preview-view h1 + .markdown-preview-view h2 {
+/* .markdown-preview-view div[data-tag-name="h1"] + div > h2 {
   margin-top: var(--editor-line-height-rem);
 }
 
-.markdown-preview-view h2 + .markdown-preview-view h3,
-.markdown-preview-view h3 + .markdown-preview-view h4,
-.markdown-preview-view h4 + .markdown-preview-view h5 {
+.markdown-preview-view div[data-tag-name="h2"] + div > h3,
+.markdown-preview-view div[data-tag-name="h3"] + div > h4,
+.markdown-preview-view div[data-tag-name="h4"] + div > h5 {
   margin-top: 0.9444444444rem;
 }
 
-.markdown-preview-view h5 + .markdown-preview-view h6 {
+.markdown-preview-view div[data-tag-name="h5"] + div > h6 {
   margin-top: -0.9444444444rem;
-}
+} */
 
 .markdown-preview-view h6 {
   font-style: italic;
@@ -141,13 +141,13 @@
 }
 
 .markdown-preview-section ul {
-  margin: 0;
+  margin-left: 0;
   padding-inline-start: 1.2em;
   list-style: disc;
 }
 
 .markdown-preview-section ol {
-  margin: 0;
+  margin-left: 0;
   padding-inline-start: 1.2em;
   list-style: decimal;
 }

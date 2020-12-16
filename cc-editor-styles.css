@@ -177,7 +177,7 @@ pre.HyperMD-header .cm-formatting-header-6:not(:only-child) {
 }
 
 .cm-s-obsidian pre.HyperMD-footnote span.cm-link.cm-hmd-footnote.cm-formatting {
-  color: var(--text-muted);
+  color: var(--text-faintest);
 }
 
 .cm-s-obsidian span.cm-footref,
@@ -187,14 +187,17 @@ pre.HyperMD-header .cm-formatting-header-6:not(:only-child) {
   font-size: unset;
 }
 
-.cm-formatting-list-ul {
-  color: var(--text-faint) !important;
+.cm-formatting-list-ul:before {
+  color: var(--text-normal);
 }
 
 .cm-formatting-list-ol {
   color: var(--text-normal) !important;
   position: relative;
-  left: -7px;
+  left: -5px;
+  display: inline-flex;
+  justify-content: flex-end;
+  width: 1rem;
 }
 
 .cm-formatting-quote {
@@ -247,13 +250,6 @@ pre.HyperMD-header .cm-formatting-header-6:not(:only-child) {
   font-size: 14px;
 }
 
-.cm-s-obsidian span.cm-formatting-link {
-  color: var(--text-faintest);
-  display: inline-block;
-  padding: 0 1px;
-  font-weight: 600;
-}
-
 .cm-s-obsidian span.cm-comment {
   font-style: italic;
 }
@@ -266,6 +262,13 @@ pre.HyperMD-header .cm-formatting-header-6:not(:only-child) {
 .cm-s-obsidian span.cm-builtin,
 .cm-s-obsidian span.cm-hr {
   color: transparent;
+}
+
+.cm-s-obsidian span.cm-formatting-link {
+  color: var(--text-faintest);
+  display: inline-block;
+  padding: 0 1px;
+  font-weight: 600;
 }
 
 .cm-s-obsidian .HyperMD-hr-bg:after {
@@ -290,22 +293,13 @@ pre.HyperMD-header .cm-formatting-header-6:not(:only-child) {
 .cm-s-obsidian span.cm-hashtag,
 .frontmatter-container .tag,
 .tag {
+  display: inline;
   color: var(--text-accent);
   margin: 0;
   text-align: unset;
   vertical-align: unset;
-}
-
-span.cm-hashtag.cm-hashtag-begin {
-  font-size: unset;
-  border-radius: 0;
-  padding: 0;
   border: none;
-}
-
-span.cm-hashtag.cm-hashtag-end {
   font-size: unset;
+  padding: 0 !important;
   border-radius: 0;
-  padding: 0;
-  border: none;
 }

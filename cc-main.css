@@ -1,7 +1,7 @@
 :root {
-  --text-editor: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  --text-editor: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  --font-monospace: "iA Writer Mono V", Menlo, SFMono-Regular, Consolas,
+  --font-monospace: Menlo, SFMono-Regular, Consolas,
     "Roboto Mono", monospace;
   --text: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto;
 
@@ -9,10 +9,17 @@
   --editor-line-height: 1.88889;
   --editor-line-height-rem: 1.88889rem;
   --editor-font-weight: 400;
-  --editor-font-features: "ss01", "cv05", "cv07", "case";
+  --editor-font-features: "";
+
+  --font-small: 14px;
+  
+  --radius-s: 4px;
+  --radius-m: 6px;
+  --radius-l: 10px;
+  --radius-xl: 20px;
 
   --max-width: 100%;
-  --line-width: 40rem;
+  --line-width: 42rem;
 
   --accent-h: 211;
   --accent-s: 100%;
@@ -22,17 +29,20 @@
   --rgb-1a: 30, 30, 30;
   --rgb-cc: 204, 204, 204;
   --rgb-white: 255, 255, 255;
-
-  --radius-s: 4px;
-  --radius-m: 6px;
-  --radius-l: 10px;
-  --radius-xl: 20px;
-
-  --font-small: 14px;
 }
 
 .theme-light {
-  --accent-rgb: 0, 122, 255;
+  --red-rgb: 255, 59, 48;
+  --orange-rgb: 255, 149, 0;
+  --yellow-rgb: 255, 204, 0;
+  --green-rgb: 52, 199, 89;
+  --teal-rgb: 90, 200, 250;
+  --blue-rgb: 0, 122, 255;
+  --indigo-rgb: 88, 86, 214;
+  --purple-rgb: 175, 82, 222;
+  --pink-rgb: 255, 45, 85;
+
+  --accent-rgb: var(--blue-rgb);
   --foreground-rgb: var(--rgb-black);
   --background-rgb: var(--rgb-white);
 
@@ -78,7 +88,17 @@
 .theme-light.minimal-light-contrast .mod-left-split,
 .theme-light.minimal-light-contrast .modal.mod-settings .vertical-tab-header,
 .theme-dark {
-  --accent-rgb: 10, 132, 255;
+  --red-rgb: 255, 69, 58;
+  --orange-rgb: 255, 159, 10;
+  --yellow-rgb: 255, 214, 10;
+  --green-rgb: 50, 215, 75;
+  --teal-rgb: 100, 210, 255;
+  --blue-rgb: 10, 132, 255;
+  --indigo-rgb: 94, 92, 230;
+  --purple-rgb: 191, 90, 242;
+  --pink-rgb: 255, 45, 85;
+
+  --accent-rgb: var(--blue-rgb);
   --foreground-rgb: var(--rgb-cc);
   --background-rgb: var(--rgb-1a);
 
@@ -541,6 +561,11 @@ body.plugin-sliding-panes-rotate-header
 .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle {
   border-right: 1px solid var(--shade-plus-darker);
 }
+
+.theme-dark .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle {
+  border-right: 1px solid var(--color-10);
+}
+
 .workspace-split.mod-root.mod-vertical .workspace-leaf-resize-handle {
   border-width: 1px;
 }
@@ -789,7 +814,7 @@ body.hider-frameless:not(.hider-ribbon) .side-dock-actions {
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.theme-dark .hider-ribbon .workspace-ribbon.mod-left {
+.theme-dark.hider-ribbon .workspace-ribbon.mod-left {
   background: rgba(60, 60, 60, 0.5);
   background-blend-mode: luminosity;
   border-color: var(--color-3);

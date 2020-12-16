@@ -11,3 +11,10 @@
   */
   src: url("👻");
 }
+
+:root {
+  --text-editor: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+
+  --editor-font-features: "ss01", "cv05", "cv07", "case";
+}
