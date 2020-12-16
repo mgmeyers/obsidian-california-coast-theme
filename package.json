@@ -1,0 +1,18 @@
+{
+  "name": "obsidian-california-coast-theme",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:mgmeyers/obsidian-california-coast-theme.git",
+  "author": "mgmeyers <matthew.gregory.meyers@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "concat": "^1.0.3"
+  },
+  "scripts": {
+    "concat:default": "concat -o california-coast.default.css ./snippets/cc-main.css ./snippets/cc-boxicons.css ./snippets/cc-editor.css ./snippets/cc-graph.css ./snippets/cc-preview.css",
+    "concat:inter": "concat -o california-coast.inter.css ./snippets/cc-main.css ./snippets/cc-font-inter.css ./snippets/cc-boxicons.css ./snippets/cc-editor.css ./snippets/cc-graph.css ./snippets/cc-preview.css",
+    "concat:lora": "concat -o california-coast.lora.css ./snippets/cc-main.css ./snippets/cc-font-lora.css ./snippets/cc-boxicons.css ./snippets/cc-editor.css ./snippets/cc-graph.css ./snippets/cc-preview.css",
+    "build": "yarn concat:default && yarn concat:inter && yarn concat:lora"
+  }
+}
