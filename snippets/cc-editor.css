@@ -10,6 +10,14 @@
   margin-bottom: 0;
 }
 
+.CodeMirror-scroll::-webkit-scrollbar-track,
+.CodeMirror-scroll::-webkit-scrollbar-thumb,
+.CodeMirror-scroll::-webkit-scrollbar {
+  opacity: 0;
+  border: none;
+  background-color: transparent;
+}
+
 .plugin-sliding-panes-rotate-header .CodeMirror-scroll {
   padding-left: var(--header-width);
   padding-right: calc(var(--header-width) * 2);

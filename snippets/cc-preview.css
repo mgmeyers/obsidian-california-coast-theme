@@ -85,7 +85,7 @@
   margin-bottom: 0.9444444444rem;
 }
 
-/* .markdown-preview-view div[data-tag-name="h1"] + div > h2 {
+.markdown-preview-view div[data-tag-name="h1"] + div > h2 {
   margin-top: var(--editor-line-height-rem);
 }
 
@@ -97,7 +97,7 @@
 
 .markdown-preview-view div[data-tag-name="h5"] + div > h6 {
   margin-top: -0.9444444444rem;
-} */
+}
 
 .markdown-preview-view h6 {
   font-style: italic;
@@ -304,6 +304,13 @@
 
 .markdown-preview-view .is-collapsed .collapse-indicator {
   color: var(--text-accent);
+}
+
+.markdown-preview-view li.is-collapsed {
+  background-image: linear-gradient(to right, var(--color-10) 50%, transparent 50%);
+  background-position: 0 bottom;
+  background-repeat: repeat-x;
+  background-size: 6px 3px;
 }
 
 .markdown-preview-view sub,
