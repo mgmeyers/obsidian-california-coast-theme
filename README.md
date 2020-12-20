@@ -30,8 +30,9 @@ You can find the individual snippets in the `./snippets` folder, or you can use 
 
 ### Recommended plugins
 
-- [hider plugin](https://github.com/kepano/obsidian-hider)
-- [sliding panes plugin](https://github.com/deathau/sliding-panes-obsidian)
+- [Hider plugin](https://github.com/kepano/obsidian-hider)
+- [Sliding panes plugin](https://github.com/deathau/sliding-panes-obsidian)
+- [Contextual typography plugin](https://github.com/mgmeyers/obsidian-contextual-typography)
 
 #### Hider Plugin Settings
 
