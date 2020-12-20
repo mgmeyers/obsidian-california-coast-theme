@@ -34,6 +34,8 @@
   .view-action[aria-label="Edit (Ctrl/Cmd+Click to edit in new pane)"]:after,
 .plugin-sliding-panes-rotate-header
   .view-action[aria-label="More options"]:after,
+.plugin-sliding-panes-rotate-header .view-action[aria-label="Pin"]:after,
+.plugin-sliding-panes-rotate-header .view-action[aria-label="Unlink pane"]:after,
 .view-action.mod-close-leaf:after {
   line-height: 1;
   transform: rotate(-90deg);
@@ -41,8 +43,7 @@
 
 .graph-controls-button[aria-label="Open graph settings"] > svg,
 .graph-controls-button[aria-label="Close"] > svg,
-.graph-controls-button[aria-label="Restore default settings"]
-  > svg,
+.graph-controls-button[aria-label="Restore default settings"] > svg,
 .outline .collapse-icon > svg,
 .graph-controls .collapse-icon > svg,
 .nav-file-icon > svg,
@@ -52,6 +53,8 @@
 .view-header-icon > svg,
 .view-action[aria-label="Preview (Ctrl/Cmd+Click to open in new pane)"] > svg,
 .view-action[aria-label="Edit (Ctrl/Cmd+Click to edit in new pane)"] > svg,
+.view-action[aria-label="Pin"] > svg,
+.view-action[aria-label="Unlink pane"] > svg,
 .view-action.mod-close-leaf > svg,
 .view-action[aria-label="More options"] > svg,
 .nav-folder-collapse-indicator > svg,
@@ -113,6 +116,8 @@
 .view-action[aria-label="Edit (Ctrl/Cmd+Click to edit in new pane)"]:after,
 .view-action.mod-close-leaf:after,
 .view-action[aria-label="More options"]:after,
+.view-action[aria-label="Pin"]:after,
+.view-action[aria-label="Unlink pane"]:after,
 .nav-folder-collapse-indicator:after,
 .outline .collapse-icon:after,
 .graph-controls .collapse-icon:after,
@@ -189,6 +194,14 @@
 
 .view-action[aria-label="More options"]:after {
   content: "\ea14";
+}
+
+.view-action[aria-label="Pin"]:after {
+  content: "\eb1c";
+}
+
+.view-action[aria-label="Unlink pane"]:after {
+  content: "\ebb7";
 }
 
 .nav-folder-collapse-indicator:after,

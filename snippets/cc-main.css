@@ -621,6 +621,28 @@ body:not(.plugin-sliding-panes-rotate-header) .workspace-leaf-content[data-type=
   position: static;
 }
 
+.workspace-leaf.is-highlighted:before {
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  border: 1px solid transparent;
+  box-shadow: inset 0 0 0 4px rgba(var(--accent-rgb), 0.5);
+  background-color: transparent;
+}
+
+.workspace-drop-overlay {
+  background-color: transparent;
+}
+
+.workspace-drop-overlay:before {
+  opacity: 1;
+  box-shadow: inset 0 0 0 4px rgba(var(--accent-rgb), 0.5);
+  background-color: transparent;
+}
+
+.workspace-drop-overlay.mod-drag:before {
+  background-color: var(--color-2);
+}
+
 .workspace-leaf-resize-handle {
   z-index: 11;
   transition: background-color 200ms ease-in-out, box-shadow 200ms ease-in-out;
