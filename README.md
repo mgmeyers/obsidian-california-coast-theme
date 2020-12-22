@@ -15,7 +15,7 @@
 
 ## Recommended plugins
 
-- Translucent window (optional)
+- Core: Translucent window
 - [Hider plugin](https://github.com/kepano/obsidian-hider)
 - [Sliding panes plugin](https://github.com/deathau/sliding-panes-obsidian)
 
