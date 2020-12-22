@@ -47,7 +47,7 @@ To match the screenshots, use these settings:
 
 ## Contributing
 
-PRs welcome!
+If you see any issue, or would like to contribute to this theme, please submit an issue or raise a PR.
 
 
 ## Credits
