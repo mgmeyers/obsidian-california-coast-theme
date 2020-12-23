@@ -2961,16 +2961,13 @@ a[href*="obsidian://search"]
 }
 .external-link {
   background: none;
-  padding-right: 16px;
+  padding-right: 0;
 }
 
-.external-link:before {
+.external-link:after {
   font-size: 16px;
   color: var(--shade-20);
-  position: absolute;
-  right: 0;
-  top: calc(50%);
-  transform: translate3d(0, -50%, 0) rotate(135deg);
+  transform: rotate(135deg);
 }
 
 .footnotes-list {
@@ -3657,7 +3654,7 @@ input[type="range"]::-webkit-slider-thumb:active {
 .workspace-ribbon.mod-right .workspace-ribbon-collapse-btn:after,
 .workspace-ribbon.mod-left .workspace-ribbon-collapse-btn:after,
 .document-search-close-button:before,
-.external-link:before,
+.external-link:after,
 .markdown-preview-view .collapse-indicator:before,
 .search-input-clear-button:before,
 .search-result-collapse-indicator + span:before,
@@ -3944,7 +3941,7 @@ input[type="range"]::-webkit-slider-thumb:active {
   color: var(--text-accent);
 }
 
-.external-link:before {
+.external-link:after {
   content: "\e917";
 }
 
@@ -4228,7 +4225,7 @@ input[type="range"]::-webkit-slider-thumb:active {
 }
 
 .cc-pretty-editor .cm-s-obsidian span.cm-url.cm-string:not(.cm-hmd-footnote-url) {
-  color: hsla(var(--accent-hsl), 0.25);
+  color: var(--shade-20);
 }
 
 .cc-pretty-editor .cm-s-obsidian span.cm-link {
