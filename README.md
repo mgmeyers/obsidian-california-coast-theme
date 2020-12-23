@@ -1,12 +1,5 @@
 # California Coast Obsidian Theme
 
-<img src="https://github.com/mgmeyers/obsidian-california-coast-theme/raw/main/screenshots/01.png" alt="Screen Shot 1" />
-<img src="https://github.com/mgmeyers/obsidian-california-coast-theme/raw/main/screenshots/02.png" alt="Screen Shot 2" />
-<img src="https://github.com/mgmeyers/obsidian-california-coast-theme/raw/main/screenshots/03.png" alt="Screen Shot 3" />
-<img src="https://github.com/mgmeyers/obsidian-california-coast-theme/raw/main/screenshots/04.png" alt="Screen Shot 4" />
-<img src="https://github.com/mgmeyers/obsidian-california-coast-theme/raw/main/screenshots/05.png" alt="Screen Shot 5" />
-
-
 ## Instructions
 
 1. Install the [Boxicon font](https://unpkg.com/boxicons@2.0.7/fonts/boxicons.ttf)
@@ -18,6 +11,15 @@
 - Core: Translucent window
 - [Hider plugin](https://github.com/kepano/obsidian-hider)
 - [Sliding panes plugin](https://github.com/deathau/sliding-panes-obsidian)
+
+
+## Screenshots
+
+<img src="https://github.com/mgmeyers/obsidian-california-coast-theme/raw/main/screenshots/01.png" alt="Screen Shot 1" />
+<img src="https://github.com/mgmeyers/obsidian-california-coast-theme/raw/main/screenshots/02.png" alt="Screen Shot 2" />
+<img src="https://github.com/mgmeyers/obsidian-california-coast-theme/raw/main/screenshots/03.png" alt="Screen Shot 3" />
+<img src="https://github.com/mgmeyers/obsidian-california-coast-theme/raw/main/screenshots/04.png" alt="Screen Shot 4" />
+<img src="https://github.com/mgmeyers/obsidian-california-coast-theme/raw/main/screenshots/05.png" alt="Screen Shot 5" />
 
 
 ### Hider Plugin Settings
