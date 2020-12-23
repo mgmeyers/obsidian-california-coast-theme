@@ -3560,7 +3560,7 @@ input[type="range"]::-webkit-slider-thumb:active {
   .workspace-tab-header-inner-icon:after,
 .workspace-tab-header[aria-label="Starred"]
   .workspace-tab-header-inner-icon:after,
-.workspace-tab-header[aria-label="Outline"]
+.workspace-tab-header[aria-label^="Outline"]
   .workspace-tab-header-inner-icon:after,
 .workspace-tab-header[aria-label="Tag pane"]
   .workspace-tab-header-inner-icon:after,
@@ -3623,7 +3623,7 @@ input[type="range"]::-webkit-slider-thumb:active {
 .workspace-tab-header[aria-label="Calendar"]
   .workspace-tab-header-inner-icon
   > svg,
-.workspace-tab-header[aria-label="Outline"]
+.workspace-tab-header[aria-label^="Outline"]
   .workspace-tab-header-inner-icon
   > svg,
 .workspace-tab-header[aria-label="Tag pane"]
@@ -3684,7 +3684,7 @@ input[type="range"]::-webkit-slider-thumb:active {
   .workspace-tab-header-inner-icon:after,
 .workspace-tab-header[aria-label="Calendar"]
   .workspace-tab-header-inner-icon:after,
-.workspace-tab-header[aria-label="Outline"]
+.workspace-tab-header[aria-label^="Outline"]
   .workspace-tab-header-inner-icon:after,
 .workspace-tab-header[aria-label="Tag pane"]
   .workspace-tab-header-inner-icon:after,
@@ -3790,7 +3790,7 @@ input[type="range"]::-webkit-slider-thumb:active {
   content: "\e97a";
 }
 
-.workspace-tab-header[aria-label="Outline"]
+.workspace-tab-header[aria-label^="Outline"]
   .workspace-tab-header-inner-icon:after {
   content: "\eaa6";
 }
