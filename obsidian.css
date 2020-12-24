@@ -509,7 +509,7 @@ body.plugin-sliding-panes-rotate-header .view-header-icon {
 body.plugin-sliding-panes.is-fullscreen .view-header-icon {
   padding-top: 8px;
 }
-body.plugin-sliding-panes-rotate-header
+html > body.plugin-sliding-panes-rotate-header
   .workspace
   > .mod-root
   > .workspace-leaf
@@ -1543,7 +1543,7 @@ body.theme-dark:not(.is-translucent):not(.hider-frameless)
   padding-left: 34px !important;
 }
 .view-header-title {
-  padding: 0;
+  padding: 3px 0;
   line-height: 1;
   margin-left: 7px;
 }
