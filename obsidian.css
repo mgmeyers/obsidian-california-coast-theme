@@ -4655,7 +4655,11 @@ html .plugin-sliding-panes-rotate-header.embedded-note-title .CodeMirror-lines {
 .cc-pretty-preview .markdown-preview-section blockquote:before {
   position: absolute;
   left: 0;
-  line-height: 1.88889;
+  line-height: 1.88889 !important;
+}
+
+.cc-pretty-preview .markdown-preview-view blockquote p {
+  margin: 0;
 }
 
 .cc-pretty-preview .markdown-preview-view table {
