@@ -349,7 +349,7 @@ Frameless mode on macOS only */
 .hider-frameless .workspace-split.mod-root .view-header {
   padding-top: 2px;
 }
-.hider-frameless .workspace-split.mod-left-split > .workspace-tabs {
+.hider-frameless:not(.is-fullscreen) .workspace-split.mod-left-split > .workspace-tabs {
   padding-top: 28px !important;
 }
 .hider-frameless
@@ -536,6 +536,10 @@ body.plugin-sliding-panes .mod-root .graph-controls {
 body:not(.hider-ribbon):not(.hider-frameless) .workspace-ribbon.mod-left {
   padding-top: 5px;
   transition: padding-right 100ms ease, box-shadow 100ms ease;
+}
+
+body.is-fullscreen:not(.hider-ribbon):not(.hider-frameless) .workspace-ribbon.mod-left {
+  padding-top: 10px;
 }
 
 body:not(.hider-ribbon):not(.hider-frameless)
@@ -930,7 +934,7 @@ strong {
   font-weight: var(--bold-weight);
 }
 
-body {
+body:not(.hider-frameless):not(.is-fullscreen) {
   padding-top: var(--titlebar-height) !important;
 }
 
@@ -1437,6 +1441,7 @@ body.theme-dark:not(.is-translucent):not(.hider-frameless)
   display: flex;
 }
 
+.is-fullscreen .workspace-tab-header-container,
 .mod-right-split .workspace-tab-header-container {
   padding: 10px;
 }
