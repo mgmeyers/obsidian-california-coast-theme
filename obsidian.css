@@ -4353,11 +4353,11 @@ html .plugin-sliding-panes-rotate-header.embedded-note-title .CodeMirror-lines {
 
 .cc-pretty-editor .cm-formatting-list-ol {
   color: var(--text-normal) !important;
-  position: relative;
-  left: -5px;
   display: inline-flex;
+  white-space: nowrap;
   justify-content: flex-end;
   width: 1rem;
+  transform: translateX(-7px);
 }
 
 .cc-pretty-editor .cm-formatting-quote {
