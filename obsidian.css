@@ -1507,6 +1507,7 @@ body.theme-dark:not(.is-translucent):not(.hider-frameless)
 }
 .titlebar-inner {
   height: var(--titlebar-height);
+  color: var(--text-muted);
 }
 
 .titlebar-button-container {
