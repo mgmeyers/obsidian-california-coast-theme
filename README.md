@@ -2,13 +2,12 @@
 
 ## Instructions
 
-1. Install the [Boxicon font](https://unpkg.com/boxicons@2.0.7/fonts/boxicons.ttf)
-2. Install the [California Coast Settings plugin](https://github.com/mgmeyers/obsidian-california-coast-settings)
+1. Install the [California Coast Settings plugin](https://github.com/mgmeyers/obsidian-california-coast-settings)
 
 
 ## Recommended plugins
 
-- Core: Translucent window
+- Core: Translucent window (Note: transparency is known to create lag on some systems)
 - [Hider plugin](https://github.com/kepano/obsidian-hider)
 - [Sliding panes plugin](https://github.com/deathau/sliding-panes-obsidian)
 
