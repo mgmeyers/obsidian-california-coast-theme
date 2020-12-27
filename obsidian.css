@@ -2219,9 +2219,15 @@ input[type="checkbox"]:checked:before {
   line-height: 1;
 }
 
+.CodeMirror-linenumbers,
 .CodeMirror-foldgutter {
   width: 18px;
 }
+
+.CodeMirror-linenumbers {
+  margin-left: -20px;
+}
+
 .CodeMirror-gutter-wrapper {
   padding: 0;
   height: 100%;
@@ -2233,6 +2239,17 @@ input[type="checkbox"]:checked:before {
 .CodeMirror-gutter-elt {
   width: unset !important;
   position: static;
+}
+
+.cm-s-obsidian .CodeMirror-linenumber {
+  width: 18px !important;
+  min-width: 0;
+  position: absolute;
+  left: -20px !important;
+  padding: 3px 0 0;
+  display: flex;
+  justify-content: flex-end;
+  font-feature-settings: normal;
 }
 
 .cm-s-obsidian .CodeMirror-gutters {
