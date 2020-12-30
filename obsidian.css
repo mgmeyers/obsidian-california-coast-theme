@@ -1052,7 +1052,8 @@ button,
 .collapse-icon svg,
 .menu-item-icon svg {
   width: 14px;
-  height: 14px;
+	height: 14px;
+	fill: currentColor;
 }
 
 .graph-controls-button svg,
@@ -1132,10 +1133,6 @@ button,
 
 .nav-action-button:hover {
   background-color: var(--shade-plus-darker);
-}
-
-.collapse-icon svg {
-  transform: rotate(90deg);
 }
 
 .is-collapsed .collapse-icon svg {
@@ -2634,7 +2631,7 @@ body:not(.is-grabbing) .nav-folder-title:hover {
 }
 .search-input-clear-button:before {
   font-size: 18px;
-  display: block;
+  display: block !important;
 }
 .search-input {
   max-width: 100%;
@@ -3022,7 +3019,12 @@ body:not(.hider-ribbon) .side-dock-ribbon-action {
 }
 .markdown-preview-section a:hover {
   color: var(--text-accent);
-  box-shadow: 0 3px var(--shade-10);
+	box-shadow: inset 0 -2px hsla(var(--accent-hsl), 0.15);
+	text-shadow:
+   -1px -1px 0 rgb(var(--background-rgb)),  
+    1px -1px 0 rgb(var(--background-rgb)),
+    -1px 1px 0 rgb(var(--background-rgb)),
+     1px 1px 0 rgb(var(--background-rgb));
 }
 .external-link {
   background: none;
