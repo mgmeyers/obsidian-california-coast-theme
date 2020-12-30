@@ -1579,7 +1579,7 @@ body.theme-dark:not(.is-translucent):not(.hider-frameless)
   align-items: center;
   padding: 6px 10px !important;
 }
-.mod-macos.hider-frameless.hider-ribbon:not(.plugin-sliding-panes-rotate-header)
+.mod-macos.hider-frameless.hider-ribbon:not(.plugin-sliding-panes-rotate-header):not(.is-fullscreen)
   .workspace-split.mod-left-split.is-collapsed
   + .mod-root
   .workspace-leaf:first-of-type
@@ -1587,7 +1587,7 @@ body.theme-dark:not(.is-translucent):not(.hider-frameless)
   padding-left: 70px !important;
 }
 
-.mod-macos.hider-frameless:not(.plugin-sliding-panes-rotate-header)
+.mod-macos.hider-frameless:not(.plugin-sliding-panes-rotate-header):not(.is-fullscreen)
   .workspace-split.mod-left-split.is-collapsed
   + .mod-root
   .workspace-leaf:first-of-type
