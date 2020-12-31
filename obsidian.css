@@ -69,7 +69,16 @@ Disabled features */
 
 /* Hides the name of the root folder */
 .nav-folder.mod-root > .nav-folder-title .nav-folder-title-content {
-  display: none;
+	border-radius: 0;
+	font-size: 14px;
+	color: transparent;
+	overflow: hidden;
+	height: 0px;
+	padding: 3px 0;
+}
+
+.nav-folder.mod-root > .nav-folder-title.is-being-dragged-over .nav-folder-title-content {
+	box-shadow: inset 0 -2px hsl(var(--accent-hsl));
 }
 
 /* Remove this if you re-enable status bar */
