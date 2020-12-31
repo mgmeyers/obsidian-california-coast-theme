@@ -1540,26 +1540,43 @@ body.theme-dark:not(.is-translucent):not(.hider-frameless)
 
 .titlebar-button-container {
   height: var(--titlebar-height);
-  top: 0;
+	top: 0;
+	display: flex;
+	align-items: center;
 }
+
 .titlebar-button-container.mod-left {
-  display: none;
+	opacity: 0;
+	transition: opacity 100ms ease-out;
 }
+
+.titlebar-button-container.mod-left:hover {
+	opacity: 1;
+}
+
+.titlebar-button-container.mod-left .titlebar-button {
+	margin-right: 5px
+}
+
+.titlebar-button-container.mod-right .titlebar-button {
+	margin-left: 5px
+}
+
 .titlebar-text {
   display: none;
   color: var(--text-faint);
 }
 .titlebar-button {
   opacity: 1;
-  cursor: var(--cursor);
+	cursor: var(--cursor);
+	padding: 2px 4px;
+	border-radius: var(--radius-s);
+	line-height: 1;
+	display: flex;
 }
-.titlebar-button svg path {
-  fill: var(--text-muted) !important;
-  stroke: var(--text-muted) !important;
-}
-.titlebar-button:hover svg path {
-  fill: var(--text-normal) !important;
-  stroke: var(--text-normal) !important;
+
+.titlebar-button:hover {
+	background-color: var(--shade-plus-darker);
 }
 
 /* --------------- */
@@ -3631,7 +3648,9 @@ input[type="range"]::-webkit-slider-thumb:active {
 .view-header-icon > svg,
 .workspace-tab-header[aria-label="File explorer"]
   .workspace-tab-header-inner-icon
-  > svg,
+	> svg,
+.titlebar-button.mod-back > svg,
+.titlebar-button.mod-forward > svg,
 .nav-action-button[aria-label="New note"] > svg,
 .nav-action-button[aria-label="New folder"] > svg,
 .side-dock-ribbon-action[aria-label="Open today's note"] > svg,
@@ -3651,6 +3670,8 @@ input[type="range"]::-webkit-slider-thumb:active {
 .CodeMirror-foldgutter-open:after,
 .workspace-ribbon.mod-right .workspace-ribbon-collapse-btn:after,
 .workspace-ribbon.mod-left .workspace-ribbon-collapse-btn:after,
+.titlebar-button.mod-back:after,
+.titlebar-button.mod-forward:after,
 .side-dock-ribbon-action[aria-label="Settings"]:after,
 .side-dock-ribbon-action[aria-label="Help"]:after,
 .side-dock-ribbon-action[aria-label="Open another vault"]:after,
@@ -3723,6 +3744,24 @@ input[type="range"]::-webkit-slider-thumb:active {
   .workspace-tab-header[aria-label="File explorer"]
   .workspace-tab-header-inner-icon:after {
   content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" style="fill:rgb(204,204,204);"><path d="M21,4c0-1.103-0.897-2-2-2H5C3.897,2,3,2.897,3,4v16c0,1.103,0.897,2,2,2h14c1.103,0,2-0.897,2-2V4z M5,4h14v7H5V4z M5,20 v-7h14.001v7H5z"></path><path d="M14 7L10 7 10 6 8 6 8 9 16 9 16 6 14 6zM14 15L14 16 10 16 10 15 8 15 8 18 16 18 16 15z"></path></svg>');
+}
+
+.titlebar-button.mod-back:after {
+  opacity: 0.5;
+  content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" style="fill:rgb(0, 0, 0);"><path d="M13.939 4.939L6.879 12 13.939 19.061 16.061 16.939 11.121 12 16.061 7.061z"></path></svg>');
+}
+
+.theme-dark .titlebar-button.mod-back:after {
+  content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" style="fill:rgb(204,204,204);"><path d="M13.939 4.939L6.879 12 13.939 19.061 16.061 16.939 11.121 12 16.061 7.061z"></path></svg>');
+}
+
+.titlebar-button.mod-forward:after {
+  opacity: 0.5;
+  content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" style="fill:rgb(0, 0, 0);"><path d="M10.061 19.061L17.121 12 10.061 4.939 7.939 7.061 12.879 12 7.939 16.939z"></path></svg>');
+}
+
+.theme-dark .titlebar-button.mod-forward:after {
+  content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" style="fill:rgb(204,204,204);"><path d="M10.061 19.061L17.121 12 10.061 4.939 7.939 7.061 12.879 12 7.939 16.939z"></path></svg>');
 }
 
 .nav-action-button[aria-label="New note"]:after {
