@@ -105,8 +105,8 @@ Disabled features */
 
   --accent-h: 211; /* Accent hue */
   --accent-s: 100%; /* Accent saturation */
-  --accent-d: 52%; /* Accent lightness Dark Mode */
   --accent-l: 50%; /* Accent lightness Light Mode */
+  --accent-d: calc(var(--accent-l) + 2%); /* Accent lightness Dark Mode */
 
   --color-black-rgb: 0, 0, 0;
   --color-white-rgb: 255, 255, 255;
@@ -609,7 +609,7 @@ body:not(.hider-ribbon):not(.hider-frameless)
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
+  cursor: var(--cursor);
   color: var(--text-muted);
   padding: 4px 6px;
   margin-bottom: 5px;
@@ -677,7 +677,7 @@ body:not(.hider-ribbon):not(.hider-frameless)
   align-items: center;
   border-radius: var(--radius-s);
   color: var(--shade-40);
-  cursor: pointer;
+  cursor: var(--cursor);
   display: flex;
   justify-content: center;
   line-height: 1;
@@ -854,7 +854,7 @@ body:not(.hider-ribbon):not(.hider-frameless)
 #calendar-container .title,
 #calendar-container .reset-button {
   letter-spacing: 0;
-  cursor: pointer;
+  cursor: var(--cursor);
   font-size: 13px;
   font-weight: 500;
   text-transform: none;
@@ -1126,7 +1126,7 @@ button,
   padding: 4px 6px;
   opacity: 1;
   margin: 0 5px 0 0;
-  cursor: pointer;
+  cursor: var(--cursor);
   border-radius: var(--radius-s);
   display: flex;
 }
@@ -1475,7 +1475,7 @@ body.theme-dark:not(.is-translucent):not(.hider-frameless)
 }
 .workspace-tab-header {
   color: var(--text-muted);
-  cursor: pointer;
+  cursor: var(--cursor);
   opacity: 1;
   border-radius: var(--radius-s) !important;
   padding: 4px 6px;
@@ -1686,8 +1686,8 @@ body.theme-dark:not(.is-translucent):not(.hider-frameless)
 
 /* Fancy cursor */
 .fancy-cursor .CodeMirror-cursor {
-  border: none;
-  border-right: 2px solid var(--text-accent);
+  border-left: 2px solid var(--text-accent);
+  transform: translateX(-0.5px);
 }
 .markdown-source-view {
   padding: 0;
@@ -4140,11 +4140,6 @@ html .plugin-sliding-panes-rotate-header.embedded-note-title .CodeMirror-lines {
 .cc-pretty-editor .cm-s-obsidian span.cm-formatting-list-ul {
   color: transparent !important;
   position: relative;
-}
-
-.cc-pretty-editor .CodeMirror-cursor {
-  border-left: 2px solid var(--text-accent);
-  transform: translateX(-0.5px);
 }
 
 .cc-pretty-editor .cm-hmd-list-indent > .cm-tab {
