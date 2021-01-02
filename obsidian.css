@@ -198,7 +198,7 @@ Disabled features */
   --accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
 
   --foreground-rgb: var(--color-black-rgb);
-  --background-rgb: var(--color-white-rgb);
+	--background-rgb: var(--color-white-rgb);
 
   --shade-90: rgba(var(--foreground-rgb), 0.9);
   --shade-80: rgba(var(--foreground-rgb), 0.8);
@@ -3965,7 +3965,9 @@ html .plugin-sliding-panes-rotate-header.embedded-note-title .CodeMirror-lines {
 
 .embedded-note-title.cc-pretty-preview .markdown-preview-view > h1,
 .embedded-note-title .CodeMirror-scroll > h1 {
-  margin: 3.6rem 0 var(--editor-line-height-rem);
+	position: absolute;
+	padding: 3.6rem 0 var(--editor-line-height-rem);
+	margin: 0;
   font-family: var(--text-editor);
   font-weight: 500;
   font-size: 2rem !important;
