@@ -2822,7 +2822,7 @@ input.search-input:focus {
 .backlink-pane .search-results-children .tree-item-self {
   padding: 0;
 }
-.backlink-pane .tree-item-self.is-clickable:hover {
+.backlink-pane > .tree-item-self.is-clickable:hover {
   color: var(--text-muted);
 }
 .backlink-pane .tree-item-self .tree-item-flair {
