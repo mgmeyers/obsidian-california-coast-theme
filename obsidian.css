@@ -1910,12 +1910,14 @@ html .plugin-sliding-panes-rotate-header .CodeMirror-lines {
   top: 0;
   font-size: 18px;
   padding: 4px 0 4px;
-  width: var(--header-width);
   line-height: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-left: auto;
+}
+.document-search-close-button {
+  width: 2rem;
 }
 .document-search-container {
   background-color: var(--background-primary);
