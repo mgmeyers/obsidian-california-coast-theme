@@ -4251,7 +4251,7 @@ html .plugin-sliding-panes-rotate-header.embedded-note-title .CodeMirror-lines {
   color: var(--text-normal);
 }
 
-.cc-pretty-editor .cm-formatting-list-ol {
+.cc-pretty-editor .cm-formatting-list-ol:not(:only-child) {
   color: var(--text-normal) !important;
   display: inline-flex;
   white-space: nowrap;
