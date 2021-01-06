@@ -4054,7 +4054,8 @@ html .plugin-sliding-panes-rotate-header.embedded-note-title .CodeMirror-lines {
 }
 
 .embedded-note-title .CodeMirror-scroll > h1 {
-  position: absolute;
+	position: absolute;
+  width: calc(100% - 7rem);
 }
 
 .embedded-note-title.plugin-sliding-panes-rotate-header.cc-pretty-preview
@@ -4251,13 +4252,12 @@ html .plugin-sliding-panes-rotate-header.embedded-note-title .CodeMirror-lines {
   color: var(--text-normal);
 }
 
-.cc-pretty-editor .cm-formatting-list-ol:not(:only-child) {
+.cc-pretty-editor .cm-formatting-list-ol {
   color: var(--text-normal) !important;
-  display: inline-flex;
-  white-space: nowrap;
-  justify-content: flex-end;
-  width: 1rem;
-  transform: translateX(-7px);
+  white-space: pre;
+	display: inline-flex;
+	justify-content: flex-end;
+	width: 1rem;
 }
 
 .cc-pretty-editor .cm-formatting-quote {
