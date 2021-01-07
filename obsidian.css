@@ -1555,18 +1555,11 @@ body.theme-dark:not(.is-translucent):not(.hider-frameless)
   opacity: 1;
 }
 
-.titlebar-button-container.mod-left .titlebar-button {
-  margin-right: 5px;
-}
-
-.titlebar-button-container.mod-right .titlebar-button {
-  margin-left: 5px;
-}
-
 .titlebar-text {
   display: none;
   color: var(--text-faint);
 }
+
 .titlebar-button {
   opacity: 1;
   cursor: var(--cursor);
@@ -1578,6 +1571,23 @@ body.theme-dark:not(.is-translucent):not(.hider-frameless)
 
 .titlebar-button:hover {
   background-color: var(--shade-plus-darker);
+}
+
+.titlebar-button-container.mod-left .titlebar-button {
+  margin-right: 5px;
+}
+
+.titlebar-button-container.mod-right .titlebar-button {
+	margin-left: 0;
+	border-radius: 0;
+	height: 100%;
+	align-items: center;
+	padding: 2px 15px;
+}
+
+.titlebar-button.mod-close:hover {
+	background-color: rgb(var(--red-rgb));
+	color: rgb(var(--color-white-rgb));
 }
 
 /* --------------- */
