@@ -586,8 +586,7 @@ body:not(.hider-ribbon):not(.hider-frameless)
   width: unset;
   height: unset;
 
-  background: rgba(245, 245, 245, 0.5);
-  backdrop-filter: blur(90px);
+  background: rgba(245, 245, 245, 1);
 
   border-top: 1px solid var(--shade-10);
   border-right: 1px solid var(--shade-10);
@@ -596,8 +595,7 @@ body:not(.hider-ribbon):not(.hider-frameless)
 }
 
 .theme-dark.hider-ribbon .workspace-ribbon.mod-left {
-  background: rgba(60, 60, 60, 0.5);
-  background-blend-mode: luminosity;
+  background: rgba(60, 60, 60, 1);
   border-color: var(--shade-3);
 }
 
@@ -1300,11 +1298,10 @@ input.prompt-input:hover {
 }
 
 .theme-dark .workspace {
-  background-color: var(--shade-10);
+  background-color: var(--shade-3);
 }
 
 .is-translucent .workspace {
-  backdrop-filter: blur(80px);
   background-color: var(--background-translucent);
 }
 
@@ -1855,6 +1852,13 @@ html .plugin-sliding-panes-rotate-header .CodeMirror-lines {
 .cm-formatting-list {
   color: var(--text-faint) !important;
 }
+.cm-s-obsidian span.cm-formatting-task {
+	display: inline-block;
+	font-weight: 500;
+	color: var(--text-normal);
+	width: 1.3em;
+}
+
 /* Editor Mode Quotes */
 .cm-formatting-quote {
   color: var(--text-faint) !important;
