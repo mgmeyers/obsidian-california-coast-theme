@@ -1304,7 +1304,6 @@ input.prompt-input:hover {
 }
 
 .is-translucent .workspace {
-  backdrop-filter: blur(80px);
   background-color: var(--background-translucent);
 }
 
