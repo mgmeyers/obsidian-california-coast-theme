@@ -3791,7 +3791,7 @@ input[type="range"]::-webkit-slider-thumb:active {
 }
 
 .plugin-sliding-panes-rotate-header .view-header-icon:after {
-  line-height: 1;
+  line-height: 0;
 }
 
 .outline .collapse-icon > svg,
