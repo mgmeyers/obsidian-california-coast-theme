@@ -1904,13 +1904,15 @@ html .plugin-sliding-panes-rotate-header .CodeMirror-lines {
 /* Internal search */
 
 .is-flashing {
-  border-radius: 2px;
-  box-shadow: 0 2px 0 8px var(--text-highlight-bg);
+  border-radius: var(--radius-s);
+  box-shadow: 0 0 0 0 var(--text-highlight-bg);
   transition: all 0s ease-in-out;
 }
+
 .is-flashing .tag {
   border-color: var(--text-highlight-bg-active);
 }
+
 .cm-s-obsidian span.obsidian-search-match-highlight {
   background: inherit;
   border-radius: 2px;
