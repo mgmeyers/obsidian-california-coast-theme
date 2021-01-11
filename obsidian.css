@@ -1572,7 +1572,7 @@ body.theme-dark:not(.is-translucent):not(.hider-frameless)
   transition: opacity 100ms ease-out;
 }
 
-.titlebar-button-container.mod-left:hover {
+.titlebar:hover .titlebar-button-container.mod-left {
   opacity: 1;
 }
 
