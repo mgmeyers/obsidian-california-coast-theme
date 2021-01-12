@@ -1315,7 +1315,7 @@ input.prompt-input:hover {
 }
 
 .theme-dark .workspace {
-  background-color: var(--shade-3);
+  background-color: var(--shade-10);
 }
 
 .is-translucent .workspace {
