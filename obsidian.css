@@ -737,7 +737,7 @@ body:not(.hider-ribbon):not(.hider-frameless)
   margin: -0.5px auto 0;
   text-align: center;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translate3d(0, -50%, 0);
   padding: 0;
   left: 0;
   right: 0;
@@ -1330,11 +1330,6 @@ input.prompt-input:hover {
   background-color: var(--background-primary);
 }
 
-body:not(.hider-frameless) .workspace-split.mod-root {
-  border-top-left-radius: var(--radius-m);
-  overflow: hidden;
-}
-
 body.hider-ribbon .workspace-split.mod-left-split.is-collapsed + .workspace-split.mod-root {
   border-top-left-radius: 0;
 }
@@ -1745,7 +1740,7 @@ body.theme-dark:not(.is-translucent):not(.hider-frameless)
 /* Fancy cursor */
 .fancy-cursor .CodeMirror-cursor {
   border-left: 2px solid var(--text-accent);
-  transform: translateX(-0.5px);
+  transform: translate3d(-0.5px, 0, 0);
 }
 .markdown-source-view {
   padding: 0;
@@ -2332,11 +2327,11 @@ input[type="checkbox"]:checked:before {
   width: 18px;
   left: 0 !important;
   padding-right: 0;
-  transform: translateX(2rem);
+  transform: translate3d(2rem, 0, 0);
 }
 
 .plugin-sliding-panes-rotate-header .cm-s-obsidian .CodeMirror-gutters {
-  transform: translateX(2px);
+  transform: translate3d(2px, 0, 0);
 }
 
 .CodeMirror-foldmarker {
