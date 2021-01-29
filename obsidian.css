@@ -1226,7 +1226,9 @@ button,
 .progress-bar-message {
   color: var(--text-faint);
 }
-
+.modal.mod-sync-history {
+	background-color: var(--shade-0);
+}
 .modal {
   border: none;
   background: var(--background-primary);
@@ -3045,6 +3047,17 @@ input.search-input:focus {
 
 .status-bar-item-segment {
   margin-right: 10px;
+}
+
+.status-bar-item-icon {
+	display: block;
+}
+
+.status-bar-item-icon svg {
+	display: block;
+	width: 1em;
+	height: 1em;
+	fill: currentColor;
 }
 
 /* --------------- */
