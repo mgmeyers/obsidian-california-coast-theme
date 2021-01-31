@@ -2416,6 +2416,8 @@ input[type="checkbox"]:checked:before {
 }
 
 .nav-file-tag {
+	line-height: 1;
+	padding: 3px;
 	background-color: var(--shade-5);
 	letter-spacing: 0;
   margin: 0 0 0 4px;
