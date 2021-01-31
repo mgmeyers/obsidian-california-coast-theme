@@ -2342,10 +2342,6 @@ input[type="checkbox"]:checked:before {
   transform: translate3d(2rem, 0, 0);
 }
 
-.plugin-sliding-panes-rotate-header .cm-s-obsidian .CodeMirror-gutters {
-  transform: translate3d(2px, 0, 0);
-}
-
 .CodeMirror-foldmarker {
   font-size: 0 !important;
   color: transparent;
