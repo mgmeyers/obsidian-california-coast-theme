@@ -1430,6 +1430,10 @@ button:hover,
   flex-direction: row-reverse;
 }
 
+[data-type="starred"] .nav-file-title {
+  flex-direction: row;
+}
+
 .nav-file-title.is-being-dragged,
 .nav-file-title.is-active,
 body:not(.is-grabbing) .nav-file-title.is-active:hover {
@@ -1572,6 +1576,7 @@ body:not(.is-grabbing) .nav-folder-title:hover {
   opacity: unset;
 }
 .outline .tree-item-inner {
+  position: relative;
   padding: 4px 6px;
   line-height: 1.4;
 }
@@ -1759,7 +1764,7 @@ input.search-input:focus {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  padding: 6px 0;
+  padding: 6px 0 6px 2px;
 }
 .search-result-file-title .tree-item-inner:before {
   flex-shrink: 0;
@@ -1775,15 +1780,6 @@ input.search-input:focus {
   margin: 0;
   padding: 0;
   width: auto;
-}
-
-.tree-item-self .collapse-icon:after {
-  content: none;
-}
-
-.is-collapsed .tree-item-self .collapse-icon,
-.is-collapsed.tree-item-self .collapse-icon {
-  transform: rotate(0deg);
 }
 
 .tree-item-self.is-clickable:hover {
