@@ -533,14 +533,10 @@
 }
 
 .external-link:after {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
+  font-size: 0.9em;
   color: var(--shade-20);
-}
-
-.external-link:after {
   content: "\e917";
+  transform: rotate(135deg);
 }
 
 a[href*="obsidian://search"]:after

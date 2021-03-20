@@ -8,7 +8,7 @@ html .embedded-note-title .CodeMirror-lines {
   padding-top: 0;
 }
 
-.embedded-note-title.cc-pretty-preview .markdown-preview-view > h1,
+.embedded-note-title .markdown-preview-view > h1,
 .embedded-note-title .CodeMirror-scroll > h1 {
   padding: 3.6rem 0 var(--editor-line-height-rem);
   margin: 0;
@@ -23,7 +23,7 @@ html .embedded-note-title .CodeMirror-lines {
   width: calc(100% - 7rem);
 }
 
-.embedded-note-title.plugin-sliding-panes-rotate-header.cc-pretty-preview
+.embedded-note-title.plugin-sliding-panes-rotate-header
   .markdown-preview-view
   > h1,
 .embedded-note-title.plugin-sliding-panes-rotate-header
@@ -32,7 +32,7 @@ html .embedded-note-title .CodeMirror-lines {
   padding: 5rem 0 var(--editor-line-height-rem);
 }
 
-.embedded-note-title.cc-pretty-preview
+.embedded-note-title
   .is-readable-line-width.markdown-preview-view
   > h1 {
   padding-left: 3.5rem;
@@ -42,7 +42,7 @@ html .embedded-note-title .CodeMirror-lines {
   max-width: var(--max-width);
 }
 
-.embedded-note-title.plugin-sliding-panes-rotate-header.cc-pretty-preview
+.embedded-note-title.plugin-sliding-panes-rotate-header
   .markdown-preview-view
   > h1 {
   padding-left: var(--header-width);

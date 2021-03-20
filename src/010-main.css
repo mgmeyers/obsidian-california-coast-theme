@@ -519,20 +519,6 @@ button,
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale;
 }
-.markdown-source-view,
-.cm-s-obsidian .cm-formatting-hashtag,
-.cm-s-obsidian {
-  line-height: var(--line-height);
-  font-family: var(--text-editor) !important;
-}
-.cm-s-obsidian .cm-header,
-.cm-s-obsidian .cm-strong {
-  font-weight: var(--bold-weight);
-}
-.cm-formatting-header {
-  color: var(--text-faint) !important;
-  font-weight: var(--normal-weight) !important;
-}
 .view-header-title,
 .file-embed-title,
 .markdown-embed-title {

@@ -1,3 +1,16 @@
+
+.markdown-source-view,
+.cm-s-obsidian .cm-formatting-hashtag,
+.cm-s-obsidian {
+  line-height: var(--line-height);
+  font-family: var(--text-editor) !important;
+}
+.cm-s-obsidian .cm-header,
+.cm-s-obsidian .cm-strong {
+  font-weight: var(--bold-weight);
+}
+
+
 /* --------------- */
 /* Editor mode */
 
@@ -161,7 +174,7 @@ html .CodeMirror-lines {
 
 /* Editor Mode Lists */
 .cm-formatting-list {
-  color: var(--text-faint) !important;
+  color: var(--text-normal) !important;
 }
 .cm-s-obsidian span.cm-formatting-task {
   display: inline-block;
@@ -415,10 +428,6 @@ input[type="checkbox"]:checked:before {
 .external-link {
   background: none;
   padding-right: 0;
-}
-
-.external-link:after {
-  transform: rotate(135deg);
 }
 
 .external-link[href*="obsidian://search"]:after
