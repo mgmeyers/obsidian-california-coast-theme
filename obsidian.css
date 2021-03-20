@@ -2465,7 +2465,10 @@ input[type="range"]::-webkit-slider-thumb:active {
 /* Settings */
 
 .modal-close-button {
-  top: 0;
+  font-size: unset;
+  line-height: 1;
+  top: 9px;
+  right: 9px;
   cursor: var(--cursor);
 }
 .modal-close-button:before {
@@ -3630,7 +3633,7 @@ ol > li::before {
 
 /* Box Icons */
 
-
+.modal-close-button:before,
 .view-header-icon:after,
 .view-action[aria-label="Preview (Ctrl/Cmd+Click to open in new pane)"]:after,
 .view-action[aria-label="Edit (Ctrl/Cmd+Click to edit in new pane)"]:after,
@@ -3738,6 +3741,7 @@ ol > li::before {
   display: none;
 }
 
+.modal-close-button:before,
 .graph-controls-button[aria-label="Open graph settings"]:after,
 .graph-controls-button[aria-label="Close"]:after,
 .graph-controls-button[aria-label="Restore default settings"]:after,
@@ -3801,6 +3805,10 @@ ol > li::before {
   font-style: normal;
   font-variant: normal;
   line-height: 1;
+}
+
+.modal-close-button:before {
+  content: "\ebe9";
 }
 
 .view-header-icon:after {

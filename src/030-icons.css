@@ -99,7 +99,7 @@
 
 /* Box Icons */
 
-
+.modal-close-button:before,
 .view-header-icon:after,
 .view-action[aria-label="Preview (Ctrl/Cmd+Click to open in new pane)"]:after,
 .view-action[aria-label="Edit (Ctrl/Cmd+Click to edit in new pane)"]:after,
@@ -207,6 +207,7 @@
   display: none;
 }
 
+.modal-close-button:before,
 .graph-controls-button[aria-label="Open graph settings"]:after,
 .graph-controls-button[aria-label="Close"]:after,
 .graph-controls-button[aria-label="Restore default settings"]:after,
@@ -270,6 +271,10 @@
   font-style: normal;
   font-variant: normal;
   line-height: 1;
+}
+
+.modal-close-button:before {
+  content: "\ebe9";
 }
 
 .view-header-icon:after {

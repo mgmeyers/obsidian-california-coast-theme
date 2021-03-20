@@ -2460,7 +2460,10 @@ input[type="range"]::-webkit-slider-thumb:active {
 /* Settings */
 
 .modal-close-button {
-  top: 0;
+  font-size: unset;
+  line-height: 1;
+  top: 9px;
+  right: 9px;
   cursor: var(--cursor);
 }
 .modal-close-button:before {
