@@ -568,28 +568,18 @@ button,
 .menu {
   color: var(--shade-90);
   border: 1px solid var(--shade-10);
-  background: rgba(245, 245, 245, 0.5);
+  background: rgb(245, 245, 245);
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(60px);
 
   font-weight: 500;
   border-radius: 6px;
   padding: 10px 14px;
 }
 
-.is-translucent .menu {
-  background: rgba(245, 245, 245, 1);
-  backdrop-filter: none;
-}
 
 .theme-dark .menu {
   border: 1px solid var(--shade-20);
-  background: rgba(60, 60, 60, 0.5);
-}
-
-.is-translucent.theme-dark .menu {
-  background: rgba(60, 60, 60, 1);
-  backdrop-filter: none;
+  background: rgb(60, 60, 60);
 }
 
 .menu-item {
@@ -2008,7 +1998,6 @@ input.search-input:focus {
   right: 0;
   bottom: 0;
   background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(15px);
   border-top: 1px solid var(--shade-plus-darker);
   border-left: 1px solid var(--shade-plus-darker);
   border-top-left-radius: var(--radius-m);
@@ -2086,16 +2075,15 @@ input.search-input:focus {
   margin-bottom: 33px;
   position: static;
   border: 1px solid var(--shade-10);
-  background: rgba(245, 245, 245, 0.5);
+  background: rgb(245, 245, 245);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(60px);
 }
 
 .theme-dark
   .workspace-ribbon.mod-right:not(.is-collapsed)
   .workspace-ribbon-collapse-btn {
   border: 1px solid var(--shade-20);
-  background: rgba(60, 60, 60, 0.5);
+  background: rgb(60, 60, 60);
 }
 
 .hider-ribbon .workspace-ribbon-collapse-btn {
@@ -2231,9 +2219,8 @@ body:not(.plugin-sliding-panes-rotate-header)
 
   color: var(--shade-90);
   border: 1px solid var(--shade-10);
-  background: rgba(245, 245, 245, 0.6);
+  background: rgb(245, 245, 245);
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(60px);
 
   font-weight: 500;
   border-radius: var(--radius-m);
