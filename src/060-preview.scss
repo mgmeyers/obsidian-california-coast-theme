@@ -1,0 +1,328 @@
+/* Pretty preview */
+
+.cc-pretty-preview
+  .markdown-preview-view
+  .internal-query.is-embed
+  .internal-query-header {
+  padding: 10px 0;
+}
+
+.cc-pretty-preview .markdown-preview-view .internal-query.is-embed {
+  margin: 2.7rem 0;
+  border: none;
+  background: var(--shade-5);
+  border-radius: var(--radius-l);
+  padding: 10px;
+}
+
+.cc-pretty-preview
+  .markdown-preview-view
+  .internal-query.is-embed
+  .internal-query-header-title {
+  font-weight: 500;
+  font-style: italic;
+}
+
+.cc-pretty-preview .markdown-preview-view {
+  font-family: var(--text-editor);
+  font-size: var(--editor-font-size);
+  font-weight: var(--editor-font-weight);
+  line-height: var(--editor-line-height);
+  font-feature-settings: var(--editor-font-features);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.cc-pretty-preview .markdown-preview-section > div > * {
+  line-height: var(--editor-line-height);
+  margin: 0rem 0rem var(--editor-line-height-rem);
+}
+
+.cc-pretty-preview .markdown-preview-section > div .math * {
+  letter-spacing: 0;
+  margin-bottom: 0;
+}
+
+.cc-pretty-preview .markdown-preview-pusher + div h1,
+.cc-pretty-preview .markdown-preview-pusher + div h2,
+.cc-pretty-preview .markdown-preview-pusher + div h3,
+.cc-pretty-preview .markdown-preview-pusher + div h4,
+.cc-pretty-preview .markdown-preview-pusher + div h5,
+.cc-pretty-preview .markdown-preview-pusher + div h6,
+.cc-pretty-preview .markdown-preview-pusher + div:empty + div h1,
+.cc-pretty-preview .markdown-preview-pusher + div:empty + div h2,
+.cc-pretty-preview .markdown-preview-pusher + div:empty + div h3,
+.cc-pretty-preview .markdown-preview-pusher + div:empty + div h4,
+.cc-pretty-preview .markdown-preview-pusher + div:empty + div h5,
+.cc-pretty-preview .markdown-preview-pusher + div:empty + div h6,
+.cc-pretty-preview .markdown-preview-pusher + div[data-tag-name="pre"] + div h1,
+.cc-pretty-preview .markdown-preview-pusher + div[data-tag-name="pre"] + div h2,
+.cc-pretty-preview .markdown-preview-pusher + div[data-tag-name="pre"] + div h3,
+.cc-pretty-preview .markdown-preview-pusher + div[data-tag-name="pre"] + div h4,
+.cc-pretty-preview .markdown-preview-pusher + div[data-tag-name="pre"] + div h5,
+.cc-pretty-preview
+  .markdown-preview-pusher
+  + div[data-tag-name="pre"]
+  + div
+  h6 {
+  margin-top: 0;
+}
+
+.cc-pretty-preview .markdown-preview-view h1 {
+  font-size: 2.4rem !important;
+  line-height: 3.1rem;
+  margin-top: 7.5555555556rem;
+  margin-bottom: var(--editor-line-height-rem);
+}
+
+.cc-pretty-preview .markdown-preview-view h2 {
+  font-size: 1.6875rem !important;
+  line-height: 2.7rem;
+  margin-top: 4.7222222222rem;
+  margin-bottom: 0.9444444444rem;
+}
+
+.cc-pretty-preview .markdown-preview-view h3 {
+  font-size: 1.375rem !important;
+  line-height: var(--editor-line-height-rem);
+  margin-top: 3.7777777778rem;
+  margin-bottom: 0.9444444444rem;
+}
+
+.cc-pretty-preview .markdown-preview-view h4 {
+  font-size: 1.2rem !important;
+  line-height: var(--editor-line-height-rem);
+  margin-top: 2.8333333333rem;
+  margin-bottom: 0.9444444444rem;
+}
+
+.cc-pretty-preview .markdown-preview-view h5 {
+  font-size: 1rem !important;
+  line-height: var(--editor-line-height-rem);
+  margin-top: 4.7222222222rem;
+  margin-bottom: 0.9444444444rem;
+}
+
+.cc-pretty-preview .markdown-preview-view h6 {
+  font-size: 1rem !important;
+  line-height: var(--editor-line-height-rem);
+  margin-top: 4.7222222222rem;
+  margin-bottom: 0.9444444444rem;
+}
+
+.cc-pretty-preview .markdown-preview-view div[data-tag-name="h1"] + div > h2 {
+  margin-top: var(--editor-line-height-rem);
+}
+
+.cc-pretty-preview .markdown-preview-view div[data-tag-name="h2"] + div > h3,
+.cc-pretty-preview .markdown-preview-view div[data-tag-name="h3"] + div > h4,
+.cc-pretty-preview .markdown-preview-view div[data-tag-name="h4"] + div > h5 {
+  margin-top: 0.9444444444rem;
+}
+
+.cc-pretty-preview .markdown-preview-view div[data-tag-name="h5"] + div > h6 {
+  margin-top: -0.9444444444rem;
+}
+
+.cc-pretty-preview .markdown-preview-view h6 {
+  font-style: italic;
+  font-weight: normal;
+}
+
+.cc-pretty-preview
+  .markdown-preview-section
+  mjx-container[jax="CHTML"][display="true"] {
+  margin: 0;
+}
+
+.cc-pretty-preview .markdown-preview-section hr {
+  margin-top: var(--editor-line-height-rem);
+  margin-bottom: var(--editor-line-height-rem);
+  box-sizing: content-box;
+  border: 0;
+  color: transparent;
+  display: block;
+  height: var(--editor-line-height-rem);
+  position: relative;
+}
+
+.cc-pretty-preview .markdown-preview-section hr:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: var(--shade-10);
+  top: 50%;
+}
+
+.cc-pretty-preview .markdown-preview-section img {
+  border: 0;
+  max-width: 100%;
+  display: block;
+  margin: inherit auto;
+}
+
+.cc-pretty-preview .markdown-preview-section svg:not(:root) {
+  overflow: hidden;
+}
+
+.cc-pretty-preview .markdown-preview-section ul {
+  margin-left: 0;
+  padding-inline-start: 1.2em;
+  list-style: disc;
+}
+.cc-pretty-preview .markdown-preview-section ol {
+  margin-left: 0;
+  padding-inline-start: 1.2em;
+  list-style: decimal;
+}
+
+.cc-pretty-preview .markdown-preview-section li blockquote,
+.cc-pretty-preview .markdown-preview-section ol ol,
+.cc-pretty-preview .markdown-preview-section ul ul {
+  margin-bottom: 0;
+}
+
+.cc-pretty-preview
+  .markdown-preview-section
+  ul
+  > li:not(.task-list-item)::before,
+.cc-pretty-preview .markdown-preview-section ol > li::before {
+  display: none;
+}
+
+.cc-pretty-preview .markdown-preview-section ul li,
+.cc-pretty-preview .markdown-preview-section ol li {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.cc-pretty-preview .markdown-preview-section .footnotes li > p {
+  display: block;
+  margin-bottom: 0;
+}
+
+.cc-pretty-preview .markdown-preview-section .footnotes li > p + p {
+  margin-top: 0.3rem;
+}
+
+.cc-pretty-preview .markdown-preview-section blockquote {
+  position: relative;
+  font-style: italic;
+  border-radius: unset;
+  border: unset;
+  border-width: unset;
+  background-color: unset;
+  color: unset;
+  padding: 0 0 0 1.4375rem;
+  margin-inline-start: unset;
+}
+
+.cc-pretty-preview .markdown-preview-section blockquote:before {
+  position: absolute;
+  left: 0;
+  line-height: 1.88889 !important;
+}
+
+.cc-pretty-preview .markdown-preview-view blockquote p {
+  margin: 0;
+}
+
+.cc-pretty-preview .markdown-preview-view table {
+  border: 1px solid var(--shade-plus-darker);
+  margin-bottom: var(--editor-line-height-rem);
+  border-collapse: unset;
+  border-spacing: 0;
+  overflow: hidden;
+}
+
+.cc-pretty-preview .markdown-preview-view th,
+.cc-pretty-preview .markdown-preview-view td {
+  padding: 10px 15px;
+  vertical-align: top;
+  border-color: var(--shade-plus-darker);
+  border-left: none;
+  border-right: none;
+}
+
+.cc-pretty-preview .markdown-preview-view th:first-child,
+.cc-pretty-preview .markdown-preview-view td:first-child {
+  padding-left: 15px;
+}
+
+.cc-pretty-preview .markdown-preview-view th {
+  background-color: var(--shade-plus-darker);
+  border-bottom: none;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.cc-pretty-preview .markdown-preview-view tr + tr td {
+  border-top: none;
+}
+
+.cc-pretty-preview .markdown-preview-section br {
+  margin-bottom: 0;
+}
+
+.cc-pretty-preview .markdown-preview-section em,
+.cc-pretty-preview .markdown-preview-section i {
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+.cc-pretty-preview .markdown-preview-view code {
+  font-size: 0.9em;
+  margin: -2px 0;
+}
+
+.cc-pretty-preview .markdown-preview-view pre {
+  padding: 0 !important;
+  border-radius: var(--radius-l);
+}
+
+.cc-pretty-preview .markdown-preview-section pre > code {
+  padding: 1.4rem;
+  display: block;
+}
+
+.cc-pretty-preview .markdown-preview-view sub,
+.cc-pretty-preview .markdown-preview-view sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+.cc-pretty-preview .markdown-preview-view sup {
+  top: -0.5em;
+}
+
+.cc-pretty-preview .markdown-preview-view sub {
+  bottom: -0.25em;
+}
+
+.cc-pretty-preview .frontmatter-container .tag,
+.cc-pretty-preview .tag {
+  display: inline;
+  border: none;
+  font-size: unset;
+  padding: unset;
+}
+
+/* Icons */
+
+.cc-pretty-preview .markdown-preview-section blockquote:before {
+  display: inline-block;
+  line-height: 1;
+  margin-right: -0.6em;
+  opacity: 0.1;
+  width: 1rem;
+  height: 1rem;
+  content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" style="fill:rgb(0, 0, 0);"><path d="M6.5 10c-.223 0-.437.034-.65.065.069-.232.14-.468.254-.68.114-.308.292-.575.469-.844.148-.291.409-.488.601-.737.201-.242.475-.403.692-.604.213-.21.492-.315.714-.463.232-.133.434-.28.65-.35.208-.086.39-.16.539-.222.302-.125.474-.197.474-.197L9.758 4.03c0 0-.218.052-.597.144C8.97 4.222 8.737 4.278 8.472 4.345c-.271.05-.56.187-.882.312C7.272 4.799 6.904 4.895 6.562 5.123c-.344.218-.741.4-1.091.692C5.132 6.116 4.723 6.377 4.421 6.76c-.33.358-.656.734-.909 1.162C3.219 8.33 3.02 8.778 2.81 9.221c-.19.443-.343.896-.468 1.336-.237.882-.343 1.72-.384 2.437-.034.718-.014 1.315.028 1.747.015.204.043.402.063.539.017.109.025.168.025.168l.026-.006C2.535 17.474 4.338 19 6.5 19c2.485 0 4.5-2.015 4.5-4.5S8.985 10 6.5 10zM17.5 10c-.223 0-.437.034-.65.065.069-.232.14-.468.254-.68.114-.308.292-.575.469-.844.148-.291.409-.488.601-.737.201-.242.475-.403.692-.604.213-.21.492-.315.714-.463.232-.133.434-.28.65-.35.208-.086.39-.16.539-.222.302-.125.474-.197.474-.197L20.758 4.03c0 0-.218.052-.597.144-.191.048-.424.104-.689.171-.271.05-.56.187-.882.312-.317.143-.686.238-1.028.467-.344.218-.741.4-1.091.692-.339.301-.748.562-1.05.944-.33.358-.656.734-.909 1.162C14.219 8.33 14.02 8.778 13.81 9.221c-.19.443-.343.896-.468 1.336-.237.882-.343 1.72-.384 2.437-.034.718-.014 1.315.028 1.747.015.204.043.402.063.539.017.109.025.168.025.168l.026-.006C13.535 17.474 15.338 19 17.5 19c2.485 0 4.5-2.015 4.5-4.5S19.985 10 17.5 10z"></path></svg>');
+}
+
+.theme-dark.cc-pretty-preview .markdown-preview-section blockquote:before {
+  content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" style="fill:rgb(204,204,204);"><path d="M6.5 10c-.223 0-.437.034-.65.065.069-.232.14-.468.254-.68.114-.308.292-.575.469-.844.148-.291.409-.488.601-.737.201-.242.475-.403.692-.604.213-.21.492-.315.714-.463.232-.133.434-.28.65-.35.208-.086.39-.16.539-.222.302-.125.474-.197.474-.197L9.758 4.03c0 0-.218.052-.597.144C8.97 4.222 8.737 4.278 8.472 4.345c-.271.05-.56.187-.882.312C7.272 4.799 6.904 4.895 6.562 5.123c-.344.218-.741.4-1.091.692C5.132 6.116 4.723 6.377 4.421 6.76c-.33.358-.656.734-.909 1.162C3.219 8.33 3.02 8.778 2.81 9.221c-.19.443-.343.896-.468 1.336-.237.882-.343 1.72-.384 2.437-.034.718-.014 1.315.028 1.747.015.204.043.402.063.539.017.109.025.168.025.168l.026-.006C2.535 17.474 4.338 19 6.5 19c2.485 0 4.5-2.015 4.5-4.5S8.985 10 6.5 10zM17.5 10c-.223 0-.437.034-.65.065.069-.232.14-.468.254-.68.114-.308.292-.575.469-.844.148-.291.409-.488.601-.737.201-.242.475-.403.692-.604.213-.21.492-.315.714-.463.232-.133.434-.28.65-.35.208-.086.39-.16.539-.222.302-.125.474-.197.474-.197L20.758 4.03c0 0-.218.052-.597.144-.191.048-.424.104-.689.171-.271.05-.56.187-.882.312-.317.143-.686.238-1.028.467-.344.218-.741.4-1.091.692-.339.301-.748.562-1.05.944-.33.358-.656.734-.909 1.162C14.219 8.33 14.02 8.778 13.81 9.221c-.19.443-.343.896-.468 1.336-.237.882-.343 1.72-.384 2.437-.034.718-.014 1.315.028 1.747.015.204.043.402.063.539.017.109.025.168.025.168l.026-.006C13.535 17.474 15.338 19 17.5 19c2.485 0 4.5-2.015 4.5-4.5S19.985 10 17.5 10z"></path></svg>');
+}

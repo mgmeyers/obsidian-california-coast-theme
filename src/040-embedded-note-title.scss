@@ -1,0 +1,50 @@
+/* Embedded note titles */
+
+.embedded-note-title .markdown-preview-sizer {
+  padding-top: 0rem;
+}
+
+html .embedded-note-title .CodeMirror-lines {
+  padding-top: 0;
+}
+
+.embedded-note-title.cc-pretty-preview .markdown-preview-view > h1,
+.embedded-note-title .CodeMirror-scroll > h1 {
+  padding: 3.6rem 0 var(--editor-line-height-rem);
+  margin: 0;
+  font-family: var(--text-editor);
+  font-weight: 500;
+  font-size: 2rem !important;
+  line-height: 2.7rem;
+}
+
+.embedded-note-title .CodeMirror-scroll > h1 {
+  position: absolute;
+  width: calc(100% - 7rem);
+}
+
+.embedded-note-title.plugin-sliding-panes-rotate-header.cc-pretty-preview
+  .markdown-preview-view
+  > h1,
+.embedded-note-title.plugin-sliding-panes-rotate-header
+  .CodeMirror-scroll
+  > h1 {
+  padding: 5rem 0 var(--editor-line-height-rem);
+}
+
+.embedded-note-title.cc-pretty-preview
+  .is-readable-line-width.markdown-preview-view
+  > h1 {
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+  margin: 0 auto;
+  width: var(--line-width);
+  max-width: var(--max-width);
+}
+
+.embedded-note-title.plugin-sliding-panes-rotate-header.cc-pretty-preview
+  .markdown-preview-view
+  > h1 {
+  padding-left: var(--header-width);
+  padding-right: calc(var(--header-width) * 2);
+}
