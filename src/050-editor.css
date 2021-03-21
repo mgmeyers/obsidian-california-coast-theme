@@ -53,6 +53,7 @@
 }
 
 .cm-s-obsidian span.cm-comment {
+  color: var(--shade-70);
   font-style: italic;
 }
 
