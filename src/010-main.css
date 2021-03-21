@@ -16,6 +16,8 @@
     Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   --text-editor: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  --text-preview: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   --font-monospace: Menlo, SFMono-Regular, Consolas, "Roboto Mono", monospace;
 
   /* Sizes, weights, padding */
@@ -1983,7 +1985,7 @@ input.search-input:focus {
   position: absolute;
   right: 0;
   bottom: 0;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgb(255, 255, 255);
   border-top: 1px solid var(--shade-plus-darker);
   border-left: 1px solid var(--shade-plus-darker);
   border-top-left-radius: var(--radius-m);
@@ -1996,7 +1998,7 @@ input.search-input:focus {
 }
 
 .theme-dark .status-bar {
-  background: rgba(50, 50, 50, 0.9);
+  background: rgb(50, 50, 50);
   border-color: var(--shade-3);
 }
 

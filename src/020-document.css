@@ -26,6 +26,11 @@
   margin-bottom: 0;
 }
 
+.markdown-source-view.mod-cm5 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .CodeMirror-scroll::-webkit-scrollbar-track,
 .CodeMirror-scroll::-webkit-scrollbar-thumb,
 .CodeMirror-scroll::-webkit-scrollbar {

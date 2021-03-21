@@ -21,6 +21,8 @@
     Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   --text-editor: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  --text-preview: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   --font-monospace: Menlo, SFMono-Regular, Consolas, "Roboto Mono", monospace;
 
   /* Sizes, weights, padding */
@@ -1988,7 +1990,7 @@ input.search-input:focus {
   position: absolute;
   right: 0;
   bottom: 0;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgb(255, 255, 255);
   border-top: 1px solid var(--shade-plus-darker);
   border-left: 1px solid var(--shade-plus-darker);
   border-top-left-radius: var(--radius-m);
@@ -2001,7 +2003,7 @@ input.search-input:focus {
 }
 
 .theme-dark .status-bar {
-  background: rgba(50, 50, 50, 0.9);
+  background: rgb(50, 50, 50);
   border-color: var(--shade-3);
 }
 
@@ -2916,6 +2918,11 @@ html .plugin-sliding-panes-rotate-header.embedded-note-title .CodeMirror-lines {
   padding-right: 3.5rem;
   margin-right: 0;
   margin-bottom: 0;
+}
+
+.markdown-source-view.mod-cm5 {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .CodeMirror-scroll::-webkit-scrollbar-track,
@@ -4413,6 +4420,16 @@ a[href*="obsidian://search"]:after
   content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" style="fill:rgba(204,204,204);"><path d="M12,2C6.486,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.514,2,12,2z"></path></svg>');
 }
 
+.markdown-preview-view {
+  font-family: var(--text-preview);
+  font-size: var(--editor-font-size);
+  font-weight: var(--editor-font-weight);
+  line-height: var(--editor-line-height);
+  font-feature-settings: var(--editor-font-features);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .markdown-preview-view
   .internal-query.is-embed
   .internal-query-header {
@@ -4432,16 +4449,6 @@ a[href*="obsidian://search"]:after
   .internal-query-header-title {
   font-weight: 500;
   font-style: italic;
-}
-
-.markdown-preview-view {
-  font-family: var(--text-editor);
-  font-size: var(--editor-font-size);
-  font-weight: var(--editor-font-weight);
-  line-height: var(--editor-line-height);
-  font-feature-settings: var(--editor-font-features);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 .markdown-preview-section hr {
@@ -4628,7 +4635,7 @@ a[href*="obsidian://search"]:after
 /* Pretty preview */
 .cc-pretty-preview .markdown-preview-section > div > * {
   line-height: var(--editor-line-height);
-  margin: 0rem 0rem var(--editor-line-height-rem);
+  margin: 0 0 var(--editor-line-height-rem);
 }
 
 .cc-pretty-preview .markdown-preview-section > div .math * {
@@ -4668,7 +4675,7 @@ a[href*="obsidian://search"]:after
 .cc-pretty-preview .markdown-preview-view div[data-tag-name="h2"] + div > h3,
 .cc-pretty-preview .markdown-preview-view div[data-tag-name="h3"] + div > h4,
 .cc-pretty-preview .markdown-preview-view div[data-tag-name="h4"] + div > h5 {
-  margin-top: 0.9444444444rem;
+  margin-top: calc(var(--editor-line-height-rem) / 2);
 }
 
 .cc-pretty-preview .markdown-preview-view div[data-tag-name="h5"] + div > h6 {

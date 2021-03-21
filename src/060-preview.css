@@ -1,3 +1,13 @@
+.markdown-preview-view {
+  font-family: var(--text-preview);
+  font-size: var(--editor-font-size);
+  font-weight: var(--editor-font-weight);
+  line-height: var(--editor-line-height);
+  font-feature-settings: var(--editor-font-features);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .markdown-preview-view
   .internal-query.is-embed
   .internal-query-header {
@@ -17,16 +27,6 @@
   .internal-query-header-title {
   font-weight: 500;
   font-style: italic;
-}
-
-.markdown-preview-view {
-  font-family: var(--text-editor);
-  font-size: var(--editor-font-size);
-  font-weight: var(--editor-font-weight);
-  line-height: var(--editor-line-height);
-  font-feature-settings: var(--editor-font-features);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 .markdown-preview-section hr {
@@ -213,7 +213,7 @@
 /* Pretty preview */
 .cc-pretty-preview .markdown-preview-section > div > * {
   line-height: var(--editor-line-height);
-  margin: 0rem 0rem var(--editor-line-height-rem);
+  margin: 0 0 var(--editor-line-height-rem);
 }
 
 .cc-pretty-preview .markdown-preview-section > div .math * {
@@ -253,7 +253,7 @@
 .cc-pretty-preview .markdown-preview-view div[data-tag-name="h2"] + div > h3,
 .cc-pretty-preview .markdown-preview-view div[data-tag-name="h3"] + div > h4,
 .cc-pretty-preview .markdown-preview-view div[data-tag-name="h4"] + div > h5 {
-  margin-top: 0.9444444444rem;
+  margin-top: calc(var(--editor-line-height-rem) / 2);
 }
 
 .cc-pretty-preview .markdown-preview-view div[data-tag-name="h5"] + div > h6 {
