@@ -8,6 +8,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.markdown-preview-section > div {
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+}
+
 .markdown-preview-view
   .internal-query.is-embed
   .internal-query-header {

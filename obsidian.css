@@ -1060,8 +1060,6 @@ body.theme-dark:not(.is-translucent):not(.hider-frameless)
 }
 
 .is-readable-line-width .markdown-preview-section > div {
-  padding-left: 3.5rem;
-  padding-right: 3.5rem;
   margin: 0 auto 0 auto;
   width: var(--line-width);
   max-width: var(--max-width);
@@ -4431,6 +4429,11 @@ a[href*="obsidian://search"]:after
   -moz-osx-font-smoothing: grayscale;
 }
 
+.markdown-preview-section > div {
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+}
+
 .markdown-preview-view
   .internal-query.is-embed
   .internal-query-header {
@@ -4924,11 +4927,15 @@ html .embedded-note-title .CodeMirror-lines {
   padding: 5rem 0 var(--editor-line-height-rem);
 }
 
-.embedded-note-title
-  .is-readable-line-width.markdown-preview-view
+.embedded-note-title .markdown-preview-view
   > h1 {
   padding-left: 3.5rem;
   padding-right: 3.5rem;
+}
+
+.embedded-note-title
+  .is-readable-line-width.markdown-preview-view
+  > h1 {
   margin: 0 auto;
   width: var(--line-width);
   max-width: var(--max-width);
