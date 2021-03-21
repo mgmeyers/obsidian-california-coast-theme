@@ -155,6 +155,7 @@
 }
 
 .markdown-preview-view code {
+  color: var(--text-normal);
   font-size: 0.9em;
   margin: -2px 0;
 }
@@ -256,7 +257,7 @@
 }
 
 .cc-pretty-preview .markdown-preview-view div[data-tag-name="h5"] + div > h6 {
-  margin-top: -0.9444444444rem;
+  margin-top: 0;
 }
 
 .cc-pretty-preview

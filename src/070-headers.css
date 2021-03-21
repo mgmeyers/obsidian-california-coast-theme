@@ -1,0 +1,238 @@
+:root {
+    --h1-size: 1.602rem;
+    --h1-line-height: 1.4;
+    --h1-margin-top: 4;
+    --h1-margin-bottom: 1; 
+    --h1-weight: 500; 
+    --h1-style: normal; 
+
+    --h2-size: 1.424rem;
+    --h2-line-height: 1.4;
+    --h2-margin-top: 2.5;
+    --h2-margin-bottom: 0.5; 
+    --h2-weight: 500; 
+    --h2-style: normal; 
+
+    --h3-size: 1.266rem;
+    --h3-line-height: 1.4;
+    --h3-margin-top: 2;
+    --h3-margin-bottom: 0.5; 
+    --h3-weight: 500; 
+    --h3-style: normal; 
+
+    --h4-size: 1.125rem;
+    --h4-line-height: 1.5;
+    --h4-margin-top: 1.5;
+    --h4-margin-bottom: 0.5; 
+    --h4-weight: 500; 
+    --h4-style: normal; 
+
+    --h5-size: 1rem;
+    --h5-line-height: 1.5;
+    --h5-margin-top: 1.5;
+    --h5-margin-bottom: 0.5; 
+    --h5-weight: 500; 
+    --h5-style: normal; 
+
+    --h6-size: 1rem;
+    --h6-line-height: 1.5;
+    --h6-margin-top: 1.5;
+    --h6-margin-bottom: 0.5; 
+    --h6-weight: 500; 
+    --h6-style: italic; 
+}
+
+.cc-pretty-preview .markdown-preview-view h1,
+.markdown-preview-view h1 {
+  font-size: var(--h1-size) !important;
+  line-height: var(--h1-line-height);
+  margin-top: calc(var(--h1-margin-top) * var(--editor-line-height-rem));
+  margin-bottom: calc(var(--h1-margin-bottom) * var(--editor-line-height-rem));
+  font-weight: var(--h1-weight);
+  font-style: var(--h1-style);
+}
+
+.cc-pretty-preview .markdown-preview-view h2,
+.markdown-preview-view h2 {
+  font-size: var(--h2-size) !important;
+  line-height: var(--h2-line-height);
+  margin-top: calc(var(--h2-margin-top) * var(--editor-line-height-rem));
+  margin-bottom: calc(var(--h2-margin-bottom) * var(--editor-line-height-rem));
+  font-weight: var(--h2-weight);
+  font-style: var(--h2-style);
+}
+
+.cc-pretty-preview .markdown-preview-view h3,
+.markdown-preview-view h3 {
+  font-size: var(--h3-size) !important;
+  line-height: var(--h3-line-height);
+  margin-top: calc(var(--h3-margin-top) * var(--editor-line-height-rem));
+  margin-bottom: calc(var(--h3-margin-bottom) * var(--editor-line-height-rem));
+  font-weight: var(--h3-weight);
+  font-style: var(--h3-style);
+}
+
+.cc-pretty-preview .markdown-preview-view h4,
+.markdown-preview-view h4 {
+  font-size: var(--h4-size) !important;
+  line-height: var(--h4-line-height);
+  margin-top: calc(var(--h4-margin-top) * var(--editor-line-height-rem));
+  margin-bottom: calc(var(--h4-margin-bottom) * var(--editor-line-height-rem));
+  font-weight: var(--h4-weight);
+  font-style: var(--h4-style);
+}
+
+.cc-pretty-preview .markdown-preview-view h5,
+.markdown-preview-view h5 {
+  font-size: var(--h5-size) !important;
+  line-height: var(--h5-line-height);
+  margin-top: calc(var(--h5-margin-top) * var(--editor-line-height-rem));
+  margin-bottom: calc(var(--h5-margin-bottom) * var(--editor-line-height-rem));
+  font-weight: var(--h5-weight);
+  font-style: var(--h5-style);
+}
+
+.cc-pretty-preview .markdown-preview-view h6,
+.markdown-preview-view h6 {
+  font-size: var(--h6-size) !important;
+  line-height: var(--h6-line-height);
+  margin-top: calc(var(--h6-margin-top) * var(--editor-line-height-rem));
+  margin-bottom: calc(var(--h6-margin-bottom) * var(--editor-line-height-rem));
+  font-weight: var(--h6-weight);
+  font-style: var(--h6-style);
+  color: var(--text-normal);
+}
+
+.empty-state-title,
+.HyperMD-header-1,
+.cm-header-1 {
+  font-size: var(--h1-size) !important;
+  font-weight: var(--h1-weight) !important;
+  font-style: var(--h1-style);
+  line-height: var(--h1-line-height) !important;
+}
+
+.cc-pretty-editor pre.HyperMD-header .cm-formatting-header-1:not(:only-child) {
+  line-height: calc(var(--h1-size) * 1.8) !important;
+}
+
+.HyperMD-header-2,
+.cm-header-2 {
+  font-size: var(--h2-size) !important;
+  font-weight: var(--h2-weight) !important;
+  font-style: var(--h2-style);
+  line-height: var(--h2-line-height) !important;
+}
+
+.cc-pretty-editor pre.HyperMD-header .cm-formatting-header-2:not(:only-child) {
+  line-height: calc(var(--h2-size) * 1.8) !important;
+}
+
+.HyperMD-header-3,
+.cm-header-3 {
+  font-size: var(--h3-size) !important;
+  font-weight: var(--h3-weight) !important;
+  font-style: var(--h3-style);
+  line-height: var(--h3-line-height) !important;
+}
+
+.cc-pretty-editor pre.HyperMD-header .cm-formatting-header-3:not(:only-child) {
+  line-height: calc(var(--h3-size) * 1.8) !important;
+}
+
+.HyperMD-header-4,
+.cm-header-4 {
+  font-variant: unset;
+  text-transform: unset;
+  letter-spacing: unset;
+  font-size: var(--h4-size) !important;
+  font-weight: var(--h4-weight) !important;
+  font-style: var(--h4-style);
+  line-height: var(--h4-line-height) !important;
+}
+
+.cc-pretty-editor pre.HyperMD-header .cm-formatting-header-4:not(:only-child) {
+  line-height: calc(var(--h4-size) * 1.8) !important;
+}
+
+.HyperMD-header-5,
+.cm-header-5 {
+  font-variant: unset;
+  text-transform: unset;
+  letter-spacing: unset;
+  font-size: var(--h5-size) !important;
+  font-weight: var(--h5-weight) !important;
+  font-style: var(--h5-style);
+  line-height: var(--h5-line-height) !important;
+}
+
+.cc-pretty-editor pre.HyperMD-header .cm-formatting-header-5:not(:only-child) {
+  line-height: calc(var(--h5-size) * 1.8) !important;
+}
+
+.HyperMD-header-6,
+.cm-header-6 {
+  font-variant: unset;
+  text-transform: unset;
+  letter-spacing: unset;
+  color: unset;
+  font-size: var(--h6-size) !important;
+  font-weight: var(--h6-weight) !important;
+  font-style: var(--h6-style);
+  line-height: var(--h6-line-height) !important;
+}
+
+.cc-pretty-editor pre.HyperMD-header .cm-formatting-header-6:not(:only-child) {
+  line-height: calc(var(--h6-size) * 1.8) !important;
+}
+
+/* Embedded note titles */
+
+.embedded-note-title .markdown-preview-sizer {
+  padding-top: 0rem;
+}
+
+html .embedded-note-title .CodeMirror-lines {
+  padding-top: 0;
+}
+
+.embedded-note-title .markdown-preview-view > h1,
+.embedded-note-title .CodeMirror-scroll > h1 {
+  padding: 3.6rem 0 var(--editor-line-height-rem);
+  margin: 0;
+  font-family: var(--text-editor);
+  font-weight: var(--h1-weight);
+  font-size: var(--h1-size);
+  line-height: var(--h1-line-height);
+}
+
+.embedded-note-title .CodeMirror-scroll > h1 {
+  position: absolute;
+  width: calc(100% - 7rem);
+}
+
+.embedded-note-title.plugin-sliding-panes-rotate-header
+  .markdown-preview-view
+  > h1,
+.embedded-note-title.plugin-sliding-panes-rotate-header
+  .CodeMirror-scroll
+  > h1 {
+  padding: 5rem 0 var(--editor-line-height-rem);
+}
+
+.embedded-note-title
+  .is-readable-line-width.markdown-preview-view
+  > h1 {
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+  margin: 0 auto;
+  width: var(--line-width);
+  max-width: var(--max-width);
+}
+
+.embedded-note-title.plugin-sliding-panes-rotate-header
+  .markdown-preview-view
+  > h1 {
+  padding-left: var(--header-width);
+  padding-right: calc(var(--header-width) * 2);
+}
