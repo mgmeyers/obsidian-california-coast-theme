@@ -21,8 +21,6 @@
     Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   --text-editor: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  --text-preview: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   --font-monospace: Menlo, SFMono-Regular, Consolas, "Roboto Mono", monospace;
 
   /* Sizes, weights, padding */
@@ -4422,7 +4420,7 @@ a[href*="obsidian://search"]:after
 }
 
 .markdown-preview-view {
-  font-family: var(--text-preview);
+  font-family: var(--text-editor);
   font-size: var(--editor-font-size);
   font-weight: var(--editor-font-weight);
   line-height: var(--editor-line-height);
