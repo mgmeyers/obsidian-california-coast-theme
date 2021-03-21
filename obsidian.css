@@ -3544,6 +3544,8 @@ ol > li::before {
   fill: currentColor;
 }
 
+.setting-add-hotkey-button svg, 
+.setting-restore-hotkey-button svg,
 .internal-query-header-icon svg,
 .clickable-icon svg {
   fill: currentColor;
