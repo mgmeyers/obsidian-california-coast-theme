@@ -42,7 +42,7 @@
 /* Fancy cursor */
 .fancy-cursor .CodeMirror-cursor {
   border-left: 2px solid var(--text-accent);
-  transform: translate3d(-0.5px, 0, 0);
+  transform: translateX(-0.5px);
 }
 .markdown-source-view {
   padding: 0;
@@ -295,7 +295,7 @@ input[type="checkbox"]:checked:before {
   position: absolute;
   left: -2.5rem;
   top: 50%;
-  transform: translate3d(0, -50%, 0);
+  transform: translateY(-50%);
 }
 
 .markdown-preview-view li > .collapse-indicator:before {
@@ -390,7 +390,7 @@ input[type="checkbox"]:checked:before {
   width: 18px;
   left: 0 !important;
   padding-right: 0;
-  transform: translate3d(2rem, 0, 0);
+  transform: translateX(2rem);
 }
 
 .CodeMirror-foldmarker {

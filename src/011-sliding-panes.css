@@ -73,7 +73,7 @@ body.plugin-sliding-panes-rotate-header
   line-height: 1;
   padding: 10px 6px !important;
   margin: 0;
-  transform: translate3d(1.5px, 0, 0);
+  transform: translateX(1.5px);
 }
 body.plugin-sliding-panes-rotate-header
   .workspace

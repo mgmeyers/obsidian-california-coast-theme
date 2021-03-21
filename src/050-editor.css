@@ -93,7 +93,7 @@
   > span:first-child:not(:only-child) {
   position: absolute;
   left: 0;
-  transform: translate3d(-100%, 0, 0);
+  transform: translateX(-100%);
   font-size: 11px !important;
   display: block;
   height: 100%;
@@ -123,7 +123,7 @@
   width: 1px;
   position: absolute;
   top: 0;
-  transform: translate3d(-1.5px, 0, 0);
+  transform: translateX(-1.5px);
   background: var(--shade-5);
   height: 100%;
 }
@@ -182,7 +182,7 @@
   top: 51%;
   left: 0;
   display: block;
-  transform: translate3d(-56%, -50%, 0);
+  transform: translate(-56%, -50%);
   width: 6px;
   height: 6px;
   content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0);"><path d="M12,2C6.486,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.514,2,12,2z"></path></svg>');

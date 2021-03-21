@@ -479,7 +479,7 @@ body:not(.hider-ribbon):not(.hider-frameless)
   margin: -0.5px auto 0;
   text-align: center;
   top: 50%;
-  transform: translate3d(0, -50%, 0);
+  transform: translateY(-50%);
   padding: 0;
   left: 0;
   right: 0;
@@ -1691,7 +1691,7 @@ body:not(.is-grabbing) .nav-folder-title:hover {
   vertical-align: unset;
   align-items: center;
   color: var(--text-faint);
-  transform: translate3d(0, -50%, 0);
+  transform: translateY(-50%);
 }
 .search-input-clear-button:hover {
   color: var(--text-normal);
