@@ -636,6 +636,9 @@ input.prompt-input:hover {
   border: 0;
   background: var(--background-primary);
   padding-left: 10px;
+  height: unset;
+  flex-grow: 0;
+  flex-shrink: 0;
 }
 .modal-container .suggestion-item.is-selected {
   border-radius: 6px;
