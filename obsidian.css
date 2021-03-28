@@ -3726,6 +3726,7 @@ ol > li::before {
 .side-dock-ribbon-action[aria-label="Open Markdown importer"] > svg,
 .side-dock-ribbon-action[aria-label="Open today's note"] > svg,
 .side-dock-ribbon-action[aria-label="Open another vault"] > svg,
+.side-dock-ribbon-action[aria-label="Open command palette"] > svg,
 .side-dock-ribbon-action[aria-label="Help"] > svg,
 .side-dock-ribbon-action[aria-label="Settings"] > svg {
   display: none;
@@ -3784,6 +3785,7 @@ ol > li::before {
 .side-dock-ribbon-action[aria-label="Open Markdown importer"]:after,
 .side-dock-ribbon-action[aria-label="Open today's note"]:after,
 .side-dock-ribbon-action[aria-label="Open another vault"]:after,
+.side-dock-ribbon-action[aria-label="Open command palette"]:after,
 .side-dock-ribbon-action[aria-label="Help"]:after,
 .side-dock-ribbon-action[aria-label="Settings"]:after,
 .CodeMirror-foldmarker:after,
@@ -3952,12 +3954,12 @@ ol > li::before {
   content: "\e947";
 }
 
-.side-dock-ribbon-action[aria-label="Help"]:after {
-  content: "\ea6f";
+.side-dock-ribbon-action[aria-label="Open command palette"]:after {
+  content: "\eb9e";
 }
 
-.side-dock-ribbon-action[aria-label="Settings"]:after {
-  content: "\e9d0";
+.side-dock-ribbon-action[aria-label="Help"]:after {
+  content: "\ea6f";
 }
 
 .side-dock-ribbon-action[aria-label="Settings"]:after {
