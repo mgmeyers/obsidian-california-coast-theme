@@ -188,16 +188,16 @@
 
 /* Embedded note titles */
 
-.embedded-note-title .markdown-preview-sizer {
+.embedded-note-titles .markdown-preview-sizer {
   padding-top: 0rem;
 }
 
-html .embedded-note-title .CodeMirror-lines {
+html .embedded-note-titles .CodeMirror-lines {
   padding-top: 0;
 }
 
-.embedded-note-title .markdown-preview-view > h1,
-.embedded-note-title .CodeMirror-scroll > h1 {
+.embedded-note-titles .markdown-preview-view > h1,
+.embedded-note-titles .CodeMirror-scroll > h1 {
   padding: 3.6rem 0 var(--editor-line-height-rem);
   margin: 0;
   font-family: var(--text-editor);
@@ -206,35 +206,35 @@ html .embedded-note-title .CodeMirror-lines {
   line-height: var(--h1-line-height);
 }
 
-.embedded-note-title .CodeMirror-scroll > h1 {
+.embedded-note-titles .CodeMirror-scroll > h1 {
   position: absolute;
   width: calc(100% - 7rem);
 }
 
-.embedded-note-title.plugin-sliding-panes-rotate-header
+.embedded-note-titles.plugin-sliding-panes-rotate-header
   .markdown-preview-view
   > h1,
-.embedded-note-title.plugin-sliding-panes-rotate-header
+.embedded-note-titles.plugin-sliding-panes-rotate-header
   .CodeMirror-scroll
   > h1 {
   padding: 5rem 0 var(--editor-line-height-rem);
 }
 
-.embedded-note-title .markdown-preview-view
+.embedded-note-titles .markdown-preview-view
   > h1 {
-  padding-left: 3.5rem;
-  padding-right: 3.5rem;
+  padding-left: 3.5rem !important;
+  padding-right: 3.5rem !important;
 }
 
-.embedded-note-title
+.embedded-note-titles
   .is-readable-line-width.markdown-preview-view
   > h1 {
   margin: 0 auto;
-  width: var(--line-width);
-  max-width: var(--max-width);
+  width: var(--line-width) !important;
+  max-width: var(--max-width) !important;
 }
 
-.embedded-note-title.plugin-sliding-panes-rotate-header
+.embedded-note-titles.plugin-sliding-panes-rotate-header
   .markdown-preview-view
   > h1 {
   padding-left: var(--header-width);

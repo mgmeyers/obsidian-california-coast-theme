@@ -1,9 +1,4 @@
 :root {
-  --base-h: 0; /* Base hue */
-  --base-s: 0%; /* Base saturation */
-  --base-d: 16%; /* Base lightness Dark Mode  - 0 is black */
-  --base-l: 96%; /* Base lightness Light Mode  - 100 is white */
-
   --accent-h: 211; /* Accent hue */
   --accent-s: 100%; /* Accent saturation */
   --accent-l: 50%; /* Accent lightness Light Mode */
@@ -24,7 +19,7 @@
 
   --editor-font-size: 18px;
   --editor-line-height: 1.88889;
-  --editor-line-height-rem: 1.88889rem;
+  --editor-line-height-rem: calc(var(--editor-line-height) * 1rem);
   --editor-font-weight: 400;
   --editor-font-features: "";
 
@@ -2470,7 +2465,12 @@ input[type="range"]::-webkit-slider-thumb:active {
 }
 .setting-hotkey {
   background-color: var(--background-modifier-border);
-  padding: 3px 25px 3px 10px;
+  padding: 4px 4px 4px 10px;
+  line-height: 1;
+  min-height: 0;
+}
+.setting-add-hotkey-button, .setting-restore-hotkey-button {
+  color: var(--text-muted);
 }
 .setting-hotkey.mod-empty {
   background: transparent;
