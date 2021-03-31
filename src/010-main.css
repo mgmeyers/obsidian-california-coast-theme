@@ -2466,7 +2466,7 @@ input[type="range"]::-webkit-slider-thumb:active {
 .setting-hotkey {
   background-color: var(--background-modifier-border);
   padding: 4px 4px 4px 10px;
-  line-height: 1;
+  line-height: 18px;
   min-height: 0;
 }
 .setting-add-hotkey-button, .setting-restore-hotkey-button {

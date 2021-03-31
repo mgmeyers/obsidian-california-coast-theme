@@ -43,15 +43,20 @@
 .setting-add-hotkey-button,
 .setting-restore-hotkey-button {
   line-height: 1;
+  height: unset;
+  padding: 4px 6px;
+}
+
+.setting-add-hotkey-button:hover, .setting-restore-hotkey-button:hover {
+  color: var(--text-muted);
+  background: var(--shade-plus-darker);
 }
 
 .setting-add-hotkey-button > svg {
   width: 18px;
   height: 18px;
-}
-.setting-restore-hotkey-button[aria-label="Restore default"] > svg {
-  width: 14px;
-  height: 14px;
+  position: static;
+  display: block;
 }
 
 .view-header-icon,
@@ -154,7 +159,7 @@
 .side-dock-ribbon-action[aria-label="Open quick switcher"]:after,
 .side-dock-ribbon-action[aria-label="Open graph view"]:after,
 .side-dock-ribbon-action[aria-label="Open Markdown importer"]:after,
-.side-dock-ribbon-action[aria-label="Open today's note"]:after,
+.side-dock-ribbon-action[aria-label="Open today's daily note"]:after,
 .side-dock-ribbon-action[aria-label="Open another vault"]:after,
 .side-dock-ribbon-action[aria-label="Help"]:after,
 .side-dock-ribbon-action[aria-label="Settings"]:after {
@@ -176,7 +181,11 @@
   transform: rotate(-90deg);
 }
 
-
+.setting-editor-extra-setting-button[aria-label^="Restore "] > svg,
+.setting-editor-extra-setting-button[aria-label="Uninstall"] > svg,
+.setting-restore-hotkey-button > svg,
+.clickable-icon[aria-label^="Open "] > svg,
+.clickable-icon[aria-label^="Reload "] > svg,
 .setting-hotkey-icon.setting-delete-hotkey > svg,
 .graph-controls-button[aria-label="Open graph settings"] > svg,
 .graph-controls-button[aria-label="Close"] > svg,
@@ -233,7 +242,7 @@
 .side-dock-ribbon-action[aria-label="Open quick switcher"] > svg,
 .side-dock-ribbon-action[aria-label="Open graph view"] > svg,
 .side-dock-ribbon-action[aria-label="Open Markdown importer"] > svg,
-.side-dock-ribbon-action[aria-label="Open today's note"] > svg,
+.side-dock-ribbon-action[aria-label="Open today's daily note"] > svg,
 .side-dock-ribbon-action[aria-label="Open another vault"] > svg,
 .side-dock-ribbon-action[aria-label="Open command palette"] > svg,
 .side-dock-ribbon-action[aria-label="Help"] > svg,
@@ -241,6 +250,12 @@
   display: none;
 }
 
+
+.setting-editor-extra-setting-button[aria-label^="Restore "]:before,
+.setting-editor-extra-setting-button[aria-label="Uninstall"]:before,
+.setting-restore-hotkey-button:before,
+.clickable-icon[aria-label^="Reload "]:before,
+.clickable-icon[aria-label^="Open "]:before,
 .setting-hotkey-icon.setting-delete-hotkey:before,
 .modal-close-button:before,
 .graph-controls-button[aria-label="Open graph settings"]:after,
@@ -294,7 +309,7 @@
 .side-dock-ribbon-action[aria-label="Open quick switcher"]:after,
 .side-dock-ribbon-action[aria-label="Open graph view"]:after,
 .side-dock-ribbon-action[aria-label="Open Markdown importer"]:after,
-.side-dock-ribbon-action[aria-label="Open today's note"]:after,
+.side-dock-ribbon-action[aria-label="Open today's daily note"]:after,
 .side-dock-ribbon-action[aria-label="Open another vault"]:after,
 .side-dock-ribbon-action[aria-label="Open command palette"]:after,
 .side-dock-ribbon-action[aria-label="Help"]:after,
@@ -308,6 +323,25 @@
   font-style: normal;
   font-variant: normal;
   line-height: 1;
+}
+
+.setting-editor-extra-setting-button[aria-label="Uninstall"]:before {
+  content: "\ebe9";
+}
+
+.setting-editor-extra-setting-button[aria-label^="Restore "]:before,
+.setting-restore-hotkey-button:before {
+  content: "\eb3d";
+  display: block;
+}
+
+.clickable-icon[aria-label^="Open "]:before {
+  content: "\ea43";
+}
+
+.clickable-icon[aria-label^="Reload "]:before {
+  content: "\eb37";
+
 }
 
 .setting-hotkey-icon.setting-delete-hotkey:before {
@@ -465,7 +499,7 @@
   content: "\ea81";
 }
 
-.side-dock-ribbon-action[aria-label="Open today's note"]:after {
+.side-dock-ribbon-action[aria-label="Open today's daily note"]:after {
   content: "\eb04";
 }
 
