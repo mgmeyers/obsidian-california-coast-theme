@@ -181,6 +181,8 @@
   transform: rotate(-90deg);
 }
 
+.file-embed-link > svg,
+.markdown-embed-link > svg,
 .setting-editor-extra-setting-button[aria-label^="Restore "] > svg,
 .setting-editor-extra-setting-button[aria-label="Uninstall"] > svg,
 .setting-restore-hotkey-button > svg,
@@ -250,7 +252,9 @@
   display: none;
 }
 
-
+.file-embed-link:before,
+.markdown-embed-link:before,
+.tag-pane-tag-text:before,
 .setting-editor-extra-setting-button[aria-label^="Restore "]:before,
 .setting-editor-extra-setting-button[aria-label="Uninstall"]:before,
 .setting-restore-hotkey-button:before,
@@ -323,6 +327,22 @@
   font-style: normal;
   font-variant: normal;
   line-height: 1;
+}
+
+.file-embed-link:before,
+.markdown-embed-link:before {
+  content: "\ea9e";
+}
+
+.tag-pane-tag-text:before {
+  content: "\ea67";
+  padding-right: 4px;
+  position: relative;
+  top: 1px;
+}
+
+.tag-pane-tag > .collapse-icon + .tree-item-inner > .tag-pane-tag-text:before {
+  content: none;
 }
 
 .setting-editor-extra-setting-button[aria-label="Uninstall"]:before {

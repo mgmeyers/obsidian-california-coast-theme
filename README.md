@@ -1,15 +1,14 @@
 # California Coast Obsidian Theme
 
-## Instructions
-
-1. Install the [California Coast Settings plugin](https://github.com/mgmeyers/obsidian-california-coast-settings)
-
-
 ## Recommended plugins
 
+- [Style Settings](https://github.com/mgmeyers/obsidian-style-settings): Enables theme customization
+- [Contextual Typography](https://github.com/mgmeyers/obsidian-contextual-typography): Enables enhanced preview typography
+- [System Dark Mode](https://github.com/kepano/obsidian-system-dark-mode): Matches the theme to the system's light or dark mode setting
+- [Hider](https://github.com/kepano/obsidian-hider): Hides various elements of the UI
+- [Sliding Panes](https://github.com/deathau/sliding-panes-obsidian)
+- [Embedded Note Titles](https://github.com/mgmeyers/obsidian-embedded-note-titles)
 - Core: Translucent window (Note: transparency is known to create lag on some systems)
-- [Hider plugin](https://github.com/kepano/obsidian-hider)
-- [Sliding panes plugin](https://github.com/deathau/sliding-panes-obsidian)
 
 
 ## Screenshots
@@ -19,31 +18,6 @@
 <img src="https://github.com/mgmeyers/obsidian-california-coast-theme/raw/main/screenshots/03.png" alt="Screen Shot 3" />
 <img src="https://github.com/mgmeyers/obsidian-california-coast-theme/raw/main/screenshots/04.png" alt="Screen Shot 4" />
 <img src="https://github.com/mgmeyers/obsidian-california-coast-theme/raw/main/screenshots/05.png" alt="Screen Shot 5" />
-
-
-### Hider Plugin Settings
-
-To match the screenshots, use these settings:
-
-- Hide title bar: **yes**
-- Hide app ribbon: **yes**
-- Hide status bar: **no**
-- Hide scroll bars: **yes**
-- Hide tooltips: **no**
-- Hide instructions: **no**
-- Hide metadata: **no**
-
-
-### Sliding Panes Settings
-
-To match the screenshots, use these settings:
-
-- Toggle sliding panes: **yes**
-- Leaf auto width: **yes**
-- Leaf rotated headers: **yes**
-- Swap rotated header direction: **yes**
-- Toggle stacking: **yes**
-- Spine width: **42**
 
 
 ## Contributing

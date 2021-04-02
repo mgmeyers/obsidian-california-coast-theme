@@ -288,3 +288,33 @@
   margin-bottom: 5px;
 }
 
+.cc-seamless-embed .internal-embed .markdown-embed {
+  border-left: none;
+  padding: 0;
+}
+
+.cc-seamless-embed .markdown-embed > .markdown-embed-content > .markdown-preview-view {
+  overflow-y: visible;
+}
+
+.cc-seamless-embed .markdown-preview-view .markdown-embed-content {
+  overflow: visible;
+}
+
+.cc-seamless-embed .markdown-embed-link svg {
+  opacity: 1;
+}
+
+.cc-seamless-embed .internal-embed:not([src*="#^"]) .markdown-embed-link {
+  width: unset;
+  left: unset;
+}
+
+.cc-seamless-embed .internal-embed:not([src*="#^"]) .markdown-embed-link {
+  width: unset;
+  left: unset;
+}
+
+.cc-seamless-embed .markdown-embed-link {
+  top: 8px;
+}

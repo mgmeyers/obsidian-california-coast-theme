@@ -142,6 +142,8 @@ html .CodeMirror-lines {
 }
 .file-embed-link svg,
 .markdown-embed-link svg {
+  position: relative;
+  top: 2px;
   width: 16px;
   opacity: 0;
 }
@@ -264,7 +266,6 @@ input[type="checkbox"]:checked:before {
 }
 .markdown-preview-view ul > li.task-list-item {
   text-indent: 0;
-  line-height: 1.4;
 }
 .markdown-preview-view .task-list-item {
   padding-inline-start: 0;

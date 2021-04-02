@@ -208,34 +208,6 @@
     ------------------------------------------------------------------
 */
 
-.pane-list-item-ending-flair:not(.tag-pane-tag-count) {
-  display: none;
-}
-
-.nav-folder.mod-root > .nav-folder-title .nav-folder-title-content {
-  border-radius: 0;
-  font-size: 14px;
-  color: transparent;
-  overflow: hidden;
-  height: 0px;
-  padding: 3px 0;
-}
-
-.nav-folder.mod-root
-  > .nav-folder-title.is-being-dragged-over
-  .nav-folder-title-content {
-  box-shadow: inset 0 -2px hsl(var(--accent-hsl));
-}
-
-.workspace-split.mod-left-split > .workspace-leaf-resize-handle,
-.workspace-split.mod-right-split > .workspace-leaf-resize-handle {
-  height: 100%;
-}
-
-/* 
-    ------------------------------------------------------------------
-*/
-
 .hider-frameless .workspace-split.mod-right-split > .workspace-tabs,
 .hider-frameless .workspace-split.mod-root .view-header {
   padding-top: 2px;
@@ -1332,6 +1304,35 @@ button:hover,
 /* --------------- */
 /* File browser */
 
+
+.pane-list-item-ending-flair:not(.tag-pane-tag-count) {
+  display: none;
+}
+
+.nav-folder.mod-root > .nav-folder-title .nav-folder-title-content {
+  border-radius: 0;
+  font-size: 14px;
+  color: transparent;
+  overflow: hidden;
+  height: 0px;
+  padding: 3px 0;
+}
+
+.nav-folder.mod-root
+  > .nav-folder-title.is-being-dragged-over
+  .nav-folder-title-content {
+  box-shadow: inset 0 -2px hsl(var(--accent-hsl));
+}
+
+.nav-folder:not(.mod-root) > .nav-folder-children {
+  padding-left: 7px;
+}
+
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle,
+.workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+  height: 100%;
+}
+
 .nav-header {
   padding: 0;
 }
@@ -1391,7 +1392,7 @@ button:hover,
   cursor: var(--cursor);
   width: 100%;
   margin: 0;
-  padding: 0 9px;
+  padding: 0 5px;
   border-radius: var(--radius-s);
   border: none;
   display: flex;
@@ -1471,6 +1472,7 @@ body:not(.is-grabbing) .nav-folder-title:hover {
   font-weight: 500;
   line-height: 1;
 }
+
 .search-result-file-title {
   font-size: var(--font-small) !important;
   color: var(--text-normal);
@@ -1913,12 +1915,12 @@ input.search-input:focus {
 /* Tag pane */
 
 .tag-container {
-  padding: 0 10px;
+  padding: 10px 10px 0;
 }
 
 .tag-pane-tag {
   cursor: var(--cursor);
-  padding: 0 10px 0 10px;
+  padding: 0 6px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -2320,7 +2322,7 @@ body:not(.plugin-sliding-panes-rotate-header)
 
 /* Tree-Item */
 .tree-item-children {
-  margin-left: 18px;
+  margin-left: 16px;
 }
 
 input[type="range"] {
