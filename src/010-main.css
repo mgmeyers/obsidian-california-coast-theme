@@ -1189,6 +1189,49 @@ input.document-replace-input:focus {
   padding-bottom: 0;
 }
 
+.community-plugin-search {
+  padding: 0;
+}
+
+.community-plugin-search > .setting-item {
+  padding: 0;
+}
+
+.community-plugin-search > .setting-item > .setting-item-info {
+  flex-grow: 0;
+  flex-shrink: 1;
+  width: 0;
+  margin-right: 0;
+}
+
+.community-plugin-search .setting-item-control {
+  justify-content: flex-start;
+}
+
+.community-plugin-search .search-input-container {
+  flex-grow: 1;
+  margin-left: 5px;
+}
+
+.community-plugin-search .search-input-container > input {
+  height: auto;
+}
+
+.community-plugin-search button.clickable-icon {
+  display: block;
+  margin: 0 16px 0 0;
+}
+
+.community-plugin-search-summary {
+  padding: 16px 16px 0;
+}
+
+.community-plugin-item {
+  padding: 16px;
+  margin: 0;
+}
+
+
 /* --------------- */
 /* Sidebar documents */
 

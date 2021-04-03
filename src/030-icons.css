@@ -181,6 +181,7 @@
   transform: rotate(-90deg);
 }
 
+.community-plugin-search button.clickable-icon > svg,
 .file-embed-link > svg,
 .markdown-embed-link > svg,
 .setting-editor-extra-setting-button[aria-label^="Restore "] > svg,
@@ -252,6 +253,7 @@
   display: none;
 }
 
+.community-plugin-search button.clickable-icon:before,
 .file-embed-link:before,
 .markdown-embed-link:before,
 .tag-pane-tag-text:before,
@@ -327,6 +329,10 @@
   font-style: normal;
   font-variant: normal;
   line-height: 1;
+}
+
+.community-plugin-search button.clickable-icon:before {
+  content: "\eb77";
 }
 
 .file-embed-link:before,

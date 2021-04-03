@@ -196,7 +196,7 @@ html .embedded-note-titles .CodeMirror-lines {
   padding-top: 0;
 }
 
-.embedded-note-titles .markdown-preview-view > h1,
+.embedded-note-titles .markdown-preview-view:not(.community-plugin-readme) > h1,
 .embedded-note-titles .CodeMirror-scroll > h1 {
   padding: 3.6rem 0 var(--editor-line-height-rem);
   margin: 0;
@@ -220,7 +220,7 @@ html .embedded-note-titles .CodeMirror-lines {
   padding: 5rem 0 var(--editor-line-height-rem);
 }
 
-.embedded-note-titles .markdown-preview-view
+.embedded-note-titles .markdown-preview-view:not(.community-plugin-readme)
   > h1 {
   padding-left: 3.5rem !important;
   padding-right: 3.5rem !important;

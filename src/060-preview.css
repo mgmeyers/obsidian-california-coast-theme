@@ -231,6 +231,12 @@
   margin-bottom: 0;
 }
 
+.community-plugin-readme.markdown-preview-view h1:first-child,
+.community-plugin-readme.markdown-preview-view h2:first-child,
+.community-plugin-readme.markdown-preview-view h3:first-child,
+.community-plugin-readme.markdown-preview-view h4:first-child,
+.community-plugin-readme.markdown-preview-view h5:first-child,
+.community-plugin-readme.markdown-preview-view h6:first-child,
 .cc-pretty-preview .markdown-preview-pusher + div h1,
 .cc-pretty-preview .markdown-preview-pusher + div h2,
 .cc-pretty-preview .markdown-preview-pusher + div h3,
