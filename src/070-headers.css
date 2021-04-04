@@ -40,10 +40,20 @@
     --h6-margin-bottom: 0.5; 
     --h6-weight: 500; 
     --h6-style: italic; 
+
+    /* Hidden settings */
+
+    --h1-color: var(--text-normal);
+    --h2-color: var(--text-normal);
+    --h3-color: var(--text-normal);
+    --h4-color: var(--text-normal);
+    --h5-color: var(--text-normal);
+    --h5-color: var(--text-normal);
 }
 
 .cc-pretty-preview .markdown-preview-view h1,
 .markdown-preview-view h1 {
+  color: var(--h1-color);
   font-size: var(--h1-size) !important;
   line-height: var(--h1-line-height);
   margin-top: calc(var(--h1-margin-top) * var(--editor-line-height-rem));
@@ -54,6 +64,7 @@
 
 .cc-pretty-preview .markdown-preview-view h2,
 .markdown-preview-view h2 {
+  color: var(--h2-color);
   font-size: var(--h2-size) !important;
   line-height: var(--h2-line-height);
   margin-top: calc(var(--h2-margin-top) * var(--editor-line-height-rem));
@@ -64,6 +75,7 @@
 
 .cc-pretty-preview .markdown-preview-view h3,
 .markdown-preview-view h3 {
+  color: var(--h3-color);
   font-size: var(--h3-size) !important;
   line-height: var(--h3-line-height);
   margin-top: calc(var(--h3-margin-top) * var(--editor-line-height-rem));
@@ -74,6 +86,7 @@
 
 .cc-pretty-preview .markdown-preview-view h4,
 .markdown-preview-view h4 {
+  color: var(--h4-color);
   font-size: var(--h4-size) !important;
   line-height: var(--h4-line-height);
   margin-top: calc(var(--h4-margin-top) * var(--editor-line-height-rem));
@@ -84,6 +97,7 @@
 
 .cc-pretty-preview .markdown-preview-view h5,
 .markdown-preview-view h5 {
+  color: var(--h5-color);
   font-size: var(--h5-size) !important;
   line-height: var(--h5-line-height);
   margin-top: calc(var(--h5-margin-top) * var(--editor-line-height-rem));
@@ -94,6 +108,7 @@
 
 .cc-pretty-preview .markdown-preview-view h6,
 .markdown-preview-view h6 {
+  color: var(--h6-color);
   font-size: var(--h6-size) !important;
   line-height: var(--h6-line-height);
   margin-top: calc(var(--h6-margin-top) * var(--editor-line-height-rem));
@@ -106,6 +121,7 @@
 .empty-state-title,
 .HyperMD-header-1,
 .cm-header-1 {
+  color: var(--h1-color);
   font-size: var(--h1-size) !important;
   font-weight: var(--h1-weight) !important;
   font-style: var(--h1-style);
@@ -118,6 +134,7 @@
 
 .HyperMD-header-2,
 .cm-header-2 {
+  color: var(--h2-color);
   font-size: var(--h2-size) !important;
   font-weight: var(--h2-weight) !important;
   font-style: var(--h2-style);
@@ -130,6 +147,7 @@
 
 .HyperMD-header-3,
 .cm-header-3 {
+  color: var(--h3-color);
   font-size: var(--h3-size) !important;
   font-weight: var(--h3-weight) !important;
   font-style: var(--h3-style);
@@ -142,6 +160,7 @@
 
 .HyperMD-header-4,
 .cm-header-4 {
+  color: var(--h4-color);
   font-variant: unset;
   text-transform: unset;
   letter-spacing: unset;
@@ -157,6 +176,7 @@
 
 .HyperMD-header-5,
 .cm-header-5 {
+  color: var(--h5-color);
   font-variant: unset;
   text-transform: unset;
   letter-spacing: unset;
@@ -175,7 +195,7 @@
   font-variant: unset;
   text-transform: unset;
   letter-spacing: unset;
-  color: unset;
+  color: var(--h6-color);
   font-size: var(--h6-size) !important;
   font-weight: var(--h6-weight) !important;
   font-style: var(--h6-style);
@@ -198,9 +218,10 @@ html .embedded-note-titles .CodeMirror-lines {
 
 .embedded-note-titles .markdown-preview-view:not(.community-plugin-readme) > h1,
 .embedded-note-titles .CodeMirror-scroll > h1 {
+  color: var(--h1-color);
   padding: 3.6rem 0 var(--editor-line-height-rem);
   margin: 0;
-  font-family: var(--text-editor);
+  font-family: var(--text-preview);
   font-weight: var(--h1-weight);
   font-size: var(--h1-size);
   line-height: var(--h1-line-height);
@@ -209,6 +230,7 @@ html .embedded-note-titles .CodeMirror-lines {
 .embedded-note-titles .CodeMirror-scroll > h1 {
   position: absolute;
   width: calc(100% - 7rem);
+  font-family: var(--text-editor);
 }
 
 .embedded-note-titles.plugin-sliding-panes-rotate-header

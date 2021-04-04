@@ -1,5 +1,9 @@
+body {
+  --text-preview: var(--text-editor);
+}
+
 .markdown-preview-view {
-  font-family: var(--text-editor);
+  font-family: var(--text-preview);
   font-size: var(--editor-font-size);
   font-weight: var(--editor-font-weight);
   line-height: var(--editor-line-height);
