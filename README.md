@@ -6,7 +6,6 @@
 - [Contextual Typography](https://github.com/mgmeyers/obsidian-contextual-typography): Enables enhanced preview typography
 - [System Dark Mode](https://github.com/kepano/obsidian-system-dark-mode): Matches the theme to the system's light or dark mode setting
 - [Hider](https://github.com/kepano/obsidian-hider): Hides various elements of the UI
-- [Sliding Panes](https://github.com/deathau/sliding-panes-obsidian)
 - [Embedded Note Titles](https://github.com/mgmeyers/obsidian-embedded-note-titles)
 
 
