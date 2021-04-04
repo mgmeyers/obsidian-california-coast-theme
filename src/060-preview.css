@@ -1,13 +1,18 @@
 body {
   --text-preview: var(--text-editor);
+  --preview-font-size: var(--editor-font-size);
+  --preview-line-height: var(--editor-line-height);
+  --preview-line-height-rem: calc(var(--preview-line-height) * 1rem);
+  --preview-font-weight: var(--editor-font-weight);
+  --preview-font-features: var(--editor-font-features);
 }
 
 .markdown-preview-view {
   font-family: var(--text-preview);
-  font-size: var(--editor-font-size);
-  font-weight: var(--editor-font-weight);
-  line-height: var(--editor-line-height);
-  font-feature-settings: var(--editor-font-features);
+  font-size: var(--preview-font-size);
+  font-weight: var(--preview-font-weight);
+  line-height: var(--preview-line-height);
+  font-feature-settings: var(--preview-font-features);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
