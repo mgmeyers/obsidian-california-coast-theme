@@ -50,6 +50,7 @@
   display: inline-flex;
   justify-content: flex-end;
   width: 1rem;
+  font-variant-numeric: tabular-nums;
 }
 
 .cm-s-obsidian span.cm-comment {
