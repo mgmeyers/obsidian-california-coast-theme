@@ -87,9 +87,11 @@ html .CodeMirror-lines {
 }
 .cm-s-obsidian span.cm-link {
   color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
 }
 .cm-s-obsidian span.cm-hmd-internal-link {
   color: var(--text-accent);
+  font-variant-numeric: tabular-nums;
 }
 .cm-s-obsidian span.cm-link.cm-strikethrough,
 .cm-s-obsidian span.cm-hmd-internal-link.cm-strikethrough {
