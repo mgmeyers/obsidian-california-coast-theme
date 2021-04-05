@@ -1,6 +1,6 @@
 .cm-s-obsidian {
   font-family: var(--text-editor);
-  font-size: var(--editor-font-size);
+  font-size: var(--editor-font-size-px);
   font-weight: var(--editor-font-weight);
   line-height: var(--editor-line-height);
   font-feature-settings: var(--editor-font-features);

@@ -17,9 +17,8 @@
 
   --rem: 18px;
 
-  --editor-font-size: 18px;
+  --editor-font-size: 18;
   --editor-line-height: 1.88889;
-  --editor-line-height-rem: calc(var(--editor-line-height) * 1rem);
   --editor-font-weight: 400;
   --editor-font-features: "";
 
@@ -29,7 +28,7 @@
   --font-smallest: 10px;
   --normal-weight: 400;
   --bold-weight: 600;
-  --line-width: 42rem;
+  --line-width: 42;
   --line-height: 1.5;
   --max-width: 100%;
   --nested-padding: 3.5%;
@@ -202,6 +201,12 @@
   --background-modifier-cover: rgba(var(--color-black-rgb), 0.8);
 
   --opacity-translucency: 1;
+}
+
+body {
+  --editor-font-size-px: calc(var(--editor-font-size) * 1px);
+  --editor-line-height-rem: calc(var(--editor-line-height) * 1rem);
+  --line-width-rem: calc(var(--line-width) * 1rem);
 }
 
 /* 
@@ -1006,14 +1011,14 @@ body.theme-dark:not(.is-translucent):not(.hider-frameless)
 
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
   max-width: var(--max-width);
-  width: var(--line-width);
+  width: var(--line-width-rem);
 }
 .markdown-source-view.is-readable-line-width .CodeMirror,
 .is-readable-line-width .markdown-preview-section {
   padding-left: 0;
   padding-right: 0;
   margin: 0 auto 0 auto;
-  width: var(--line-width);
+  width: var(--line-width-rem);
   max-width: var(--max-width);
 }
 .markdown-preview-sizer {
@@ -1026,7 +1031,7 @@ body.theme-dark:not(.is-translucent):not(.hider-frameless)
 
 .is-readable-line-width .markdown-preview-section > div {
   margin: 0 auto 0 auto;
-  width: var(--line-width);
+  width: var(--line-width-rem);
   max-width: var(--max-width);
 }
 
@@ -2408,7 +2413,7 @@ input[type="range"]::-webkit-slider-thumb:active {
 .mod-root .local-graph-jumps-slider-container {
   right: 0;
   left: 0;
-  width: var(--line-width);
+  width: var(--line-width-rem);
   max-width: var(--max-width);
   margin: 0 auto;
   top: 30px;

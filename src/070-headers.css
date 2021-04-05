@@ -252,7 +252,7 @@ html .embedded-note-titles .CodeMirror-lines {
   .is-readable-line-width.markdown-preview-view
   > h1 {
   margin: 0 auto;
-  width: var(--line-width) !important;
+  width: var(--line-width-rem) !important;
   max-width: var(--max-width) !important;
 }
 

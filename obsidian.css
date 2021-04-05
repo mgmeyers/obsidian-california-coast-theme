@@ -373,9 +373,8 @@ settings:
 
   --rem: 18px;
 
-  --editor-font-size: 18px;
+  --editor-font-size: 18;
   --editor-line-height: 1.88889;
-  --editor-line-height-rem: calc(var(--editor-line-height) * 1rem);
   --editor-font-weight: 400;
   --editor-font-features: "";
 
@@ -385,7 +384,7 @@ settings:
   --font-smallest: 10px;
   --normal-weight: 400;
   --bold-weight: 600;
-  --line-width: 42rem;
+  --line-width: 42;
   --line-height: 1.5;
   --max-width: 100%;
   --nested-padding: 3.5%;
@@ -558,6 +557,12 @@ settings:
   --background-modifier-cover: rgba(var(--color-black-rgb), 0.8);
 
   --opacity-translucency: 1;
+}
+
+body {
+  --editor-font-size-px: calc(var(--editor-font-size) * 1px);
+  --editor-line-height-rem: calc(var(--editor-line-height) * 1rem);
+  --line-width-rem: calc(var(--line-width) * 1rem);
 }
 
 /* 
@@ -1362,14 +1367,14 @@ body.theme-dark:not(.is-translucent):not(.hider-frameless)
 
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
   max-width: var(--max-width);
-  width: var(--line-width);
+  width: var(--line-width-rem);
 }
 .markdown-source-view.is-readable-line-width .CodeMirror,
 .is-readable-line-width .markdown-preview-section {
   padding-left: 0;
   padding-right: 0;
   margin: 0 auto 0 auto;
-  width: var(--line-width);
+  width: var(--line-width-rem);
   max-width: var(--max-width);
 }
 .markdown-preview-sizer {
@@ -1382,7 +1387,7 @@ body.theme-dark:not(.is-translucent):not(.hider-frameless)
 
 .is-readable-line-width .markdown-preview-section > div {
   margin: 0 auto 0 auto;
-  width: var(--line-width);
+  width: var(--line-width-rem);
   max-width: var(--max-width);
 }
 
@@ -2764,7 +2769,7 @@ input[type="range"]::-webkit-slider-thumb:active {
 .mod-root .local-graph-jumps-slider-container {
   right: 0;
   left: 0;
-  width: var(--line-width);
+  width: var(--line-width-rem);
   max-width: var(--max-width);
   margin: 0 auto;
   top: 30px;
@@ -3140,7 +3145,7 @@ html .plugin-sliding-panes-rotate-header.embedded-note-title .CodeMirror-lines {
     font-size: 16px;
   }
   .mod-root #calendar-container {
-    width: var(--line-width);
+    width: var(--line-width-rem);
     max-width: var(--max-width);
     margin: 0 auto;
     padding: 0;
@@ -4743,7 +4748,7 @@ a[href*="obsidian://search"]:after
 }
 .cm-s-obsidian {
   font-family: var(--text-editor);
-  font-size: var(--editor-font-size);
+  font-size: var(--editor-font-size-px);
   font-weight: var(--editor-font-weight);
   line-height: var(--editor-line-height);
   font-feature-settings: var(--editor-font-features);
@@ -4944,9 +4949,13 @@ body {
   --preview-font-features: var(--editor-font-features);
 }
 
+body {
+  --preview-font-size-px: calc(var(--preview-font-size) * 1px);
+}
+
 .markdown-preview-view {
   font-family: var(--text-preview);
-  font-size: var(--preview-font-size);
+  font-size: var(--preview-font-size-px);
   font-weight: var(--preview-font-weight);
   line-height: var(--preview-line-height);
   font-feature-settings: var(--preview-font-features);
@@ -5524,7 +5533,7 @@ html .embedded-note-titles .CodeMirror-lines {
   .is-readable-line-width.markdown-preview-view
   > h1 {
   margin: 0 auto;
-  width: var(--line-width) !important;
+  width: var(--line-width-rem) !important;
   max-width: var(--max-width) !important;
 }
 

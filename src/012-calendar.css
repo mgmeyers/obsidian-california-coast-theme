@@ -30,7 +30,7 @@
     font-size: 16px;
   }
   .mod-root #calendar-container {
-    width: var(--line-width);
+    width: var(--line-width-rem);
     max-width: var(--max-width);
     margin: 0 auto;
     padding: 0;

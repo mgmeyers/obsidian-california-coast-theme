@@ -7,9 +7,13 @@ body {
   --preview-font-features: var(--editor-font-features);
 }
 
+body {
+  --preview-font-size-px: calc(var(--preview-font-size) * 1px);
+}
+
 .markdown-preview-view {
   font-family: var(--text-preview);
-  font-size: var(--preview-font-size);
+  font-size: var(--preview-font-size-px);
   font-weight: var(--preview-font-weight);
   line-height: var(--preview-line-height);
   font-feature-settings: var(--preview-font-features);
