@@ -934,7 +934,7 @@ button,
   border-radius: 10px;
   overflow: hidden;
   max-width: 90vw;
-  max-height: 90vw;
+  max-height: 90vh;
 }
 .modal.mod-settings .vertical-tab-content-container {
   border-left: var(--border-width) solid var(--background-modifier-border);
