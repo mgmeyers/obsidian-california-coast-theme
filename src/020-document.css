@@ -411,18 +411,12 @@ input[type="checkbox"]:checked:before {
   height: 1px;
   border-width: 2px 0 0 0;
 }
-.minimal-theme:not(.links-int-on) a[href*="obsidian://"],
-  .minimal-theme:not(.links-int-on) .markdown-preview-view .internal-link,
-  .minimal-theme:not(.links-int-on) .external-link {
-  text-decoration: none;
-}
+
 .markdown-preview-section a,
-.minimal-theme.links-int-on .markdown-preview-view .internal-link,
 .markdown-preview-view .internal-link {
   margin-bottom: 0;
   position: relative;
   text-decoration: none;
-  z-index: 10;
   box-shadow: 0 3px transparent;
   transition: box-shadow 100ms ease-out;
 }
