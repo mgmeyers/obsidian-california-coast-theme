@@ -26,6 +26,11 @@
   margin-bottom: 0;
 }
 
+.workspace-tabs .CodeMirror-scroll {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
 .markdown-source-view.mod-cm5 {
   padding-left: 0;
   padding-right: 0;
@@ -361,6 +366,10 @@ input[type="checkbox"]:checked:before {
   width: 18px;
 }
 
+.CodeMirror-gutter.CodeMirror-linenumbers, .CodeMirror-gutter.CodeMirror-foldgutter {
+  background: transparent;
+}
+
 .CodeMirror-linenumbers {
   margin-left: -20px;
 }
@@ -389,7 +398,7 @@ input[type="checkbox"]:checked:before {
   font-feature-settings: normal;
 }
 
-.cm-s-obsidian .CodeMirror-gutters {
+.workspace-split > .workspace-leaf .cm-s-obsidian .CodeMirror-gutters {
   width: 18px;
   left: 0 !important;
   padding-right: 0;

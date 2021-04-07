@@ -17,10 +17,12 @@
 
   --rem: 18px;
 
-  --editor-font-size: 18;
+  --editor-font-size: 18px;
   --editor-line-height: 1.88889;
   --editor-font-weight: 400;
   --editor-font-features: "";
+
+  --small-modifier: 0.9;
 
   --font-normal: 16px;
   --font-small: 14px;
@@ -28,7 +30,7 @@
   --font-smallest: 10px;
   --normal-weight: 400;
   --bold-weight: 600;
-  --line-width: 42;
+  --line-width: 42rem;
   --line-height: 1.5;
   --max-width: 100%;
   --nested-padding: 3.5%;
@@ -204,9 +206,9 @@
 }
 
 body {
-  --editor-font-size-px: calc(var(--editor-font-size) * 1px);
   --editor-line-height-rem: calc(var(--editor-line-height) * 1rem);
-  --line-width-rem: calc(var(--line-width) * 1rem);
+  --editor-line-height-small: calc(var(--editor-line-height) * var(--small-modifier));
+  --editor-line-height-small-rem: calc(var(--editor-line-height-small) * 1rem);
 }
 
 /* 
@@ -403,7 +405,6 @@ body:not(.hider-ribbon):not(.hider-frameless)
   position: static;
 }
 .view-action.is-active {
-  color: var(--text-faint);
   opacity: 1;
 }
 .view-actions .view-action:last-child {
@@ -804,6 +805,10 @@ body.theme-dark:not(.is-translucent):not(.hider-frameless)
   background-color: transparent;
   box-shadow: none !important;
 }
+.workspace-leaf:not(.mod-active) .view-header-icon,
+.workspace-leaf:not(.mod-active) .view-action {
+  color: var(--shade-30);
+}
 
 .workspace-tab-container-inner {
   background: var(--shade-plus-darker);
@@ -1011,14 +1016,14 @@ body.theme-dark:not(.is-translucent):not(.hider-frameless)
 
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
   max-width: var(--max-width);
-  width: var(--line-width-rem);
+  width: var(--line-width);
 }
 .markdown-source-view.is-readable-line-width .CodeMirror,
 .is-readable-line-width .markdown-preview-section {
   padding-left: 0;
   padding-right: 0;
   margin: 0 auto 0 auto;
-  width: var(--line-width-rem);
+  width: var(--line-width);
   max-width: var(--max-width);
 }
 .markdown-preview-sizer {
@@ -1031,7 +1036,7 @@ body.theme-dark:not(.is-translucent):not(.hider-frameless)
 
 .is-readable-line-width .markdown-preview-section > div {
   margin: 0 auto 0 auto;
-  width: var(--line-width-rem);
+  width: var(--line-width);
   max-width: var(--max-width);
 }
 
@@ -1242,8 +1247,7 @@ input.document-replace-input:focus {
 
 .workspace > .workspace-split:not(.mod-root) .CodeMirror,
 .workspace > .workspace-split:not(.mod-root) .markdown-preview-view {
-  font-size: var(--font-small);
-  line-height: 1.2;
+  font-size: calc(100% * var(--small-modifier));
 }
 .workspace
   > .workspace-split:not(.mod-root)
@@ -2195,15 +2199,14 @@ body:not(.hider-ribbon) .side-dock-ribbon-action {
   display: none;
 }
 .popover .markdown-embed .markdown-preview-view {
-  padding-top: 15px;
-  padding-bottom: 30px;
+  padding: 16px;
 }
 .popover.hover-popover .markdown-embed .markdown-embed-content {
   max-height: none;
 }
+.popover.hover-popover.mod-empty,
 .popover.mod-empty {
-  padding: 20px 15px 20px 20px;
-  color: var(--text-muted);
+  padding: 16px;
 }
 
 /* --------------- */
@@ -2413,7 +2416,7 @@ input[type="range"]::-webkit-slider-thumb:active {
 .mod-root .local-graph-jumps-slider-container {
   right: 0;
   left: 0;
-  width: var(--line-width-rem);
+  width: var(--line-width);
   max-width: var(--max-width);
   margin: 0 auto;
   top: 30px;

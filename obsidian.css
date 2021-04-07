@@ -82,12 +82,14 @@ settings:
         description: The maximum line width in rem units (1rem = Body font size)
         type: variable-number
         default: 42
+        format: rem
     - 
         id: editor-font-size
         title: Body font size
         description: Font size in px of the main text
         type: variable-number
         default: 18
+        format: px
     - 
         id: editor-line-height
         title: Body line height
@@ -105,7 +107,7 @@ settings:
         title: H1 font size
         description: Accepts any CSS font-size value
         type: variable-text
-        default: 1.602rem
+        default: 1.602em
     - 
         id: h1-line-height
         title: H1 line height
@@ -147,7 +149,7 @@ settings:
         title: H2 font size
         description: Accepts any CSS font-size value
         type: variable-text
-        default: 1.424rem
+        default: 1.424em
     - 
         id: h2-line-height
         title: H2 line height
@@ -189,7 +191,7 @@ settings:
         title: H3 font size
         description: Accepts any CSS font-size value
         type: variable-text
-        default: 1.266rem
+        default: 1.266em
     - 
         id: h3-line-height
         title: H3 line height
@@ -231,7 +233,7 @@ settings:
         title: H4 font size
         description: Accepts any CSS font-size value
         type: variable-text
-        default: 1.125rem
+        default: 1.125em
     - 
         id: h4-line-height
         title: H4 line height
@@ -273,7 +275,7 @@ settings:
         title: H5 font size
         description: Accepts any CSS font-size value
         type: variable-text
-        default: 1rem
+        default: 1em
     - 
         id: h5-line-height
         title: H5 line height
@@ -315,7 +317,7 @@ settings:
         title: H6 font size
         description: Accepts any CSS font-size value
         type: variable-text
-        default: 1rem
+        default: 1em
     - 
         id: h6-line-height
         title: H6 line height
@@ -373,10 +375,12 @@ settings:
 
   --rem: 18px;
 
-  --editor-font-size: 18;
+  --editor-font-size: 18px;
   --editor-line-height: 1.88889;
   --editor-font-weight: 400;
   --editor-font-features: "";
+
+  --small-modifier: 0.9;
 
   --font-normal: 16px;
   --font-small: 14px;
@@ -384,7 +388,7 @@ settings:
   --font-smallest: 10px;
   --normal-weight: 400;
   --bold-weight: 600;
-  --line-width: 42;
+  --line-width: 42rem;
   --line-height: 1.5;
   --max-width: 100%;
   --nested-padding: 3.5%;
@@ -560,9 +564,9 @@ settings:
 }
 
 body {
-  --editor-font-size-px: calc(var(--editor-font-size) * 1px);
   --editor-line-height-rem: calc(var(--editor-line-height) * 1rem);
-  --line-width-rem: calc(var(--line-width) * 1rem);
+  --editor-line-height-small: calc(var(--editor-line-height) * var(--small-modifier));
+  --editor-line-height-small-rem: calc(var(--editor-line-height-small) * 1rem);
 }
 
 /* 
@@ -759,7 +763,6 @@ body:not(.hider-ribbon):not(.hider-frameless)
   position: static;
 }
 .view-action.is-active {
-  color: var(--text-faint);
   opacity: 1;
 }
 .view-actions .view-action:last-child {
@@ -1160,6 +1163,10 @@ body.theme-dark:not(.is-translucent):not(.hider-frameless)
   background-color: transparent;
   box-shadow: none !important;
 }
+.workspace-leaf:not(.mod-active) .view-header-icon,
+.workspace-leaf:not(.mod-active) .view-action {
+  color: var(--shade-30);
+}
 
 .workspace-tab-container-inner {
   background: var(--shade-plus-darker);
@@ -1367,14 +1374,14 @@ body.theme-dark:not(.is-translucent):not(.hider-frameless)
 
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
   max-width: var(--max-width);
-  width: var(--line-width-rem);
+  width: var(--line-width);
 }
 .markdown-source-view.is-readable-line-width .CodeMirror,
 .is-readable-line-width .markdown-preview-section {
   padding-left: 0;
   padding-right: 0;
   margin: 0 auto 0 auto;
-  width: var(--line-width-rem);
+  width: var(--line-width);
   max-width: var(--max-width);
 }
 .markdown-preview-sizer {
@@ -1387,7 +1394,7 @@ body.theme-dark:not(.is-translucent):not(.hider-frameless)
 
 .is-readable-line-width .markdown-preview-section > div {
   margin: 0 auto 0 auto;
-  width: var(--line-width-rem);
+  width: var(--line-width);
   max-width: var(--max-width);
 }
 
@@ -1598,8 +1605,7 @@ input.document-replace-input:focus {
 
 .workspace > .workspace-split:not(.mod-root) .CodeMirror,
 .workspace > .workspace-split:not(.mod-root) .markdown-preview-view {
-  font-size: var(--font-small);
-  line-height: 1.2;
+  font-size: calc(100% * var(--small-modifier));
 }
 .workspace
   > .workspace-split:not(.mod-root)
@@ -2551,15 +2557,14 @@ body:not(.hider-ribbon) .side-dock-ribbon-action {
   display: none;
 }
 .popover .markdown-embed .markdown-preview-view {
-  padding-top: 15px;
-  padding-bottom: 30px;
+  padding: 16px;
 }
 .popover.hover-popover .markdown-embed .markdown-embed-content {
   max-height: none;
 }
+.popover.hover-popover.mod-empty,
 .popover.mod-empty {
-  padding: 20px 15px 20px 20px;
-  color: var(--text-muted);
+  padding: 16px;
 }
 
 /* --------------- */
@@ -2769,7 +2774,7 @@ input[type="range"]::-webkit-slider-thumb:active {
 .mod-root .local-graph-jumps-slider-container {
   right: 0;
   left: 0;
-  width: var(--line-width-rem);
+  width: var(--line-width);
   max-width: var(--max-width);
   margin: 0 auto;
   top: 30px;
@@ -3145,7 +3150,7 @@ html .plugin-sliding-panes-rotate-header.embedded-note-title .CodeMirror-lines {
     font-size: 16px;
   }
   .mod-root #calendar-container {
-    width: var(--line-width-rem);
+    width: var(--line-width);
     max-width: var(--max-width);
     margin: 0 auto;
     padding: 0;
@@ -3319,6 +3324,11 @@ html .plugin-sliding-panes-rotate-header.embedded-note-title .CodeMirror-lines {
   padding-right: 3.5rem;
   margin-right: 0;
   margin-bottom: 0;
+}
+
+.workspace-tabs .CodeMirror-scroll {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .markdown-source-view.mod-cm5 {
@@ -3656,6 +3666,10 @@ input[type="checkbox"]:checked:before {
   width: 18px;
 }
 
+.CodeMirror-gutter.CodeMirror-linenumbers, .CodeMirror-gutter.CodeMirror-foldgutter {
+  background: transparent;
+}
+
 .CodeMirror-linenumbers {
   margin-left: -20px;
 }
@@ -3684,7 +3698,7 @@ input[type="checkbox"]:checked:before {
   font-feature-settings: normal;
 }
 
-.cm-s-obsidian .CodeMirror-gutters {
+.workspace-split > .workspace-leaf .cm-s-obsidian .CodeMirror-gutters {
   width: 18px;
   left: 0 !important;
   padding-right: 0;
@@ -4742,7 +4756,7 @@ a[href*="obsidian://search"]:after
 }
 .cm-s-obsidian {
   font-family: var(--text-editor);
-  font-size: var(--editor-font-size-px);
+  font-size: var(--editor-font-size);
   font-weight: var(--editor-font-weight);
   line-height: var(--editor-line-height);
   font-feature-settings: var(--editor-font-features);
@@ -4943,13 +4957,9 @@ body {
   --preview-font-features: var(--editor-font-features);
 }
 
-body {
-  --preview-font-size-px: calc(var(--preview-font-size) * 1px);
-}
-
 .markdown-preview-view {
   font-family: var(--text-preview);
-  font-size: var(--preview-font-size-px);
+  font-size: var(--preview-font-size);
   font-weight: var(--preview-font-weight);
   line-height: var(--preview-line-height);
   font-feature-settings: var(--preview-font-features);
@@ -4960,6 +4970,11 @@ body {
 .markdown-preview-section > div {
   padding-left: 3.5rem;
   padding-right: 3.5rem;
+}
+
+.workspace-tabs .view-content > div > .markdown-preview-view > .markdown-preview-section > div {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .markdown-preview-view
@@ -5207,6 +5222,28 @@ body {
   .markdown-preview-pusher
   + div[data-tag-name="pre"]
   + div
+  h6,
+.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div h1,
+.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div h2,
+.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div h3,
+.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div h4,
+.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div h5,
+.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div h6,
+.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div:empty + div h1,
+.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div:empty + div h2,
+.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div:empty + div h3,
+.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div:empty + div h4,
+.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div:empty + div h5,
+.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div:empty + div h6,
+.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div[data-tag-name="pre"] + div h1,
+.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div[data-tag-name="pre"] + div h2,
+.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div[data-tag-name="pre"] + div h3,
+.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div[data-tag-name="pre"] + div h4,
+.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div[data-tag-name="pre"] + div h5,
+.cc-pretty-preview .workspace-tabs
+  .markdown-preview-pusher
+  + div[data-tag-name="pre"]
+  + div
   h6 {
   margin-top: 0;
 }
@@ -5274,42 +5311,42 @@ body {
   top: 8px;
 }
 :root {
-    --h1-size: 1.602rem;
+    --h1-size: 1.602em;
     --h1-line-height: 1.4;
     --h1-margin-top: 4;
     --h1-margin-bottom: 1; 
     --h1-weight: 500; 
     --h1-style: normal; 
 
-    --h2-size: 1.424rem;
+    --h2-size: 1.424em;
     --h2-line-height: 1.4;
     --h2-margin-top: 2.5;
     --h2-margin-bottom: 0.5; 
     --h2-weight: 500; 
     --h2-style: normal; 
 
-    --h3-size: 1.266rem;
+    --h3-size: 1.266em;
     --h3-line-height: 1.4;
     --h3-margin-top: 2;
     --h3-margin-bottom: 0.5; 
     --h3-weight: 500; 
     --h3-style: normal; 
 
-    --h4-size: 1.125rem;
+    --h4-size: 1.125em;
     --h4-line-height: 1.5;
     --h4-margin-top: 1.5;
     --h4-margin-bottom: 0.5; 
     --h4-weight: 500; 
     --h4-style: normal; 
 
-    --h5-size: 1rem;
+    --h5-size: 1em;
     --h5-line-height: 1.5;
     --h5-margin-top: 1.5;
     --h5-margin-bottom: 0.5; 
     --h5-weight: 500; 
     --h5-style: normal; 
 
-    --h6-size: 1rem;
+    --h6-size: 1em;
     --h6-line-height: 1.5;
     --h6-margin-top: 1.5;
     --h6-margin-bottom: 0.5; 
@@ -5337,6 +5374,12 @@ body {
   font-style: var(--h1-style);
 }
 
+.cc-pretty-preview .workspace-tabs  .markdown-preview-view h1,
+.workspace-tabs .markdown-preview-view h1 {
+  margin-top: calc(var(--h2-margin-top) * var(--editor-line-height-small-rem));
+  margin-bottom: calc(var(--h2-margin-bottom) * var(--editor-line-height-small-rem));
+}
+
 .cc-pretty-preview .markdown-preview-view h2,
 .markdown-preview-view h2 {
   color: var(--h2-color);
@@ -5346,6 +5389,12 @@ body {
   margin-bottom: calc(var(--h2-margin-bottom) * var(--editor-line-height-rem));
   font-weight: var(--h2-weight);
   font-style: var(--h2-style);
+}
+
+.cc-pretty-preview .workspace-tabs  .markdown-preview-view h2,
+.workspace-tabs .markdown-preview-view h2 {
+  margin-top: calc(var(--h2-margin-top) * var(--editor-line-height-small-rem));
+  margin-bottom: calc(var(--h2-margin-bottom) * var(--editor-line-height-small-rem));
 }
 
 .cc-pretty-preview .markdown-preview-view h3,
@@ -5359,6 +5408,12 @@ body {
   font-style: var(--h3-style);
 }
 
+.cc-pretty-preview .workspace-tabs  .markdown-preview-view h3,
+.workspace-tabs .markdown-preview-view h3 {
+  margin-top: calc(var(--h3-margin-top) * var(--editor-line-height-small-rem));
+  margin-bottom: calc(var(--h3-margin-bottom) * var(--editor-line-height-small-rem));
+}
+
 .cc-pretty-preview .markdown-preview-view h4,
 .markdown-preview-view h4 {
   color: var(--h4-color);
@@ -5370,6 +5425,12 @@ body {
   font-style: var(--h4-style);
 }
 
+.cc-pretty-preview .workspace-tabs  .markdown-preview-view h4,
+.workspace-tabs .markdown-preview-view h4 {
+  margin-top: calc(var(--h4-margin-top) * var(--editor-line-height-small-rem));
+  margin-bottom: calc(var(--h4-margin-bottom) * var(--editor-line-height-small-rem));
+}
+
 .cc-pretty-preview .markdown-preview-view h5,
 .markdown-preview-view h5 {
   color: var(--h5-color);
@@ -5379,6 +5440,12 @@ body {
   margin-bottom: calc(var(--h5-margin-bottom) * var(--editor-line-height-rem));
   font-weight: var(--h5-weight);
   font-style: var(--h5-style);
+}
+
+.cc-pretty-preview .workspace-tabs  .markdown-preview-view h5,
+.workspace-tabs .markdown-preview-view h5 {
+  margin-top: calc(var(--h5-margin-top) * var(--editor-line-height-small-rem));
+  margin-bottom: calc(var(--h5-margin-bottom) * var(--editor-line-height-small-rem));
 }
 
 .cc-pretty-preview .markdown-preview-view h6,
@@ -5393,9 +5460,14 @@ body {
   color: var(--text-normal);
 }
 
+.cc-pretty-preview .workspace-tabs  .markdown-preview-view h6,
+.workspace-tabs .markdown-preview-view h6 {
+  margin-top: calc(var(--h6-margin-top) * var(--editor-line-height-small-rem));
+  margin-bottom: calc(var(--h6-margin-bottom) * var(--editor-line-height-small-rem));
+}
+
 .empty-state-title,
-.HyperMD-header-1,
-.cm-header-1 {
+.HyperMD-header-1 {
   color: var(--h1-color);
   font-size: var(--h1-size) !important;
   font-weight: var(--h1-weight) !important;
@@ -5407,8 +5479,7 @@ body {
   line-height: calc(var(--h1-size) * 1.8) !important;
 }
 
-.HyperMD-header-2,
-.cm-header-2 {
+.HyperMD-header-2 {
   color: var(--h2-color);
   font-size: var(--h2-size) !important;
   font-weight: var(--h2-weight) !important;
@@ -5420,8 +5491,7 @@ body {
   line-height: calc(var(--h2-size) * 1.8) !important;
 }
 
-.HyperMD-header-3,
-.cm-header-3 {
+.HyperMD-header-3 {
   color: var(--h3-color);
   font-size: var(--h3-size) !important;
   font-weight: var(--h3-weight) !important;
@@ -5433,8 +5503,7 @@ body {
   line-height: calc(var(--h3-size) * 1.8) !important;
 }
 
-.HyperMD-header-4,
-.cm-header-4 {
+.HyperMD-header-4 {
   color: var(--h4-color);
   font-variant: unset;
   text-transform: unset;
@@ -5449,8 +5518,7 @@ body {
   line-height: calc(var(--h4-size) * 1.8) !important;
 }
 
-.HyperMD-header-5,
-.cm-header-5 {
+.HyperMD-header-5 {
   color: var(--h5-color);
   font-variant: unset;
   text-transform: unset;
@@ -5465,8 +5533,7 @@ body {
   line-height: calc(var(--h5-size) * 1.8) !important;
 }
 
-.HyperMD-header-6,
-.cm-header-6 {
+.HyperMD-header-6 {
   font-variant: unset;
   text-transform: unset;
   letter-spacing: unset;
@@ -5479,6 +5546,19 @@ body {
 
 .cc-pretty-editor pre.HyperMD-header .cm-formatting-header-6:not(:only-child) {
   line-height: calc(var(--h6-size) * 1.8) !important;
+}
+
+.cm-s-obsidian .cm-header-1,
+.cm-s-obsidian .cm-header-2,
+.cm-s-obsidian .cm-header-3,
+.cm-s-obsidian .cm-header-4,
+.cm-s-obsidian .cm-header-5,
+.cm-s-obsidian .cm-header-6 {
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  line-height: inherit;
 }
 
 /* Embedded note titles */
@@ -5527,7 +5607,7 @@ html .embedded-note-titles .CodeMirror-lines {
   .is-readable-line-width.markdown-preview-view
   > h1 {
   margin: 0 auto;
-  width: var(--line-width-rem) !important;
+  width: var(--line-width) !important;
   max-width: var(--max-width) !important;
 }
 

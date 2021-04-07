@@ -7,13 +7,9 @@ body {
   --preview-font-features: var(--editor-font-features);
 }
 
-body {
-  --preview-font-size-px: calc(var(--preview-font-size) * 1px);
-}
-
 .markdown-preview-view {
   font-family: var(--text-preview);
-  font-size: var(--preview-font-size-px);
+  font-size: var(--preview-font-size);
   font-weight: var(--preview-font-weight);
   line-height: var(--preview-line-height);
   font-feature-settings: var(--preview-font-features);
@@ -24,6 +20,11 @@ body {
 .markdown-preview-section > div {
   padding-left: 3.5rem;
   padding-right: 3.5rem;
+}
+
+.workspace-tabs .view-content > div > .markdown-preview-view > .markdown-preview-section > div {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .markdown-preview-view
@@ -268,6 +269,28 @@ body {
 .cc-pretty-preview .markdown-preview-pusher + div[data-tag-name="pre"] + div h4,
 .cc-pretty-preview .markdown-preview-pusher + div[data-tag-name="pre"] + div h5,
 .cc-pretty-preview
+  .markdown-preview-pusher
+  + div[data-tag-name="pre"]
+  + div
+  h6,
+.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div h1,
+.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div h2,
+.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div h3,
+.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div h4,
+.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div h5,
+.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div h6,
+.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div:empty + div h1,
+.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div:empty + div h2,
+.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div:empty + div h3,
+.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div:empty + div h4,
+.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div:empty + div h5,
+.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div:empty + div h6,
+.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div[data-tag-name="pre"] + div h1,
+.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div[data-tag-name="pre"] + div h2,
+.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div[data-tag-name="pre"] + div h3,
+.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div[data-tag-name="pre"] + div h4,
+.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div[data-tag-name="pre"] + div h5,
+.cc-pretty-preview .workspace-tabs
   .markdown-preview-pusher
   + div[data-tag-name="pre"]
   + div
