@@ -22,14 +22,17 @@ body {
   padding-right: 3.5rem;
 }
 
-.workspace-tabs .view-content > div > .markdown-preview-view > .markdown-preview-section > div {
+.workspace-tabs
+  .view-content
+  > div
+  > .markdown-preview-view
+  > .markdown-preview-section
+  > div {
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
-.markdown-preview-view
-  .internal-query.is-embed
-  .internal-query-header {
+.markdown-preview-view .internal-query.is-embed .internal-query-header {
   padding: 10px 0;
 }
 
@@ -41,9 +44,7 @@ body {
   padding: 10px;
 }
 
-.markdown-preview-view
-  .internal-query.is-embed
-  .internal-query-header-title {
+.markdown-preview-view .internal-query.is-embed .internal-query-header-title {
   font-weight: 500;
   font-style: italic;
 }
@@ -91,13 +92,10 @@ body {
   list-style: decimal;
 }
 
-.markdown-preview-section
-  ul
-  > li:not(.task-list-item)::before,
+.markdown-preview-section ul > li:not(.task-list-item)::before,
 .markdown-preview-section ol > li::before {
   display: none;
 }
-
 
 .markdown-preview-section .footnotes li > p {
   display: block;
@@ -245,59 +243,6 @@ body {
   margin-bottom: 0;
 }
 
-.community-plugin-readme.markdown-preview-view h1:first-child,
-.community-plugin-readme.markdown-preview-view h2:first-child,
-.community-plugin-readme.markdown-preview-view h3:first-child,
-.community-plugin-readme.markdown-preview-view h4:first-child,
-.community-plugin-readme.markdown-preview-view h5:first-child,
-.community-plugin-readme.markdown-preview-view h6:first-child,
-.cc-pretty-preview .markdown-preview-pusher + div h1,
-.cc-pretty-preview .markdown-preview-pusher + div h2,
-.cc-pretty-preview .markdown-preview-pusher + div h3,
-.cc-pretty-preview .markdown-preview-pusher + div h4,
-.cc-pretty-preview .markdown-preview-pusher + div h5,
-.cc-pretty-preview .markdown-preview-pusher + div h6,
-.cc-pretty-preview .markdown-preview-pusher + div:empty + div h1,
-.cc-pretty-preview .markdown-preview-pusher + div:empty + div h2,
-.cc-pretty-preview .markdown-preview-pusher + div:empty + div h3,
-.cc-pretty-preview .markdown-preview-pusher + div:empty + div h4,
-.cc-pretty-preview .markdown-preview-pusher + div:empty + div h5,
-.cc-pretty-preview .markdown-preview-pusher + div:empty + div h6,
-.cc-pretty-preview .markdown-preview-pusher + div[data-tag-name="pre"] + div h1,
-.cc-pretty-preview .markdown-preview-pusher + div[data-tag-name="pre"] + div h2,
-.cc-pretty-preview .markdown-preview-pusher + div[data-tag-name="pre"] + div h3,
-.cc-pretty-preview .markdown-preview-pusher + div[data-tag-name="pre"] + div h4,
-.cc-pretty-preview .markdown-preview-pusher + div[data-tag-name="pre"] + div h5,
-.cc-pretty-preview
-  .markdown-preview-pusher
-  + div[data-tag-name="pre"]
-  + div
-  h6,
-.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div h1,
-.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div h2,
-.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div h3,
-.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div h4,
-.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div h5,
-.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div h6,
-.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div:empty + div h1,
-.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div:empty + div h2,
-.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div:empty + div h3,
-.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div:empty + div h4,
-.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div:empty + div h5,
-.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div:empty + div h6,
-.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div[data-tag-name="pre"] + div h1,
-.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div[data-tag-name="pre"] + div h2,
-.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div[data-tag-name="pre"] + div h3,
-.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div[data-tag-name="pre"] + div h4,
-.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div[data-tag-name="pre"] + div h5,
-.cc-pretty-preview .workspace-tabs
-  .markdown-preview-pusher
-  + div[data-tag-name="pre"]
-  + div
-  h6 {
-  margin-top: 0;
-}
-
 .cc-pretty-preview .markdown-preview-view div[data-tag-name="h1"] + div > h2 {
   margin-top: var(--editor-line-height-rem);
 }
@@ -335,8 +280,11 @@ body {
   padding: 0;
 }
 
-.cc-seamless-embed .markdown-embed > .markdown-embed-content > .markdown-preview-view {
-  overflow-y: visible;
+.cc-seamless-embed
+  .markdown-embed
+  > .markdown-embed-content
+  > .markdown-preview-view {
+  /* overflow-y: auto; */
 }
 
 .cc-seamless-embed .markdown-preview-view .markdown-embed-content {
@@ -358,5 +306,10 @@ body {
 }
 
 .cc-seamless-embed .markdown-embed-link {
-  top: 8px;
+  top: 0;
+  line-height: inherit;
+}
+
+.cc-seamless-embed .markdown-embed-title {
+  display: none;
 }

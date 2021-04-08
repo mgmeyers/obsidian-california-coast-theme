@@ -27,9 +27,15 @@ settings:
         level: 3
     - 
         id: cc-seamless-embed
-        title: Seamless Embed
+        title: Seamless embed
         description: Display embedded content seamlessly as a part of the containing document
         type: class-toggle
+    - 
+        id: scale-small
+        title: Page preview scale
+        description: Percentage amount to scale hover preview and sidebar document font
+        type: variable-number
+        default: 90
 
     - 
         id: custom-fonts

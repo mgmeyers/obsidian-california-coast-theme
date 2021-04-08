@@ -22,7 +22,7 @@
   --editor-font-weight: 400;
   --editor-font-features: "";
 
-  --small-modifier: 0.9;
+  --scale-small: 90;
 
   --font-normal: 16px;
   --font-small: 14px;
@@ -207,7 +207,7 @@
 
 body {
   --editor-line-height-rem: calc(var(--editor-line-height) * 1rem);
-  --editor-line-height-small: calc(var(--editor-line-height) * var(--small-modifier));
+  --editor-line-height-small: calc(var(--editor-line-height) * var(--scale-small) / 100);
   --editor-line-height-small-rem: calc(var(--editor-line-height-small) * 1rem);
 }
 
@@ -1247,7 +1247,7 @@ input.document-replace-input:focus {
 
 .workspace > .workspace-split:not(.mod-root) .CodeMirror,
 .workspace > .workspace-split:not(.mod-root) .markdown-preview-view {
-  font-size: calc(100% * var(--small-modifier));
+  font-size: calc(100% * var(--scale-small) / 100);
 }
 .workspace
   > .workspace-split:not(.mod-root)
@@ -2192,13 +2192,11 @@ body:not(.hider-ribbon) .side-dock-ribbon-action {
   pointer-events: auto !important;
   border: 1px solid var(--background-modifier-border);
 }
-.popover.hover-popover {
-  max-height: 40vh;
-}
 .popover .markdown-embed-link {
   display: none;
 }
 .popover .markdown-embed .markdown-preview-view {
+  font-size: calc(100% * var(--scale-small) / 100);
   padding: 16px;
 }
 .popover.hover-popover .markdown-embed .markdown-embed-content {

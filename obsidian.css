@@ -27,9 +27,15 @@ settings:
         level: 3
     - 
         id: cc-seamless-embed
-        title: Seamless Embed
+        title: Seamless embed
         description: Display embedded content seamlessly as a part of the containing document
         type: class-toggle
+    - 
+        id: scale-small
+        title: Page preview scale
+        description: Percentage amount to scale hover preview and sidebar document font
+        type: variable-number
+        default: 90
 
     - 
         id: custom-fonts
@@ -380,7 +386,7 @@ settings:
   --editor-font-weight: 400;
   --editor-font-features: "";
 
-  --small-modifier: 0.9;
+  --scale-small: 90;
 
   --font-normal: 16px;
   --font-small: 14px;
@@ -565,7 +571,7 @@ settings:
 
 body {
   --editor-line-height-rem: calc(var(--editor-line-height) * 1rem);
-  --editor-line-height-small: calc(var(--editor-line-height) * var(--small-modifier));
+  --editor-line-height-small: calc(var(--editor-line-height) * var(--scale-small) / 100);
   --editor-line-height-small-rem: calc(var(--editor-line-height-small) * 1rem);
 }
 
@@ -1605,7 +1611,7 @@ input.document-replace-input:focus {
 
 .workspace > .workspace-split:not(.mod-root) .CodeMirror,
 .workspace > .workspace-split:not(.mod-root) .markdown-preview-view {
-  font-size: calc(100% * var(--small-modifier));
+  font-size: calc(100% * var(--scale-small) / 100);
 }
 .workspace
   > .workspace-split:not(.mod-root)
@@ -2550,13 +2556,11 @@ body:not(.hider-ribbon) .side-dock-ribbon-action {
   pointer-events: auto !important;
   border: 1px solid var(--background-modifier-border);
 }
-.popover.hover-popover {
-  max-height: 40vh;
-}
 .popover .markdown-embed-link {
   display: none;
 }
 .popover .markdown-embed .markdown-preview-view {
+  font-size: calc(100% * var(--scale-small) / 100);
   padding: 16px;
 }
 .popover.hover-popover .markdown-embed .markdown-embed-content {
@@ -3425,8 +3429,9 @@ html .CodeMirror-lines {
   padding: 0 calc(var(--nested-padding) / 2) 0 var(--nested-padding);
 }
 .markdown-embed-title {
-  line-height: 18px;
-  height: 24px;
+  line-height: inherit;
+  height: unset;
+  color: var(--shade-40);
 }
 .markdown-embed .markdown-preview-sizer:first-child ul {
   margin-block-start: 2px;
@@ -3564,7 +3569,7 @@ input[type="checkbox"]:checked:before {
   height: 16px;
   position: relative;
   line-height: 0;
-  margin-left: -1.25em;
+  margin-left: -1.2em;
   margin-right: 6px;
   filter: none;
 
@@ -4972,14 +4977,17 @@ body {
   padding-right: 3.5rem;
 }
 
-.workspace-tabs .view-content > div > .markdown-preview-view > .markdown-preview-section > div {
+.workspace-tabs
+  .view-content
+  > div
+  > .markdown-preview-view
+  > .markdown-preview-section
+  > div {
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
-.markdown-preview-view
-  .internal-query.is-embed
-  .internal-query-header {
+.markdown-preview-view .internal-query.is-embed .internal-query-header {
   padding: 10px 0;
 }
 
@@ -4991,9 +4999,7 @@ body {
   padding: 10px;
 }
 
-.markdown-preview-view
-  .internal-query.is-embed
-  .internal-query-header-title {
+.markdown-preview-view .internal-query.is-embed .internal-query-header-title {
   font-weight: 500;
   font-style: italic;
 }
@@ -5041,13 +5047,10 @@ body {
   list-style: decimal;
 }
 
-.markdown-preview-section
-  ul
-  > li:not(.task-list-item)::before,
+.markdown-preview-section ul > li:not(.task-list-item)::before,
 .markdown-preview-section ol > li::before {
   display: none;
 }
-
 
 .markdown-preview-section .footnotes li > p {
   display: block;
@@ -5195,59 +5198,6 @@ body {
   margin-bottom: 0;
 }
 
-.community-plugin-readme.markdown-preview-view h1:first-child,
-.community-plugin-readme.markdown-preview-view h2:first-child,
-.community-plugin-readme.markdown-preview-view h3:first-child,
-.community-plugin-readme.markdown-preview-view h4:first-child,
-.community-plugin-readme.markdown-preview-view h5:first-child,
-.community-plugin-readme.markdown-preview-view h6:first-child,
-.cc-pretty-preview .markdown-preview-pusher + div h1,
-.cc-pretty-preview .markdown-preview-pusher + div h2,
-.cc-pretty-preview .markdown-preview-pusher + div h3,
-.cc-pretty-preview .markdown-preview-pusher + div h4,
-.cc-pretty-preview .markdown-preview-pusher + div h5,
-.cc-pretty-preview .markdown-preview-pusher + div h6,
-.cc-pretty-preview .markdown-preview-pusher + div:empty + div h1,
-.cc-pretty-preview .markdown-preview-pusher + div:empty + div h2,
-.cc-pretty-preview .markdown-preview-pusher + div:empty + div h3,
-.cc-pretty-preview .markdown-preview-pusher + div:empty + div h4,
-.cc-pretty-preview .markdown-preview-pusher + div:empty + div h5,
-.cc-pretty-preview .markdown-preview-pusher + div:empty + div h6,
-.cc-pretty-preview .markdown-preview-pusher + div[data-tag-name="pre"] + div h1,
-.cc-pretty-preview .markdown-preview-pusher + div[data-tag-name="pre"] + div h2,
-.cc-pretty-preview .markdown-preview-pusher + div[data-tag-name="pre"] + div h3,
-.cc-pretty-preview .markdown-preview-pusher + div[data-tag-name="pre"] + div h4,
-.cc-pretty-preview .markdown-preview-pusher + div[data-tag-name="pre"] + div h5,
-.cc-pretty-preview
-  .markdown-preview-pusher
-  + div[data-tag-name="pre"]
-  + div
-  h6,
-.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div h1,
-.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div h2,
-.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div h3,
-.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div h4,
-.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div h5,
-.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div h6,
-.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div:empty + div h1,
-.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div:empty + div h2,
-.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div:empty + div h3,
-.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div:empty + div h4,
-.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div:empty + div h5,
-.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div:empty + div h6,
-.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div[data-tag-name="pre"] + div h1,
-.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div[data-tag-name="pre"] + div h2,
-.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div[data-tag-name="pre"] + div h3,
-.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div[data-tag-name="pre"] + div h4,
-.cc-pretty-preview .workspace-tabs .markdown-preview-pusher + div[data-tag-name="pre"] + div h5,
-.cc-pretty-preview .workspace-tabs
-  .markdown-preview-pusher
-  + div[data-tag-name="pre"]
-  + div
-  h6 {
-  margin-top: 0;
-}
-
 .cc-pretty-preview .markdown-preview-view div[data-tag-name="h1"] + div > h2 {
   margin-top: var(--editor-line-height-rem);
 }
@@ -5285,8 +5235,11 @@ body {
   padding: 0;
 }
 
-.cc-seamless-embed .markdown-embed > .markdown-embed-content > .markdown-preview-view {
-  overflow-y: visible;
+.cc-seamless-embed
+  .markdown-embed
+  > .markdown-embed-content
+  > .markdown-preview-view {
+  /* overflow-y: auto; */
 }
 
 .cc-seamless-embed .markdown-preview-view .markdown-embed-content {
@@ -5308,26 +5261,32 @@ body {
 }
 
 .cc-seamless-embed .markdown-embed-link {
-  top: 8px;
+  top: 0;
+  line-height: inherit;
 }
+
+.cc-seamless-embed .markdown-embed-title {
+  display: none;
+}
+
 :root {
     --h1-size: 1.602em;
     --h1-line-height: 1.4;
-    --h1-margin-top: 4;
+    --h1-margin-top: 3;
     --h1-margin-bottom: 1; 
     --h1-weight: 500; 
     --h1-style: normal; 
 
     --h2-size: 1.424em;
     --h2-line-height: 1.4;
-    --h2-margin-top: 2.5;
+    --h2-margin-top: 2.25;
     --h2-margin-bottom: 0.5; 
     --h2-weight: 500; 
     --h2-style: normal; 
 
     --h3-size: 1.266em;
     --h3-line-height: 1.4;
-    --h3-margin-top: 2;
+    --h3-margin-top: 1.75;
     --h3-margin-bottom: 0.5; 
     --h3-weight: 500; 
     --h3-style: normal; 
@@ -5374,6 +5333,7 @@ body {
   font-style: var(--h1-style);
 }
 
+.popover .markdown-embed .markdown-preview-view h1,
 .cc-pretty-preview .workspace-tabs  .markdown-preview-view h1,
 .workspace-tabs .markdown-preview-view h1 {
   margin-top: calc(var(--h2-margin-top) * var(--editor-line-height-small-rem));
@@ -5391,6 +5351,7 @@ body {
   font-style: var(--h2-style);
 }
 
+.popover .markdown-embed .markdown-preview-view h2,
 .cc-pretty-preview .workspace-tabs  .markdown-preview-view h2,
 .workspace-tabs .markdown-preview-view h2 {
   margin-top: calc(var(--h2-margin-top) * var(--editor-line-height-small-rem));
@@ -5408,6 +5369,7 @@ body {
   font-style: var(--h3-style);
 }
 
+.popover .markdown-embed .markdown-preview-view h3,
 .cc-pretty-preview .workspace-tabs  .markdown-preview-view h3,
 .workspace-tabs .markdown-preview-view h3 {
   margin-top: calc(var(--h3-margin-top) * var(--editor-line-height-small-rem));
@@ -5425,6 +5387,7 @@ body {
   font-style: var(--h4-style);
 }
 
+.popover .markdown-embed .markdown-preview-view h4,
 .cc-pretty-preview .workspace-tabs  .markdown-preview-view h4,
 .workspace-tabs .markdown-preview-view h4 {
   margin-top: calc(var(--h4-margin-top) * var(--editor-line-height-small-rem));
@@ -5442,6 +5405,7 @@ body {
   font-style: var(--h5-style);
 }
 
+.popover .markdown-embed .markdown-preview-view h5,
 .cc-pretty-preview .workspace-tabs  .markdown-preview-view h5,
 .workspace-tabs .markdown-preview-view h5 {
   margin-top: calc(var(--h5-margin-top) * var(--editor-line-height-small-rem));
@@ -5460,6 +5424,7 @@ body {
   color: var(--text-normal);
 }
 
+.popover .markdown-embed .markdown-preview-view h6,
 .cc-pretty-preview .workspace-tabs  .markdown-preview-view h6,
 .workspace-tabs .markdown-preview-view h6 {
   margin-top: calc(var(--h6-margin-top) * var(--editor-line-height-small-rem));
@@ -5616,4 +5581,31 @@ html .embedded-note-titles .CodeMirror-lines {
   > h1 {
   padding-left: var(--header-width);
   padding-right: calc(var(--header-width) * 2);
+}
+
+.community-plugin-readme.markdown-preview-view h1:first-child,
+.community-plugin-readme.markdown-preview-view h2:first-child,
+.community-plugin-readme.markdown-preview-view h3:first-child,
+.community-plugin-readme.markdown-preview-view h4:first-child,
+.community-plugin-readme.markdown-preview-view h5:first-child,
+.community-plugin-readme.markdown-preview-view h6:first-child,
+.markdown-preview-pusher + div > h1,
+.markdown-preview-pusher + div > h2,
+.markdown-preview-pusher + div > h3,
+.markdown-preview-pusher + div > h4,
+.markdown-preview-pusher + div > h5,
+.markdown-preview-pusher + div > h6,
+.markdown-preview-pusher + div:empty + div > h1,
+.markdown-preview-pusher + div:empty + div > h2,
+.markdown-preview-pusher + div:empty + div > h3,
+.markdown-preview-pusher + div:empty + div > h4,
+.markdown-preview-pusher + div:empty + div > h5,
+.markdown-preview-pusher + div:empty + div > h6,
+.markdown-preview-pusher + div[data-tag-name="pre"] + div > h1,
+.markdown-preview-pusher + div[data-tag-name="pre"] + div > h2,
+.markdown-preview-pusher + div[data-tag-name="pre"] + div > h3,
+.markdown-preview-pusher + div[data-tag-name="pre"] + div > h4,
+.markdown-preview-pusher + div[data-tag-name="pre"] + div > h5,
+.markdown-preview-pusher + div[data-tag-name="pre"] + div > h6 {
+  margin-top: 0 !important;
 }
