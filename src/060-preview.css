@@ -280,13 +280,6 @@ body {
   padding: 0;
 }
 
-.cc-seamless-embed
-  .markdown-embed
-  > .markdown-embed-content
-  > .markdown-preview-view {
-  /* overflow-y: auto; */
-}
-
 .cc-seamless-embed .markdown-preview-view .markdown-embed-content {
   overflow: visible;
 }
