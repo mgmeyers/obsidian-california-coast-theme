@@ -46,6 +46,10 @@
   --radius-xl: 20px;
 
   --cursor: pointer;
+
+  --strong-weight: var(--bold-weight);
+  --strong-color: inherit;
+  --em-color: inherit;
 }
 
 .theme-light {
@@ -578,7 +582,7 @@ button,
   background: var(--background-primary);
   border-radius: 10px;
   overflow: hidden;
-  max-width: 90vw;
+  max-width: 1000px;
   max-height: 90vh;
 }
 .modal.mod-settings .vertical-tab-content-container {
@@ -587,6 +591,7 @@ button,
   padding-right: 0;
 }
 .modal.mod-settings {
+  max-width: 1000px;
   width: 90vw;
   height: 90vh;
 }
@@ -2498,21 +2503,32 @@ input[type="range"]::-webkit-slider-thumb:active {
   padding-top: 5px;
 }
 .vertical-tab-header-group-title {
-  color: var(--text-normal);
+  color: var(--shade-40);
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: 0;
+  padding: 6px 18px;
+}
+.vertical-tab-header-group-items {
+  padding: 0 10px;
 }
 .vertical-tab-nav-item {
-  font-size: var(--font-small);
-  padding: 5px 10px 5px 17px;
-  color: var(--text-muted);
+  font-size: 13px;
+  padding: 4px 8px;
+  color: var(--text-normal);
   border: none;
   background: transparent;
   cursor: var(--cursor);
+  font-weight: 500;
+  border-radius: var(--radius-s);
 }
-.vertical-tab-nav-item:hover,
+.vertical-tab-nav-item:hover {
+  background: transparent;
+}
 .vertical-tab-nav-item.is-active {
   color: var(--text-normal);
+  background: var(--shade-plus-darker);
 }
 .setting-hotkey {
   background-color: var(--background-modifier-border);

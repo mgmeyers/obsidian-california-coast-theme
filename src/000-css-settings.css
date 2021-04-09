@@ -125,7 +125,7 @@ settings:
         title: H1 top margin
         description: Accepts decimal values representing the number of lines to add before the heading
         type: variable-number
-        default: 4
+        default: 3
     - 
         id: h1-margin-bottom
         title: H1 bottom margin
@@ -167,7 +167,7 @@ settings:
         title: H2 top margin
         description: Accepts decimal values representing the number of lines to add before the heading
         type: variable-number
-        default: 2.5
+        default: 2.25
     - 
         id: h2-margin-bottom
         title: H2 bottom margin
@@ -209,13 +209,13 @@ settings:
         title: H3 top margin
         description: Accepts decimal values representing the number of lines to add before the heading
         type: variable-number
-        default: 2
+        default: 1.75
     - 
         id: h3-margin-bottom
         title: H3 bottom margin
         description: Accepts decimal values representing the number of lines to add below the heading
         type: variable-number
-        default: 0.4
+        default: 0.5
     - 
         id: h3-weight
         title: H3 font weight

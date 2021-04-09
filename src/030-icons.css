@@ -70,6 +70,10 @@
   cursor: var(--cursor);
 }
 
+.nav-action-button.is-active {
+  background: var(--shade-plus-darker);
+}
+
 .nav-action-button.is-active:hover {
   color: var(--text-muted);
 }

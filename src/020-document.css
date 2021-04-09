@@ -5,9 +5,19 @@
   line-height: var(--line-height);
   font-family: var(--text-editor) !important;
 }
-.cm-s-obsidian .cm-header,
-.cm-s-obsidian .cm-strong {
+.cm-s-obsidian .cm-header {
   font-weight: var(--bold-weight);
+}
+
+.markdown-preview-section strong,
+.cm-s-obsidian .cm-strong {
+  font-weight: var(--strong-weight);
+  color: var(--strong-color);
+}
+
+.markdown-preview-section em,
+.cm-s-obsidian .cm-em {
+  color: var(--em-color);
 }
 
 
