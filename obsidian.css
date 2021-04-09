@@ -2861,7 +2861,7 @@ input[type="range"]::-webkit-slider-thumb:active {
 }
 .vertical-tab-header-group-title {
   color: var(--shade-40);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
   text-transform: none;
   letter-spacing: 0;
@@ -2871,14 +2871,15 @@ input[type="range"]::-webkit-slider-thumb:active {
   padding: 0 10px;
 }
 .vertical-tab-nav-item {
-  font-size: 13px;
-  padding: 4px 8px;
+  font-size: 14px;
+  padding: 8px 8px;
   color: var(--text-normal);
   border: none;
   background: transparent;
   cursor: var(--cursor);
   font-weight: 500;
   border-radius: var(--radius-s);
+  line-height: 1;
 }
 .vertical-tab-nav-item:hover {
   background: transparent;
