@@ -1441,13 +1441,6 @@ body.theme-dark:not(.is-translucent):not(.hider-frameless)
   border-color: var(--text-highlight-bg-active);
 }
 
-.cm-s-obsidian span.obsidian-search-match-highlight {
-  background: inherit;
-  border-radius: 2px;
-  box-shadow: 0 0 0px 2px hsla(var(--accent-hsl), 0.8);
-  padding-left: 0;
-  padding-right: 0;
-}
 .markdown-preview-view .search-highlight > div {
   box-shadow: 0 0 0px 2px var(--text-normal);
   border-radius: 2px;
@@ -4854,6 +4847,11 @@ a[href*="obsidian://search"]:after
 }
 
 /* Pretty editor */
+ 
+.cc-pretty-editor .cm-formatting-header.obsidian-search-match-highlight
+ {
+  background: transparent;
+} 
 
 .cc-pretty-editor .cm-formatting-header {
   color: var(--text-faint) !important;

@@ -63,6 +63,11 @@
 }
 
 /* Pretty editor */
+ 
+.cc-pretty-editor .cm-formatting-header.obsidian-search-match-highlight
+ {
+  background: transparent;
+} 
 
 .cc-pretty-editor .cm-formatting-header {
   color: var(--text-faint) !important;
