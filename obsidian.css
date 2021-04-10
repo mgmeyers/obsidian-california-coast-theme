@@ -5455,7 +5455,7 @@ body {
 }
 
 .empty-state-title,
-.HyperMD-header-1 {
+.CodeMirror .CodeMirror-line.HyperMD-header-1 {
   color: var(--h1-color);
   font-size: var(--h1-size) !important;
   font-weight: var(--h1-weight) !important;
@@ -5467,7 +5467,7 @@ body {
   line-height: calc(var(--h1-size) * 1.8) !important;
 }
 
-.HyperMD-header-2 {
+.CodeMirror .CodeMirror-line.HyperMD-header-2 {
   color: var(--h2-color);
   font-size: var(--h2-size) !important;
   font-weight: var(--h2-weight) !important;
@@ -5479,7 +5479,7 @@ body {
   line-height: calc(var(--h2-size) * 1.8) !important;
 }
 
-.HyperMD-header-3 {
+.CodeMirror .CodeMirror-line.HyperMD-header-3 {
   color: var(--h3-color);
   font-size: var(--h3-size) !important;
   font-weight: var(--h3-weight) !important;
@@ -5491,7 +5491,7 @@ body {
   line-height: calc(var(--h3-size) * 1.8) !important;
 }
 
-.HyperMD-header-4 {
+.CodeMirror .CodeMirror-line.HyperMD-header-4 {
   color: var(--h4-color);
   font-variant: unset;
   text-transform: unset;
@@ -5506,7 +5506,7 @@ body {
   line-height: calc(var(--h4-size) * 1.8) !important;
 }
 
-.HyperMD-header-5 {
+.CodeMirror .CodeMirror-line.HyperMD-header-5 {
   color: var(--h5-color);
   font-variant: unset;
   text-transform: unset;
@@ -5521,7 +5521,7 @@ body {
   line-height: calc(var(--h5-size) * 1.8) !important;
 }
 
-.HyperMD-header-6 {
+.CodeMirror .CodeMirror-line.HyperMD-header-6 {
   font-variant: unset;
   text-transform: unset;
   letter-spacing: unset;
