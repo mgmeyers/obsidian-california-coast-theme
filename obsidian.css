@@ -1154,6 +1154,23 @@ body.theme-dark:not(.is-translucent):not(.hider-frameless)
   box-shadow: 0 1px 0 var(--shade-10), 0 -1px 0 var(--shade-10);
 }
 
+.workspace-tabs .workspace-leaf-content[data-type="markdown"] {
+  border-top: 1px solid var(--shade-plus-darker);
+  box-shadow: inset 1px 0 13px -12px rgb(var(--color-black-rgb));
+}
+
+.theme-dark .workspace-tabs .workspace-leaf-content[data-type="markdown"] {
+  border-top-color: var(--dark-separator);
+}
+
+.workspace-tabs .workspace-leaf-content[data-type="markdown"] .markdown-preview-view {
+  padding-top: 1.5rem !important;
+}
+
+.workspace-split.mod-right-split .workspace-tabs .workspace-leaf {
+  border-top-right-radius: 0;
+}
+
 .workspace-leaf {
   border-left: 0px;
 }
