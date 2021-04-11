@@ -993,7 +993,10 @@ input.prompt-input:hover {
 .modal,
 .prompt,
 .suggestion-container {
-  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.2);
+}
+.suggestion-container {
+  border: none;
 }
 .prompt-instructions {
   color: var(--text-muted);
@@ -1573,6 +1576,7 @@ input.document-replace-input:focus {
 
 .community-plugin-search .setting-item-control {
   justify-content: flex-start;
+  padding-top: 5px;
 }
 
 .community-plugin-search .search-input-container {
@@ -1590,7 +1594,8 @@ input.document-replace-input:focus {
 }
 
 .community-plugin-search-summary {
-  padding: 16px 16px 0;
+  padding: 0 16px 10px;
+  font-size: 13px;
 }
 
 .community-plugin-item {
@@ -2888,6 +2893,10 @@ input[type="range"]::-webkit-slider-thumb:active {
 .vertical-tab-nav-item.is-active {
   color: var(--text-normal);
   background: var(--shade-plus-darker);
+}
+.hotkey-list-container,
+.hotkey-search-container {
+  padding-left: 2px;
 }
 .setting-hotkey {
   background-color: var(--background-modifier-border);
