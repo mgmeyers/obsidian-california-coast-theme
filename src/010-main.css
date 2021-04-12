@@ -790,8 +790,7 @@ body.theme-dark:not(.is-translucent):not(.hider-frameless)
 }
 
 .workspace-tabs .workspace-leaf-content[data-type="markdown"] {
-  border-top: 1px solid var(--shade-plus-darker);
-  box-shadow: inset 1px 0 13px -12px rgb(var(--color-black-rgb));
+  border-top: 2px solid var(--shade-3);
 }
 
 .theme-dark .workspace-tabs .workspace-leaf-content[data-type="markdown"] {
