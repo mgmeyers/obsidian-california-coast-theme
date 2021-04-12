@@ -108,6 +108,7 @@ settings:
         title: Level 1 Headings
         type: heading
         level: 4
+        collapsed: true
     - 
         id: h1-size
         title: H1 font size
@@ -150,6 +151,7 @@ settings:
         title: Level 2 Headings
         type: heading
         level: 4
+        collapsed: true
     - 
         id: h2-size
         title: H2 font size
@@ -192,6 +194,7 @@ settings:
         title: Level 3 Headings
         type: heading
         level: 4
+        collapsed: true
     - 
         id: h3-size
         title: H3 font size
@@ -234,6 +237,7 @@ settings:
         title: Level 4 Headings
         type: heading
         level: 4
+        collapsed: true
     - 
         id: h4-size
         title: H4 font size
@@ -276,6 +280,7 @@ settings:
         title: Level 5 Headings
         type: heading
         level: 4
+        collapsed: true
     - 
         id: h5-size
         title: H5 font size
@@ -318,6 +323,7 @@ settings:
         title: Level 6 Headings
         type: heading
         level: 4
+        collapsed: true
     - 
         id: h6-size
         title: H6 font size
