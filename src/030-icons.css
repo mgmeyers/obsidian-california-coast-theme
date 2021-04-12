@@ -378,8 +378,8 @@
 }
 
 .modal-close-button:before {
-  font-size: 18px;
-  content: "\ebea";
+  font-size: 20px;
+  content: "\ebe9";
 }
 
 .view-header-icon:after {
