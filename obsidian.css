@@ -1686,7 +1686,10 @@ input[type="search"],
 input[type="email"],
 input[type="password"],
 input[type="number"] {
+  padding: 5px 10px;
   font-size: 14px;
+  border-radius: var(--radius-m);
+  height: auto;
 }
 
 textarea:focus,
