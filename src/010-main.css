@@ -1250,10 +1250,50 @@ input.document-replace-input:focus {
 }
 
 .community-plugin-item {
-  padding: 16px;
+  padding: 16px 16px 16px;
   margin: 0;
+  border-top: 1px solid var(--shade-plus-darker);
 }
 
+.community-plugin-name {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.community-plugin-name .flair {
+  letter-spacing: 0;
+  text-transform: none;
+  vertical-align: unset;
+  top: -1px;
+}
+
+.community-plugin-item .community-plugin-downloads {
+  color: var(--text-normal);
+  display: block;
+  font-size: 12px;
+  margin-top: 0;
+  line-height: 1;
+  padding: 4px 0 4px;
+}
+
+.community-plugin-item .community-plugin-author {
+  color: var(--text-muted);
+  font-size: 12px;
+  padding: 0 0 10px;
+}
+
+.community-plugin-version, .community-plugin-author {
+  line-height: inherit;
+}
+
+.community-plugin-item .community-plugin-desc {
+  color: var(--text-normal);
+}
+
+.community-plugin-downloads svg {
+  width: 13px;
+  height: 13px;
+}
 
 /* --------------- */
 /* Sidebar documents */
