@@ -138,7 +138,6 @@
 
 /* Box Icons */
 
-.modal-close-button:before,
 .view-header-icon:after,
 .view-action[aria-label="Preview (Ctrl/Cmd+Click to open in new pane)"]:after,
 .view-action[aria-label="Edit (Ctrl/Cmd+Click to edit in new pane)"]:after,
@@ -379,7 +378,8 @@
 }
 
 .modal-close-button:before {
-  content: "\ebe9";
+  font-size: 18px;
+  content: "\ebea";
 }
 
 .view-header-icon:after {

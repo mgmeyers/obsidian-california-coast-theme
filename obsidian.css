@@ -448,7 +448,6 @@ settings:
 
   --shade-plus-darker: var(--shade-5);
   --shade-plus-darker-hsl: hsl(0, 0%, 95%);
-
   --background-primary: var(--shade-0);
   --background-primary-alt: var(--shade-3);
   --background-secondary: var(--shade-3);
@@ -487,7 +486,7 @@ settings:
   --text-selection: hsl(var(--accent-h), var(--accent-s), 96%);
   --text-highlight-bg: rgba(255, 224, 0, 0.5);
   --text-highlight-bg-active: rgba(0, 0, 0, 0.1);
-  --background-modifier-cover: var(--shade-60);
+  --background-modifier-cover: rgba(170, 170, 170, 0.6);
 
   --opacity-translucency: 1;
 }
@@ -568,7 +567,7 @@ settings:
   --text-selection: hsl(var(--accent-h), calc(var(--accent-s) - 50%), 20%);
   --text-highlight-bg: rgba(255, 177, 80, 0.3);
   --text-highlight-bg-active: rgba(255, 255, 255, 0.1);
-  --background-modifier-cover: rgba(var(--color-black-rgb), 0.8);
+  --background-modifier-cover: rgba(20, 20, 20, 0.6);
 
   --opacity-translucency: 1;
 }
@@ -938,7 +937,7 @@ button,
   background-color: var(--shade-0);
 }
 .modal {
-  border: none;
+  border: 1px solid var(--shade-30);
   background: var(--background-primary);
   border-radius: 10px;
   overflow: hidden;
@@ -4126,7 +4125,6 @@ ol > li::before {
 
 /* Box Icons */
 
-.modal-close-button:before,
 .view-header-icon:after,
 .view-action[aria-label="Preview (Ctrl/Cmd+Click to open in new pane)"]:after,
 .view-action[aria-label="Edit (Ctrl/Cmd+Click to edit in new pane)"]:after,
@@ -4367,7 +4365,8 @@ ol > li::before {
 }
 
 .modal-close-button:before {
-  content: "\ebe9";
+  font-size: 18px;
+  content: "\ebea";
 }
 
 .view-header-icon:after {
