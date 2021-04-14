@@ -900,7 +900,7 @@ button,
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
 
   font-weight: 500;
-  border-radius: 6px;
+  border-radius: var(--radius-m);
   padding: 10px 14px;
 }
 
@@ -984,7 +984,7 @@ input.prompt-input:hover {
   flex-shrink: 0;
 }
 .modal-container .suggestion-item.is-selected {
-  border-radius: 6px;
+  border-radius: var(--radius-m);
   background: var(--background-tertiary);
 }
 .suggestion-item.is-selected,
@@ -1768,14 +1768,57 @@ textarea {
   padding: 8px 10px;
 }
 
+.modal.mod-settings button:not(.mod-cta):not(.mod-warning),
+.setting-item-control button,
 button,
-.modal.mod-settings button:not(.mod-cta) {
-  background-color: var(--background-modifier-border);
+button.mod-cta {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-normal);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4px 14px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.08);
+  border-radius: var(--radius-m);
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0px 0px;
   cursor: var(--cursor);
 }
+
+.modal.mod-settings button:not(.mod-cta):not(.mod-warning):hover
+.setting-item-control button:hover,
 button:hover,
-.modal.mod-settings button:not(.mod-cta):hover {
-  background-color: var(--background-modifier-border-hover);
+button.mod-cta:hover {
+  background: #FFFFFF;
+}
+
+.theme-dark .modal.mod-settings button:not(.mod-cta):not(.mod-warning),
+.theme-dark .setting-item-control button,
+.theme-dark button,
+.theme-dark button.mod-cta {
+  color: #DFDEDF;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), inset 0px 1px 1px rgba(255, 255, 255, 0.3);
+  background-color: var(--shade-50);
+}
+
+.theme-dark .modal.mod-settings button:not(.mod-cta):not(.mod-warning):active
+.theme-dark .setting-item-control button:active,
+.theme-dark button:active,
+.theme-dark button.mod-cta:active, 
+.modal.mod-settings button:not(.mod-cta):not(.mod-warning):active,
+.setting-item-control button:active,
+button:active,
+button.mod-cta:active {
+  color: #fff;
+  background: linear-gradient(180deg, hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 4%)) 0%, hsl(var(--accent-hsl)) 100%);
+  box-shadow: 0px 1px 2px hsla(var(--accent-hsl), 0.25);
 }
 
 input[type='range'] {
@@ -1784,7 +1827,7 @@ input[type='range'] {
   background-color: var(--shade-plus-darker);
   border: 1px solid rgba(0, 0, 0, 0.06);
   box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.03);
-  border-radius: 6px;
+  border-radius: var(--radius-m);
   height: 4px;
   margin: 0;
   padding: 0;
@@ -3018,16 +3061,32 @@ body:not(.plugin-sliding-panes-rotate-header)
 }
 .dropdown {
   font-size: 14px;
-  border-color: var(--shade-10);
+  font-weight: 500;
   font-family: var(--text);
   background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  color: var(--text-normal);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4px 28px 4px 14px;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.08);
+  border-radius: var(--radius-m);
+  order: 0;
+  flex-grow: 0;
+  margin: 0px 0px;
+  cursor: var(--cursor);
 }
 .theme-dark .dropdown {
-  border-color: var(--shade-20);
+  color: #DFDEDF;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), inset 0px 1px 1px rgba(255, 255, 255, 0.3);
+  background-color: var(--shade-50);
   background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23FFF%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
 }
+.theme-dark .dropdown:focus,
 .dropdown:focus {
-  border-color: var(--background-modifier-border-focus);
+  border-color: rgba(0, 0, 0, 0.12);
 }
 
 /* --------------- */
