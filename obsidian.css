@@ -3793,11 +3793,12 @@ input[type="checkbox"]:checked:before {
   margin: 0;
   float: none;
   padding-left: 0;
-  display: inline-block;
+  display: inline;
   line-height: inherit;
   font-size: unset;
   width: 0;
   height: 0.75em;
+  padding: 0;
 }
 
 .markdown-preview-view .collapse-indicator:before {
@@ -5157,6 +5158,42 @@ a[href*="obsidian://search"]:after
 
 .theme-dark.cc-pretty-editor .cm-formatting-list-ul:before {
   content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" style="fill:rgba(204,204,204);"><path d="M12,2C6.486,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.514,2,12,2z"></path></svg>');
+}
+
+.outliner-plugin-bls-zoom.cc-pretty-editor .cm-formatting-list-ul {
+  cursor: pointer;
+}
+
+.CodeMirror > .outliner-plugin-zoom-header {
+  font-family: var(--text);
+  font-size: 0.8em;
+  padding: 1rem 3.5rem 0;
+}
+
+.outliner-plugin-zoom-header > .outliner-plugin-zoom-title {
+  text-decoration: none;
+  color: hsla(var(--accent-hsl), 0.8);
+}
+.outliner-plugin-zoom-header > .outliner-plugin-zoom-title:hover {
+  color: hsla(var(--accent-hsl), 1);
+}
+.outliner-plugin-zoom-header > .outliner-plugin-zoom-title + span {
+  color: transparent;
+  font-size: 0;
+}
+.outliner-plugin-zoom-header > .outliner-plugin-zoom-title + span:before {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  display: inline-block;
+  font-family: "boxicons";
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  content: "\e9b2";
+  padding: 0 2px;
+  position: relative;
+  top: 2px;
 }
 
 body {

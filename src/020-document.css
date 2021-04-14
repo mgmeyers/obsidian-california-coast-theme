@@ -302,11 +302,12 @@ input[type="checkbox"]:checked:before {
   margin: 0;
   float: none;
   padding-left: 0;
-  display: inline-block;
+  display: inline;
   line-height: inherit;
   font-size: unset;
   width: 0;
   height: 0.75em;
+  padding: 0;
 }
 
 .markdown-preview-view .collapse-indicator:before {
