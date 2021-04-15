@@ -32,6 +32,13 @@ body {
   padding-right: 1rem;
 }
 
+.workspace-tabs
+  .view-content
+  > div
+  > .markdown-preview-view .markdown-preview-section ul.contains-task-list {
+    padding-inline-start: 1.5em;
+  }
+
 .markdown-preview-view .internal-query.is-embed .internal-query-header {
   padding: 10px 0;
 }

@@ -1689,7 +1689,7 @@ input.document-replace-input:focus {
   > .workspace-split:not(.mod-root)
   .workspace-leaf-content[data-type="markdown"]
   .markdown-preview-view {
-  padding: 0 15px;
+  padding: 0;
 }
 .workspace
   > .workspace-split:not(.mod-root)
@@ -5239,6 +5239,13 @@ body {
   padding-left: 1rem;
   padding-right: 1rem;
 }
+
+.workspace-tabs
+  .view-content
+  > div
+  > .markdown-preview-view .markdown-preview-section ul.contains-task-list {
+    padding-inline-start: 1.5em;
+  }
 
 .markdown-preview-view .internal-query.is-embed .internal-query-header {
   padding: 10px 0;

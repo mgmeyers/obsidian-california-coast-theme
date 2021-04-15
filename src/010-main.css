@@ -1319,7 +1319,7 @@ input.document-replace-input:focus {
   > .workspace-split:not(.mod-root)
   .workspace-leaf-content[data-type="markdown"]
   .markdown-preview-view {
-  padding: 0 15px;
+  padding: 0;
 }
 .workspace
   > .workspace-split:not(.mod-root)
