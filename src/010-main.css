@@ -805,6 +805,19 @@ body.theme-dark:not(.is-translucent):not(.hider-frameless)
   border-top-right-radius: 0;
 }
 
+.workspace-tabs .workspace-leaf .workspace-leaf-content > .view-content > * {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.workspace-tabs .workspace-leaf .workspace-leaf-content > .view-content > *:last-child {
+  margin-bottom: 2.5rem;
+}
+
+.workspace-tabs .workspace-leaf-content:not([data-type="markdown"]) .view-content {
+  font-size: 14px;
+}
+
 .workspace-leaf {
   border-left: 0px;
 }
@@ -1400,8 +1413,8 @@ textarea {
 
 .modal.mod-settings button:not(.mod-cta):not(.mod-warning),
 .setting-item-control button,
-button,
-button.mod-cta {
+.modal button,
+.modal button.mod-cta {
   font-size: 14px;
   font-weight: 500;
   color: var(--text-normal);
@@ -1423,15 +1436,15 @@ button.mod-cta {
 
 .modal.mod-settings button:not(.mod-cta):not(.mod-warning):hover
 .setting-item-control button:hover,
-button:hover,
-button.mod-cta:hover {
+.modal button:hover,
+.modal button.mod-cta:hover {
   background: #FFFFFF;
 }
 
 .theme-dark .modal.mod-settings button:not(.mod-cta):not(.mod-warning),
 .theme-dark .setting-item-control button,
-.theme-dark button,
-.theme-dark button.mod-cta {
+.theme-dark .modal button,
+.theme-dark .modal button.mod-cta {
   color: #DFDEDF;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), inset 0px 1px 1px rgba(255, 255, 255, 0.3);
   background-color: var(--shade-50);
@@ -1439,12 +1452,12 @@ button.mod-cta:hover {
 
 .theme-dark .modal.mod-settings button:not(.mod-cta):not(.mod-warning):active
 .theme-dark .setting-item-control button:active,
-.theme-dark button:active,
-.theme-dark button.mod-cta:active, 
+.theme-dark .modal button:active,
+.theme-dark .modal button.mod-cta:active, 
 .modal.mod-settings button:not(.mod-cta):not(.mod-warning):active,
 .setting-item-control button:active,
-button:active,
-button.mod-cta:active {
+.modal button:active,
+.modal button.mod-cta:active {
   color: #fff;
   background: linear-gradient(180deg, hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 4%)) 0%, hsl(var(--accent-hsl)) 100%);
   box-shadow: 0px 1px 2px hsla(var(--accent-hsl), 0.25);
@@ -1560,11 +1573,15 @@ input[type='range'] {
 }
 
 .nav-buttons-container {
-  padding: 4px 10px 1px;
+  padding: 4px 0 1px;
   margin-bottom: 0px !important;
   justify-content: flex-start;
   border: 0;
   line-height: 1;
+  font-size: var(--rem);
+}
+.workspace-leaf-content > .nav-header > .nav-buttons-container {
+  padding: 4px 10px 1px;
 }
 .nav-files-container {
   overflow-x: hidden;
@@ -2062,9 +2079,7 @@ input.search-input:focus {
   background-color: transparent;
   color: var(--shade-30);
 }
-.backlink-pane > .tree-item-self > .tree-item-inner {
-  padding-left: 4px;
-}
+
 .backlink-pane > .tree-item-self > .collapse-icon {
   display: none;
   color: var(--text-muted);
