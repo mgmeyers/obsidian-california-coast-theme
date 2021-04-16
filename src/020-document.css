@@ -559,48 +559,9 @@ iframe {
 
 /* Preview Mode Lists  */
 
-ul {
-  padding-inline-start: 2em;
-  list-style: none;
-}
-ul ul,
-ol ul,
-ol ol ul,
-ol ul ul,
-ul ol ul,
-ul ul ul {
-  list-style: none;
-}
-ul > li:not(.task-list-item)::before {
-  content: "\2022";
-  color: var(--text-faint);
-  font-weight: 600;
-  display: inline-block;
-  width: 1em;
-  margin-left: -1em;
-}
-ul li p,
-ol li p {
+.markdown-preview-view ul li p,
+.markdown-preview-view ol li p {
   display: inline;
-}
-ol {
-  padding-inline-start: 1em;
-  margin-left: 1em;
-  list-style: none;
-  counter-reset: counter;
-  position: relative;
-}
-ol > li {
-  margin-left: 0em;
-  counter-increment: counter;
-}
-ol > li::before {
-  content: counter(counter) ". ";
-  color: var(--text-faint);
-  position: absolute;
-  left: -1.25em;
-  text-align: right;
-  width: 2em;
 }
 
 /* Code */

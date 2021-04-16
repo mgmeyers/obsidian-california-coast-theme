@@ -99,11 +99,6 @@ body {
   list-style: decimal;
 }
 
-.markdown-preview-section ul > li:not(.task-list-item)::before,
-.markdown-preview-section ol > li::before {
-  display: none;
-}
-
 .markdown-preview-section .footnotes li > p {
   display: block;
   margin-bottom: 0;
