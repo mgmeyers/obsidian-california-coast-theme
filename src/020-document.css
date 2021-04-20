@@ -368,7 +368,6 @@ input[type="checkbox"]:checked:before {
 .CodeMirror-foldgutter-open:after,
 .CodeMirror-foldgutter-folded:after {
   border-radius: 50%;
-  backdrop-filter: blur(10px);
   background-color: rgba(var(--background-rgb), 0.3);
   line-height: 1;
 }
