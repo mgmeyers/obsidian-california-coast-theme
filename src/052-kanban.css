@@ -1,0 +1,138 @@
+body .kanban-plugin {
+  background-color: var(--shade-0);
+}
+
+body .kanban-plugin__board {
+    padding: 1.5rem;
+}
+
+body .kanban-plugin__lane-title {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+body .kanban-plugin__lane {
+  box-shadow: 0px 0.5px 1px 0.5px rgba(0, 0, 0, 0.1);
+  background: var(--shade-0);
+  border: none;
+  border-radius: var(--radius-l);
+  padding: 2px;
+}
+
+body .kanban-plugin__item {
+  background-color: var(--background-primary);
+  margin-bottom: 6px;
+  font-size: 14px;
+  border: none;
+  box-shadow: 0px 0.5px 1px 0.5px rgba(0, 0, 0, 0.1);
+}
+
+body .kanban-plugin__item-content-wrapper {
+  font-weight: 500;
+  background-color: var(--shade-3);
+  padding: 8px 10px;
+}
+
+body .kanban-plugin button {
+  box-shadow: 0px 0.5px 1px 0.5px rgba(0, 0, 0, 0.1);
+  background-color: var(--shade-3);
+  font-weight: 500;
+}
+
+body .kanban-plugin .kanban-plugin__item-edit-button-wrapper button {
+  background-color: var(--shade-0);
+}
+
+body .kanban-plugin__lane-action-wrapper button {
+  box-shadow: none;
+}
+
+body .kanban-plugin button:hover,
+body .kanban-plugin__item .kanban-plugin__item-edit-archive-button:hover,
+body .kanban-plugin__item button.kanban-plugin__item-edit-button.is-enabled,
+body .kanban-plugin__item button.kanban-plugin__item-edit-button:hover,
+body .kanban-plugin__lane button.kanban-plugin__lane-settings-button.is-enabled,
+body .kanban-plugin__lane button.kanban-plugin__lane-settings-button:hover {
+  color: var(--text-on-accent);
+  background-color: var(--interactive-accent);
+}
+
+body .kanban-plugin__new-lane-button,
+body .kanban-plugin__new-item-button {
+  font-size: 14px;
+  background-color: var(--shade-plus-darker);
+}
+
+body button.kanban-plugin__new-lane-button {
+  border: none;
+  border-radius: var(--radius-m);
+  padding: 12px;
+}
+
+body button.kanban-plugin__new-item-button {
+  background-color: var(--background-primary);
+}
+
+body button.kanban-plugin__new-item-button,
+body .kanban-plugin__item-settings-actions button {
+  box-shadow: none;
+}
+
+body button.kanban-plugin__confirm-action-button:hover,
+body button.kanban-plugin__item-button-delete:hover,
+body button.kanban-plugin__delete-lane-button:hover {
+  color: var(--text-error);
+  background-color: rgba(var(--background-modifier-error-rgb), 0.2);
+}
+
+body .kanban-plugin__lane-settings-button {
+  border-radius: 50%;
+}
+
+body .kanban-plugin__item-input-wrapper .kanban-plugin__grow-wrap > textarea,
+body .kanban-plugin__item-input-wrapper .kanban-plugin__grow-wrap::after {
+  font-size: 14px;
+}
+
+body .kanban-plugin__item-content-wrapper .kanban-plugin__grow-wrap > textarea,
+body .kanban-plugin__item-content-wrapper .kanban-plugin__grow-wrap::after,
+body .kanban-plugin__lane-input-wrapper .kanban-plugin__grow-wrap > textarea,
+body .kanban-plugin__lane-input-wrapper .kanban-plugin__grow-wrap::after,
+body .kanban-plugin__lane-title .kanban-plugin__grow-wrap > textarea,
+body .kanban-plugin__lane-title .kanban-plugin__grow-wrap::after {
+  font-size: 14px;
+}
+
+body button.kanban-plugin__item-action-add,
+body button.kanban-plugin__lane-action-add {
+  background-color: var(--interactive-accent);
+}
+
+body .kanban-plugin__action-confirm-wrapper button,
+body .kanban-plugin__lane-input-actions button,
+body .kanban-plugin__item-input-actions button {
+  font-size: 14px;
+}
+
+body .kanban-plugin__lane-grip {
+  margin-left: -5px;
+  margin-right: 4px;
+}
+
+body .kanban-plugin__lane-items {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+body .kanban-plugin__lane-items.is-dragging-over {
+  background-color: hsla(var(--accent-hsl), 0.15);
+}
+
+body .kanban-plugin__item.is-dragging {
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2),
+    0 0 0 2px hsla(var(--accent-hsl), 0.8);
+}
+
+body .kanban-plugin__item.is-dragging .kanban-plugin__item-content-wrapper {
+  background-color: var(--background-primary);
+}
