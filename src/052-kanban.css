@@ -24,6 +24,11 @@ body .kanban-plugin__lane-items {
   border-radius: var(--radius-l);
 }
 
+body.theme-dark .kanban-plugin__lane-items {
+  background-color: var(--shade-3);
+}
+
+
 body .kanban-plugin__lane-items:empty {
   border-radius: 0;
   padding: 4px
@@ -40,6 +45,10 @@ body .kanban-plugin__item {
   margin-bottom: 6px;
   font-size: 14px;
   box-shadow: 0px 0.5px 1px 0.5px rgba(0, 0, 0, 0.1);
+}
+
+body.theme-dark .kanban-plugin__item-content-wrapper {
+  background-color: var(--shade-10);
 }
 
 body .kanban-plugin__item:last-child {
@@ -78,6 +87,10 @@ body .kanban-plugin button {
 
 body .kanban-plugin .kanban-plugin__item-edit-button-wrapper button {
   background-color: var(--shade-0);
+}
+
+body .kanban-plugin__lane-setting-wrapper > div:last-child {
+  border-bottom: none;
 }
 
 body .kanban-plugin__lane-action-wrapper button {
