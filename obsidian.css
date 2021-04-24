@@ -5176,25 +5176,62 @@ body .kanban-plugin__lane-title {
 }
 
 body .kanban-plugin__lane {
-  box-shadow: 0px 0.5px 1px 0.5px rgba(0, 0, 0, 0.1);
   background: var(--shade-0);
   border: none;
-  border-radius: var(--radius-l);
   padding: 2px;
 }
 
+body .kanban-plugin__lane-items {
+  background-color: var(--shade-5);
+  margin: 5px 0 0;
+  padding: 7px;
+  border-radius: var(--radius-l);
+}
+
+body .kanban-plugin__lane-items:empty {
+  border-radius: 0;
+  padding: 4px
+}
+
+body .kanban-plugin__lane-items.is-dragging-over {
+  background-color: hsla(var(--accent-hsl), 0.15);
+}
+
 body .kanban-plugin__item {
+  border-radius: var(--radius-l);
   background-color: var(--background-primary);
+  border: none;
   margin-bottom: 6px;
   font-size: 14px;
-  border: none;
   box-shadow: 0px 0.5px 1px 0.5px rgba(0, 0, 0, 0.1);
+}
+
+body .kanban-plugin__item:last-child {
+  margin-bottom: 0;
+}
+
+body .kanban-plugin__item.is-dragging {
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2),
+    0 0 0 3px hsla(var(--accent-hsl), 0.8);
+}
+
+body .kanban-plugin__item.is-dragging .kanban-plugin__item-content-wrapper {
+  background-color: var(--background-primary);
+}
+
+body .markdown-preview-view.kanban-plugin__item-markdown {
+  font-family: var(--text);
+  font-size: 1em;
+  line-height: 1.4;
 }
 
 body .kanban-plugin__item-content-wrapper {
   font-weight: 500;
-  background-color: var(--shade-3);
   padding: 8px 10px;
+}
+
+body .kanban-plugin__item-button-wrapper {
+  border-top: none;
 }
 
 body .kanban-plugin button {
@@ -5227,10 +5264,17 @@ body .kanban-plugin__new-item-button {
   background-color: var(--shade-plus-darker);
 }
 
+body .kanban-plugin__new-lane-button-wrapper {
+  width: calc(var(--lane-width) / 2);
+}
+
 body button.kanban-plugin__new-lane-button {
+  background-color: var(--shade-0);
+  box-shadow: none;
   border: none;
   border-radius: var(--radius-m);
   padding: 12px;
+  width: auto;
 }
 
 body button.kanban-plugin__new-item-button {
@@ -5281,24 +5325,6 @@ body .kanban-plugin__item-input-actions button {
 body .kanban-plugin__lane-grip {
   margin-left: -5px;
   margin-right: 4px;
-}
-
-body .kanban-plugin__lane-items {
-  margin-top: 5px;
-  margin-bottom: 10px;
-}
-
-body .kanban-plugin__lane-items.is-dragging-over {
-  background-color: hsla(var(--accent-hsl), 0.15);
-}
-
-body .kanban-plugin__item.is-dragging {
-  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2),
-    0 0 0 2px hsla(var(--accent-hsl), 0.8);
-}
-
-body .kanban-plugin__item.is-dragging .kanban-plugin__item-content-wrapper {
-  background-color: var(--background-primary);
 }
 body {
   --text-preview: var(--text-editor);
