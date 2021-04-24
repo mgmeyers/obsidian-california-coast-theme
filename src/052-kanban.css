@@ -152,10 +152,12 @@ body button.kanban-plugin__lane-action-add {
   background-color: var(--interactive-accent);
 }
 
+body .kanban-plugin__item-settings-actions button,
+body .kanban-plugin__lane-action-wrapper button,
 body .kanban-plugin__action-confirm-wrapper button,
 body .kanban-plugin__lane-input-actions button,
 body .kanban-plugin__item-input-actions button {
-  font-size: 14px;
+  font-size: 13px;
 }
 
 body .kanban-plugin__lane-grip {
