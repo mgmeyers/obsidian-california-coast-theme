@@ -5338,6 +5338,11 @@ body .kanban-plugin__lane-grip {
   margin-left: -5px;
   margin-right: 4px;
 }
+
+body .kanban-plugin__autocomplete-item:hover, 
+body .kanban-plugin__autocomplete-item-active {
+  background-color: var(--interactive-accent);
+}
 body {
   --text-preview: var(--text-editor);
   --preview-font-size: var(--editor-font-size);
