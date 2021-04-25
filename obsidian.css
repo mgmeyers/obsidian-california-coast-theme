@@ -3102,25 +3102,22 @@ body:not(.plugin-sliding-panes-rotate-header)
 /* Scroll bars */
 
 ::-webkit-scrollbar {
-  width: 7px;
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
 }
 ::-webkit-scrollbar-track {
-  background-color: var(--background-primary);
+  background-color: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  border-width: 0px 4px 6px 0px;
-  border-style: solid;
-  border-radius: 0 !important;
-  border-color: var(--background-primary);
+  background-clip: padding-box;
+  border: 3px solid transparent;
   min-height: 40px;
 }
+
 .modal .vertical-tab-header::-webkit-scrollbar-track,
 .mod-left-split .workspace-tabs ::-webkit-scrollbar-track {
-  background-color: var(--background-secondary);
-}
-.modal .vertical-tab-header::-webkit-scrollbar-thumb,
-.mod-left-split .workspace-tabs ::-webkit-scrollbar-thumb {
-  border-color: var(--background-secondary);
+  background-color: transparent;
 }
 
 /* Tooltip */
