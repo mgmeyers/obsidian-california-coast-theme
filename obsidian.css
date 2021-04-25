@@ -5232,7 +5232,6 @@ body .markdown-preview-view.kanban-plugin__item-markdown {
 }
 
 body .kanban-plugin__item-content-wrapper {
-  font-weight: 500;
   padding: 8px 10px;
 }
 
@@ -5266,6 +5265,10 @@ body .kanban-plugin__lane button.kanban-plugin__lane-settings-button.is-enabled,
 body .kanban-plugin__lane button.kanban-plugin__lane-settings-button:hover {
   color: var(--text-on-accent);
   background-color: var(--interactive-accent);
+}
+
+body .kanban-plugin__checkbox-wrapper {
+  border: none;
 }
 
 body .kanban-plugin__new-lane-button,
@@ -5305,6 +5308,10 @@ body button.kanban-plugin__delete-lane-button:hover {
 
 body .kanban-plugin__lane-settings-button {
   border-radius: 50%;
+}
+
+body .kanban-plugin__item-input-wrapper {
+  border-top: none;
 }
 
 body .kanban-plugin__item-input-wrapper .kanban-plugin__grow-wrap > textarea,
