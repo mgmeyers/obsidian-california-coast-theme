@@ -5350,9 +5350,22 @@ body .kanban-plugin__lane-grip {
   margin-right: 4px;
 }
 
+body .kanban-plugin__autocomplete {
+  font-weight: 500;
+  font-size: 14px;
+  border: none;
+}
+
+body .kanban-plugin__autocomplete-item-active, 
+body .kanban-plugin__autocomplete-item {
+  padding: 4px 8px;
+}
+
 body .kanban-plugin__autocomplete-item:hover,
 body .kanban-plugin__autocomplete-item-active {
-  background-color: var(--interactive-accent);
+  border-top: 1px solid transparent;
+  background-color: var(--shade-5);
+  color: var(--text-normal)
 }
 
 body {
