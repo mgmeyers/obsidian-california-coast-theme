@@ -5164,7 +5164,7 @@ body .kanban-plugin {
 }
 
 body .kanban-plugin__board {
-    padding: 1.5rem;
+  padding: 1.5rem;
 }
 
 body .kanban-plugin__lane-title {
@@ -5178,6 +5178,11 @@ body .kanban-plugin__lane {
   padding: 2px;
 }
 
+body .kanban-plugin__lane.is-dragging {
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2),
+    0 0 0 3px hsla(var(--accent-hsl), 0.5);
+}
+
 body .kanban-plugin__lane-items {
   background-color: var(--shade-5);
   margin: 5px 0 0;
@@ -5189,10 +5194,9 @@ body.theme-dark .kanban-plugin__lane-items {
   background-color: var(--shade-3);
 }
 
-
 body .kanban-plugin__lane-items:empty {
   border-radius: 0;
-  padding: 4px
+  padding: 4px;
 }
 
 body .kanban-plugin__lane-items.is-dragging-over {
@@ -5346,10 +5350,11 @@ body .kanban-plugin__lane-grip {
   margin-right: 4px;
 }
 
-body .kanban-plugin__autocomplete-item:hover, 
+body .kanban-plugin__autocomplete-item:hover,
 body .kanban-plugin__autocomplete-item-active {
   background-color: var(--interactive-accent);
 }
+
 body {
   --text-preview: var(--text-editor);
   --preview-font-size: var(--editor-font-size);
