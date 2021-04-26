@@ -5265,8 +5265,18 @@ body .kanban-plugin button:hover {
   background-color: var(--interactive-accent);
 }
 
+body .kanban-plugin__item button.kanban-plugin__item-edit-button, 
+body .kanban-plugin__lane button.kanban-plugin__lane-settings-button {
+  margin-top: -1px;
+  margin-bottom: -1px;
+  font-size: 14px;
+}
+
 body .kanban-plugin__item button.kanban-plugin__item-edit-button.is-enabled,
-body .kanban-plugin__lane button.kanban-plugin__lane-settings-button.is-enabled,
+body .kanban-plugin__lane button.kanban-plugin__lane-settings-button.is-enabled {
+  color: var(--text-muted);
+}
+
 body .kanban-plugin__item button.kanban-plugin__item-edit-button:hover,
 body .kanban-plugin__lane button.kanban-plugin__lane-settings-button:hover {
   color: var(--text-muted);
@@ -5279,12 +5289,16 @@ body .kanban-plugin__checkbox-wrapper {
 
 body .kanban-plugin__new-lane-button,
 body .kanban-plugin__new-item-button {
+  font-weight: 500;
   font-size: 14px;
   background-color: var(--shade-plus-darker);
+  border: 1px solid transparent;
 }
 
-body .kanban-plugin__new-lane-button-wrapper {
-  width: calc(var(--lane-width) / 2);
+body button.kanban-plugin__new-lane-button:hover,
+body button.kanban-plugin__new-item-button:hover {
+  background-color: var(--shade-plus-darker);
+  color: var(--text-muted);
 }
 
 body button.kanban-plugin__new-lane-button {
@@ -5292,17 +5306,11 @@ body button.kanban-plugin__new-lane-button {
   box-shadow: none;
   border: none;
   border-radius: var(--radius-m);
-  padding: 12px;
   width: auto;
 }
 
 body button.kanban-plugin__new-item-button {
   background-color: var(--background-primary);
-}
-
-body button.kanban-plugin__new-item-button,
-body .kanban-plugin__item-settings-actions button {
-  box-shadow: none;
 }
 
 body button.kanban-plugin__confirm-action-button:hover,
