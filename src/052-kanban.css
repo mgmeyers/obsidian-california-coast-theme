@@ -83,7 +83,6 @@ body .kanban-plugin__item-button-wrapper {
 }
 
 body .kanban-plugin button {
-  box-shadow: 0px 0.5px 1px 0.5px rgba(0, 0, 0, 0.1);
   background-color: var(--shade-3);
   font-weight: 500;
 }
@@ -100,14 +99,17 @@ body .kanban-plugin__lane-action-wrapper button {
   box-shadow: none;
 }
 
-body .kanban-plugin button:hover,
-body .kanban-plugin__item .kanban-plugin__item-edit-archive-button:hover,
-body .kanban-plugin__item button.kanban-plugin__item-edit-button.is-enabled,
-body .kanban-plugin__item button.kanban-plugin__item-edit-button:hover,
-body .kanban-plugin__lane button.kanban-plugin__lane-settings-button.is-enabled,
-body .kanban-plugin__lane button.kanban-plugin__lane-settings-button:hover {
+body .kanban-plugin button:hover {
   color: var(--text-on-accent);
   background-color: var(--interactive-accent);
+}
+
+body .kanban-plugin__item button.kanban-plugin__item-edit-button.is-enabled,
+body .kanban-plugin__lane button.kanban-plugin__lane-settings-button.is-enabled,
+body .kanban-plugin__item button.kanban-plugin__item-edit-button:hover,
+body .kanban-plugin__lane button.kanban-plugin__lane-settings-button:hover {
+  color: var(--text-muted);
+  background-color: var(--shade-plus-darker);
 }
 
 body .kanban-plugin__checkbox-wrapper {
@@ -149,10 +151,6 @@ body button.kanban-plugin__delete-lane-button:hover {
   background-color: rgba(var(--background-modifier-error-rgb), 0.2);
 }
 
-body .kanban-plugin__lane-settings-button {
-  border-radius: 50%;
-}
-
 body .kanban-plugin__item-input-wrapper {
   border-top: none;
 }
@@ -184,6 +182,11 @@ body .kanban-plugin__item-input-actions button {
   font-size: 13px;
 }
 
+body .kanban-plugin__lane-input-actions button,
+body .kanban-plugin__item-input-actions button {
+  box-shadow: 0px 0.5px 1px 0.5px rgba(0, 0, 0, 0.1);
+}
+
 body .kanban-plugin__lane-grip {
   margin-left: -5px;
   margin-right: 4px;
@@ -195,7 +198,7 @@ body .kanban-plugin__autocomplete {
   border: none;
 }
 
-body .kanban-plugin__autocomplete-item-active, 
+body .kanban-plugin__autocomplete-item-active,
 body .kanban-plugin__autocomplete-item {
   padding: 4px 8px;
 }
@@ -204,5 +207,5 @@ body .kanban-plugin__autocomplete-item:hover,
 body .kanban-plugin__autocomplete-item-active {
   border-top: 1px solid transparent;
   background-color: var(--shade-5);
-  color: var(--text-normal)
+  color: var(--text-normal);
 }
