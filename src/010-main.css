@@ -576,7 +576,6 @@ button,
   border: 1px solid var(--shade-30);
   background: var(--background-primary);
   border-radius: 10px;
-  overflow: hidden;
   max-width: 1000px;
   max-height: 90vh;
 }
