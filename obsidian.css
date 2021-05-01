@@ -5464,6 +5464,11 @@ body {
   margin: inherit auto;
 }
 
+.markdown-preview-section img.emoji {
+  display: inline;
+  margin: 0;
+}
+
 .markdown-preview-section svg:not(:root) {
   overflow: hidden;
 }
