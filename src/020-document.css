@@ -215,6 +215,8 @@ html .CodeMirror-lines {
 /* Checkboxes */
 
 input[type="checkbox"] {
+  width: 0.866em;
+  height: 0.866em;
   cursor: var(--cursor);
   -webkit-appearance: none;
   appearance: none;
@@ -256,9 +258,9 @@ input[type="checkbox"]:checked:before {
   position: absolute;
   top: -1px;
   left: -1px;
-  width: 16px;
-  height: 16px;
-  font-size: 16px;
+  width: 0.866em;
+  height: 0.866em;
+  font-size: 0.866em;
   content: "\e9a4";
   color: rgb(var(--color-white-rgb))
 }
@@ -271,11 +273,11 @@ input[type="checkbox"]:checked:before {
   color: var(--text-normal);
 }
 .markdown-preview-view .task-list-item-checkbox {
-  width: 16px;
-  height: 16px;
+  width: 0.866em;
+  height: 0.866em;
   position: relative;
   line-height: 0;
-  margin-left: -1.2em;
+  margin-left: -1.1em;
   margin-right: 6px;
   filter: none;
 
