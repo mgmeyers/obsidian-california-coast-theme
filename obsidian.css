@@ -1958,6 +1958,9 @@ input[type='range'] {
   padding-top: 10px;
 }
 
+.hider-ribbon .nav-files-container {
+  padding-bottom: 50px;
+}
 .nav-folder-title.is-being-dragged-over {
   background-color: hsl(var(--accent-hsl));
   color: var(--text-on-accent);
