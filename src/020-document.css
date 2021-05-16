@@ -204,6 +204,7 @@ html .CodeMirror-lines {
   font-weight: 500;
   color: var(--text-normal);
   width: 1.3em;
+  font-family: inherit;
 }
 
 /* Editor Mode Quotes */

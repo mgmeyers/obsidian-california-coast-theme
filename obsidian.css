@@ -3700,6 +3700,7 @@ html .CodeMirror-lines {
   font-weight: 500;
   color: var(--text-normal);
   width: 1.3em;
+  font-family: inherit;
 }
 
 /* Editor Mode Quotes */
@@ -5235,8 +5236,12 @@ body .kanban-plugin__item.is-dragging .kanban-plugin__item-content-wrapper {
 
 body .markdown-preview-view.kanban-plugin__item-markdown {
   font-family: var(--text);
-  font-size: 1em;
   line-height: 1.4;
+}
+
+body .is-dragging .markdown-preview-view.kanban-plugin__item-markdown, 
+body .kanban-plugin .kanban-plugin__item .markdown-preview-view.kanban-plugin__item-markdown {
+  font-size: 1em;
 }
 
 body .kanban-plugin__item-content-wrapper {
