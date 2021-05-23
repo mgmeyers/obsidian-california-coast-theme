@@ -2,6 +2,28 @@ body .kanban-plugin {
   background-color: var(--shade-0);
 }
 
+body .kanban-plugin__search-wrapper {
+  background-color: var(--background-primary);
+  border-bottom: 1px solid var(--shade-plus-darker);
+}
+
+body button.kanban-plugin__search-cancel-button {
+  color: var(--text-normal);
+  border: 1px solid transparent;
+  border-radius: var(--radius-m);
+  font-weight: 500;
+  background-color: var(--shade-plus-darker);
+  box-shadow: 0px 0.5px 1px 0.5px rgba(0, 0, 0, 0.1);
+  padding: 7px;
+  position: relative;
+  top: -1px;
+  margin-left: 6px;
+}
+
+body button.kanban-plugin__search-cancel-button:hover {
+  background-color: var(--shade-10);
+}
+
 body .kanban-plugin__board {
   padding: 1.5rem;
 }
@@ -64,6 +86,11 @@ body .kanban-plugin__item.is-dragging {
     0 0 0 3px hsla(var(--accent-hsl), 0.8);
 }
 
+body .kanban-plugin__item.is-search-hit {
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2),
+    0 0 0 2px var(--text-highlight-bg-active);
+}
+
 body .kanban-plugin__item.is-dragging .kanban-plugin__item-content-wrapper {
   background-color: var(--background-primary);
 }
@@ -73,8 +100,11 @@ body .markdown-preview-view.kanban-plugin__item-markdown {
   line-height: 1.4;
 }
 
-body .is-dragging .markdown-preview-view.kanban-plugin__item-markdown, 
-body .kanban-plugin .kanban-plugin__item .markdown-preview-view.kanban-plugin__item-markdown {
+body .is-dragging .markdown-preview-view.kanban-plugin__item-markdown,
+body
+  .kanban-plugin
+  .kanban-plugin__item
+  .markdown-preview-view.kanban-plugin__item-markdown {
   font-size: 1em;
 }
 
@@ -108,7 +138,7 @@ body .kanban-plugin button:hover {
   background-color: var(--interactive-accent);
 }
 
-body .kanban-plugin__item button.kanban-plugin__item-edit-button, 
+body .kanban-plugin__item button.kanban-plugin__item-edit-button,
 body .kanban-plugin__lane button.kanban-plugin__lane-settings-button {
   margin-top: -1px;
   margin-bottom: -1px;
@@ -116,7 +146,9 @@ body .kanban-plugin__lane button.kanban-plugin__lane-settings-button {
 }
 
 body .kanban-plugin__item button.kanban-plugin__item-edit-button.is-enabled,
-body .kanban-plugin__lane button.kanban-plugin__lane-settings-button.is-enabled {
+body
+  .kanban-plugin__lane
+  button.kanban-plugin__lane-settings-button.is-enabled {
   color: var(--text-muted);
 }
 
@@ -153,7 +185,7 @@ body button.kanban-plugin__new-lane-button {
 }
 
 body button.kanban-plugin__new-item-button {
-  background-color: var(--background-primary);
+  background-color: transparent;
 }
 
 body button.kanban-plugin__confirm-action-button:hover,

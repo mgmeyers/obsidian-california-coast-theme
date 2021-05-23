@@ -2678,7 +2678,7 @@ body:not(.plugin-sliding-panes-rotate-header)
   cursor: var(--cursor);
   font-weight: 500;
   border-radius: var(--radius-s);
-  line-height: 1;
+  line-height: 1.4;
 }
 .vertical-tab-nav-item:hover {
   background: transparent;
