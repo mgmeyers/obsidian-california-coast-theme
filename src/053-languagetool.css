@@ -1,20 +1,7 @@
 body .lt-predictions-container {
   font-family: var(--text);
   font-size: 14px;
-  text-align: left;
-  padding: 10px;
-  animation: none;
-  background-color: var(--background-primary);
   border: 1px solid var(--shade-10);
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-  border-radius: var(--radius-m);
-  width: 300px;
-  line-height: 1.5;
-}
-
-body .lt-buttoncontainer {
-  margin: 0;
-  padding-top: 10px;
 }
 
 body .lt-buttoncontainer > button {
@@ -31,31 +18,18 @@ body .lt-buttoncontainer > button {
 
 body .lt-title:not(:empty) {
   font-weight: 500;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  margin-bottom: 5px;
 }
 
-.lt-title:not(:empty)::before {
-  flex-shrink: 0;
-  flex-grow: 0;
-  content: " ";
-  width: 0.5em;
-  height: 0.5em;
-  display: inline-block;
-  border-radius: 1em;
-  margin-right: 6px;
+body .lt-status-bar-btn {
+  margin: -2px 0;
 }
 
-.lt-minor .lt-title::before {
-  background-color: #e9b35f;
+body .lt-status-bar-btn svg {
+  display: none;
+  width: 14px;
+  height: 14px;
 }
 
-.lt-major .lt-title::before {
-  background-color: #da615c;
-}
-
-.lt-style .lt-title::before {
-  background-color: #8981f3;
+body .lt-status-bar-btn.lt-loading svg {
+  display: block;
 }

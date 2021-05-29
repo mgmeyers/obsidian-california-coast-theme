@@ -2217,6 +2217,8 @@ input.search-input:focus {
 
 .status-bar,
 .is-translucent .status-bar {
+  display: flex;
+  align-items: center;
   font-size: 11px;
   position: absolute;
   right: 0;

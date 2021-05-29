@@ -1,0 +1,30 @@
+body .zoom-plugin-header {
+    border-bottom: 1px solid var(--shade-plus-darker);
+  padding: 10px 17px;
+  font-size: 14px;
+  font-family: var(--text);
+}
+
+body .zoom-plugin-title {
+  text-decoration: none;
+}
+
+body .zoom-plugin-header > span {
+  color: transparent;
+  font-size: 0;
+}
+
+body .zoom-plugin-header > span:before {
+  font-size: 16px;
+  color: var(--text-muted);
+  display: inline-block;
+  font-family: "boxicons";
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  content: "\e9b2";
+  padding: 0 2px;
+  position: relative;
+  top: 2px;
+}
