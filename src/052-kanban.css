@@ -195,6 +195,10 @@ body button.kanban-plugin__delete-lane-button:hover {
   background-color: rgba(var(--background-modifier-error-rgb), 0.2);
 }
 
+body .kanban-plugin__action-confirm-wrapper button {
+  margin-bottom: 5px;
+}
+
 body .kanban-plugin__item-input-wrapper {
   border-top: none;
 }
@@ -252,4 +256,15 @@ body .kanban-plugin__autocomplete-item-active {
   border-top: 1px solid transparent;
   background-color: var(--shade-5);
   color: var(--text-normal);
+}
+
+body .kanban-plugin__action-confirm-wrapper {
+  margin: 5px 0;
+  border-radius: var(--radius-l);
+  border-width: 3px;
+}
+
+body .kanban-plugin__action-confirm-text {
+  font-size: 14px;
+  padding-bottom: 5px;
 }
