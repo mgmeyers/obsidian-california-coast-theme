@@ -1307,6 +1307,26 @@ input.document-replace-input:focus {
   height: 13px;
 }
 
+.community-theme .modal-button-container button {
+  margin-left: 5px;
+}
+
+.community-theme .modal-button-container a {
+  margin-left: 5px;
+  background-color: var(--background-secondary-alt);
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-normal);
+  padding: 4px 14px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 1px 1px rgb(0 0 0 / 8%);
+  border-radius: var(--radius-m);
+  margin-right: 0;
+  cursor: var(--cursor);
+}
+
 /* --------------- */
 /* Sidebar documents */
 

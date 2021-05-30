@@ -1677,6 +1677,26 @@ input.document-replace-input:focus {
   height: 13px;
 }
 
+.community-theme .modal-button-container button {
+  margin-left: 5px;
+}
+
+.community-theme .modal-button-container a {
+  margin-left: 5px;
+  background-color: var(--background-secondary-alt);
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-normal);
+  padding: 4px 14px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 1px 1px rgb(0 0 0 / 8%);
+  border-radius: var(--radius-m);
+  margin-right: 0;
+  cursor: var(--cursor);
+}
+
 /* --------------- */
 /* Sidebar documents */
 
@@ -5473,43 +5493,80 @@ body .lt-status-bar-btn.lt-loading svg {
   display: block;
 }
 body .workspace-leaf-content[data-type="dictionary-view"] .searchbox > input {
-    margin: 0;
+  margin: 0;
 }
 
 body .workspace-leaf-content[data-type="dictionary-view"] .searchbox > button {
-    margin: 0 0 0 5px;
-    padding: 0 10px;
-    flex-shrink: 0;
-    flex-grow: 0;
-
-    color: var(--text-muted);
-    background: #FFFFFF;
-    border: 1px solid rgba(0, 0, 0, 0.12);
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.08);
-    border-radius: var(--radius-m);
+  margin: 0 0 0 5px;
+  padding: 0 10px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  color: var(--text-muted);
+  background: var(--background-primary);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.08);
+  border-radius: var(--radius-m);
 }
 
-body .workspace-leaf-content[data-type="dictionary-view"] .searchbox > button > .gg-search {
-    margin: 0;
-    display: flex;
-    top: -1px;
-    left: -1px;
+body
+  .workspace-leaf-content[data-type="dictionary-view"]
+  .searchbox
+  > button
+  > .gg-search {
+  margin: 0;
+  display: flex;
+  top: -1px;
+  left: -1px;
 }
 
-body .workspace-leaf-content[data-type="dictionary-view"] .results > .container {
-    background-color: transparent;
-    padding: 0;
+body
+  .workspace-leaf-content[data-type="dictionary-view"]
+  .results
+  > .container {
+  background-color: transparent;
+  padding: 0;
 }
 
 body .workspace-leaf-content[data-type="dictionary-view"] h3 {
-    font-size: 14px;
-    font-weight: 500;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 body .workspace-leaf-content[data-type="dictionary-view"] .container > .main {
-    background: var(--shade-3);
-    box-shadow: 0px 0.5px 1px 0.5px rgb(0 0 0 / 10%);
+  background: var(--shade-3);
+  box-shadow: 0px 0.5px 1px 0.5px rgb(0 0 0 / 10%);
 }
+
+body
+  .workspace-leaf-content[data-type="dictionary-view"]
+  .definition:last-child {
+  padding-bottom: 0;
+}
+
+body
+  .workspace-leaf-content[data-type="dictionary-view"]
+  details[open]
+  summary
+  ~ audio,
+body
+  .workspace-leaf-content[data-type="dictionary-view"]
+  details[open]
+  summary
+  ~ div.definition {
+  animation: none !important;
+}
+
+audio,
+audio::-webkit-media-controls-panel {
+  background: var(--background-primary);
+}
+
+audio {
+  border-radius: 40px;
+  border: 1px solid var(--shade-5);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.08);
+}
+
 body .zoom-plugin-header {
     border-bottom: 1px solid var(--shade-plus-darker);
   padding: 10px 17px;
