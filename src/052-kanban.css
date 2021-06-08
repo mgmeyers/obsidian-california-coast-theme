@@ -108,8 +108,30 @@ body
   font-size: 1em;
 }
 
-body .kanban-plugin__item-content-wrapper {
+body .is-dragging .markdown-preview-view.kanban-plugin__lane-title-text,
+body .kanban-plugin .markdown-preview-view.kanban-plugin__lane-title-text {
+  font-family: var(--text-normal);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+body .kanban-plugin__item-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+body .kanban-plugin__item-title-wrapper {
   padding: 8px 10px;
+}
+
+body .kanban-plugin__item-metadata:empty {
+  display: none;
+}
+
+body .kanban-plugin__item-tags .kanban-plugin__item-tag {
+  background-color: transparent;
+  padding: 1px !important;
 }
 
 body .kanban-plugin__item-button-wrapper {
