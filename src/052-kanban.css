@@ -308,3 +308,7 @@ body .kanban-plugin__action-confirm-text {
   font-size: 14px;
   padding-bottom: 5px;
 }
+
+body .kanban-plugin__setting-item {
+  background-color: var(--background-primary);
+}
