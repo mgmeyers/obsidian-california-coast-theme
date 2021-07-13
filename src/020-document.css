@@ -419,6 +419,10 @@ input[type="checkbox"]:checked:before {
   transform: translateX(2rem);
 }
 
+.is-mobile .cm-s-obsidian .cm-gutters {
+  background-color: transparent !important;
+}
+
 .CodeMirror-foldmarker {
   font-size: 0 !important;
   color: transparent;

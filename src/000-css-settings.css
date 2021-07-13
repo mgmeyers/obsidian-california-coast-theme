@@ -361,4 +361,49 @@ settings:
         type: variable-text
         default: italic
 
+    - 
+        id: icons
+        title: Icons
+        type: heading
+        level: 3
+    - 
+        id: no-custom-icons
+        title: Disable Custom Icons
+        description: Use obsidian's default icons
+        type: class-toggle
+    - 
+        id: no-folder-icons
+        title: Hide Folder Icons
+        type: class-toggle
+    - 
+        id: folder-h
+        title: Folder icon color
+        type: variable-number-slider
+        default: 0
+        format: deg
+        min: 0
+        max: 359
+        step: 1
+    - 
+        id: folder-s
+        title: Folder icon saturation
+        type: variable-number-slider
+        default: 100
+        format: '%'
+        min: 0
+        max: 200
+        step: 1
+    - 
+        id: folder-b
+        title: Folder icon brightness
+        type: variable-number-slider
+        default: 100
+        format: '%'
+        min: 50
+        max: 150
+        step: 1
+    - 
+        id: no-file-icons
+        title: Hide File Icons
+        type: class-toggle
 */
