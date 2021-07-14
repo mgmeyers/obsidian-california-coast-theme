@@ -96,10 +96,8 @@
   color: var(--text-muted);
   background-color: var(--shade-plus-darker);
 }
-.workspace-leaf-content[data-type="search"] .nav-action-button.is-active,
 .workspace-leaf-content[data-type="backlink"] .nav-action-button.is-active,
 .workspace-leaf-content[data-type="search"] .nav-action-button.is-active {
-  background: transparent;
   color: var(--text-muted);
   opacity: 1;
 }
@@ -111,9 +109,6 @@
   background: var(--shade-plus-darker);
   color: var(--text-muted);
   opacity: 1;
-}
-.workspace-leaf-content[data-type="search"] .nav-action-button.is-active {
-  background: transparent;
 }
 .workspace-tab-header-inner {
   line-height: 1;
