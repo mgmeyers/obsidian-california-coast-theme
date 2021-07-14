@@ -17,8 +17,9 @@ body .lt-buttoncontainer > button {
 }
 
 body.theme-dark .lt-buttoncontainer > button {
-  color: #DFDEDF;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), inset 0px 1px 1px rgba(255, 255, 255, 0.3);
+  color: #dfdedf;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1),
+    inset 0px 1px 1px rgba(255, 255, 255, 0.3);
   background-color: var(--shade-20);
 }
 

@@ -36,6 +36,19 @@ settings:
         description: Percentage amount to scale hover preview and sidebar document font
         type: variable-number
         default: 90
+    -
+        id: truncated-explorer-titles
+        title: Truncate file titles
+        description: 'By default, files with long names will wrap in the file explorer. This setting ensures each file name only takes up a single line'
+        type: class-toggle
+    -
+        id: hide-table-vertical-dividers
+        title: Hide vertical table dividers
+        type: class-toggle
+    -
+        id: soft-wrap-code-blocks
+        title: Soft wrap code-blocks
+        type: class-toggle
 
     - 
         id: custom-fonts

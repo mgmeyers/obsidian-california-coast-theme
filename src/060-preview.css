@@ -35,9 +35,11 @@ body {
 .workspace-tabs
   .view-content
   > div
-  > .markdown-preview-view .markdown-preview-section ul.contains-task-list {
-    padding-inline-start: 1.5em;
-  }
+  > .markdown-preview-view
+  .markdown-preview-section
+  ul.contains-task-list {
+  padding-inline-start: 1.5em;
+}
 
 .markdown-preview-view .internal-query.is-embed .internal-query-header {
   padding: 10px 0;
@@ -148,8 +150,12 @@ body {
   padding: 10px 15px;
   vertical-align: top;
   border-color: var(--shade-plus-darker);
-  border-left: none;
   border-right: none;
+}
+
+.hide-table-vertical-dividers .markdown-preview-view th,
+.hide-table-vertical-dividers .markdown-preview-view td {
+  border-left: none;
 }
 
 .markdown-preview-view th:first-child,
@@ -158,9 +164,10 @@ body {
 }
 
 .markdown-preview-view th {
+  font-family: var(--text);
   background-color: var(--shade-plus-darker);
   border-bottom: none;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
 }
 
@@ -197,6 +204,12 @@ body {
 .markdown-preview-section pre > code {
   padding: 1.4rem;
   display: block;
+}
+
+.soft-wrap-code-blocks code[class*="language-"],
+.soft-wrap-code-blocks pre[class*="language-"] {
+  overflow: hidden;
+  white-space: pre-wrap ;
 }
 
 .markdown-preview-view sub,

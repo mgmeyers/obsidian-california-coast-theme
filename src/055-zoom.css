@@ -1,5 +1,5 @@
 body .zoom-plugin-header {
-    border-bottom: 1px solid var(--shade-plus-darker);
+  border-bottom: 1px solid var(--shade-plus-darker);
   padding: 10px 17px;
   font-size: 14px;
   font-family: var(--text);
@@ -15,16 +15,15 @@ body .zoom-plugin-header > span {
 }
 
 body .zoom-plugin-header > span:before {
-  font-size: 16px;
+  font-size: 0.9rem;
+  width: 0.9rem;
+  height: 0.9rem;
   color: var(--text-muted);
-  display: inline-block;
-  font-family: "boxicons";
-  font-weight: normal;
-  font-style: normal;
-  font-variant: normal;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   line-height: 1;
-  content: "\e9b2";
+  content: "›";
   padding: 0 2px;
   position: relative;
-  top: 2px;
 }

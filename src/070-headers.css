@@ -1,54 +1,54 @@
 :root {
-    --h1-size: 1.602em;
-    --h1-line-height: 1.4;
-    --h1-margin-top: 3;
-    --h1-margin-bottom: 1; 
-    --h1-weight: 500; 
-    --h1-style: normal; 
+  --h1-size: 1.602em;
+  --h1-line-height: 1.4;
+  --h1-margin-top: 3;
+  --h1-margin-bottom: 1;
+  --h1-weight: 500;
+  --h1-style: normal;
 
-    --h2-size: 1.424em;
-    --h2-line-height: 1.4;
-    --h2-margin-top: 2.25;
-    --h2-margin-bottom: 0.5; 
-    --h2-weight: 500; 
-    --h2-style: normal; 
+  --h2-size: 1.424em;
+  --h2-line-height: 1.4;
+  --h2-margin-top: 2.25;
+  --h2-margin-bottom: 0.5;
+  --h2-weight: 500;
+  --h2-style: normal;
 
-    --h3-size: 1.266em;
-    --h3-line-height: 1.4;
-    --h3-margin-top: 1.75;
-    --h3-margin-bottom: 0.5; 
-    --h3-weight: 500; 
-    --h3-style: normal; 
+  --h3-size: 1.266em;
+  --h3-line-height: 1.4;
+  --h3-margin-top: 1.75;
+  --h3-margin-bottom: 0.5;
+  --h3-weight: 500;
+  --h3-style: normal;
 
-    --h4-size: 1.125em;
-    --h4-line-height: 1.5;
-    --h4-margin-top: 1.5;
-    --h4-margin-bottom: 0.5; 
-    --h4-weight: 500; 
-    --h4-style: normal; 
+  --h4-size: 1.125em;
+  --h4-line-height: 1.5;
+  --h4-margin-top: 1.5;
+  --h4-margin-bottom: 0.5;
+  --h4-weight: 500;
+  --h4-style: normal;
 
-    --h5-size: 1em;
-    --h5-line-height: 1.5;
-    --h5-margin-top: 1.5;
-    --h5-margin-bottom: 0.5; 
-    --h5-weight: 500; 
-    --h5-style: normal; 
+  --h5-size: 1em;
+  --h5-line-height: 1.5;
+  --h5-margin-top: 1.5;
+  --h5-margin-bottom: 0.5;
+  --h5-weight: 500;
+  --h5-style: normal;
 
-    --h6-size: 1em;
-    --h6-line-height: 1.5;
-    --h6-margin-top: 1.5;
-    --h6-margin-bottom: 0.5; 
-    --h6-weight: 500; 
-    --h6-style: italic; 
+  --h6-size: 1em;
+  --h6-line-height: 1.5;
+  --h6-margin-top: 1.5;
+  --h6-margin-bottom: 0.5;
+  --h6-weight: 500;
+  --h6-style: italic;
 
-    /* Hidden settings */
+  /* Hidden settings */
 
-    --h1-color: var(--text-normal);
-    --h2-color: var(--text-normal);
-    --h3-color: var(--text-normal);
-    --h4-color: var(--text-normal);
-    --h5-color: var(--text-normal);
-    --h5-color: var(--text-normal);
+  --h1-color: var(--text-normal);
+  --h2-color: var(--text-normal);
+  --h3-color: var(--text-normal);
+  --h4-color: var(--text-normal);
+  --h5-color: var(--text-normal);
+  --h5-color: var(--text-normal);
 }
 
 .cc-pretty-preview .markdown-preview-view h1,
@@ -63,10 +63,12 @@
 }
 
 .popover .markdown-embed .markdown-preview-view h1,
-.cc-pretty-preview .workspace-tabs  .markdown-preview-view h1,
+.cc-pretty-preview .workspace-tabs .markdown-preview-view h1,
 .workspace-tabs .markdown-preview-view h1 {
   margin-top: calc(var(--h2-margin-top) * var(--editor-line-height-small-rem));
-  margin-bottom: calc(var(--h2-margin-bottom) * var(--editor-line-height-small-rem));
+  margin-bottom: calc(
+    var(--h2-margin-bottom) * var(--editor-line-height-small-rem)
+  );
 }
 
 .cc-pretty-preview .markdown-preview-view h2,
@@ -81,10 +83,12 @@
 }
 
 .popover .markdown-embed .markdown-preview-view h2,
-.cc-pretty-preview .workspace-tabs  .markdown-preview-view h2,
+.cc-pretty-preview .workspace-tabs .markdown-preview-view h2,
 .workspace-tabs .markdown-preview-view h2 {
   margin-top: calc(var(--h2-margin-top) * var(--editor-line-height-small-rem));
-  margin-bottom: calc(var(--h2-margin-bottom) * var(--editor-line-height-small-rem));
+  margin-bottom: calc(
+    var(--h2-margin-bottom) * var(--editor-line-height-small-rem)
+  );
 }
 
 .cc-pretty-preview .markdown-preview-view h3,
@@ -99,10 +103,12 @@
 }
 
 .popover .markdown-embed .markdown-preview-view h3,
-.cc-pretty-preview .workspace-tabs  .markdown-preview-view h3,
+.cc-pretty-preview .workspace-tabs .markdown-preview-view h3,
 .workspace-tabs .markdown-preview-view h3 {
   margin-top: calc(var(--h3-margin-top) * var(--editor-line-height-small-rem));
-  margin-bottom: calc(var(--h3-margin-bottom) * var(--editor-line-height-small-rem));
+  margin-bottom: calc(
+    var(--h3-margin-bottom) * var(--editor-line-height-small-rem)
+  );
 }
 
 .cc-pretty-preview .markdown-preview-view h4,
@@ -117,10 +123,12 @@
 }
 
 .popover .markdown-embed .markdown-preview-view h4,
-.cc-pretty-preview .workspace-tabs  .markdown-preview-view h4,
+.cc-pretty-preview .workspace-tabs .markdown-preview-view h4,
 .workspace-tabs .markdown-preview-view h4 {
   margin-top: calc(var(--h4-margin-top) * var(--editor-line-height-small-rem));
-  margin-bottom: calc(var(--h4-margin-bottom) * var(--editor-line-height-small-rem));
+  margin-bottom: calc(
+    var(--h4-margin-bottom) * var(--editor-line-height-small-rem)
+  );
 }
 
 .cc-pretty-preview .markdown-preview-view h5,
@@ -135,10 +143,12 @@
 }
 
 .popover .markdown-embed .markdown-preview-view h5,
-.cc-pretty-preview .workspace-tabs  .markdown-preview-view h5,
+.cc-pretty-preview .workspace-tabs .markdown-preview-view h5,
 .workspace-tabs .markdown-preview-view h5 {
   margin-top: calc(var(--h5-margin-top) * var(--editor-line-height-small-rem));
-  margin-bottom: calc(var(--h5-margin-bottom) * var(--editor-line-height-small-rem));
+  margin-bottom: calc(
+    var(--h5-margin-bottom) * var(--editor-line-height-small-rem)
+  );
 }
 
 .cc-pretty-preview .markdown-preview-view h6,
@@ -154,10 +164,12 @@
 }
 
 .popover .markdown-embed .markdown-preview-view h6,
-.cc-pretty-preview .workspace-tabs  .markdown-preview-view h6,
+.cc-pretty-preview .workspace-tabs .markdown-preview-view h6,
 .workspace-tabs .markdown-preview-view h6 {
   margin-top: calc(var(--h6-margin-top) * var(--editor-line-height-small-rem));
-  margin-bottom: calc(var(--h6-margin-bottom) * var(--editor-line-height-small-rem));
+  margin-bottom: calc(
+    var(--h6-margin-bottom) * var(--editor-line-height-small-rem)
+  );
 }
 
 .empty-state-title,
@@ -291,15 +303,14 @@ html .embedded-note-titles .CodeMirror-lines {
   padding: 5rem 0 var(--editor-line-height-rem);
 }
 
-.embedded-note-titles .markdown-preview-view:not(.community-plugin-readme)
+.embedded-note-titles
+  .markdown-preview-view:not(.community-plugin-readme)
   > h1 {
   padding-left: 3.5rem !important;
   padding-right: 3.5rem !important;
 }
 
-.embedded-note-titles
-  .is-readable-line-width.markdown-preview-view
-  > h1 {
+.embedded-note-titles .is-readable-line-width.markdown-preview-view > h1 {
   margin: 0 auto;
   width: var(--line-width) !important;
   max-width: var(--max-width) !important;
