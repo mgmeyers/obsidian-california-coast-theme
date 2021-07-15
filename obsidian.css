@@ -1924,6 +1924,20 @@ input.document-replace-input:focus {
   cursor: var(--cursor);
 }
 
+.is-mobile .modal-title {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.is-mobile .community-theme .modal-button-container button {
+  margin: 0 0 8px;
+}
+
+.is-mobile .community-theme .modal-button-container a {
+  padding: 12px 14px;
+  margin: 0;
+}
+
 /* --------------- */
 /* Sidebar documents */
 
