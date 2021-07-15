@@ -1177,6 +1177,7 @@ input.prompt-input:hover {
 .is-mobile .modal, .is-mobile .prompt, .is-mobile .suggestion-container {
   border-radius: 10px 10px 0 0;
   padding: 10px 10px 0;
+  overflow: hidden;
 }
 .is-mobile .prompt-results {
   padding-top: 1rem;
