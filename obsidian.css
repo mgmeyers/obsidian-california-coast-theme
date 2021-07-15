@@ -1177,7 +1177,7 @@ input.prompt-input:hover {
 .is-mobile .modal, .is-mobile .prompt, .is-mobile .suggestion-container {
   border-radius: 10px 10px 0 0;
   padding: 10px 10px 0;
-  overflow: hidden;
+  overflow: hidden !important;
 }
 .is-mobile .prompt-results {
   padding-top: 1rem;
@@ -1504,7 +1504,7 @@ body.theme-dark:not(.is-translucent):not(.hider-frameless)
   background: var(--background-secondary);
   height: env(safe-area-inset-top) !important;
   padding: 0 !important;
-  position: relative;
+  position: relative !important;
 }
 
 body:not(.is-mobile) .titlebar {
