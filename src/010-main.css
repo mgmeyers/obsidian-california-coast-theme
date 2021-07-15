@@ -1025,7 +1025,7 @@ body:not(.is-mobile) .titlebar {
   padding-top: 0 !important;
 }
 
-.theme-dark .titlebar {
+body.theme-dark:not(.is-mobile) .titlebar {
   background-color: var(--shade-10);
 }
 

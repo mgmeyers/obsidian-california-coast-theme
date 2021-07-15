@@ -320,7 +320,11 @@ input[type="checkbox"]:checked:before {
 .markdown-preview-view
   .heading-collapse-indicator.collapse-indicator
   > svg.right-triangle {
-  left: -1.33rem;
+  left: -1.2rem;
+}
+
+.is-mobile .markdown-preview-view .heading-collapse-indicator {
+  margin-left: 0;
 }
 
 .markdown-preview-view .is-collapsed .collapse-indicator > svg.right-triangle {
@@ -351,8 +355,22 @@ input[type="checkbox"]:checked:before {
 .markdown-preview-view h6 .heading-collapse-indicator {
   margin-top: -7px;
 }
+
+span[title="Fold line"],
+span[title="Unfold line"] {
+  line-height: 1;
+  position: relative;
+  /* top: 4px; */
+  font-size: 0;
+  color: transparent;  
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
 .CodeMirror-foldgutter-open,
 .CodeMirror-foldgutter-folded {
+  background-color: rgba(var(--background-rgb), 0.6);
   color: var(--text-faint);
   cursor: var(--cursor);
   line-height: 1;
@@ -361,12 +379,19 @@ input[type="checkbox"]:checked:before {
   align-items: center;
   transition: color 140ms ease;
 }
+
+span[title="Fold line"]:hover,
+span[title="Unfold line"]:hover,
 .CodeMirror-foldgutter-open:hover,
 .CodeMirror-foldgutter-folded:hover {
   color: var(--text-muted);
 }
+span[title="Fold line"]:after,
+span[title="Unfold line"]:after,
 .CodeMirror-foldgutter-open:after,
 .CodeMirror-foldgutter-folded:after {
+  text-align: center;
+  color: var(--text-faint);
   font-size: 0.9rem;
   display: flex;
   align-items: center;
@@ -377,11 +402,19 @@ input[type="checkbox"]:checked:before {
   font-weight: 600;
 }
 
+span[title="Fold line"]:after,
+span[title="Unfold line"]:after {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+span[title="Unfold line"]:after,
 .CodeMirror-foldgutter-folded:after {
   content: "›";
   transform: translateY(-2px);
 }
 
+span[title="Fold line"]:after,
 .CodeMirror-foldgutter-open:after {
   content: "›";
   transform: rotate(90deg);

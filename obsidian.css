@@ -1448,7 +1448,7 @@ body:not(.is-mobile) .titlebar {
   padding-top: 0 !important;
 }
 
-.theme-dark .titlebar {
+body.theme-dark:not(.is-mobile) .titlebar {
   background-color: var(--shade-10);
 }
 
@@ -4164,7 +4164,11 @@ input[type="checkbox"]:checked:before {
 .markdown-preview-view
   .heading-collapse-indicator.collapse-indicator
   > svg.right-triangle {
-  left: -1.33rem;
+  left: -1.2rem;
+}
+
+.is-mobile .markdown-preview-view .heading-collapse-indicator {
+  margin-left: 0;
 }
 
 .markdown-preview-view .is-collapsed .collapse-indicator > svg.right-triangle {
@@ -4195,8 +4199,22 @@ input[type="checkbox"]:checked:before {
 .markdown-preview-view h6 .heading-collapse-indicator {
   margin-top: -7px;
 }
+
+span[title="Fold line"],
+span[title="Unfold line"] {
+  line-height: 1;
+  position: relative;
+  /* top: 4px; */
+  font-size: 0;
+  color: transparent;  
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
 .CodeMirror-foldgutter-open,
 .CodeMirror-foldgutter-folded {
+  background-color: rgba(var(--background-rgb), 0.6);
   color: var(--text-faint);
   cursor: var(--cursor);
   line-height: 1;
@@ -4205,12 +4223,19 @@ input[type="checkbox"]:checked:before {
   align-items: center;
   transition: color 140ms ease;
 }
+
+span[title="Fold line"]:hover,
+span[title="Unfold line"]:hover,
 .CodeMirror-foldgutter-open:hover,
 .CodeMirror-foldgutter-folded:hover {
   color: var(--text-muted);
 }
+span[title="Fold line"]:after,
+span[title="Unfold line"]:after,
 .CodeMirror-foldgutter-open:after,
 .CodeMirror-foldgutter-folded:after {
+  text-align: center;
+  color: var(--text-faint);
   font-size: 0.9rem;
   display: flex;
   align-items: center;
@@ -4221,11 +4246,19 @@ input[type="checkbox"]:checked:before {
   font-weight: 600;
 }
 
+span[title="Fold line"]:after,
+span[title="Unfold line"]:after {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+span[title="Unfold line"]:after,
 .CodeMirror-foldgutter-folded:after {
   content: "›";
   transform: translateY(-2px);
 }
 
+span[title="Fold line"]:after,
 .CodeMirror-foldgutter-open:after {
   content: "›";
   transform: rotate(90deg);
@@ -5617,11 +5650,11 @@ body:not(.no-custom-icons) .view-action[aria-label^="Preview"] > svg {
   padding-right: 5px;
 }
 
-.cc-pretty-editor
-  .cm-s-obsidian
-  pre.HyperMD-header
-  > span
-  > span:first-child:not(:only-child) {
+.cc-pretty-editor .cm-s-obsidian .HyperMD-header {
+  position: relative;
+}
+
+.cc-pretty-editor .cm-s-obsidian .HyperMD-header .cm-formatting-header:not(:only-child) {
   position: absolute;
   left: 0;
   transform: translateX(-100%);
@@ -5630,8 +5663,21 @@ body:not(.no-custom-icons) .view-action[aria-label^="Preview"] > svg {
   height: 100%;
 }
 
+.is-mobile.cc-pretty-editor .cm-s-obsidian .HyperMD-header .cm-formatting-header:not(:only-child) {
+  letter-spacing: -3px;
+}
+
+.cc-pretty-editor .HyperMD-quote {
+  border-left: 2px solid var(--shade-60);
+}
 .cc-pretty-editor .cm-formatting-quote {
-  color: transparent !important;
+  font-style: italic;
+  font-weight: 800;
+  color: var(--shade-5) !important;
+}
+
+.cc-pretty-editor .HyperMD-quote-lazy {
+  padding-left: 1rem !important;
 }
 
 .cc-pretty-editor .cm-s-obsidian pre.HyperMD-list-line {
@@ -5678,6 +5724,10 @@ body:not(.no-custom-icons) .view-action[aria-label^="Preview"] > svg {
   color: transparent;
 }
 
+.cc-pretty-editor .HyperMD-hr {
+  position: relative;
+}
+
 .cc-pretty-editor
   .cm-s-obsidian
   div:not(.CodeMirror-activeline)
@@ -5692,20 +5742,6 @@ body:not(.no-custom-icons) .view-action[aria-label^="Preview"] > svg {
 }
 
 /* Icons */
-
-.cc-pretty-editor .cm-formatting-quote:before {
-  display: inline-block;
-  line-height: 1;
-  margin-right: -0.6em;
-  opacity: 0.1;
-  width: 1rem;
-  height: 1rem;
-  content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" style="fill:rgb(0, 0, 0);"><path d="M6.5 10c-.223 0-.437.034-.65.065.069-.232.14-.468.254-.68.114-.308.292-.575.469-.844.148-.291.409-.488.601-.737.201-.242.475-.403.692-.604.213-.21.492-.315.714-.463.232-.133.434-.28.65-.35.208-.086.39-.16.539-.222.302-.125.474-.197.474-.197L9.758 4.03c0 0-.218.052-.597.144C8.97 4.222 8.737 4.278 8.472 4.345c-.271.05-.56.187-.882.312C7.272 4.799 6.904 4.895 6.562 5.123c-.344.218-.741.4-1.091.692C5.132 6.116 4.723 6.377 4.421 6.76c-.33.358-.656.734-.909 1.162C3.219 8.33 3.02 8.778 2.81 9.221c-.19.443-.343.896-.468 1.336-.237.882-.343 1.72-.384 2.437-.034.718-.014 1.315.028 1.747.015.204.043.402.063.539.017.109.025.168.025.168l.026-.006C2.535 17.474 4.338 19 6.5 19c2.485 0 4.5-2.015 4.5-4.5S8.985 10 6.5 10zM17.5 10c-.223 0-.437.034-.65.065.069-.232.14-.468.254-.68.114-.308.292-.575.469-.844.148-.291.409-.488.601-.737.201-.242.475-.403.692-.604.213-.21.492-.315.714-.463.232-.133.434-.28.65-.35.208-.086.39-.16.539-.222.302-.125.474-.197.474-.197L20.758 4.03c0 0-.218.052-.597.144-.191.048-.424.104-.689.171-.271.05-.56.187-.882.312-.317.143-.686.238-1.028.467-.344.218-.741.4-1.091.692-.339.301-.748.562-1.05.944-.33.358-.656.734-.909 1.162C14.219 8.33 14.02 8.778 13.81 9.221c-.19.443-.343.896-.468 1.336-.237.882-.343 1.72-.384 2.437-.034.718-.014 1.315.028 1.747.015.204.043.402.063.539.017.109.025.168.025.168l.026-.006C13.535 17.474 15.338 19 17.5 19c2.485 0 4.5-2.015 4.5-4.5S19.985 10 17.5 10z"></path></svg>');
-}
-
-.theme-dark.cc-pretty-editor .cm-formatting-quote:before {
-  content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" style="fill:rgb(204,204,204);"><path d="M6.5 10c-.223 0-.437.034-.65.065.069-.232.14-.468.254-.68.114-.308.292-.575.469-.844.148-.291.409-.488.601-.737.201-.242.475-.403.692-.604.213-.21.492-.315.714-.463.232-.133.434-.28.65-.35.208-.086.39-.16.539-.222.302-.125.474-.197.474-.197L9.758 4.03c0 0-.218.052-.597.144C8.97 4.222 8.737 4.278 8.472 4.345c-.271.05-.56.187-.882.312C7.272 4.799 6.904 4.895 6.562 5.123c-.344.218-.741.4-1.091.692C5.132 6.116 4.723 6.377 4.421 6.76c-.33.358-.656.734-.909 1.162C3.219 8.33 3.02 8.778 2.81 9.221c-.19.443-.343.896-.468 1.336-.237.882-.343 1.72-.384 2.437-.034.718-.014 1.315.028 1.747.015.204.043.402.063.539.017.109.025.168.025.168l.026-.006C2.535 17.474 4.338 19 6.5 19c2.485 0 4.5-2.015 4.5-4.5S8.985 10 6.5 10zM17.5 10c-.223 0-.437.034-.65.065.069-.232.14-.468.254-.68.114-.308.292-.575.469-.844.148-.291.409-.488.601-.737.201-.242.475-.403.692-.604.213-.21.492-.315.714-.463.232-.133.434-.28.65-.35.208-.086.39-.16.539-.222.302-.125.474-.197.474-.197L20.758 4.03c0 0-.218.052-.597.144-.191.048-.424.104-.689.171-.271.05-.56.187-.882.312-.317.143-.686.238-1.028.467-.344.218-.741.4-1.091.692-.339.301-.748.562-1.05.944-.33.358-.656.734-.909 1.162C14.219 8.33 14.02 8.778 13.81 9.221c-.19.443-.343.896-.468 1.336-.237.882-.343 1.72-.384 2.437-.034.718-.014 1.315.028 1.747.015.204.043.402.063.539.017.109.025.168.025.168l.026-.006C13.535 17.474 15.338 19 17.5 19c2.485 0 4.5-2.015 4.5-4.5S19.985 10 17.5 10z"></path></svg>');
-}
 
 .cc-pretty-editor .cm-formatting-list-ul:before {
   line-height: 0;
@@ -6263,6 +6299,11 @@ body {
   padding-right: 3.5rem;
 }
 
+.is-mobile .markdown-preview-section > div {
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+}
+
 .workspace-tabs
   .view-content
   > div
@@ -6743,7 +6784,7 @@ body {
 }
 
 .empty-state-title,
-.CodeMirror .CodeMirror-line.HyperMD-header-1 {
+.cm-s-obsidian .HyperMD-header.HyperMD-header-1 {
   color: var(--h1-color);
   font-size: var(--h1-size) !important;
   font-weight: var(--h1-weight) !important;
@@ -6751,11 +6792,11 @@ body {
   line-height: var(--h1-line-height) !important;
 }
 
-.cc-pretty-editor pre.HyperMD-header .cm-formatting-header-1:not(:only-child) {
+.cc-pretty-editor .cm-s-obsidian .HyperMD-header .cm-formatting-header-1:not(:only-child) {
   line-height: calc(var(--h1-size) * 1.8) !important;
 }
 
-.CodeMirror .CodeMirror-line.HyperMD-header-2 {
+.cm-s-obsidian .HyperMD-header.HyperMD-header-2 {
   color: var(--h2-color);
   font-size: var(--h2-size) !important;
   font-weight: var(--h2-weight) !important;
@@ -6763,11 +6804,11 @@ body {
   line-height: var(--h2-line-height) !important;
 }
 
-.cc-pretty-editor pre.HyperMD-header .cm-formatting-header-2:not(:only-child) {
+.cc-pretty-editor .cm-s-obsidian .HyperMD-header .cm-formatting-header-2:not(:only-child) {
   line-height: calc(var(--h2-size) * 1.8) !important;
 }
 
-.CodeMirror .CodeMirror-line.HyperMD-header-3 {
+.cm-s-obsidian .HyperMD-header.HyperMD-header-3 {
   color: var(--h3-color);
   font-size: var(--h3-size) !important;
   font-weight: var(--h3-weight) !important;
@@ -6775,11 +6816,11 @@ body {
   line-height: var(--h3-line-height) !important;
 }
 
-.cc-pretty-editor pre.HyperMD-header .cm-formatting-header-3:not(:only-child) {
+.cc-pretty-editor .cm-s-obsidian .HyperMD-header .cm-formatting-header-3:not(:only-child) {
   line-height: calc(var(--h3-size) * 1.8) !important;
 }
 
-.CodeMirror .CodeMirror-line.HyperMD-header-4 {
+.cm-s-obsidian .HyperMD-header.HyperMD-header-4 {
   color: var(--h4-color);
   font-variant: unset;
   text-transform: unset;
@@ -6790,11 +6831,11 @@ body {
   line-height: var(--h4-line-height) !important;
 }
 
-.cc-pretty-editor pre.HyperMD-header .cm-formatting-header-4:not(:only-child) {
+.cc-pretty-editor .cm-s-obsidian .HyperMD-header .cm-formatting-header-4:not(:only-child) {
   line-height: calc(var(--h4-size) * 1.8) !important;
 }
 
-.CodeMirror .CodeMirror-line.HyperMD-header-5 {
+.cm-s-obsidian .HyperMD-header.HyperMD-header-5 {
   color: var(--h5-color);
   font-variant: unset;
   text-transform: unset;
@@ -6805,11 +6846,11 @@ body {
   line-height: var(--h5-line-height) !important;
 }
 
-.cc-pretty-editor pre.HyperMD-header .cm-formatting-header-5:not(:only-child) {
+.cc-pretty-editor .cm-s-obsidian .HyperMD-header .cm-formatting-header-5:not(:only-child) {
   line-height: calc(var(--h5-size) * 1.8) !important;
 }
 
-.CodeMirror .CodeMirror-line.HyperMD-header-6 {
+.cm-s-obsidian .HyperMD-header.HyperMD-header-6 {
   font-variant: unset;
   text-transform: unset;
   letter-spacing: unset;
@@ -6820,7 +6861,7 @@ body {
   line-height: var(--h6-line-height) !important;
 }
 
-.cc-pretty-editor pre.HyperMD-header .cm-formatting-header-6:not(:only-child) {
+.cc-pretty-editor .cm-s-obsidian .HyperMD-header .cm-formatting-header-6:not(:only-child) {
   line-height: calc(var(--h6-size) * 1.8) !important;
 }
 
