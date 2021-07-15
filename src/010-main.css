@@ -953,10 +953,10 @@ body.theme-dark:not(.is-translucent):not(.hider-frameless)
 /* --------------- */
 /* Window frame */
 .is-mobile .safe-area-top-cover {
-  background-color: var(--background-primary);
+  background-color: var(--background-secondary);
 }
 .is-mobile .titlebar {
-  background: var(--background-primary);
+  background: var(--background-secondary);
 }
 
 body:not(.is-mobile) .titlebar {
