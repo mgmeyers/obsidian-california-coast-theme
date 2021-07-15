@@ -907,7 +907,7 @@ strong {
   font-weight: var(--bold-weight);
 }
 
-body:not(.hider-frameless):not(.is-fullscreen) {
+body:not(.hider-frameless):not(.is-fullscreen):not(.is-mobile) {
   padding-top: var(--titlebar-height) !important;
 }
 
@@ -1145,8 +1145,8 @@ body.hider-ribbon
   border-top-left-radius: 0;
 }
 
-body:not(.is-translucent):not(.hider-frameless) .workspace-split.mod-root,
-body:not(.is-translucent):not(.hider-frameless)
+body:not(.is-translucent):not(.hider-frameless):not(.is-mobile) .workspace-split.mod-root,
+body:not(.is-translucent):not(.hider-frameless):not(.is-mobile)
   .workspace-split.mod-right-split {
   border-top: 1px solid var(--shade-plus-darker);
 }
@@ -1375,10 +1375,16 @@ body.theme-dark:not(.is-translucent):not(.hider-frameless)
 
 /* --------------- */
 /* Window frame */
+.is-mobile .safe-area-top-cover {
+  background-color: var(--background-primary);
+}
+.is-mobile .titlebar {
+  background: var(--background-primary);
+}
 
-.titlebar {
-  background: var(--shade-3);
+body:not(.is-mobile) .titlebar {
   border-bottom: none;
+  background: var(--shade-3);
   height: var(--titlebar-height) !important;
   top: 0 !important;
   padding-top: 0 !important;
