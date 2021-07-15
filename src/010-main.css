@@ -50,6 +50,7 @@
   --strong-weight: var(--bold-weight);
   --strong-color: inherit;
   --em-color: inherit;
+  --workspace-drawer-ribbon-width: 46px;
 }
 
 .theme-light {
@@ -214,6 +215,10 @@ body {
     var(--editor-line-height) * var(--scale-small) / 100
   );
   --editor-line-height-small-rem: calc(var(--editor-line-height-small) * 1rem);
+}
+
+body.is-mobile {
+  padding: 0 !important;
 }
 
 /* 
@@ -589,19 +594,38 @@ button,
 }
 
 .workspace-drawer {
-  border: 1px solid var(--shade-30);
   background: var(--background-primary);
-  border-radius: 10px;
+}
+
+.workspace-drawer-ribbon {
+  width: var(--workspace-drawer-ribbon-width);
+}
+
+.is-mobile .side-dock-ribbon-action > svg {
+  width: 26px;
+  height: 26px;
+}
+
+.workspace-drawer.mod-left .workspace-drawer-inner {
+  padding-left: calc(var(--workspace-drawer-ribbon-width) + env(safe-area-inset-left));
+}
+
+.workspace-drawer-inner {
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
 .workspace-drawer-header-icon {
   display: flex;
   align-items: center;
   justify-content: center;
+  align-self: flex-start;
 }
 
 .workspace-drawer-header-name {
   font-weight: 500;
+  line-height: 1;
+  height: auto;
 }
 
 .workspace-drawer-header-info:empty {
@@ -614,16 +638,11 @@ button,
 
 .workspace-drawer.mod-left {
   border-right: 1px solid var(--shade-30);
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  border-left: 0;
 }
 
 .workspace-drawer.mod-right {
   border-left: 1px solid var(--shade-30);
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-right: 0;
+  padding-right: env(safe-area-inset-right);
 }
 
 .workspace-drawer-active-tab-icon {
@@ -637,12 +656,32 @@ button,
 
 .workspace-drawer-active-tab-header {
   margin: 0;
-  padding: 0.5rem 0 1rem;
+  padding: 0 0.5rem 0.5rem;
 }
 
 .workspace-drawer-tab-option-item-title, .workspace-drawer-active-tab-title {
   font-size: 1rem;
   font-weight: 500;
+  width: 100%;
+}
+
+.workspace-drawer-header {
+  padding: 1rem;
+}
+
+.workspace-drawer-header-info {
+  margin-bottom: 0;
+}
+
+.workspace-drawer-tab-container > * {
+  padding: 0 0.5rem;
+}
+
+.workspace-drawer-active-tab-back-icon {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 0;
+  margin-right: 2px;
 }
 
 /* --------------- */
@@ -711,6 +750,29 @@ input.prompt-input:hover {
 .prompt,
 .suggestion-container {
   box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.2);
+}
+.is-mobile .modal, .is-mobile .prompt, .is-mobile .suggestion-container {
+  border-radius: 10px 10px 0 0;
+  padding: 10px 10px 0;
+}
+.is-mobile .prompt-results {
+  padding-top: 1rem;
+}
+.is-mobile .suggestion-item {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.is-mobile .suggestion-hotkey {
+  float: none;
+  display: flex;
+  line-height: 1;
+  flex-shrink: 0;
+  flex-grow: 0;
+  padding: 10px;
+  background-color: var(--shade-plus-darker);
+  margin-left: 5px;
 }
 .suggestion-container {
   border: none;
@@ -1015,6 +1077,7 @@ body.theme-dark:not(.is-translucent):not(.hider-frameless)
 }
 .is-mobile .titlebar {
   background: var(--background-secondary);
+  height: env(safe-area-inset-top) !important;
 }
 
 body:not(.is-mobile) .titlebar {
@@ -1728,7 +1791,7 @@ input[type="range"] {
   padding: 4px 10px 1px;
 }
 .is-mobile .workspace-leaf-content > .nav-header > .nav-buttons-container {
-  padding: 6px 10px 6px;
+  padding: 0.5rem 0;
 }
 .nav-files-container {
   overflow-x: hidden;
@@ -2282,6 +2345,12 @@ input.search-input:focus {
   line-height: 1;
   font-weight: 500;
 }
+
+.is-mobile .outgoing-link-pane .tree-item-self,
+.is-mobile .backlink-pane .tree-item-self {
+  font-size: 1rem !important;
+}
+
 .outgoing-link-pane .tree-item-self {
   align-items: flex-start;
 }
@@ -2630,7 +2699,7 @@ input.search-input:focus {
 }
 .is-mobile .side-dock-ribbon {
   border-right: 1px solid var(--shade-5);
-  padding: 4px 0;
+  padding: calc(env(safe-area-inset-top) + 4px) 0 calc(env(safe-area-inset-bottom) + 4px) env(safe-area-inset-left);
 }
 body.hider-frameless:not(.hider-ribbon) .side-dock-actions {
   padding-top: 0;

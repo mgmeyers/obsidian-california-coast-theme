@@ -95,7 +95,10 @@
   position: relative;
 }
 
-.cc-pretty-editor .cm-s-obsidian .HyperMD-header .cm-formatting-header:not(:only-child) {
+.cc-pretty-editor
+  .cm-s-obsidian
+  .HyperMD-header
+  .cm-formatting-header:not(:only-child) {
   position: absolute;
   left: 0;
   transform: translateX(-100%);
@@ -104,13 +107,13 @@
   height: 100%;
 }
 
-.is-mobile.cc-pretty-editor .cm-s-obsidian .HyperMD-header .cm-formatting-header:not(:only-child) {
+.is-mobile.cc-pretty-editor
+  .cm-s-obsidian
+  .HyperMD-header
+  .cm-formatting-header:not(:only-child) {
   letter-spacing: -3px;
 }
 
-.cc-pretty-editor .HyperMD-quote {
-  border-left: 2px solid var(--shade-60);
-}
 .cc-pretty-editor .cm-formatting-quote {
   font-style: italic;
   font-weight: 800;
