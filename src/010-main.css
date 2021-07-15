@@ -615,6 +615,10 @@ button,
   padding-bottom: env(safe-area-inset-bottom);
 }
 
+.is-mobile .workspace-split.mod-root {
+  padding-top: env(safe-area-inset-top);
+}
+
 .workspace-drawer-header-icon {
   display: flex;
   align-items: center;
