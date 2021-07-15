@@ -309,13 +309,20 @@ input[type="checkbox"]:checked:before {
 }
 
 .markdown-preview-view .collapse-indicator > svg.right-triangle {
-  width: 16px;
-  height: 16px;
+  color: var(--shade-40);
+  width: 14px;
+  height: 14px;
   position: absolute;
   left: -2.33rem;
   top: 50%;
   transform: translateY(-50%);
 }
+
+.is-mobile .markdown-preview-view .collapse-indicator > svg.right-triangle {
+  width: 16px;
+  height: 16px;
+}
+
 
 .markdown-preview-view
   .heading-collapse-indicator.collapse-indicator
