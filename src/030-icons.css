@@ -29,8 +29,13 @@ svg {
 .workspace-tab-header-inner-icon > svg,
 .side-dock-ribbon-action > svg,
 .nav-action-button svg {
-  width: var(--svg-xl);
-  height: var(--svg-xl);
+  width: var(--svg-xxl);
+  height: var(--svg-xxl);
+}
+
+.workspace-drawer-header-icon > svg {
+  width: var(--svg-xxl);
+  height: var(--svg-xxl);
 }
 
 .menu-item-icon svg {
