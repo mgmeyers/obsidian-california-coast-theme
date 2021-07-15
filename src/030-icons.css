@@ -24,15 +24,24 @@ svg {
   stroke-width: 0;
 }
 
-.view-header-icon > svg,
 .view-action > svg,
-.workspace-tab-header-inner-icon > svg,
-.side-dock-ribbon-action > svg,
-.nav-action-button svg {
-  width: var(--svg-xxl);
-  height: var(--svg-xxl);
+.view-header-icon > svg,
+.nav-action-button svg,
+.workspace-tab-header-inner-icon > svg {
+  width: var(--svg-xl);
+  height: var(--svg-xl);
 }
 
+.side-dock-ribbon-action > svg {
+  width: 17px;
+  height: 17px;
+}
+
+.is-mobile .view-action > svg,
+.is-mobile .side-dock-ribbon-action > svg,
+.is-mobile .view-header-icon > svg,
+.is-mobile .nav-action-button svg,
+.is-mobile .workspace-tab-header-inner-icon > svg,
 .workspace-drawer-header-icon > svg {
   width: var(--svg-xxl);
   height: var(--svg-xxl);
