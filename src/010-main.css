@@ -1074,10 +1074,13 @@ body.theme-dark:not(.is-translucent):not(.hider-frameless)
 /* Window frame */
 .is-mobile .safe-area-top-cover {
   background-color: var(--background-secondary);
+  height: env(safe-area-inset-top);
 }
 .is-mobile .titlebar {
   background: var(--background-secondary);
   height: env(safe-area-inset-top) !important;
+  padding: 0 !important;
+  position: relative;
 }
 
 body:not(.is-mobile) .titlebar {
