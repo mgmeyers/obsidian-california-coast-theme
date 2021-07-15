@@ -1375,6 +1375,10 @@ body.theme-dark:not(.is-translucent):not(.hider-frameless)
 
 /* --------------- */
 /* Window frame */
+.workspace-drawer-backdrop {
+  position: absolute;
+}
+
 .is-mobile .safe-area-top-cover {
   background-color: var(--background-secondary);
 }
