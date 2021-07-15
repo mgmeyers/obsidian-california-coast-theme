@@ -1192,17 +1192,14 @@ input.prompt-input:hover {
 }
 .is-mobile .suggestion-item {
   padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 .is-mobile .suggestion-hotkey {
-  float: none;
+  float: right;
   display: flex;
   line-height: 1;
   flex-shrink: 0;
   flex-grow: 0;
-  padding: 10px;
+  padding: 7px 10px;
   background-color: var(--shade-plus-darker);
   margin-left: 5px;
 }
