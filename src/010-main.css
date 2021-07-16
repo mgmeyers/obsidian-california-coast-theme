@@ -1853,8 +1853,20 @@ input[type="range"] {
 }
 
 .nav-file {
-  padding: 0 5px 0 20px;
+  padding: 0 5px 0 22px;
   margin-left: 0;
+}
+
+.cc-no-folder-icons .nav-folder-title-content {
+  padding-left: 7px;
+}
+
+.cc-no-folder-icons .nav-file {
+  padding-left: 6px;
+}
+
+.cc-no-folder-icons.cc-no-file-icons .nav-file {
+  padding-left: 11px;
 }
 
 .nav-file-tag {
@@ -1911,6 +1923,7 @@ body:not(.is-grabbing) .nav-file-title.is-active:hover {
   align-items: flex-start;
 }
 
+.cc-truncated-explorer-titles .nav-folder-title-content,
 .cc-truncated-explorer-titles .nav-file-title-content {
   display: inline-block;
   white-space: nowrap;
@@ -1952,16 +1965,6 @@ body:not(.is-grabbing) .nav-file-title.is-active:hover {
   margin: 0;
   top: 0;
   line-height: 0;
-}
-.nav-file-icon:before,
-.nav-file-title-content:before,
-.search-result-file-title .tree-item-inner:before {
-  position: relative;
-  padding-right: 4px;
-  margin: 0;
-}
-.nav-file-title-content:before {
-  top: 0.5px;
 }
 
 body:not(.is-grabbing) .nav-file-title:hover .nav-folder-collapse-indicator,

@@ -411,16 +411,16 @@ settings:
         type: heading
         level: 3
     - 
-        id: no-custom-icons
+        id: cc-no-custom-icons
         title: Disable Custom Icons
         description: Use obsidian's default icons
         type: class-toggle
     - 
-        id: no-file-icons
+        id: cc-no-file-icons
         title: Hide File Icons
         type: class-toggle
     - 
-        id: no-folder-icons
+        id: cc-no-folder-icons
         title: Hide Folder Icons
         type: class-toggle
     - 
