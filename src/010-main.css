@@ -1813,7 +1813,7 @@ input[type="range"] {
 }
 
 .nav-buttons-container {
-  padding: 4px 0 1px;
+  padding: 4px 0;
   margin-bottom: 0px !important;
   justify-content: flex-start;
   border: 0;
@@ -1821,10 +1821,10 @@ input[type="range"] {
   font-size: var(--rem);
 }
 .is-mobile .nav-buttons-container {
-  padding: 4px 0.5rem 1px;
+  padding: 4px 0.5rem;
 }
 .workspace-leaf-content > .nav-header > .nav-buttons-container {
-  padding: 4px 10px 1px;
+  padding: 2px 10px 10px;
 }
 .is-mobile .workspace-leaf-content > .nav-header > .nav-buttons-container {
   padding: 0.5rem 0.3rem;
