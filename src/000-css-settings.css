@@ -20,36 +20,6 @@ settings:
         description: The editor cursor takes on your accent color
         type: class-toggle
 
-    -
-        id: misc-title
-        title: Misc
-        type: heading
-        level: 3
-    - 
-        id: cc-seamless-embed
-        title: Seamless embed
-        description: Display embedded content seamlessly as a part of the containing document
-        type: class-toggle
-    - 
-        id: scale-small
-        title: Page preview scale
-        description: Percentage amount to scale hover preview and sidebar document font
-        type: variable-number
-        default: 90
-    -
-        id: truncated-explorer-titles
-        title: Truncate file titles
-        description: 'By default, files with long names will wrap in the file explorer. This setting ensures each file name only takes up a single line'
-        type: class-toggle
-    -
-        id: hide-table-vertical-dividers
-        title: Hide vertical table dividers
-        type: class-toggle
-    -
-        id: soft-wrap-code-blocks
-        title: Soft wrap code-blocks
-        type: class-toggle
-
     - 
         id: custom-fonts
         title: Custom Fonts
@@ -79,29 +49,6 @@ settings:
         description: Used for code blocks, front matter, etc
         type: variable-text
         default: Menlo, SFMono-Regular, Consolas, "Roboto Mono", monospace
-    
-    - 
-        id: typography
-        title: Typography
-        type: heading
-        level: 3
-    - 
-        id: cc-pretty-editor
-        title: Enhanced Editor Typography
-        description: Adds WYSIWYG-like functionality to editor mode
-        type: class-toggle
-    - 
-        id: cc-pretty-preview
-        title: Enhanced Preview Typography
-        description: Adds context aware padding between text elements in preview mode (requires the "contextual typography" plugin)
-        type: class-toggle
-    - 
-        id: line-width
-        title: Line width
-        description: The maximum line width in rem units (1rem = Body font size)
-        type: variable-number
-        default: 42
-        format: rem
     - 
         id: editor-font-size
         title: Body font size
@@ -114,7 +61,91 @@ settings:
         title: Body line height
         description: Line height of the main text, expects a decimal value
         type: variable-number
-        default: 1.88889  
+        default: 1.88889
+    - 
+        id: line-width
+        title: Line width
+        description: The maximum line width in rem units (1rem = Body font size)
+        type: variable-number
+        default: 42
+        format: rem
+    
+    -
+        id: misc-title
+        title: Misc
+        type: heading
+        level: 3
+    - 
+        id: scale-small
+        title: Page preview scale
+        description: Percentage amount to scale hover preview and sidebar document font
+        type: variable-number
+        default: 90
+    -
+        id: cc-truncated-explorer-titles
+        title: Truncate file titles
+        description: 'By default, files with long names will wrap in the file explorer. This setting ensures each file name only takes up a single line'
+        type: class-toggle
+
+    - 
+        id: editor-customization
+        title: Editor Customization
+        type: heading
+        level: 3
+    - 
+        id: cc-editor-heading-hash
+        title: Flush headings
+        description: Shifts heading hashes so headings are aligned with the edge of the editor
+        type: class-toggle
+    - 
+        id: cc-block-quotes
+        title: Blockquotes
+        description: De-emphasizes the blockquote formatting character
+        type: class-toggle
+    - 
+        id: cc-em-strong
+        title: Bold and italics
+        description: Styles bold and italic formatting to be less prominent
+        type: class-toggle
+    - 
+        id: cc-hr
+        title: Horizontal rule
+        description: Styles horizontal rules to span the width of the editor
+        type: class-toggle
+    -
+        id: cc-editor-list-bullets
+        title: Editor list bullets
+        description: 'Replace *, -, + with a bullet character when creating lists'
+        type: class-toggle
+    -
+        id: cc-list-relationship-lines
+        title: Editor list indentation lines
+        description: Display vertical lines to distinguish list indentation level
+        type: class-toggle
+    -
+        id: cc-soft-wrap-code-blocks
+        title: Soft wrap code-blocks
+        type: class-toggle
+
+    - 
+        id: preview-customization
+        title: Preview Customization
+        type: heading
+        level: 3
+    - 
+        id: cc-pretty-preview
+        title: Enhanced Preview Typography
+        description: Adds context aware padding between text elements in preview mode (requires the "contextual typography" plugin)
+        type: class-toggle
+    -
+        id: cc-hide-table-vertical-dividers
+        title: Hide vertical table dividers
+        type: class-toggle
+    - 
+        id: cc-seamless-embed
+        title: Seamless embed
+        description: Display embedded content seamlessly as a part of the containing document
+        type: class-toggle
     
     - 
         id: level-1-headings
@@ -385,6 +416,10 @@ settings:
         description: Use obsidian's default icons
         type: class-toggle
     - 
+        id: no-file-icons
+        title: Hide File Icons
+        type: class-toggle
+    - 
         id: no-folder-icons
         title: Hide Folder Icons
         type: class-toggle
@@ -415,8 +450,4 @@ settings:
         min: 50
         max: 150
         step: 1
-    - 
-        id: no-file-icons
-        title: Hide File Icons
-        type: class-toggle
 */

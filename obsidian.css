@@ -20,36 +20,6 @@ settings:
         description: The editor cursor takes on your accent color
         type: class-toggle
 
-    -
-        id: misc-title
-        title: Misc
-        type: heading
-        level: 3
-    - 
-        id: cc-seamless-embed
-        title: Seamless embed
-        description: Display embedded content seamlessly as a part of the containing document
-        type: class-toggle
-    - 
-        id: scale-small
-        title: Page preview scale
-        description: Percentage amount to scale hover preview and sidebar document font
-        type: variable-number
-        default: 90
-    -
-        id: truncated-explorer-titles
-        title: Truncate file titles
-        description: 'By default, files with long names will wrap in the file explorer. This setting ensures each file name only takes up a single line'
-        type: class-toggle
-    -
-        id: hide-table-vertical-dividers
-        title: Hide vertical table dividers
-        type: class-toggle
-    -
-        id: soft-wrap-code-blocks
-        title: Soft wrap code-blocks
-        type: class-toggle
-
     - 
         id: custom-fonts
         title: Custom Fonts
@@ -79,29 +49,6 @@ settings:
         description: Used for code blocks, front matter, etc
         type: variable-text
         default: Menlo, SFMono-Regular, Consolas, "Roboto Mono", monospace
-    
-    - 
-        id: typography
-        title: Typography
-        type: heading
-        level: 3
-    - 
-        id: cc-pretty-editor
-        title: Enhanced Editor Typography
-        description: Adds WYSIWYG-like functionality to editor mode
-        type: class-toggle
-    - 
-        id: cc-pretty-preview
-        title: Enhanced Preview Typography
-        description: Adds context aware padding between text elements in preview mode (requires the "contextual typography" plugin)
-        type: class-toggle
-    - 
-        id: line-width
-        title: Line width
-        description: The maximum line width in rem units (1rem = Body font size)
-        type: variable-number
-        default: 42
-        format: rem
     - 
         id: editor-font-size
         title: Body font size
@@ -114,7 +61,91 @@ settings:
         title: Body line height
         description: Line height of the main text, expects a decimal value
         type: variable-number
-        default: 1.88889  
+        default: 1.88889
+    - 
+        id: line-width
+        title: Line width
+        description: The maximum line width in rem units (1rem = Body font size)
+        type: variable-number
+        default: 42
+        format: rem
+    
+    -
+        id: misc-title
+        title: Misc
+        type: heading
+        level: 3
+    - 
+        id: scale-small
+        title: Page preview scale
+        description: Percentage amount to scale hover preview and sidebar document font
+        type: variable-number
+        default: 90
+    -
+        id: cc-truncated-explorer-titles
+        title: Truncate file titles
+        description: 'By default, files with long names will wrap in the file explorer. This setting ensures each file name only takes up a single line'
+        type: class-toggle
+
+    - 
+        id: editor-customization
+        title: Editor Customization
+        type: heading
+        level: 3
+    - 
+        id: cc-editor-heading-hash
+        title: Flush headings
+        description: Shifts heading hashes so headings are aligned with the edge of the editor
+        type: class-toggle
+    - 
+        id: cc-block-quotes
+        title: Blockquotes
+        description: De-emphasizes the blockquote formatting character
+        type: class-toggle
+    - 
+        id: cc-em-strong
+        title: Bold and italics
+        description: Styles bold and italic formatting to be less prominent
+        type: class-toggle
+    - 
+        id: cc-hr
+        title: Horizontal rule
+        description: Styles horizontal rules to span the width of the editor
+        type: class-toggle
+    -
+        id: cc-editor-list-bullets
+        title: Editor list bullets
+        description: 'Replace *, -, + with a bullet character when creating lists'
+        type: class-toggle
+    -
+        id: cc-list-relationship-lines
+        title: Editor list indentation lines
+        description: Display vertical lines to distinguish list indentation level
+        type: class-toggle
+    -
+        id: cc-soft-wrap-code-blocks
+        title: Soft wrap code-blocks
+        type: class-toggle
+
+    - 
+        id: preview-customization
+        title: Preview Customization
+        type: heading
+        level: 3
+    - 
+        id: cc-pretty-preview
+        title: Enhanced Preview Typography
+        description: Adds context aware padding between text elements in preview mode (requires the "contextual typography" plugin)
+        type: class-toggle
+    -
+        id: cc-hide-table-vertical-dividers
+        title: Hide vertical table dividers
+        type: class-toggle
+    - 
+        id: cc-seamless-embed
+        title: Seamless embed
+        description: Display embedded content seamlessly as a part of the containing document
+        type: class-toggle
     
     - 
         id: level-1-headings
@@ -385,6 +416,10 @@ settings:
         description: Use obsidian's default icons
         type: class-toggle
     - 
+        id: no-file-icons
+        title: Hide File Icons
+        type: class-toggle
+    - 
         id: no-folder-icons
         title: Hide Folder Icons
         type: class-toggle
@@ -415,10 +450,6 @@ settings:
         min: 50
         max: 150
         step: 1
-    - 
-        id: no-file-icons
-        title: Hide File Icons
-        type: class-toggle
 */
 
 :root {
@@ -1524,6 +1555,10 @@ body.theme-dark:not(.is-mobile) .titlebar {
   background-color: var(--shade-10);
 }
 
+body.hider-frameless:not(.is-mobile) .titlebar {
+  background: transparent;
+}
+
 .is-translucent .titlebar {
   background-color: var(--background-translucent);
 }
@@ -2287,7 +2322,7 @@ input[type="range"] {
   top: 0.5em;
 }
 
-.truncated-explorer-titles .nav-file-tag {
+.cc-truncated-explorer-titles .nav-file-tag {
   top: 0.68em;
 }
 
@@ -2330,7 +2365,7 @@ body:not(.is-grabbing) .nav-file-title.is-active:hover {
   align-items: flex-start;
 }
 
-.truncated-explorer-titles .nav-file-title-content {
+.cc-truncated-explorer-titles .nav-file-title-content {
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;
@@ -5607,23 +5642,23 @@ body:not(.no-custom-icons) .view-action[aria-label^="Preview"] > svg {
 
 /* Pretty editor */
 
-.cc-pretty-editor .cm-formatting-header.obsidian-search-match-highlight {
+.cc-editor-heading-hash .cm-formatting-header.obsidian-search-match-highlight {
   background: transparent;
 }
 
-.cc-pretty-editor .cm-formatting-header {
+.cc-editor-heading-hash .cm-formatting-header {
   color: var(--text-faint) !important;
   font-weight: var(--normal-weight) !important;
 }
 
-.cc-pretty-editor
+.cc-editor-heading-hash
   div:not(.CodeMirror-activeline)
   > pre.HyperMD-header
   .cm-formatting-header:not(:only-child) {
   color: transparent !important;
 }
 
-.cc-pretty-editor
+.cc-editor-heading-hash
   div:not(.CodeMirror-activeline)
   > pre.HyperMD-header
   .cm-formatting-header:not(:only-child):after {
@@ -5633,11 +5668,11 @@ body:not(.no-custom-icons) .view-action[aria-label^="Preview"] > svg {
   padding-right: 5px;
 }
 
-.cc-pretty-editor .cm-s-obsidian .HyperMD-header {
+.cc-editor-heading-hash .cm-s-obsidian .HyperMD-header {
   position: relative;
 }
 
-.cc-pretty-editor
+.cc-editor-heading-hash
   .cm-s-obsidian
   .HyperMD-header
   .cm-formatting-header:not(:only-child) {
@@ -5649,38 +5684,38 @@ body:not(.no-custom-icons) .view-action[aria-label^="Preview"] > svg {
   height: 100%;
 }
 
-.is-mobile.cc-pretty-editor
+.is-mobile.cc-editor-heading-hash
   .cm-s-obsidian
   .HyperMD-header
   .cm-formatting-header:not(:only-child) {
   letter-spacing: -3px;
 }
 
-.cc-pretty-editor .cm-formatting-quote {
+.cc-block-quotes .cm-formatting-quote {
   font-style: italic;
   font-weight: 800;
   color: var(--shade-5) !important;
 }
 
-.cc-pretty-editor .HyperMD-quote-lazy {
+.cc-block-quotes .HyperMD-quote-lazy {
   padding-left: 1rem !important;
 }
 
-.cc-pretty-editor .cm-s-obsidian pre.HyperMD-list-line {
+.cc-editor-list-bullets .cm-s-obsidian pre.HyperMD-list-line {
   padding-top: 0;
   padding-bottom: 10px;
 }
 
-.cc-pretty-editor .cm-s-obsidian span.cm-formatting-list-ul {
+.cc-editor-list-bullets .cm-s-obsidian span.cm-formatting-list-ul {
   color: transparent !important;
   position: relative;
 }
 
-.cc-pretty-editor .cm-hmd-list-indent > .cm-tab {
+.cc-list-relationship-lines .cm-hmd-list-indent > .cm-tab {
   display: inline-block;
 }
 
-.cc-pretty-editor .cm-hmd-list-indent > .cm-tab:after {
+.cc-list-relationship-lines .cm-hmd-list-indent > .cm-tab:after {
   content: " ";
   display: block;
   width: 1px;
@@ -5691,33 +5726,26 @@ body:not(.no-custom-icons) .view-action[aria-label^="Preview"] > svg {
   height: 100%;
 }
 
-.cc-pretty-editor .cm-formatting-strong,
-.cc-pretty-editor .cm-formatting-em {
+.cc-em-strong .cm-formatting-strong,
+.cc-em-strong .cm-formatting-em {
   color: var(--shade-20);
   font-size: 14px;
 }
 
-.cc-pretty-editor
+.cc-hr
   .cm-s-obsidian
   div:not(.CodeMirror-activeline)
   > .HyperMD-hr
   span.cm-builtin,
-.cc-pretty-editor
-  .cm-s-obsidian
-  div:not(.CodeMirror-activeline)
-  > .HyperMD-hr
-  span.cm-hr {
+.cc-hr .cm-s-obsidian div:not(.CodeMirror-activeline) > .HyperMD-hr span.cm-hr {
   color: transparent;
 }
 
-.cc-pretty-editor .HyperMD-hr {
+.cc-hr .HyperMD-hr {
   position: relative;
 }
 
-.cc-pretty-editor
-  .cm-s-obsidian
-  div:not(.CodeMirror-activeline)
-  > .HyperMD-hr-bg:after {
+.cc-hr .cm-s-obsidian div:not(.CodeMirror-activeline) > .HyperMD-hr-bg:after {
   content: " ";
   display: block;
   position: absolute;
@@ -5729,7 +5757,7 @@ body:not(.no-custom-icons) .view-action[aria-label^="Preview"] > svg {
 
 /* Icons */
 
-.cc-pretty-editor .cm-formatting-list-ul:before {
+.cc-editor-list-bullets .cm-formatting-list-ul:before {
   line-height: 0;
   position: absolute;
   top: 51%;
@@ -5741,11 +5769,11 @@ body:not(.no-custom-icons) .view-action[aria-label^="Preview"] > svg {
   content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0);"><path d="M12,2C6.486,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.514,2,12,2z"></path></svg>');
 }
 
-.theme-dark.cc-pretty-editor .cm-formatting-list-ul:before {
+.theme-dark.cc-editor-list-bullets .cm-formatting-list-ul:before {
   content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" style="fill:rgba(204,204,204);"><path d="M12,2C6.486,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.514,2,12,2z"></path></svg>');
 }
 
-.outliner-plugin-bls-zoom.cc-pretty-editor .cm-formatting-list-ul {
+.outliner-plugin-bls-zoom.cc-editor-list-bullets .cm-formatting-list-ul {
   cursor: pointer;
 }
 
@@ -6396,11 +6424,6 @@ body {
   border-left: 2px solid var(--shade-plus-darker);
 }
 
-/* .theme-dark .markdown-preview-section blockquote {
-  border-left-color: var(--shade-10);
-} */
-
-
 .markdown-preview-view blockquote p {
   margin: 0;
 }
@@ -6415,14 +6438,13 @@ body {
 
 .markdown-preview-view th,
 .markdown-preview-view td {
-  padding: 10px 15px;
   vertical-align: top;
   border-color: var(--shade-plus-darker);
   border-right: none;
 }
 
-.hide-table-vertical-dividers .markdown-preview-view th,
-.hide-table-vertical-dividers .markdown-preview-view td {
+.cc-hide-table-vertical-dividers .markdown-preview-view th,
+.cc-hide-table-vertical-dividers .markdown-preview-view td {
   border-left: none;
 }
 
@@ -6474,8 +6496,8 @@ body {
   display: block;
 }
 
-.soft-wrap-code-blocks code[class*="language-"],
-.soft-wrap-code-blocks pre[class*="language-"] {
+.cc-soft-wrap-code-blocks code[class*="language-"],
+.cc-soft-wrap-code-blocks pre[class*="language-"] {
   overflow: hidden;
   white-space: pre-wrap ;
 }
@@ -6762,7 +6784,7 @@ body {
   line-height: var(--h1-line-height) !important;
 }
 
-.cc-pretty-editor .cm-s-obsidian .HyperMD-header .cm-formatting-header-1:not(:only-child) {
+.cc-editor-heading-hash .cm-s-obsidian .HyperMD-header .cm-formatting-header-1:not(:only-child) {
   line-height: calc(var(--h1-size) * 1.8) !important;
 }
 
@@ -6774,7 +6796,7 @@ body {
   line-height: var(--h2-line-height) !important;
 }
 
-.cc-pretty-editor .cm-s-obsidian .HyperMD-header .cm-formatting-header-2:not(:only-child) {
+.cc-editor-heading-hash .cm-s-obsidian .HyperMD-header .cm-formatting-header-2:not(:only-child) {
   line-height: calc(var(--h2-size) * 1.8) !important;
 }
 
@@ -6786,7 +6808,7 @@ body {
   line-height: var(--h3-line-height) !important;
 }
 
-.cc-pretty-editor .cm-s-obsidian .HyperMD-header .cm-formatting-header-3:not(:only-child) {
+.cc-editor-heading-hash .cm-s-obsidian .HyperMD-header .cm-formatting-header-3:not(:only-child) {
   line-height: calc(var(--h3-size) * 1.8) !important;
 }
 
@@ -6801,7 +6823,7 @@ body {
   line-height: var(--h4-line-height) !important;
 }
 
-.cc-pretty-editor .cm-s-obsidian .HyperMD-header .cm-formatting-header-4:not(:only-child) {
+.cc-editor-heading-hash .cm-s-obsidian .HyperMD-header .cm-formatting-header-4:not(:only-child) {
   line-height: calc(var(--h4-size) * 1.8) !important;
 }
 
@@ -6816,7 +6838,7 @@ body {
   line-height: var(--h5-line-height) !important;
 }
 
-.cc-pretty-editor .cm-s-obsidian .HyperMD-header .cm-formatting-header-5:not(:only-child) {
+.cc-editor-heading-hash .cm-s-obsidian .HyperMD-header .cm-formatting-header-5:not(:only-child) {
   line-height: calc(var(--h5-size) * 1.8) !important;
 }
 
@@ -6831,7 +6853,7 @@ body {
   line-height: var(--h6-line-height) !important;
 }
 
-.cc-pretty-editor .cm-s-obsidian .HyperMD-header .cm-formatting-header-6:not(:only-child) {
+.cc-editor-heading-hash .cm-s-obsidian .HyperMD-header .cm-formatting-header-6:not(:only-child) {
   line-height: calc(var(--h6-size) * 1.8) !important;
 }
 

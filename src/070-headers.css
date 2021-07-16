@@ -181,7 +181,7 @@
   line-height: var(--h1-line-height) !important;
 }
 
-.cc-pretty-editor .cm-s-obsidian .HyperMD-header .cm-formatting-header-1:not(:only-child) {
+.cc-editor-heading-hash .cm-s-obsidian .HyperMD-header .cm-formatting-header-1:not(:only-child) {
   line-height: calc(var(--h1-size) * 1.8) !important;
 }
 
@@ -193,7 +193,7 @@
   line-height: var(--h2-line-height) !important;
 }
 
-.cc-pretty-editor .cm-s-obsidian .HyperMD-header .cm-formatting-header-2:not(:only-child) {
+.cc-editor-heading-hash .cm-s-obsidian .HyperMD-header .cm-formatting-header-2:not(:only-child) {
   line-height: calc(var(--h2-size) * 1.8) !important;
 }
 
@@ -205,7 +205,7 @@
   line-height: var(--h3-line-height) !important;
 }
 
-.cc-pretty-editor .cm-s-obsidian .HyperMD-header .cm-formatting-header-3:not(:only-child) {
+.cc-editor-heading-hash .cm-s-obsidian .HyperMD-header .cm-formatting-header-3:not(:only-child) {
   line-height: calc(var(--h3-size) * 1.8) !important;
 }
 
@@ -220,7 +220,7 @@
   line-height: var(--h4-line-height) !important;
 }
 
-.cc-pretty-editor .cm-s-obsidian .HyperMD-header .cm-formatting-header-4:not(:only-child) {
+.cc-editor-heading-hash .cm-s-obsidian .HyperMD-header .cm-formatting-header-4:not(:only-child) {
   line-height: calc(var(--h4-size) * 1.8) !important;
 }
 
@@ -235,7 +235,7 @@
   line-height: var(--h5-line-height) !important;
 }
 
-.cc-pretty-editor .cm-s-obsidian .HyperMD-header .cm-formatting-header-5:not(:only-child) {
+.cc-editor-heading-hash .cm-s-obsidian .HyperMD-header .cm-formatting-header-5:not(:only-child) {
   line-height: calc(var(--h5-size) * 1.8) !important;
 }
 
@@ -250,7 +250,7 @@
   line-height: var(--h6-line-height) !important;
 }
 
-.cc-pretty-editor .cm-s-obsidian .HyperMD-header .cm-formatting-header-6:not(:only-child) {
+.cc-editor-heading-hash .cm-s-obsidian .HyperMD-header .cm-formatting-header-6:not(:only-child) {
   line-height: calc(var(--h6-size) * 1.8) !important;
 }
 

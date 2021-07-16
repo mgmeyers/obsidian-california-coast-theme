@@ -133,11 +133,6 @@ body {
   border-left: 2px solid var(--shade-plus-darker);
 }
 
-/* .theme-dark .markdown-preview-section blockquote {
-  border-left-color: var(--shade-10);
-} */
-
-
 .markdown-preview-view blockquote p {
   margin: 0;
 }
@@ -152,14 +147,13 @@ body {
 
 .markdown-preview-view th,
 .markdown-preview-view td {
-  padding: 10px 15px;
   vertical-align: top;
   border-color: var(--shade-plus-darker);
   border-right: none;
 }
 
-.hide-table-vertical-dividers .markdown-preview-view th,
-.hide-table-vertical-dividers .markdown-preview-view td {
+.cc-hide-table-vertical-dividers .markdown-preview-view th,
+.cc-hide-table-vertical-dividers .markdown-preview-view td {
   border-left: none;
 }
 
@@ -211,8 +205,8 @@ body {
   display: block;
 }
 
-.soft-wrap-code-blocks code[class*="language-"],
-.soft-wrap-code-blocks pre[class*="language-"] {
+.cc-soft-wrap-code-blocks code[class*="language-"],
+.cc-soft-wrap-code-blocks pre[class*="language-"] {
   overflow: hidden;
   white-space: pre-wrap ;
 }

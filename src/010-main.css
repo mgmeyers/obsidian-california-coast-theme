@@ -1097,12 +1097,12 @@ body:not(.is-mobile) .titlebar {
   padding-top: 0 !important;
 }
 
-body.hider-frameless:not(.is-mobile) .titlebar {
-  background: transparent;
-}
-
 body.theme-dark:not(.is-mobile) .titlebar {
   background-color: var(--shade-10);
+}
+
+body.hider-frameless:not(.is-mobile) .titlebar {
+  background: transparent;
 }
 
 .is-translucent .titlebar {
@@ -1868,7 +1868,7 @@ input[type="range"] {
   top: 0.5em;
 }
 
-.truncated-explorer-titles .nav-file-tag {
+.cc-truncated-explorer-titles .nav-file-tag {
   top: 0.68em;
 }
 
@@ -1911,7 +1911,7 @@ body:not(.is-grabbing) .nav-file-title.is-active:hover {
   align-items: flex-start;
 }
 
-.truncated-explorer-titles .nav-file-title-content {
+.cc-truncated-explorer-titles .nav-file-title-content {
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;

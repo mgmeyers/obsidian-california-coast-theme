@@ -65,23 +65,23 @@
 
 /* Pretty editor */
 
-.cc-pretty-editor .cm-formatting-header.obsidian-search-match-highlight {
+.cc-editor-heading-hash .cm-formatting-header.obsidian-search-match-highlight {
   background: transparent;
 }
 
-.cc-pretty-editor .cm-formatting-header {
+.cc-editor-heading-hash .cm-formatting-header {
   color: var(--text-faint) !important;
   font-weight: var(--normal-weight) !important;
 }
 
-.cc-pretty-editor
+.cc-editor-heading-hash
   div:not(.CodeMirror-activeline)
   > pre.HyperMD-header
   .cm-formatting-header:not(:only-child) {
   color: transparent !important;
 }
 
-.cc-pretty-editor
+.cc-editor-heading-hash
   div:not(.CodeMirror-activeline)
   > pre.HyperMD-header
   .cm-formatting-header:not(:only-child):after {
@@ -91,11 +91,11 @@
   padding-right: 5px;
 }
 
-.cc-pretty-editor .cm-s-obsidian .HyperMD-header {
+.cc-editor-heading-hash .cm-s-obsidian .HyperMD-header {
   position: relative;
 }
 
-.cc-pretty-editor
+.cc-editor-heading-hash
   .cm-s-obsidian
   .HyperMD-header
   .cm-formatting-header:not(:only-child) {
@@ -107,38 +107,38 @@
   height: 100%;
 }
 
-.is-mobile.cc-pretty-editor
+.is-mobile.cc-editor-heading-hash
   .cm-s-obsidian
   .HyperMD-header
   .cm-formatting-header:not(:only-child) {
   letter-spacing: -3px;
 }
 
-.cc-pretty-editor .cm-formatting-quote {
+.cc-block-quotes .cm-formatting-quote {
   font-style: italic;
   font-weight: 800;
   color: var(--shade-5) !important;
 }
 
-.cc-pretty-editor .HyperMD-quote-lazy {
+.cc-block-quotes .HyperMD-quote-lazy {
   padding-left: 1rem !important;
 }
 
-.cc-pretty-editor .cm-s-obsidian pre.HyperMD-list-line {
+.cc-editor-list-bullets .cm-s-obsidian pre.HyperMD-list-line {
   padding-top: 0;
   padding-bottom: 10px;
 }
 
-.cc-pretty-editor .cm-s-obsidian span.cm-formatting-list-ul {
+.cc-editor-list-bullets .cm-s-obsidian span.cm-formatting-list-ul {
   color: transparent !important;
   position: relative;
 }
 
-.cc-pretty-editor .cm-hmd-list-indent > .cm-tab {
+.cc-list-relationship-lines .cm-hmd-list-indent > .cm-tab {
   display: inline-block;
 }
 
-.cc-pretty-editor .cm-hmd-list-indent > .cm-tab:after {
+.cc-list-relationship-lines .cm-hmd-list-indent > .cm-tab:after {
   content: " ";
   display: block;
   width: 1px;
@@ -149,33 +149,26 @@
   height: 100%;
 }
 
-.cc-pretty-editor .cm-formatting-strong,
-.cc-pretty-editor .cm-formatting-em {
+.cc-em-strong .cm-formatting-strong,
+.cc-em-strong .cm-formatting-em {
   color: var(--shade-20);
   font-size: 14px;
 }
 
-.cc-pretty-editor
+.cc-hr
   .cm-s-obsidian
   div:not(.CodeMirror-activeline)
   > .HyperMD-hr
   span.cm-builtin,
-.cc-pretty-editor
-  .cm-s-obsidian
-  div:not(.CodeMirror-activeline)
-  > .HyperMD-hr
-  span.cm-hr {
+.cc-hr .cm-s-obsidian div:not(.CodeMirror-activeline) > .HyperMD-hr span.cm-hr {
   color: transparent;
 }
 
-.cc-pretty-editor .HyperMD-hr {
+.cc-hr .HyperMD-hr {
   position: relative;
 }
 
-.cc-pretty-editor
-  .cm-s-obsidian
-  div:not(.CodeMirror-activeline)
-  > .HyperMD-hr-bg:after {
+.cc-hr .cm-s-obsidian div:not(.CodeMirror-activeline) > .HyperMD-hr-bg:after {
   content: " ";
   display: block;
   position: absolute;
@@ -187,7 +180,7 @@
 
 /* Icons */
 
-.cc-pretty-editor .cm-formatting-list-ul:before {
+.cc-editor-list-bullets .cm-formatting-list-ul:before {
   line-height: 0;
   position: absolute;
   top: 51%;
@@ -199,6 +192,6 @@
   content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0);"><path d="M12,2C6.486,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.514,2,12,2z"></path></svg>');
 }
 
-.theme-dark.cc-pretty-editor .cm-formatting-list-ul:before {
+.theme-dark.cc-editor-list-bullets .cm-formatting-list-ul:before {
   content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" style="fill:rgba(204,204,204);"><path d="M12,2C6.486,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.514,2,12,2z"></path></svg>');
 }
