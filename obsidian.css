@@ -2303,11 +2303,11 @@ input[type="range"] {
 }
 
 .nav-folder-children > .nav-folder {
-  padding: 0 0 0 8px;
+  padding: 0 0 0 5px;
 }
 
 .nav-file {
-  padding: 0 5px 0 22px;
+  padding: 0 5px 0 19px;
   margin-left: 0;
 }
 
@@ -2316,11 +2316,11 @@ input[type="range"] {
 }
 
 .cc-no-folder-icons .nav-file {
-  padding-left: 6px;
+  padding-left: 4px;
 }
 
 .cc-no-folder-icons.cc-no-file-icons .nav-file {
-  padding-left: 11px;
+  padding-left: 12px;
 }
 
 .nav-file-tag {
