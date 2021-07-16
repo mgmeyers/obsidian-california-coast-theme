@@ -89,21 +89,11 @@ body:not(.cc-no-custom-icons) .setting-hotkey-icon.setting-delete-hotkey > svg {
 
 .view-header-icon,
 .workspace-tab-header,
-.nav-action-button,
-.nav-action-button.is-active,
 .side-dock-ribbon-tab,
 .view-action {
   background: transparent;
   color: var(--text-muted);
   cursor: var(--cursor);
-}
-
-.nav-action-button.is-active {
-  background: var(--shade-plus-darker);
-}
-
-.nav-action-button.is-active:hover {
-  color: var(--text-muted);
 }
 
 .view-header-icon {
@@ -125,11 +115,6 @@ body:not(.cc-no-custom-icons) .setting-hotkey-icon.setting-delete-hotkey > svg {
   background-color: var(--shade-plus-darker);
 }
 
-.workspace-leaf-content[data-type="backlink"] .nav-action-button.is-active,
-.workspace-leaf-content[data-type="search"] .nav-action-button.is-active {
-  color: var(--text-muted);
-  opacity: 1;
-}
 .view-header-icon:hover,
 .nav-action-button:hover,
 .workspace-tab-header:hover,
@@ -144,22 +129,29 @@ body:not(.cc-no-custom-icons) .setting-hotkey-icon.setting-delete-hotkey > svg {
   padding: 0;
 }
 
-.nav-action-button,
-.workspace-leaf-content[data-type="search"] .nav-action-button,
-.workspace-leaf-content[data-type="backlink"] .nav-action-button {
-  padding: 4px 6px;
+.nav-action-button {
+  padding: 3px 5px;
   opacity: 1;
-  margin: 0 0 0 1px;
+  margin: 0 2px 0 0;
   cursor: var(--cursor);
-  border-radius: var(--radius-s);
   display: flex;
+  border-radius: var(--radius-m);
+  background-color: var(--background-primary);
+  box-shadow: 0px 1px 1px rgb(0, 0, 0, 0.08); 
+  border: 1px solid rgba(0, 0, 0, 0.12);
 }
 
-.is-mobile .nav-action-button,
-.is-mobile .workspace-leaf-content[data-type="search"] .nav-action-button,
-.is-mobile .workspace-leaf-content[data-type="backlink"] .nav-action-button {
+.theme-dark .nav-action-button {
+  color: var(--text-normal);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1),
+    inset 0px 1px 1px rgba(255, 255, 255, 0.3);
+  background-color: var(--shade-20);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.is-mobile .nav-action-button {
   padding: 6px 8px;
-  margin: 0 4px 0 0;
+  margin: 0 5px 0 0;
 }
 
 .is-mobile .nav-action-button svg {
@@ -167,8 +159,30 @@ body:not(.cc-no-custom-icons) .setting-hotkey-icon.setting-delete-hotkey > svg {
   height: var(--svg-xxl);
 }
 
+.nav-action-button.is-active {
+  color: var(--text-muted);
+  background-color: var(--background-primary);
+  border-color: hsla(var(--accent-hsl), 0.7);
+  box-shadow: 0px 1px 1px rgb(0, 0, 0, 0.08), inset 0 0 0 1px hsla(var(--accent-hsl), 0.7);
+}
+
+.nav-action-button.is-active:hover {
+  color: var(--text-muted);
+}
+
 .nav-action-button:hover {
-  background-color: var(--shade-plus-darker);
+  background-color: var(--background-primary);
+}
+
+.theme-dark .nav-action-button.is-active,
+.theme-dark .nav-action-button:hover {
+  color: var(--text-normal);
+  background-color: var(--shade-20);
+}
+
+.theme-dark .nav-action-button.is-active {
+  color: var(--text-normal);
+  background-color: var(--shade-20);
 }
 
 .setting-item[data-id="folder-h"] .setting-item-name::before,
