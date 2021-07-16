@@ -70,6 +70,7 @@
 }
 
 .cc-editor-heading-hash .cm-formatting-header {
+  font-family: var(--text);
   color: var(--text-faint) !important;
   font-weight: var(--normal-weight) !important;
 }
@@ -149,10 +150,20 @@
   height: 100%;
 }
 
+.cc-em-strong .cm-formatting-strong.cm-header,
+.cc-em-strong .cm-formatting-em.cm-header,
 .cc-em-strong .cm-formatting-strong,
 .cc-em-strong .cm-formatting-em {
   color: var(--shade-20);
-  font-size: 14px;
+  font-size: 0.777em;
+}
+
+.cm-s-obsidian .cm-em.cm-header {
+  font-style: italic;
+}
+
+.cm-s-obsidian .cm-strong.cm-header {
+  font-weight: 800;
 }
 
 .cc-hr
