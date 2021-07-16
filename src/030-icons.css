@@ -227,7 +227,8 @@ body:not(.cc-no-file-icons) .nav-file-title-content::before {
 }
 
 body:not(.cc-no-file-icons).cc-no-folder-icons .nav-file-title-content::before {
-  margin-right: 3px;
+  margin-right: 4px;
+  margin-left: -1px;
 }
 
 body:not(.cc-no-custom-icons) .collapse-icon > svg,
