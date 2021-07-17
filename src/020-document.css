@@ -52,11 +52,6 @@
   background-color: transparent;
 }
 
-/* Fancy cursor */
-.fancy-cursor .CodeMirror-cursor {
-  border-left: 2px solid var(--text-accent);
-  transform: translateX(-0.5px);
-}
 .markdown-source-view {
   padding: 0;
 }
@@ -86,34 +81,7 @@ html .CodeMirror-lines {
 .internal-embed .markdown-preview-section {
   max-width: 100%;
 }
-.cm-s-obsidian pre.HyperMD-header {
-  padding-left: 0 !important;
-}
-.CodeMirror-linenumber {
-  font-size: var(--font-small) !important;
-  font-feature-settings: "tnum";
-  color: var(--text-faint);
-  padding-top: 3px;
-}
-.cm-s-obsidian span.cm-url {
-  color: var(--text-accent);
-}
-.cm-s-obsidian span.cm-link {
-  color: var(--text-muted);
-}
-.cm-s-obsidian span.cm-hmd-internal-link {
-  color: var(--text-accent);
-}
-.cm-s-obsidian span.cm-link.cm-strikethrough,
-.cm-s-obsidian span.cm-hmd-internal-link.cm-strikethrough {
-  text-decoration: line-through;
-  text-decoration-color: var(--text-muted);
-  text-decoration-thickness: 3px;
-}
-.cm-strikethrough {
-  text-decoration-color: var(--text-muted);
-  text-decoration-thickness: 3px;
-}
+
 
 /* Transcluded notes embeds */
 
@@ -176,39 +144,6 @@ html .CodeMirror-lines {
   border: 0;
   border-left: 2px solid var(--shade-plus-darker);
   border-radius: 0;
-}
-
-/* Editor Mode Footnotes */
-
-.cm-s-obsidian span.cm-footref {
-  font-size: var(--font-normal);
-}
-.cm-s-obsidian pre.HyperMD-footnote {
-  font-size: var(--font-small);
-  padding-left: 20px;
-}
-
-/* Editor Mode Tables */
-.CodeMirror pre.HyperMD-table-row {
-  font-family: var(--font-monospace);
-  font-size: calc(var(--font-normal) - 1px);
-}
-
-/* Editor Mode Lists */
-.cm-formatting-list {
-  color: var(--text-normal) !important;
-}
-.cm-s-obsidian span.cm-formatting-task {
-  display: inline-block;
-  font-weight: 500;
-  color: var(--text-normal);
-  min-width: 1.3em;
-  font-family: inherit;
-}
-
-/* Editor Mode Quotes */
-.cm-formatting-quote {
-  color: var(--text-faint) !important;
 }
 
 /* --------------- */

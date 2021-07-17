@@ -9,6 +9,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.cm-s-obsidian span.cm-comment {
+  color: var(--shade-70);
+  font-style: italic;
+}
+
+.cm-s-obsidian span.cm-quote {
+  color: var(--text-normal);
+  font-style: italic;
+}
+
 .cm-s-obsidian span.cm-url.cm-string:not(.cm-hmd-footnote-url) {
   color: var(--shade-20);
 }
@@ -53,14 +63,89 @@
   width: 1rem;
 }
 
-.cm-s-obsidian span.cm-comment {
-  color: var(--shade-70);
-  font-style: italic;
+.cm-s-obsidian span.cm-hashtag,
+.frontmatter-container .tag,
+.tag {
+  background-color: transparent;
+  text-decoration: none;
+
+  display: inline;
+  color: var(--text-accent);
+  margin: 0;
+  text-align: unset;
+  vertical-align: unset;
+  border: none;
+  font-size: unset;
+  padding: 0 !important;
+  border-radius: 0;
 }
 
-.cm-s-obsidian span.cm-quote {
+.cm-s-obsidian pre.HyperMD-header {
+  padding-left: 0 !important;
+}
+.CodeMirror-linenumber {
+  font-size: var(--font-small) !important;
+  font-feature-settings: "tnum";
+  color: var(--text-faint);
+  padding-top: 3px;
+}
+.cm-s-obsidian span.cm-url {
+  color: var(--text-accent);
+}
+.cm-s-obsidian span.cm-link {
+  color: var(--text-muted);
+}
+.cm-s-obsidian span.cm-hmd-internal-link {
+  color: var(--text-accent);
+}
+.cm-s-obsidian span.cm-link.cm-strikethrough,
+.cm-s-obsidian span.cm-hmd-internal-link.cm-strikethrough {
+  text-decoration: line-through;
+  text-decoration-color: var(--text-muted);
+  text-decoration-thickness: 3px;
+}
+.cm-strikethrough {
+  text-decoration-color: var(--text-muted);
+  text-decoration-thickness: 3px;
+}
+
+/* Editor Mode Footnotes */
+
+.cm-s-obsidian span.cm-footref {
+  font-size: var(--font-normal);
+}
+.cm-s-obsidian pre.HyperMD-footnote {
+  font-size: var(--font-small);
+  padding-left: 20px;
+}
+
+/* Editor Mode Tables */
+.CodeMirror pre.HyperMD-table-row {
+  font-family: var(--font-monospace);
+  font-size: calc(var(--font-normal) - 1px);
+}
+
+/* Editor Mode Lists */
+.cm-formatting-list {
+  color: var(--text-normal) !important;
+}
+.cm-s-obsidian span.cm-formatting-task {
+  display: inline-block;
+  font-weight: 500;
   color: var(--text-normal);
-  font-style: italic;
+  min-width: 1.3em;
+  font-family: inherit;
+}
+
+/* Editor Mode Quotes */
+.cm-formatting-quote {
+  color: var(--text-faint) !important;
+}
+
+/* Fancy cursor */
+.fancy-cursor .CodeMirror-cursor {
+  border-left: 2px solid var(--text-accent);
+  transform: translateX(-0.5px);
 }
 
 /* Pretty editor */

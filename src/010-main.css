@@ -528,26 +528,6 @@ button,
   line-height: 1;
 }
 
-/* --------------- */
-/* Tags */
-
-.cm-s-obsidian span.cm-hashtag,
-.frontmatter-container .tag,
-.tag {
-  background-color: transparent;
-  text-decoration: none;
-
-  display: inline;
-  color: var(--text-accent);
-  margin: 0;
-  text-align: unset;
-  vertical-align: unset;
-  border: none;
-  font-size: unset;
-  padding: 0 !important;
-  border-radius: 0;
-}
-
 /* Menu */
 .menu {
   color: var(--shade-90);
