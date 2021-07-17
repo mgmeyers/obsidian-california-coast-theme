@@ -5654,9 +5654,7 @@ body:not(.cc-no-custom-icons) .view-action[aria-label^="Preview"] > svg {
 .cm-s-obsidian span.cm-url {
   color: var(--text-accent);
 }
-.cm-s-obsidian span.cm-link {
-  color: var(--text-muted);
-}
+
 .cm-s-obsidian span.cm-hmd-internal-link {
   color: var(--text-accent);
 }
