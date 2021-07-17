@@ -1821,7 +1821,7 @@ input[type="range"] {
   font-size: var(--rem);
 }
 .is-mobile .nav-buttons-container {
-  padding: 4px 0.5rem;
+  padding: 2px 0.5rem 0.5rem;
 }
 .workspace-leaf-content > .nav-header > .nav-buttons-container {
   padding: 2px 10px 10px;
