@@ -2558,7 +2558,8 @@ body:not(.is-grabbing) .nav-folder-title:hover {
 /* --------------- */
 /* Search */
 
-.suggestion-container.mod-search-suggestion {
+.suggestion-container {
+  overflow: hidden;
   border: 1px solid var(--shade-10);
   border-radius: var(--radius-l);
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
