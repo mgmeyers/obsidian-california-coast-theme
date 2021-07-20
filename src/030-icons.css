@@ -20,10 +20,6 @@ body.is-mobile {
   --svg-xxl: 24px;
 }
 
-svg {
-  stroke-width: 0;
-}
-
 .view-action > svg,
 .view-header-icon > svg,
 .nav-action-button svg,
@@ -399,6 +395,7 @@ body:not(.cc-no-custom-icons) svg.tomorrow-glyph,
 body:not(.cc-no-custom-icons) svg.yesterday-glyph,
 body:not(.cc-no-custom-icons) svg.workspace-glyph,
 body:not(.cc-no-custom-icons) svg.box-glyph {
+  stroke-width: 0;
   background-color: currentColor;
 }
 
