@@ -86,6 +86,16 @@ settings:
         title: Truncate file titles
         description: 'By default, files with long names will wrap in the file explorer. This setting ensures each file name only takes up a single line'
         type: class-toggle
+    -
+        id: cc-no-sidebar-animation
+        title: Disable sidebar animations
+        description: Closing and opening sidebars will occur immediately rather than animating to the open or closed positions
+        type: class-toggle
+    -
+        id: cc-no-tree-animation
+        title: Disable tree animations
+        description: Closing and opening folders, nested tags, etc. will occur immediately rather than animating to the open or closed positions
+        type: class-toggle
 
     - 
         id: editor-customization
