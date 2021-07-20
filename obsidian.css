@@ -3966,6 +3966,7 @@ html .plugin-sliding-panes-rotate-header.embedded-note-title .CodeMirror-lines {
 #calendar-container svg.task,
 #calendar-container .active svg.task {
   stroke: var(--text-accent);
+  stroke-width: 1px;
 }
 #calendar-container svg.dot,
 #calendar-container svg.task {
