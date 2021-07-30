@@ -1077,7 +1077,7 @@ button,
 }
 
 .workspace-drawer-inner {
-  background-color: var(--background-secondary);
+  background-color: var(--shade-3);
   padding-top: env(safe-area-inset-top);
   padding-bottom: env(safe-area-inset-bottom);
 }
@@ -1111,12 +1111,7 @@ button,
   justify-content: center;
 }
 
-.workspace-drawer.mod-left {
-  border-right: 1px solid var(--shade-30);
-}
-
 .workspace-drawer.mod-right {
-  border-left: 1px solid var(--shade-30);
   padding-right: env(safe-area-inset-right);
 }
 
