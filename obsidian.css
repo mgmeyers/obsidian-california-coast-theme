@@ -673,6 +673,11 @@ settings:
   --opacity-translucency: 1;
 }
 
+.is-mobile.theme-dark,
+.is-mobile.theme-light {
+  --background-modifier-cover: rgba(0, 0, 0, 0.25);
+}
+
 body {
   --editor-line-height-rem: calc(var(--editor-line-height) * 1rem);
   --editor-line-height-small: calc(
@@ -683,6 +688,10 @@ body {
 
 body.is-mobile {
   padding: 0 !important;
+}
+
+.is-mobile .app-container {
+  background-color: #000;
 }
 
 /* 
@@ -1142,6 +1151,9 @@ button,
 /* --------------- */
 /* Modals */
 
+.modal-bg {
+  opacity: 1 !important;
+}
 .progress-bar-message {
   color: var(--text-faint);
 }
@@ -1154,6 +1166,9 @@ button,
   border-radius: 10px;
   max-width: 1000px;
   max-height: 90vh;
+}
+.is-mobile .modal {
+  border: none;
 }
 .modal-content {
   padding-left: 10px;
@@ -1174,6 +1189,14 @@ button,
   max-width: 1000px;
   width: 90vw;
   height: 90vh;
+}
+
+.is-mobile .prompt,
+.is-mobile .modal.mod-settings {
+  width: 100vw; 
+  height: 92vh;
+  max-height: none;
+  max-width: none;
 }
 
 .modal.mod-settings .vertical-tab-header {
