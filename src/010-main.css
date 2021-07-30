@@ -739,7 +739,7 @@ button,
 .is-mobile .prompt,
 .is-mobile .modal.mod-settings {
   width: 100vw; 
-  height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom) - 25px);
+  height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom) - 50px);
   max-height: none;
   max-width: none;
 }
