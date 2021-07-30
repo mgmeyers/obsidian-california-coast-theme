@@ -695,7 +695,7 @@ body.is-mobile {
 }
 
 .is-mobile .horizontal-main-container {
-  z-index: 1;
+  z-index: 2;
 }
 
 /* 
@@ -1609,6 +1609,7 @@ body.theme-dark:not(.is-translucent):not(.hider-frameless)
 .is-mobile .safe-area-top-cover {
   background-color: var(--background-secondary);
   height: env(safe-area-inset-top);
+  z-index: 1;
 }
 .is-mobile .titlebar {
   background: var(--background-secondary);
