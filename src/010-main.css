@@ -784,6 +784,7 @@ input.prompt-input:hover {
   padding: 10px 10px 0;
   overflow: hidden !important;
   transform: translateZ(0);
+  z-index: 1;
 }
 .is-mobile .prompt-results {
   padding-top: 1rem;
