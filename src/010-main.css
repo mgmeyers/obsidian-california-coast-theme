@@ -391,6 +391,12 @@ body:not(.hider-ribbon):not(.hider-frameless)
   min-width: none;
 }
 
+.mobile-toolbar {
+  background-color: var(--background-primary);
+  transition: none !important;
+  transform: none !important;
+}
+
 /* 
       ------------------------------------------------------------------
   */
@@ -783,7 +789,6 @@ input.prompt-input:hover {
   border-radius: 10px 10px 0 0;
   padding: 10px 10px 0;
   overflow: hidden !important;
-  transform: translateZ(0);
   z-index: 1;
 }
 .is-mobile .prompt-results {
