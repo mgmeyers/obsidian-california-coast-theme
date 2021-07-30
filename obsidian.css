@@ -1196,7 +1196,7 @@ button,
 .is-mobile .prompt,
 .is-mobile .modal.mod-settings {
   width: 100vw; 
-  height: 88vh;
+  height: 87vh;
   max-height: none;
   max-width: none;
 }
