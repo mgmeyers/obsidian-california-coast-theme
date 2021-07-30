@@ -1191,10 +1191,12 @@ button,
   height: 90vh;
 }
 
+.is-mobile .modal.mod-community-theme, 
+.is-mobile .modal.mod-community-plugin,
 .is-mobile .prompt,
 .is-mobile .modal.mod-settings {
   width: 100vw; 
-  height: 92vh;
+  height: 88vh;
   max-height: none;
   max-width: none;
 }
