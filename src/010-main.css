@@ -597,6 +597,7 @@ button,
 }
 
 .workspace-drawer-ribbon {
+  background-color: transparent;
   width: var(--workspace-drawer-ribbon-width);
 }
 
@@ -612,6 +613,7 @@ button,
 }
 
 .workspace-drawer-inner {
+  background-color: var(--background-secondary);
   padding-top: env(safe-area-inset-top);
   padding-bottom: env(safe-area-inset-bottom);
 }
@@ -2827,7 +2829,7 @@ input.search-input:focus {
   border-left: 0;
 }
 .is-mobile .side-dock-ribbon {
-  border-right: 1px solid var(--shade-5);
+  border-right: 1px solid transparent;
   padding: calc(env(safe-area-inset-top) + 4px) 0
     calc(env(safe-area-inset-bottom) + 4px) env(safe-area-inset-left);
 }
