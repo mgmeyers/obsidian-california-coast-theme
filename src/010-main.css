@@ -230,6 +230,10 @@ body.is-mobile {
   background-color: #000;
 }
 
+.is-mobile .horizontal-main-container {
+  z-index: 1;
+}
+
 /* 
     ------------------------------------------------------------------
 */
