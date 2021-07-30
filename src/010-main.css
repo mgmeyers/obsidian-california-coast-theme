@@ -694,6 +694,7 @@ button,
 .modal-content {
   padding-left: 10px;
 }
+.community-plugin.modal-content,
 .modal.mod-settings .modal-content {
   padding-left: 0;
 }
