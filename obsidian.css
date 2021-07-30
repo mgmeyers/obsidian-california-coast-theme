@@ -1203,8 +1203,8 @@ button,
 .is-mobile .prompt,
 .is-mobile .modal.mod-settings {
   width: 100vw; 
-  height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom) - 50px);
-  max-height: none;
+  height: 90vh;
+  max-height: calc(100% - env(safe-area-inset-top) - env(safe-area-inset-bottom) - 100px);
   max-width: none;
 }
 
