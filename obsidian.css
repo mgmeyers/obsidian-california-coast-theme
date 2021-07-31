@@ -1254,7 +1254,9 @@ input.prompt-input:hover {
   border-radius: 10px 10px 0 0;
   padding: 10px 10px 0;
   overflow: hidden !important;
-  z-index: 1;
+}
+.is-mobile .modal.mod-settings .vertical-tab-header, .is-mobile .modal.mod-settings .vertical-tab-nav-item {
+  border-radius: 10px 10px 0 0;
 }
 .is-mobile .prompt-results {
   padding-top: 1rem;
