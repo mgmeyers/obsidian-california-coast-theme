@@ -1065,6 +1065,14 @@ button,
   width: var(--workspace-drawer-ribbon-width);
 }
 
+.workspace-drawer.mod-left .workspace-drawer-active-tab-container {
+  padding-left: 0;
+}
+
+.workspace-drawer.mod-left .workspace-drawer-header {
+  padding-left: 0.5rem;
+}
+
 .is-mobile .side-dock-ribbon-action > svg {
   width: 26px;
   height: 26px;
