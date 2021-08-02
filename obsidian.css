@@ -50,13 +50,6 @@ settings:
         type: variable-text
         default: Menlo, SFMono-Regular, Consolas, "Roboto Mono", monospace
     - 
-        id: editor-font-size
-        title: Body font size
-        description: Font size in px of the main text
-        type: variable-number
-        default: 18
-        format: px
-    - 
         id: editor-line-height
         title: Body line height
         description: Line height of the main text, expects a decimal value
