@@ -9,6 +9,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.cm-s-obsidian .HyperMD-codeblock {
+  line-height: var(--editor-line-height);
+}
+
 .cm-s-obsidian span.cm-comment {
   color: var(--shade-70);
   font-style: italic;
@@ -271,6 +275,8 @@
   background-color: var(--shade-10);
   top: 50%;
 }
+
+
 
 /* Icons */
 

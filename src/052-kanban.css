@@ -312,3 +312,13 @@ body .kanban-plugin__action-confirm-text {
 body .kanban-plugin__setting-item {
   background-color: var(--background-primary);
 }
+
+body .kanban-plugin__icon[data-icon="cross"] {
+  color: var(--text-muted);
+
+}
+
+body .kanban-plugin__icon[data-icon="cross"] > svg {
+  width: 1.2em;
+  height: 1.2em;
+}
