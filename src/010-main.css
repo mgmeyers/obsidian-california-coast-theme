@@ -1169,7 +1169,7 @@ body.hider-frameless:not(.is-mobile) .titlebar {
   background: transparent;
 }
 
-.is-translucent .titlebar {
+body:not(.is-mobile).is-translucent .titlebar {
   background-color: var(--background-translucent);
 }
 
