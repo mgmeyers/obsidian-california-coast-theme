@@ -1350,7 +1350,7 @@ input.prompt-input:hover {
 /* Workspace */
 
 .workspace {
-  background-color: var(--shade-3);
+  background-color: var(--shade-5);
 }
 
 .theme-dark .workspace {
@@ -1620,7 +1620,7 @@ body.theme-dark:not(.is-translucent):not(.hider-frameless)
 
 body:not(.is-mobile) .titlebar {
   border-bottom: none;
-  background: var(--shade-3);
+  background: var(--shade-5);
   height: var(--titlebar-height) !important;
   top: 0 !important;
   padding-top: 0 !important;
@@ -4549,12 +4549,26 @@ span[title="Fold line"]:after,
   padding-right: 0;
 }
 
-.external-link[href*="obsidian://search"]:after
-{
-  transform: scaleX(-1);
+.external-link::after {
+  display: inline-block;
+  width: 0.7em;
+  height: 0.7em;
+  content: " ";
+  margin-left: 2px;
+  top: -2px;
   position: relative;
-  top: 3px;
-  padding-right: 3px;
+  background-color: var(--shade-20);
+  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.707 13.707l8.293-8.293v3.586c0 0.552 0.448 1 1 1s1-0.448 1-1v-6c0-0.404-0.244-0.769-0.617-0.924-0.124-0.051-0.254-0.076-0.383-0.076v-0.001h-6c-0.552 0-1 0.448-1 1s0.448 1 1 1h3.586l-8.293 8.293c-0.195 0.195-0.293 0.451-0.293 0.707s0.098 0.512 0.293 0.707c0.39 0.391 1.024 0.391 1.414 0z"></path></svg>');
+}
+
+.external-link[href*="obsidian://search"]::after
+{
+  width: 0.9em;
+  height: 0.9em;
+  content: " ";
+  margin-left: 2px;
+  top: 0.1em;
+  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="red" d="M79.263 70.738c-2.138 -2.033 -4.183 -4.154 -5.696 -5.767c-1.55 -1.575 -2.483 -2.721 -2.483 -2.721l-11.667 -5.571C63.917 51.542 66.667 44.846 66.667 37.5c0 -16.079 -13.083 -29.167 -29.167 -29.167S8.333 21.421 8.333 37.5s13.083 29.167 29.167 29.167c7.346 0 14.042 -2.75 19.179 -7.246l5.571 11.667c0 0 1.146 0.933 2.721 2.483c1.613 1.512 3.733 3.558 5.767 5.696c2.058 2.108 4.117 4.217 5.658 5.8c1.508 1.617 2.517 2.692 2.517 2.692l8.838 -8.838c0 0 -1.075 -1.008 -2.692 -2.517C83.479 74.854 81.371 72.796 79.263 70.738zM37.5 58.333c-11.488 0 -20.833 -9.346 -20.833 -20.833s9.346 -20.833 20.833 -20.833s20.833 9.346 20.833 20.833S48.988 58.333 37.5 58.333z"></path></svg>');
 }
 
 .footnotes-list {

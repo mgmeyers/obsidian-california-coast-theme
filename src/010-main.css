@@ -893,7 +893,7 @@ input.prompt-input:hover {
 /* Workspace */
 
 .workspace {
-  background-color: var(--shade-3);
+  background-color: var(--shade-5);
 }
 
 .theme-dark .workspace {
@@ -1163,7 +1163,7 @@ body.theme-dark:not(.is-translucent):not(.hider-frameless)
 
 body:not(.is-mobile) .titlebar {
   border-bottom: none;
-  background: var(--shade-3);
+  background: var(--shade-5);
   height: var(--titlebar-height) !important;
   top: 0 !important;
   padding-top: 0 !important;
