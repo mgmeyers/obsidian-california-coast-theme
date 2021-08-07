@@ -896,10 +896,6 @@ input.prompt-input:hover {
   background-color: var(--shade-5);
 }
 
-.theme-dark .workspace {
-  background-color: var(--shade-10);
-}
-
 .is-translucent .workspace {
   background-color: var(--background-translucent);
 }
@@ -1167,10 +1163,6 @@ body:not(.is-mobile) .titlebar {
   height: var(--titlebar-height) !important;
   top: 0 !important;
   padding-top: 0 !important;
-}
-
-body.theme-dark:not(.is-mobile) .titlebar {
-  background-color: var(--shade-10);
 }
 
 body.hider-frameless:not(.is-mobile) .titlebar {
