@@ -1973,6 +1973,10 @@ input[type="range"] {
   align-items: center;
 }
 
+.nav-folder-title {
+  padding-right: 10px;
+}
+
 .nav-file-title {
   flex-direction: row-reverse;
 }
