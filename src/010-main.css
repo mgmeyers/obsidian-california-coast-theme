@@ -1926,15 +1926,15 @@ input[type="range"] {
   margin-left: 0;
 }
 
-.cc-no-folder-icons .nav-folder-title-content {
+body:not(.cc-folder-icons) .nav-folder-title-content {
   padding-left: 7px;
 }
 
-.cc-no-folder-icons .nav-file {
+body:not(.cc-folder-icons) .nav-file {
   padding-left: 4px;
 }
 
-.cc-no-folder-icons.cc-no-file-icons .nav-file {
+body:not(.cc-folder-icons):not(.cc-file-icons) .nav-file {
   padding-left: 12px;
 }
 

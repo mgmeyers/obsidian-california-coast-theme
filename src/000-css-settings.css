@@ -414,18 +414,21 @@ settings:
         type: heading
         level: 3
     - 
-        id: cc-no-custom-icons
-        title: Disable Custom Icons
-        description: Use obsidian's default icons
+        id: cc-custom-icons
+        title: Use Custom Icons
+        description: Replace obsidian's default icons
         type: class-toggle
+        default: true
     - 
-        id: cc-no-file-icons
-        title: Hide File Icons
+        id: cc-file-icons
+        title: Use File Icons
         type: class-toggle
+        default: true
     - 
-        id: cc-no-folder-icons
-        title: Hide Folder Icons
+        id: cc-folder-icons
+        title: Use Folder Icons
         type: class-toggle
+        default: true
     - 
         id: folder-h
         title: Folder icon color
