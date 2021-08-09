@@ -5,6 +5,9 @@ body {
   --preview-line-height-rem: calc(var(--preview-line-height) * 1rem);
   --preview-font-weight: var(--editor-font-weight);
   --preview-font-features: var(--editor-font-features);
+
+  --hr-spacing-top: calc(var(--editor-line-height-rem) / 2);
+  --hr-spacing-bottom: calc(var(--editor-line-height-rem) * 1.5);
 }
 
 .markdown-preview-view {
@@ -139,24 +142,14 @@ body {
 }
 
 .markdown-preview-section hr {
-  margin-top: var(--editor-line-height-rem);
-  margin-bottom: var(--editor-line-height-rem);
+  margin-bottom: var(--hr-spacing-bottom) !important;
   box-sizing: content-box;
   border: 0;
   color: transparent;
   display: block;
-  height: var(--editor-line-height-rem);
-  position: relative;
-}
-
-.markdown-preview-section hr:after {
-  content: " ";
-  display: block;
-  position: absolute;
   width: 100%;
-  height: 1px;
-  background-color: var(--shade-10);
-  top: 50%;
+  height: var(--hr-spacing-top);
+  border-bottom: 1px solid var(--shade-10);
 }
 
 .markdown-preview-section img {
@@ -196,7 +189,6 @@ body {
 }
 
 .markdown-preview-section blockquote {
-  position: relative;
   font-style: italic;
   border-radius: unset;
   border: unset;
