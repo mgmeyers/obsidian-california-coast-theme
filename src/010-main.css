@@ -1891,7 +1891,6 @@ input[type="range"] {
 }
 .nav-files-container {
   overflow-x: hidden;
-  padding-top: 10px;
 }
 .hider-ribbon .nav-files-container {
   padding-bottom: 50px;
