@@ -5820,6 +5820,11 @@ body.cc-custom-icons .view-action[aria-label^="Preview"] > svg {
   font-size: unset;
 }
 
+.cm-s-obsidian span.cm-blockid {
+  font-family: var(--font-monospace);
+  font-size: 0.6em;
+}
+
 .cm-formatting-list-ul:before {
   color: var(--text-normal);
 }
@@ -6059,531 +6064,6 @@ body.cc-custom-icons .view-action[aria-label^="Preview"] > svg {
 
 .theme-dark.cc-editor-list-bullets .cm-formatting-list-ul:before {
   content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" style="fill:rgba(204,204,204);"><path d="M12,2C6.486,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.514,2,12,2z"></path></svg>');
-}
-
-.outliner-plugin-bls-zoom.cc-editor-list-bullets .cm-formatting-list-ul {
-  cursor: pointer;
-}
-
-.CodeMirror > .outliner-plugin-zoom-header {
-  font-family: var(--text);
-  font-size: 0.8em;
-  padding: 1rem 3.5rem 0;
-}
-
-.outliner-plugin-zoom-header > .outliner-plugin-zoom-title {
-  text-decoration: none;
-  color: hsla(var(--accent-hsl), 0.8);
-}
-.outliner-plugin-zoom-header > .outliner-plugin-zoom-title:hover {
-  color: hsla(var(--accent-hsl), 1);
-}
-.outliner-plugin-zoom-header > .outliner-plugin-zoom-title + span {
-  color: transparent;
-  font-size: 0;
-}
-.outliner-plugin-zoom-header > .outliner-plugin-zoom-title + span:before {
-  font-size: 0.9rem;
-  width: 0.9rem;
-  height: 0.9rem;
-  color: var(--text-muted);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 1;
-  content: "›";
-  padding: 0 2px;
-  position: relative;
-}
-
-body .kanban-plugin {
-  background-color: var(--shade-0);
-}
-
-body .kanban-plugin__search-wrapper {
-  background-color: var(--background-primary);
-  border-bottom: 1px solid var(--shade-plus-darker);
-}
-
-body button.kanban-plugin__search-cancel-button {
-  color: var(--text-normal);
-  border: 1px solid transparent;
-  border-radius: var(--radius-m);
-  font-weight: 500;
-  background-color: var(--shade-plus-darker);
-  box-shadow: 0px 0.5px 1px 0.5px rgba(0, 0, 0, 0.1);
-  padding: 7px;
-  position: relative;
-  top: -1px;
-  margin-left: 6px;
-}
-
-body button.kanban-plugin__search-cancel-button:hover {
-  background-color: var(--shade-10);
-}
-
-body .kanban-plugin__board {
-  padding: 1.5rem;
-}
-
-body .kanban-plugin__lane-title {
-  font-weight: 500;
-  font-size: 14px;
-}
-
-body .kanban-plugin__lane {
-  background: var(--shade-0);
-  border: none;
-  padding: 2px;
-}
-
-body .kanban-plugin__lane.is-dragging {
-  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2),
-    0 0 0 3px hsla(var(--accent-hsl), 0.5);
-}
-
-body .kanban-plugin__lane-items {
-  background-color: var(--shade-5);
-  margin: 5px 0 0;
-  padding: 7px;
-  border-radius: var(--radius-l);
-}
-
-body.theme-dark .kanban-plugin__lane-items {
-  background-color: var(--shade-3);
-}
-
-body .kanban-plugin__lane-items:empty {
-  border-radius: 0;
-  padding: 4px;
-}
-
-body .kanban-plugin__lane-items.is-dragging-over {
-  background-color: hsla(var(--accent-hsl), 0.15);
-}
-
-body .kanban-plugin__item {
-  border-radius: var(--radius-l);
-  background-color: var(--background-primary);
-  border: none;
-  margin-bottom: 6px;
-  font-size: 14px;
-  box-shadow: 0px 0.5px 1px 0.5px rgba(0, 0, 0, 0.1);
-}
-
-body.theme-dark .kanban-plugin__item-content-wrapper {
-  background-color: var(--shade-10);
-}
-
-body .kanban-plugin__item:last-child {
-  margin-bottom: 0;
-}
-
-body .kanban-plugin__item.is-dragging {
-  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2),
-    0 0 0 3px hsla(var(--accent-hsl), 0.8);
-}
-
-body .kanban-plugin__item.is-search-hit {
-  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2),
-    0 0 0 2px var(--text-highlight-bg-active);
-}
-
-body .kanban-plugin__item.is-dragging .kanban-plugin__item-content-wrapper {
-  background-color: var(--background-primary);
-}
-
-body .markdown-preview-view.kanban-plugin__item-markdown {
-  font-family: var(--text);
-  line-height: 1.4;
-}
-
-body .is-dragging .markdown-preview-view.kanban-plugin__item-markdown,
-body
-  .kanban-plugin
-  .kanban-plugin__item
-  .markdown-preview-view.kanban-plugin__item-markdown {
-  font-size: 1em;
-}
-
-body .is-dragging .markdown-preview-view.kanban-plugin__lane-title-text,
-body .kanban-plugin .markdown-preview-view.kanban-plugin__lane-title-text {
-  font-family: var(--text-normal);
-  font-size: 14px;
-  font-weight: 500;
-}
-
-body .kanban-plugin__item-title {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-body .kanban-plugin__item-title-wrapper {
-  padding: 8px 10px;
-}
-
-body .kanban-plugin__item-metadata:empty {
-  display: none;
-}
-
-body .kanban-plugin__item-tags .kanban-plugin__item-tag {
-  font-weight: 500;
-  color: var(--text-muted);
-  background-color: var(--shade-plus-darker);
-  padding: 4px 5px !important;
-  border-radius: var(--radius-s);
-  line-height: 1;
-}
-
-body .kanban-plugin__item-tags .kanban-plugin__item-tag:hover {
-  color: var(--text-accent);
-}
-
-body .kanban-plugin__item-tags .kanban-plugin__item-tag > span {
-  display: inline-block;
-  margin-right: 1px;
-  color: var(--text-faint);
-}
-
-body .kanban-plugin__item-tags .kanban-plugin__item-tag:hover > span {
-  color: hsla(var(--accent-hsl), 0.5);
-}
-
-body .kanban-plugin__item-button-wrapper {
-  border-top: none;
-}
-
-body .kanban-plugin button {
-  background-color: var(--shade-3);
-  font-weight: 500;
-}
-
-body .kanban-plugin .kanban-plugin__item-edit-button-wrapper button {
-  background-color: var(--shade-0);
-}
-
-body .kanban-plugin__lane-setting-wrapper > div:last-child {
-  border-bottom: none;
-}
-
-body .kanban-plugin__lane-action-wrapper button {
-  box-shadow: none;
-}
-
-body .kanban-plugin button:hover {
-  color: var(--text-on-accent);
-  background-color: var(--interactive-accent);
-}
-
-body .kanban-plugin__item button.kanban-plugin__item-edit-button,
-body .kanban-plugin__lane button.kanban-plugin__lane-settings-button {
-  margin-top: -1px;
-  margin-bottom: -1px;
-  font-size: 14px;
-}
-
-body .kanban-plugin__item button.kanban-plugin__item-edit-button.is-enabled,
-body
-  .kanban-plugin__lane
-  button.kanban-plugin__lane-settings-button.is-enabled {
-  color: var(--text-muted);
-}
-
-body .kanban-plugin__item button.kanban-plugin__item-edit-button:hover,
-body .kanban-plugin__lane button.kanban-plugin__lane-settings-button:hover {
-  color: var(--text-muted);
-  background-color: var(--shade-plus-darker);
-}
-
-body .kanban-plugin__checkbox-wrapper {
-  border: none;
-}
-
-body .kanban-plugin__new-lane-button,
-body .kanban-plugin__new-item-button {
-  font-weight: 500;
-  font-size: 14px;
-  background-color: var(--shade-plus-darker);
-  border: 1px solid transparent;
-}
-
-body button.kanban-plugin__new-lane-button:hover,
-body button.kanban-plugin__new-item-button:hover {
-  background-color: var(--shade-plus-darker);
-  color: var(--text-muted);
-}
-
-body button.kanban-plugin__new-lane-button {
-  background-color: var(--shade-0);
-  box-shadow: none;
-  border: none;
-  border-radius: var(--radius-m);
-  width: auto;
-}
-
-body button.kanban-plugin__new-item-button {
-  background-color: transparent;
-}
-
-body button.kanban-plugin__confirm-action-button:hover,
-body button.kanban-plugin__item-button-delete:hover,
-body button.kanban-plugin__delete-lane-button:hover {
-  color: var(--text-error);
-  background-color: rgba(var(--background-modifier-error-rgb), 0.2);
-}
-
-body .kanban-plugin__action-confirm-wrapper button {
-  margin-bottom: 5px;
-}
-
-body .kanban-plugin__item-input-wrapper {
-  border-top: none;
-}
-
-body .kanban-plugin__item-input-wrapper .kanban-plugin__grow-wrap > textarea,
-body .kanban-plugin__item-input-wrapper .kanban-plugin__grow-wrap::after {
-  font-size: 14px;
-}
-
-body .kanban-plugin__item-content-wrapper .kanban-plugin__grow-wrap > textarea,
-body .kanban-plugin__item-content-wrapper .kanban-plugin__grow-wrap::after,
-body .kanban-plugin__lane-input-wrapper .kanban-plugin__grow-wrap > textarea,
-body .kanban-plugin__lane-input-wrapper .kanban-plugin__grow-wrap::after,
-body .kanban-plugin__lane-title .kanban-plugin__grow-wrap > textarea,
-body .kanban-plugin__lane-title .kanban-plugin__grow-wrap::after {
-  font-size: 14px;
-}
-
-body button.kanban-plugin__item-action-add,
-body button.kanban-plugin__lane-action-add {
-  background-color: var(--interactive-accent);
-}
-
-body .kanban-plugin__item-settings-actions button,
-body .kanban-plugin__lane-action-wrapper button,
-body .kanban-plugin__action-confirm-wrapper button,
-body .kanban-plugin__lane-input-actions button,
-body .kanban-plugin__item-input-actions button {
-  font-size: 13px;
-}
-
-body .kanban-plugin__lane-input-actions button,
-body .kanban-plugin__item-input-actions button {
-  box-shadow: 0px 0.5px 1px 0.5px rgba(0, 0, 0, 0.1);
-}
-
-body .kanban-plugin__lane-grip {
-  margin-left: -5px;
-  margin-right: 4px;
-}
-
-body .kanban-plugin__autocomplete {
-  font-weight: 500;
-  font-size: 14px;
-  border: none;
-}
-
-body .kanban-plugin__autocomplete-item-active,
-body .kanban-plugin__autocomplete-item {
-  padding: 4px 8px;
-}
-
-body .kanban-plugin__autocomplete-item:hover,
-body .kanban-plugin__autocomplete-item-active {
-  border-top: 1px solid transparent;
-  background-color: var(--shade-5);
-  color: var(--text-normal);
-}
-
-body .kanban-plugin__action-confirm-wrapper {
-  margin: 5px 0;
-  border-radius: var(--radius-l);
-  border-width: 3px;
-}
-
-body .kanban-plugin__action-confirm-text {
-  font-size: 14px;
-  padding-bottom: 5px;
-}
-
-body .kanban-plugin__setting-item {
-  background-color: var(--background-primary);
-}
-
-body .kanban-plugin__icon[data-icon="cross"] {
-  color: var(--text-muted);
-
-}
-
-body .kanban-plugin__icon[data-icon="cross"] > svg {
-  width: 1.2em;
-  height: 1.2em;
-}
-body .lt-predictions-container {
-  font-family: var(--text);
-  font-size: 14px;
-  border: 1px solid var(--shade-10);
-}
-
-body .lt-buttoncontainer > button {
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--text-normal);
-  padding: 4px 14px;
-  background: var(--background-primary);
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.08);
-  border-radius: var(--radius-m);
-  cursor: var(--cursor);
-}
-
-body.theme-dark .lt-buttoncontainer > button {
-  color: #dfdedf;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1),
-    inset 0px 1px 1px rgba(255, 255, 255, 0.3);
-  background-color: var(--shade-20);
-}
-
-body .lt-ignore-btn {
-  background-color: var(--background-primary);
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--text-muted);
-  transition: 100ms color, 100ms background-color;
-}
-
-body .lt-ignore-btn:hover {
-  background-color: var(--shade-3);
-  color: var(--text-normal);
-}
-
-body .lt-ignore-btn svg {
-  width: 1em;
-  height: 1em;
-}
-
-body .lt-title:not(:empty) {
-  font-weight: 500;
-}
-
-body .lt-status-bar-btn {
-  margin: -2px 0;
-}
-
-body .lt-status-bar-btn svg {
-  display: none;
-  width: 14px;
-  height: 14px;
-}
-
-body .lt-status-bar-btn.lt-loading svg {
-  display: block;
-}
-
-body .workspace-leaf-content[data-type="dictionary-view"] .searchbox > input {
-  margin: 0;
-}
-
-body .workspace-leaf-content[data-type="dictionary-view"] .searchbox > button {
-  margin: 0 0 0 5px;
-  padding: 0 10px;
-  flex-shrink: 0;
-  flex-grow: 0;
-  color: var(--text-muted);
-  background: var(--background-primary);
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.08);
-  border-radius: var(--radius-m);
-}
-
-body
-  .workspace-leaf-content[data-type="dictionary-view"]
-  .searchbox
-  > button
-  > .gg-search {
-  margin: 0;
-  display: flex;
-  top: -1px;
-  left: -1px;
-}
-
-body
-  .workspace-leaf-content[data-type="dictionary-view"]
-  .results
-  > .container {
-  background-color: transparent;
-  padding: 0;
-}
-
-body .workspace-leaf-content[data-type="dictionary-view"] h3 {
-  font-size: 14px;
-  font-weight: 500;
-}
-
-body .workspace-leaf-content[data-type="dictionary-view"] .container > .main {
-  background: var(--shade-3);
-  box-shadow: 0px 0.5px 1px 0.5px rgb(0 0 0 / 10%);
-}
-
-body
-  .workspace-leaf-content[data-type="dictionary-view"]
-  .definition:last-child {
-  padding-bottom: 0;
-}
-
-body
-  .workspace-leaf-content[data-type="dictionary-view"]
-  details[open]
-  summary
-  ~ audio,
-body
-  .workspace-leaf-content[data-type="dictionary-view"]
-  details[open]
-  summary
-  ~ div.definition {
-  animation: none !important;
-}
-
-audio,
-audio::-webkit-media-controls-panel {
-  background: var(--background-primary);
-}
-
-audio {
-  border-radius: 40px;
-  border: 1px solid var(--shade-5);
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.08);
-}
-
-body .zoom-plugin-header {
-  border-bottom: 1px solid var(--shade-plus-darker);
-  padding: 10px 17px;
-  font-size: 14px;
-  font-family: var(--text);
-}
-
-body .zoom-plugin-title {
-  text-decoration: none;
-}
-
-body .zoom-plugin-header > span {
-  color: transparent;
-  font-size: 0;
-}
-
-body .zoom-plugin-header > span:before {
-  font-size: 0.9rem;
-  width: 0.9rem;
-  height: 0.9rem;
-  color: var(--text-muted);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 1;
-  content: "›";
-  padding: 0 2px;
-  position: relative;
 }
 
 body {
@@ -7249,4 +6729,541 @@ html .embedded-note-titles .CodeMirror-lines {
 .markdown-preview-pusher + div[data-tag-name="pre"] + div > h5,
 .markdown-preview-pusher + div[data-tag-name="pre"] + div > h6 {
   margin-top: 0 !important;
+}
+
+.outliner-plugin-bls-zoom.cc-editor-list-bullets .cm-formatting-list-ul {
+  cursor: pointer;
+}
+
+.CodeMirror > .outliner-plugin-zoom-header {
+  font-family: var(--text);
+  font-size: 0.8em;
+  padding: 1rem 3.5rem 0;
+}
+
+.outliner-plugin-zoom-header > .outliner-plugin-zoom-title {
+  text-decoration: none;
+  color: hsla(var(--accent-hsl), 0.8);
+}
+.outliner-plugin-zoom-header > .outliner-plugin-zoom-title:hover {
+  color: hsla(var(--accent-hsl), 1);
+}
+.outliner-plugin-zoom-header > .outliner-plugin-zoom-title + span {
+  color: transparent;
+  font-size: 0;
+}
+.outliner-plugin-zoom-header > .outliner-plugin-zoom-title + span:before {
+  font-size: 0.9rem;
+  width: 0.9rem;
+  height: 0.9rem;
+  color: var(--text-muted);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  content: "›";
+  padding: 0 2px;
+  position: relative;
+}
+
+body .kanban-plugin {
+  background-color: var(--shade-0);
+}
+
+body .kanban-plugin__search-wrapper {
+  background-color: var(--background-primary);
+  border-bottom: 1px solid var(--shade-plus-darker);
+}
+
+body button.kanban-plugin__search-cancel-button {
+  color: var(--text-normal);
+  border: 1px solid transparent;
+  border-radius: var(--radius-m);
+  font-weight: 500;
+  background-color: var(--shade-plus-darker);
+  box-shadow: 0px 0.5px 1px 0.5px rgba(0, 0, 0, 0.1);
+  padding: 7px;
+  position: relative;
+  top: -1px;
+  margin-left: 6px;
+}
+
+body button.kanban-plugin__search-cancel-button:hover {
+  background-color: var(--shade-10);
+}
+
+body .kanban-plugin__board {
+  padding: 1.5rem;
+}
+
+body .kanban-plugin__lane-title {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+body .kanban-plugin__lane {
+  background: var(--shade-0);
+  border: none;
+  padding: 2px;
+}
+
+body .kanban-plugin__lane.is-dragging {
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2),
+    0 0 0 3px hsla(var(--accent-hsl), 0.5);
+}
+
+body .kanban-plugin__lane-items {
+  background-color: var(--shade-5);
+  margin: 5px 0 0;
+  padding: 7px;
+  border-radius: var(--radius-l);
+}
+
+body.theme-dark .kanban-plugin__lane-items {
+  background-color: var(--shade-3);
+}
+
+body .kanban-plugin__lane-items:empty {
+  border-radius: 0;
+  padding: 4px;
+}
+
+body .kanban-plugin__lane-items.is-dragging-over {
+  background-color: hsla(var(--accent-hsl), 0.15);
+}
+
+body .kanban-plugin__item {
+  border-radius: var(--radius-l);
+  background-color: var(--background-primary);
+  border: none;
+  margin-bottom: 6px;
+  font-size: 14px;
+  box-shadow: 0px 0.5px 1px 0.5px rgba(0, 0, 0, 0.1);
+}
+
+body.theme-dark .kanban-plugin__item-content-wrapper {
+  background-color: var(--shade-10);
+}
+
+body .kanban-plugin__item:last-child {
+  margin-bottom: 0;
+}
+
+body .kanban-plugin__item.is-dragging {
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2),
+    0 0 0 3px hsla(var(--accent-hsl), 0.8);
+}
+
+body .kanban-plugin__item.is-search-hit {
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2),
+    0 0 0 2px var(--text-highlight-bg-active);
+}
+
+body .kanban-plugin__item.is-dragging .kanban-plugin__item-content-wrapper {
+  background-color: var(--background-primary);
+}
+
+body .markdown-preview-view.kanban-plugin__item-markdown {
+  font-family: var(--text);
+  line-height: 1.4;
+}
+
+body .is-dragging .markdown-preview-view.kanban-plugin__item-markdown,
+body
+  .kanban-plugin
+  .kanban-plugin__item
+  .markdown-preview-view.kanban-plugin__item-markdown {
+  font-size: 1em;
+}
+
+body .is-dragging .markdown-preview-view.kanban-plugin__lane-title-text,
+body .kanban-plugin .markdown-preview-view.kanban-plugin__lane-title-text {
+  font-family: var(--text-normal);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+body .kanban-plugin__item-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+body .kanban-plugin__item-title-wrapper {
+  padding: 8px 10px;
+}
+
+body .kanban-plugin__item-metadata:empty {
+  display: none;
+}
+
+body .kanban-plugin__item-tags .kanban-plugin__item-tag {
+  font-weight: 500;
+  color: var(--text-muted);
+  background-color: var(--shade-plus-darker);
+  padding: 4px 5px !important;
+  border-radius: var(--radius-s);
+  line-height: 1;
+}
+
+body .kanban-plugin__item-tags .kanban-plugin__item-tag:hover {
+  color: var(--text-accent);
+}
+
+body .kanban-plugin__item-tags .kanban-plugin__item-tag > span {
+  display: inline-block;
+  margin-right: 1px;
+  color: var(--text-faint);
+}
+
+body .kanban-plugin__item-tags .kanban-plugin__item-tag:hover > span {
+  color: hsla(var(--accent-hsl), 0.5);
+}
+
+body .kanban-plugin__item-button-wrapper {
+  border-top: none;
+}
+
+body .kanban-plugin button {
+  background-color: var(--shade-3);
+  font-weight: 500;
+}
+
+body .kanban-plugin .kanban-plugin__item-edit-button-wrapper button {
+  background-color: var(--shade-0);
+}
+
+body .kanban-plugin__lane-setting-wrapper > div:last-child {
+  border-bottom: none;
+}
+
+body .kanban-plugin__lane-action-wrapper button {
+  box-shadow: none;
+}
+
+body .kanban-plugin button:hover {
+  color: var(--text-on-accent);
+  background-color: var(--interactive-accent);
+}
+
+body .kanban-plugin__item button.kanban-plugin__item-edit-button,
+body .kanban-plugin__lane button.kanban-plugin__lane-settings-button {
+  margin-top: -1px;
+  margin-bottom: -1px;
+  font-size: 14px;
+}
+
+body .kanban-plugin__item button.kanban-plugin__item-edit-button.is-enabled,
+body
+  .kanban-plugin__lane
+  button.kanban-plugin__lane-settings-button.is-enabled {
+  color: var(--text-muted);
+}
+
+body .kanban-plugin__item button.kanban-plugin__item-edit-button:hover,
+body .kanban-plugin__lane button.kanban-plugin__lane-settings-button:hover {
+  color: var(--text-muted);
+  background-color: var(--shade-plus-darker);
+}
+
+body .kanban-plugin__checkbox-wrapper {
+  border: none;
+}
+
+body .kanban-plugin__new-lane-button,
+body .kanban-plugin__new-item-button {
+  font-weight: 500;
+  font-size: 14px;
+  background-color: var(--shade-plus-darker);
+  border: 1px solid transparent;
+}
+
+body button.kanban-plugin__new-lane-button:hover,
+body button.kanban-plugin__new-item-button:hover {
+  background-color: var(--shade-plus-darker);
+  color: var(--text-muted);
+}
+
+body button.kanban-plugin__new-lane-button {
+  background-color: var(--shade-0);
+  box-shadow: none;
+  border: none;
+  border-radius: var(--radius-m);
+  width: auto;
+}
+
+body button.kanban-plugin__new-item-button {
+  background-color: transparent;
+}
+
+body button.kanban-plugin__confirm-action-button:hover,
+body button.kanban-plugin__item-button-delete:hover,
+body button.kanban-plugin__delete-lane-button:hover {
+  color: var(--text-error);
+  background-color: rgba(var(--background-modifier-error-rgb), 0.2);
+}
+
+body .kanban-plugin__action-confirm-wrapper button {
+  margin-bottom: 5px;
+}
+
+body .kanban-plugin__item-input-wrapper {
+  border-top: none;
+}
+
+body .kanban-plugin__item-input-wrapper .kanban-plugin__grow-wrap > textarea,
+body .kanban-plugin__item-input-wrapper .kanban-plugin__grow-wrap::after {
+  font-size: 14px;
+}
+
+body .kanban-plugin__item-content-wrapper .kanban-plugin__grow-wrap > textarea,
+body .kanban-plugin__item-content-wrapper .kanban-plugin__grow-wrap::after,
+body .kanban-plugin__lane-input-wrapper .kanban-plugin__grow-wrap > textarea,
+body .kanban-plugin__lane-input-wrapper .kanban-plugin__grow-wrap::after,
+body .kanban-plugin__lane-title .kanban-plugin__grow-wrap > textarea,
+body .kanban-plugin__lane-title .kanban-plugin__grow-wrap::after {
+  font-size: 14px;
+}
+
+body button.kanban-plugin__item-action-add,
+body button.kanban-plugin__lane-action-add {
+  background-color: var(--interactive-accent);
+}
+
+body .kanban-plugin__item-settings-actions button,
+body .kanban-plugin__lane-action-wrapper button,
+body .kanban-plugin__action-confirm-wrapper button,
+body .kanban-plugin__lane-input-actions button,
+body .kanban-plugin__item-input-actions button {
+  font-size: 13px;
+}
+
+body .kanban-plugin__lane-input-actions button,
+body .kanban-plugin__item-input-actions button {
+  box-shadow: 0px 0.5px 1px 0.5px rgba(0, 0, 0, 0.1);
+}
+
+body .kanban-plugin__lane-grip {
+  margin-left: -5px;
+  margin-right: 4px;
+}
+
+body .kanban-plugin__autocomplete {
+  font-weight: 500;
+  font-size: 14px;
+  border: none;
+}
+
+body .kanban-plugin__autocomplete-item-active,
+body .kanban-plugin__autocomplete-item {
+  padding: 4px 8px;
+}
+
+body .kanban-plugin__autocomplete-item:hover,
+body .kanban-plugin__autocomplete-item-active {
+  border-top: 1px solid transparent;
+  background-color: var(--shade-5);
+  color: var(--text-normal);
+}
+
+body .kanban-plugin__action-confirm-wrapper {
+  margin: 5px 0;
+  border-radius: var(--radius-l);
+  border-width: 3px;
+}
+
+body .kanban-plugin__action-confirm-text {
+  font-size: 14px;
+  padding-bottom: 5px;
+}
+
+body .kanban-plugin__setting-item {
+  background-color: var(--background-primary);
+}
+
+body .kanban-plugin__icon[data-icon="cross"] {
+  color: var(--text-muted);
+
+}
+
+body .kanban-plugin__icon[data-icon="cross"] > svg {
+  width: 1.2em;
+  height: 1.2em;
+}
+body .lt-predictions-container {
+  font-family: var(--text);
+  font-size: 14px;
+  border: 1px solid var(--shade-10);
+}
+
+body .lt-buttoncontainer > button {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-normal);
+  padding: 4px 14px;
+  background: var(--background-primary);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.08);
+  border-radius: var(--radius-m);
+  cursor: var(--cursor);
+}
+
+body.theme-dark .lt-buttoncontainer > button {
+  color: #dfdedf;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1),
+    inset 0px 1px 1px rgba(255, 255, 255, 0.3);
+  background-color: var(--shade-20);
+}
+
+body .lt-ignore-btn {
+  background-color: var(--background-primary);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: 100ms color, 100ms background-color;
+}
+
+body .lt-ignore-btn:hover {
+  background-color: var(--shade-3);
+  color: var(--text-normal);
+}
+
+body .lt-ignore-btn svg {
+  width: 1em;
+  height: 1em;
+}
+
+body .lt-title:not(:empty) {
+  font-weight: 500;
+}
+
+body .lt-status-bar-btn {
+  margin: -2px 0;
+}
+
+body .lt-status-bar-btn svg {
+  display: none;
+  width: 14px;
+  height: 14px;
+}
+
+body .lt-status-bar-btn.lt-loading svg {
+  display: block;
+}
+
+body .workspace-leaf-content[data-type="dictionary-view"] .searchbox > input {
+  margin: 0;
+}
+
+body .workspace-leaf-content[data-type="dictionary-view"] .searchbox > button {
+  margin: 0 0 0 5px;
+  padding: 0 10px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  color: var(--text-muted);
+  background: var(--background-primary);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.08);
+  border-radius: var(--radius-m);
+}
+
+body
+  .workspace-leaf-content[data-type="dictionary-view"]
+  .searchbox
+  > button
+  > .gg-search {
+  margin: 0;
+  display: flex;
+  top: -1px;
+  left: -1px;
+}
+
+body
+  .workspace-leaf-content[data-type="dictionary-view"]
+  .results
+  > .container {
+  background-color: transparent;
+  padding: 0;
+}
+
+body .workspace-leaf-content[data-type="dictionary-view"] h3 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+body .workspace-leaf-content[data-type="dictionary-view"] .container > .main {
+  background: var(--shade-3);
+  box-shadow: 0px 0.5px 1px 0.5px rgb(0 0 0 / 10%);
+}
+
+body
+  .workspace-leaf-content[data-type="dictionary-view"]
+  .definition:last-child {
+  padding-bottom: 0;
+}
+
+body
+  .workspace-leaf-content[data-type="dictionary-view"]
+  details[open]
+  summary
+  ~ audio,
+body
+  .workspace-leaf-content[data-type="dictionary-view"]
+  details[open]
+  summary
+  ~ div.definition {
+  animation: none !important;
+}
+
+audio,
+audio::-webkit-media-controls-panel {
+  background: var(--background-primary);
+}
+
+audio {
+  border-radius: 40px;
+  border: 1px solid var(--shade-5);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.08);
+}
+
+body .zoom-plugin-header {
+  border-bottom: 1px solid var(--shade-plus-darker);
+  padding: 10px 17px;
+  font-size: 14px;
+  font-family: var(--text);
+}
+
+body .zoom-plugin-title {
+  text-decoration: none;
+}
+
+body .zoom-plugin-header > span {
+  color: transparent;
+  font-size: 0;
+}
+
+body .zoom-plugin-header > span:before {
+  font-size: 0.9rem;
+  width: 0.9rem;
+  height: 0.9rem;
+  color: var(--text-muted);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  content: "›";
+  padding: 0 2px;
+  position: relative;
+}
+
+.sr-deck-counts,
+.tag-pane-tag-count.tree-item-flair[aria-label="Due cards"] {
+    display: inline-block;
+    padding: 2px 6px;
+    line-height: 1;
+    font-size: 16px;
+}
+
+.sr-modal-content .tag-pane-tag:hover .tag-pane-tag-count {
+    color: #fff;
 }

@@ -55,6 +55,11 @@
   font-size: unset;
 }
 
+.cm-s-obsidian span.cm-blockid {
+  font-family: var(--font-monospace);
+  font-size: 0.6em;
+}
+
 .cm-formatting-list-ul:before {
   color: var(--text-normal);
 }
