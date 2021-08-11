@@ -281,7 +281,11 @@
   top: 50%;
 }
 
-
+.cm-s-obsidian span.cm-formatting-highlight,
+.cm-s-obsidian span.cm-highlight,
+.cm-s-obsidian span.obsidian-search-match-highlight {
+  background-color: var(--text-highlight-bg);
+}
 
 /* Icons */
 
