@@ -75,19 +75,19 @@ body {
 }
 
 .cc-pretty-preview
-  .markdown-preview-section
+  .markdown-preview-view
   mjx-container[jax="CHTML"][display="true"] {
   margin: 0;
 }
 
-.cc-pretty-preview .markdown-preview-section li blockquote,
-.cc-pretty-preview .markdown-preview-section ol ol,
-.cc-pretty-preview .markdown-preview-section ul ul {
+.cc-pretty-preview .markdown-preview-view li blockquote,
+.cc-pretty-preview .markdown-preview-view ol ol,
+.cc-pretty-preview .markdown-preview-view ul ul {
   margin-bottom: 0;
 }
 
-.cc-pretty-preview .markdown-preview-section ul li,
-.cc-pretty-preview .markdown-preview-section ol li {
+.cc-pretty-preview .markdown-preview-view ul li,
+.cc-pretty-preview .markdown-preview-view ol li {
   margin-top: 5px;
   margin-bottom: 5px;
 }
@@ -141,7 +141,7 @@ body {
   font-style: italic;
 }
 
-.markdown-preview-section hr {
+.markdown-preview-view hr {
   margin-bottom: var(--hr-spacing-bottom) !important;
   box-sizing: content-box;
   border: 0;
@@ -152,43 +152,43 @@ body {
   border-bottom: 1px solid var(--shade-10);
 }
 
-.markdown-preview-section img {
+.markdown-preview-view img {
   border: 0;
   max-width: 100%;
   display: block;
   margin: inherit auto;
 }
 
-.markdown-preview-section img.emoji {
+.markdown-preview-view img.emoji {
   display: inline;
   margin: 0;
 }
 
-.markdown-preview-section svg:not(:root) {
+.markdown-preview-view svg:not(:root) {
   overflow: hidden;
 }
 
-.markdown-preview-section ul {
+.markdown-preview-view ul {
   margin-left: 0;
   padding-inline-start: 1.2em;
   list-style: disc;
 }
-.markdown-preview-section ol {
+.markdown-preview-view ol {
   margin-left: 0;
   padding-inline-start: 1.2em;
   list-style: decimal;
 }
 
-.markdown-preview-section .footnotes li > p {
+.markdown-preview-view .footnotes li > p {
   display: block;
   margin-bottom: 0;
 }
 
-.markdown-preview-section .footnotes li > p + p {
+.markdown-preview-view .footnotes li > p + p {
   margin-top: 0.3rem;
 }
 
-.markdown-preview-section blockquote {
+.markdown-preview-view blockquote {
   font-style: italic;
   border-radius: unset;
   border: unset;
@@ -241,12 +241,12 @@ body {
   border-top: none;
 }
 
-.markdown-preview-section br {
+.markdown-preview-view br {
   margin-bottom: 0;
 }
 
-.markdown-preview-section em,
-.markdown-preview-section i {
+.markdown-preview-view em,
+.markdown-preview-view i {
   line-height: 0;
   vertical-align: baseline;
 }
@@ -267,7 +267,7 @@ body {
   border-radius: var(--radius-l);
 }
 
-.markdown-preview-section pre > code {
+.markdown-preview-view pre > code {
   padding: 1.4rem;
   display: block;
 }

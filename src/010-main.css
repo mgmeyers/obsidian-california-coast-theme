@@ -723,6 +723,7 @@ button,
 }
 .modal-content {
   padding-left: 10px;
+  padding-top: 2px;
 }
 .community-plugin.modal-content,
 .modal.mod-settings .modal-content {
