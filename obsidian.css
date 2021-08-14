@@ -15,7 +15,7 @@ settings:
         format: hsl-split
         default: '#007AFF'
     - 
-        id: fancy-cursor
+        id: cc-fancy-cursor
         title: Accented cursor
         description: The editor cursor takes on your accent color
         type: class-toggle
@@ -95,6 +95,11 @@ settings:
         title: Editor Customization
         type: heading
         level: 3
+    - 
+        id: cc-soft-blink-cursor
+        title: Soft-blink cursor
+        description: The editor cursor will fade in and out rather than blinking
+        type: class-toggle
     - 
         id: cc-editor-heading-hash
         title: Flush headings
@@ -5921,9 +5926,20 @@ body.cc-custom-icons .view-action[aria-label^="Preview"] > svg {
 }
 
 /* Fancy cursor */
-.fancy-cursor .CodeMirror-cursor {
+.cc-fancy-cursor .CodeMirror-cursor {
   border-left: 2px solid var(--text-accent);
   transform: translateX(-0.5px);
+  border-radius: 2px;
+}
+
+.cc-soft-blink-cursor .CodeMirror-cursors {
+  visibility: visible !important;
+  transition: 100ms opacity ease-in;
+  opacity: 1;
+}
+
+.cc-soft-blink-cursor .CodeMirror-cursors[style^="visibility"] {
+  opacity: 0;
 }
 
 /* Pretty editor */

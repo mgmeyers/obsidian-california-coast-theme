@@ -150,9 +150,20 @@
 }
 
 /* Fancy cursor */
-.fancy-cursor .CodeMirror-cursor {
+.cc-fancy-cursor .CodeMirror-cursor {
   border-left: 2px solid var(--text-accent);
   transform: translateX(-0.5px);
+  border-radius: 2px;
+}
+
+.cc-soft-blink-cursor .CodeMirror-cursors {
+  visibility: visible !important;
+  transition: 100ms opacity ease-in;
+  opacity: 1;
+}
+
+.cc-soft-blink-cursor .CodeMirror-cursors[style^="visibility"] {
+  opacity: 0;
 }
 
 /* Pretty editor */
