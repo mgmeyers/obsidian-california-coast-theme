@@ -5932,13 +5932,13 @@ body.cc-custom-icons .view-action[aria-label^="Preview"] > svg {
   border-radius: 2px;
 }
 
-.cc-soft-blink-cursor .CodeMirror-cursors {
+.cc-soft-blink-cursor .CodeMirror-focused .CodeMirror-cursors {
   visibility: visible !important;
   transition: 100ms opacity ease-in;
   opacity: 1;
 }
 
-.cc-soft-blink-cursor .CodeMirror-cursors[style^="visibility"] {
+.cc-soft-blink-cursor .CodeMirror-focused .CodeMirror-cursors[style^="visibility"] {
   opacity: 0;
 }
 
