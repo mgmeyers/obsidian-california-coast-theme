@@ -217,6 +217,9 @@ input[type="checkbox"]:checked:before {
   margin-bottom: 0;
   top: 2px;
 }
+.markdown-preview-view ol .task-list-item-checkbox {
+  margin-left: 0;
+}
 .markdown-preview-view ul > li.task-list-item {
   text-indent: 0;
 }
