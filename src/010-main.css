@@ -2417,7 +2417,7 @@ input.search-input:focus {
   font-size: 12px;
   line-height: 1.6;
   margin: 0;
-  padding: 0 0 0 8px !important;
+  padding: 0;
   border-bottom: none;
 }
 
@@ -2454,7 +2454,7 @@ input.search-input:focus {
 }
 .outgoing-link-pane .search-result-container,
 .backlink-pane .search-result-container {
-  padding: 0 0 5px 15px;
+  padding: 0 0 5px 10px;
   margin-left: 0;
 }
 .outgoing-link-pane .tree-item-self .collapse-icon,

@@ -2882,7 +2882,7 @@ input.search-input:focus {
   font-size: 12px;
   line-height: 1.6;
   margin: 0;
-  padding: 0 0 0 8px !important;
+  padding: 0;
   border-bottom: none;
 }
 
@@ -2919,7 +2919,7 @@ input.search-input:focus {
 }
 .outgoing-link-pane .search-result-container,
 .backlink-pane .search-result-container {
-  padding: 0 0 5px 15px;
+  padding: 0 0 5px 10px;
   margin-left: 0;
 }
 .outgoing-link-pane .tree-item-self .collapse-icon,
@@ -4864,6 +4864,10 @@ body.cc-custom-icons .setting-hotkey-icon.setting-delete-hotkey > svg {
   background-color: var(--background-primary);
   box-shadow: 0px 1px 1px rgb(0, 0, 0, 0.08);
   border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.nav-action-button:last-child {
+  margin-right: 0;
 }
 
 .theme-dark .nav-action-button {

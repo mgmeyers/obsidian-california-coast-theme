@@ -137,6 +137,10 @@ body.cc-custom-icons .setting-hotkey-icon.setting-delete-hotkey > svg {
   border: 1px solid rgba(0, 0, 0, 0.12);
 }
 
+.nav-action-button:last-child {
+  margin-right: 0;
+}
+
 .theme-dark .nav-action-button {
   color: var(--text-normal);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1),
