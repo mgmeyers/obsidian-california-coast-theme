@@ -1414,15 +1414,27 @@ input.document-replace-input:focus {
   background: var(--background-primary);
   transition: all 0.1s ease-in-out;
   border: 1px solid hsla(var(--accent-hsl), 0.5);
-  box-shadow: 0px 0.5px 1px 0.5px rgba(0, 0, 0, 0.1),
-    0 0 0 2px hsla(var(--accent-hsl), 0.5);
+  box-shadow: 0 0 0 2px hsla(var(--accent-hsl), 0.5);
+}
+
+input.document-search-input.mod-no-match,
+input.document-search-input.mod-no-match:hover,
+input.document-search-input.mod-no-match:placeholder-shown:hover {
+  background-color: var(--shade-0);
+}
+
+input.document-search-input.mod-no-match:not(:placeholder-shown),
+input.document-search-input.mod-no-match:not(:placeholder-shown):focus {
+  background-color: var(--shade-0);
+  box-shadow: 0 0 0 2px rgba(var(--background-modifier-error-rgb), 0.7);
+  border: 1px solid rgba(var(--background-modifier-error-rgb), 0.7);
 }
 
 .document-search-button {
   color: var(--text-normal);
   font-size: 13px;
   line-height: 1;
-  border: 1px solid transparent;
+  border: 1px solid var(--shade-plus-darker);
   border-radius: var(--radius-m);
   font-weight: 500;
   background-color: var(--shade-plus-darker);
@@ -1430,7 +1442,7 @@ input.document-replace-input:focus {
   height: auto;
   padding: 4px 8px;
   margin: 0 0 0 5px;
-  box-shadow: 0px 0.5px 1px 0.5px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0px 0.5px 1px 0.5px rgba(0, 0, 0, 0.04); */
 }
 
 .document-search-button:hover {
