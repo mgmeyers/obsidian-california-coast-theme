@@ -1194,6 +1194,9 @@ button,
 .modal.mod-settings .modal-content {
   padding-left: 0;
 }
+.modal.mod-settings .modal-content {
+  padding-top: 0;
+}
 .modal-title {
   padding: 0 10px;
 }
@@ -1635,7 +1638,7 @@ body.hider-frameless:not(.is-mobile) .titlebar {
   background: transparent;
 }
 
-body:not(.is-mobile).is-translucent .titlebar {
+body:not(.hider-frameless):not(.is-mobile).is-translucent .titlebar {
   background-color: var(--background-translucent);
 }
 
