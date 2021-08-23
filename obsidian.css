@@ -6019,7 +6019,7 @@ body.cc-custom-icons .view-action[aria-label^="Preview"] > svg {
 .cc-block-quotes .cm-formatting-quote {
   font-style: italic;
   font-weight: 800;
-  color: var(--shade-5) !important;
+  color: var(--shade-10) !important;
 }
 
 .cc-block-quotes .HyperMD-quote-lazy {
