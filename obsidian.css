@@ -7126,6 +7126,10 @@ body .kanban-plugin__icon[data-icon="cross"] > svg {
   width: 1.2em;
   height: 1.2em;
 }
+
+body .kanban-plugin__lane-form-wrapper {
+  background-color: var(--background-primary);
+}
 body .lt-predictions-container {
   font-family: var(--text);
   font-size: 14px;
