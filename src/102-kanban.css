@@ -29,7 +29,9 @@ body .kanban-plugin__markdown-preview-view {
   font-size: 14px;
 }
 
-body .kanban-plugin__lane-title-text > .kanban-plugin__markdown-preview-view.markdown-preview-view {
+body
+  .kanban-plugin__lane-title-text
+  > .kanban-plugin__markdown-preview-view.markdown-preview-view {
   font-weight: 500;
 }
 
@@ -43,7 +45,10 @@ body .kanban-plugin__lane-header-wrapper {
   border-bottom: 0;
 }
 
-body .kanban-plugin__drag-container > .kanban-plugin__lane-wrapper > .kanban-plugin__lane {
+body
+  .kanban-plugin__drag-container
+  > .kanban-plugin__lane-wrapper
+  > .kanban-plugin__lane {
   box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2),
     0 0 0 3px hsla(var(--accent-hsl), 0.5);
 }
@@ -62,6 +67,17 @@ body.theme-dark .kanban-plugin__lane-items {
 body .kanban-plugin__lane-items:empty {
   border-radius: 0;
   padding: 4px;
+}
+
+body .kanban-plugin__lane-items > .kanban-plugin__placeholder:only-child {
+  border-radius: var(--radius-l);
+}
+
+body
+  .is-sorting
+  .kanban-plugin__lane-items
+  > .kanban-plugin__placeholder:only-child {
+  border-color: var(--shade-20);
 }
 
 body .kanban-plugin__item-form {
@@ -96,7 +112,10 @@ body .kanban-plugin__item:last-child {
   margin-bottom: 0;
 }
 
-body .kanban-plugin__drag-container > .kanban-plugin__item-wrapper > .kanban-plugin__item {
+body
+  .kanban-plugin__drag-container
+  > .kanban-plugin__item-wrapper
+  > .kanban-plugin__item {
   box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2),
     0 0 0 3px hsla(var(--accent-hsl), 0.8);
 }
@@ -106,7 +125,10 @@ body .kanban-plugin__item.is-search-hit {
     0 0 0 2px var(--text-highlight-bg-active);
 }
 
-body .kanban-plugin__drag-container > .kanban-plugin__item-wrapper .kanban-plugin__item-content-wrapper {
+body
+  .kanban-plugin__drag-container
+  > .kanban-plugin__item-wrapper
+  .kanban-plugin__item-content-wrapper {
   background-color: var(--background-primary);
 }
 
@@ -338,7 +360,6 @@ body .kanban-plugin__setting-item {
 
 body .kanban-plugin__icon[data-icon="cross"] {
   color: var(--text-muted);
-
 }
 
 body .kanban-plugin__icon[data-icon="cross"] > svg {
@@ -348,4 +369,8 @@ body .kanban-plugin__icon[data-icon="cross"] > svg {
 
 body .kanban-plugin__lane-form-wrapper {
   background-color: var(--background-primary);
+}
+
+body .kanban-plugin__item-markdown .external-link::after {
+  top: 0;
 }
