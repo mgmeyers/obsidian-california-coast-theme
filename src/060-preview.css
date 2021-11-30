@@ -229,12 +229,18 @@ body {
   padding-left: 15px;
 }
 
+body .table-view-table > thead > tr > th,
 .markdown-preview-view th {
   font-family: var(--text);
   background-color: var(--shade-plus-darker);
   border-bottom: none;
   font-weight: 400;
   font-size: 16px;
+}
+
+body .table-view-table > tbody > tr > td {
+  border-top: 1px solid var(--shade-plus-darker);
+  border-left: 1px solid var(--shade-plus-darker);
 }
 
 .markdown-preview-view tr + tr td {
