@@ -69,6 +69,8 @@
   white-space: pre;
   display: inline-flex;
   justify-content: flex-end;
+}
+.markdown-source-view.mod-cm5 .cm-formatting-list-ol {
   width: 1rem;
 }
 
