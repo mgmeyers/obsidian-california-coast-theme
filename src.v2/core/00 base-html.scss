@@ -1,0 +1,47 @@
+body.is-mobile {
+  padding: 0 !important;
+}
+
+.is-mobile .app-container {
+  background-color: #000;
+}
+
+.is-mobile .horizontal-main-container {
+  z-index: 2;
+}
+
+html,
+body,
+input,
+textarea,
+button,
+.cm-s-obsidian .cm-formatting-hashtag,
+.cm-s-obsidian {
+  font-size: var(--rem);
+  font-weight: var(--normal-weight);
+  line-height: var(--line-height);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+strong {
+  font-weight: var(--bold-weight);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+}
+
+.modal .vertical-tab-header::-webkit-scrollbar-track,
+.mod-left-split .workspace-tabs ::-webkit-scrollbar-track,
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-clip: padding-box;
+  border: 3px solid transparent;
+  min-height: 40px;
+}

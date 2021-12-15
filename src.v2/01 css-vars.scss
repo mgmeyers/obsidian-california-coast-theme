@@ -1,0 +1,255 @@
+// CSS Variables
+
+:root {
+  --accent-h: 211; /* Accent hue */
+  --accent-s: 100%; /* Accent saturation */
+  --accent-l: 50%; /* Accent lightness Light Mode */
+  --accent-d: calc(var(--accent-l) + 2%); /* Accent lightness Dark Mode */
+
+  --color-black-rgb: 0, 0, 0;
+  --color-white-rgb: 255, 255, 255;
+
+  --default-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans,
+    Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  --editor-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  --font-monospace: Menlo, SFMono-Regular, Consolas, "Roboto Mono", monospace;
+
+  /* Sizes, weights, padding */
+
+  --rem: 18px;
+
+  --editor-font-size: 18px;
+  --editor-line-height: 1.88889;
+  --editor-font-weight: 400;
+  --editor-font-features: "";
+
+  --scale-small: 90;
+
+  --font-normal: 16px;
+  --font-small: 14px;
+  --font-smaller: 11px;
+  --font-smallest: 10px;
+  --normal-weight: 400;
+  --bold-weight: 600;
+  --line-width: 42rem;
+  --line-height: 1.5;
+  --max-width: 100%;
+  --nested-padding: 3.5%;
+  --icon-muted: 0.4;
+  --border-width: 1px;
+  --border-width-alt: 1px;
+  --titlebar-height: 28px;
+  --header-width: 42px;
+
+  --radius-s: 4px;
+  --radius-m: 6px;
+  --radius-l: 10px;
+  --radius-xl: 20px;
+
+  --cursor: pointer;
+
+  --strong-weight: var(--bold-weight);
+  --strong-color: inherit;
+  --em-color: inherit;
+  --workspace-drawer-ribbon-width: 46px;
+}
+
+.theme-light {
+  --red-rgb: 255, 59, 48;
+  --orange-rgb: 255, 149, 0;
+  --yellow-rgb: 255, 204, 0;
+  --green-rgb: 52, 199, 89;
+  --teal-rgb: 90, 200, 250;
+  --blue-rgb: 0, 122, 255;
+  --indigo-rgb: 88, 86, 214;
+  --purple-rgb: 175, 82, 222;
+  --pink-rgb: 255, 45, 85;
+
+  --accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
+
+  --foreground-rgb: var(--color-black-rgb);
+  --background-rgb: var(--color-white-rgb);
+
+  --shade-90: rgba(var(--foreground-rgb), 0.9);
+  --shade-80: rgba(var(--foreground-rgb), 0.8);
+  --shade-70: rgba(var(--foreground-rgb), 0.7);
+  --shade-60: rgba(var(--foreground-rgb), 0.6);
+  --shade-50: rgba(var(--foreground-rgb), 0.5);
+  --shade-40: rgba(var(--foreground-rgb), 0.4);
+  --shade-30: rgba(var(--foreground-rgb), 0.3);
+  --shade-20: rgba(var(--foreground-rgb), 0.2);
+  --shade-10: rgba(var(--foreground-rgb), 0.1);
+  --shade-5: rgba(var(--foreground-rgb), 0.05);
+  --shade-3: rgba(var(--foreground-rgb), 0.03);
+  --shade-2: rgba(var(--foreground-rgb), 0.02);
+  --shade-0: rgb(var(--background-rgb));
+
+  --shade-90-opaque: hsl(0, 0%, 10%);
+  --shade-80-opaque: hsl(0, 0%, 20%);
+  --shade-70-opaque: hsl(0, 0%, 30%);
+  --shade-60-opaque: hsl(0, 0%, 40%);
+  --shade-50-opaque: hsl(0, 0%, 50%);
+  --shade-40-opaque: hsl(0, 0%, 60%);
+  --shade-30-opaque: hsl(0, 0%, 70%);
+  --shade-20-opaque: hsl(0, 0%, 80%);
+  --shade-10-opaque: hsl(0, 0%, 90%);
+  --shade-5-opaque: hsl(0, 0%, 95%);
+  --shade-3-opaque: hsl(0, 0%, 97%);
+  --shade-2-opaque: hsl(0, 0%, 98%);
+  --shade-0-opaque: rgb(var(--background-rgb));
+
+  --shade-plus-darker: var(--shade-5);
+  --shade-plus-darker-hsl: hsl(0, 0%, 95%);
+  --background-primary: var(--shade-0-opaque);
+  --background-primary-alt: var(--shade-3-opaque);
+  --background-secondary: var(--shade-3-opaque);
+  --background-secondary-alt: var(--shade-3-opaque);
+  --background-tertiary: var(--shade-3-opaque);
+  --background-modifier-border: var(--shade-plus-darker);
+  --background-modifier-border-hover: var(--shade-plus-darker);
+  --background-modifier-border-focus: var(--shade-plus-darker);
+  --text-normal: var(--shade-90-opaque);
+  --text-muted: var(--shade-50-opaque);
+  --text-faint: var(--shade-30-opaque);
+  --background-transparent: transparent;
+  --background-translucent: rgba(245, 245, 245, 0.75);
+  --background-match-highlight: hsla(var(--accent-hsl), 0.2);
+  --background-modifier-accent: hsl(
+    var(--accent-h),
+    var(--accent-s),
+    calc(var(--accent-l) + 10%)
+  );
+  --text-accent: hsl(var(--accent-hsl));
+  --text-accent-hover: hsl(
+    var(--accent-h),
+    var(--accent-s),
+    calc(var(--accent-l) - 10%)
+  );
+  --text-on-accent: white;
+  --icon-hex: 000;
+  --interactive-accent: hsl(var(--accent-hsl));
+  --interactive-accent-hover: hsl(
+    var(--accent-h),
+    var(--accent-s),
+    calc(var(--accent-l) - 10%)
+  );
+  --quote-opening-modifier: var(--shade-70-opaque);
+  // TODO:
+  --interactive-accent-rgb: var(--shade-70-opaque);
+  --text-selection: hsl(var(--accent-h), var(--accent-s), 96%);
+  --text-highlight-bg: rgba(255, 224, 0, 0.5);
+  --text-highlight-bg-active: rgba(0, 0, 0, 0.1);
+  --background-modifier-cover: rgba(170, 170, 170, 0.6);
+
+  --opacity-translucency: 1;
+}
+
+.theme-dark {
+  --accent-h: 210; /* Accent hue */
+
+  --red-rgb: 255, 69, 58;
+  --orange-rgb: 255, 159, 10;
+  --yellow-rgb: 255, 214, 10;
+  --green-rgb: 50, 215, 75;
+  --teal-rgb: 100, 210, 255;
+  --blue-rgb: 10, 132, 255;
+  --indigo-rgb: 94, 92, 230;
+  --purple-rgb: 191, 90, 242;
+  --pink-rgb: 255, 45, 85;
+
+  --accent-hsl: var(--accent-h), var(--accent-s), var(--accent-d);
+
+  --foreground-rgb: 204, 204, 204;
+  --background-rgb: 30, 30, 30;
+
+  --shade-90: rgba(var(--foreground-rgb), 0.9);
+  --shade-80: rgba(var(--foreground-rgb), 0.8);
+  --shade-70: rgba(var(--foreground-rgb), 0.7);
+  --shade-60: rgba(var(--foreground-rgb), 0.6);
+  --shade-50: rgba(var(--foreground-rgb), 0.5);
+  --shade-40: rgba(var(--foreground-rgb), 0.4);
+  --shade-30: rgba(var(--foreground-rgb), 0.3);
+  --shade-20: rgba(var(--foreground-rgb), 0.2);
+  --shade-10: rgba(var(--foreground-rgb), 0.1);
+  --shade-5: rgba(var(--foreground-rgb), 0.05);
+  --shade-3: rgba(var(--foreground-rgb), 0.03);
+  --shade-2: rgba(var(--foreground-rgb), 0.02);
+  --shade-0: rgb(var(--background-rgb));
+
+  --shade-90-opaque: hsl(0, 0%, 73%);
+  --shade-80-opaque: hsl(0, 0%, 66%);
+  --shade-70-opaque: hsl(0, 0%, 60%);
+  --shade-60-opaque: hsl(0, 0%, 53%);
+  --shade-50-opaque: hsl(0, 0%, 46%);
+  --shade-40-opaque: hsl(0, 0%, 39%);
+  --shade-30-opaque: hsl(0, 0%, 32%);
+  --shade-20-opaque: hsl(0, 0%, 25%);
+  --shade-10-opaque: hsl(0, 0%, 18%);
+  --shade-5-opaque: hsl(0, 0%, 15%);
+  --shade-3-opaque: hsl(0, 0%, 14%);
+  --shade-2-opaque: hsl(0, 0%, 13%);
+  --shade-0-opaque: rgb(var(--background-rgb));
+
+  --shade-plus-darker: rgba(255, 255, 255, 0.15);
+  --shade-plus-darker-hsl: hsl(0, 0%, 16%);
+
+  --dark-separator: hsl(0, 0%, 9%);
+
+  --background-primary: var(--shade-0-opaque);
+  --background-primary-alt: var(--shade-3-opaque);
+  --background-secondary: var(--shade-3-opaque);
+  --background-secondary-alt: var(--shade-3-opaque);
+  --background-tertiary: var(--shade-3-opaque);
+  --background-modifier-border: var(--shade-plus-darker);
+  --background-modifier-border-hover: var(--shade-plus-darker);
+  --background-modifier-border-focus: var(--shade-plus-darker);
+  --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
+  --text-normal: var(--shade-90-opaque);
+  --text-muted: var(--shade-50-opaque);
+  --text-faint: var(--shade-30-opaque);
+  --background-transparent: transparent;
+  --background-translucent: rgba(40, 40, 40, 0.6);
+  --background-match-highlight: hsla(var(--accent-hsl), 0.2);
+  --background-modifier-accent: hsl(
+    var(--accent-h),
+    var(--accent-s),
+    calc(var(--accent-d) - 10%)
+  );
+  --text-accent: hsl(var(--accent-hsl));
+  --text-accent-hover: hsl(
+    var(--accent-h),
+    var(--accent-s),
+    calc(var(--accent-d) + 12%)
+  );
+  --text-on-accent: white;
+  --icon-hex: FFF;
+  --interactive-accent: hsl(var(--accent-hsl));
+  --interactive-accent-hover: hsl(
+    var(--accent-h),
+    var(--accent-s),
+    calc(var(--accent-d) - 15%)
+  );
+  --quote-opening-modifier: var(--shade-70-opaque);
+  // TODO:
+  --interactive-accent-rgb: var(--shade-70-opaque);
+  --text-selection: hsl(var(--accent-h), calc(var(--accent-s) - 50%), 20%);
+  --text-highlight-bg: rgba(255, 177, 80, 0.3);
+  --text-highlight-bg-active: rgba(255, 255, 255, 0.1);
+  --background-modifier-cover: rgba(20, 20, 20, 0.6);
+
+  --opacity-translucency: 1;
+}
+
+.is-mobile.theme-dark,
+.is-mobile.theme-light {
+  --background-modifier-cover: rgba(0, 0, 0, 0.25);
+}
+
+body {
+  --editor-line-height-rem: calc(var(--editor-line-height) * 1rem);
+  --editor-line-height-small: calc(
+    var(--editor-line-height) * var(--scale-small) / 100
+  );
+  --editor-line-height-small-rem: calc(var(--editor-line-height-small) * 1rem);
+}
