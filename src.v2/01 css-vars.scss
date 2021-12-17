@@ -19,17 +19,15 @@
 
   --rem: 18px;
 
-  --editor-font-size: 18px;
+  --editor-font-size: var(--rem);
   --editor-line-height: 1.88889;
   --editor-font-weight: 400;
   --editor-font-features: "";
 
+  --ui-font-size: 14px;
+
   --scale-small: 90;
 
-  --font-normal: 16px;
-  --font-small: 14px;
-  --font-smaller: 11px;
-  --font-smallest: 10px;
   --normal-weight: 400;
   --bold-weight: 600;
   --line-width: 42rem;
@@ -37,8 +35,6 @@
   --max-width: 100%;
   --nested-padding: 3.5%;
   --icon-muted: 0.4;
-  --border-width: 1px;
-  --border-width-alt: 1px;
   --titlebar-height: 28px;
   --header-width: 42px;
 

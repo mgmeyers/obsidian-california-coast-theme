@@ -12,20 +12,15 @@
 
 .workspace-split.mod-left-split,
 .workspace-split.mod-right-split {
-  font-size: 14px;
+  font-size: var(--ui-font-size);
 
   & > .workspace-leaf-resize-handle {
     height: 100%;
   }
 }
 
-.workspace-split.mod-left-split > .workspace-leaf-resize-handle,
-.workspace-split.mod-right-split > .workspace-leaf-resize-handle {
-  height: 100%;
-}
-
 .workspace-leaf-resize-handle {
-  background-color: transparent;
+  background-color: var(--shade-3-opaque);
 
   &:hover {
     background-color: var(--shade-5);
@@ -41,6 +36,11 @@
 
   .workspace-split.mod-left-split > & {
     background-color: transparent;
+  }
+
+  .workspace-split.mod-left-split > &,
+  .workspace-split.mod-right-split > & {
+    height: 100%;
   }
 
   .workspace-split.mod-vertical > * > &,

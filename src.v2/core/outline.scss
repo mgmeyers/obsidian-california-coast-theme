@@ -1,0 +1,109 @@
+.tree-item-self {
+  @include radius-s;
+  display: flex;
+  align-items: center;
+  color: var(--text-normal);
+  font-weight: 500;
+  padding: 0;
+
+  &.is-clickable:hover {
+    background-color: var(--shade-plus-darker);
+  }
+
+  .tree-item-icon {
+    margin: 0 0 0 -2px;
+    &:after {
+      content: none;
+    }
+  }
+}
+
+.tree-item-children {
+  margin-left: 14px;
+}
+
+.tree-item-flair {
+  color: var(--text-faint);
+  background-color: transparent;
+
+  .tree-item-self:hover & {
+    color: var(--text-faint);
+    background-color: transparent;
+  }
+}
+
+.tree-item-flair-outer:after {
+  content: none;
+}
+
+// Tag pane
+
+.tag-container {
+  padding-bottom: 5rem;
+
+  .tree-item-self .collapse-icon {
+    padding: 4px;
+    margin: -4px 0 -4px -6px;
+  }
+}
+
+.tag-pane-tag {
+  padding: 0 6px;
+  line-height: 1;
+
+  > .tree-item-inner:first-child {
+    margin-left: 14px;
+  }
+}
+
+.tag-pane-tag-text {
+  color: var(--text-accent);
+  padding: 6px 0;
+
+  &::before {
+    content: "#";
+  }
+}
+
+// Outline
+
+.outline {
+  padding: 0 0 5rem;
+
+  .pane-empty {
+    font-size: var(--ui-font-size);
+    color: var(--text-faint);
+    padding: 0 0 0 15px;
+    width: 100%;
+  }
+
+  .tree-item-inner {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    padding: 4px 6px;
+    line-height: 1.4;
+
+    &::before {
+      flex-shrink: 0;
+      content: "●";
+      display: block;
+      align-items: center;
+      justify-content: center;
+      width: 12px;
+      height: 12px;
+      font-size: 7px;
+      position: relative;
+      top: 0.8em;
+      margin-right: 4px;
+    }
+
+    &:not(:only-child)::before {
+      display: none;
+    }
+  }
+
+  .tree-item-children {
+    margin-left: 22px;
+  }
+}

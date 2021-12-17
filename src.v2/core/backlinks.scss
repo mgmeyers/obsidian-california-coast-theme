@@ -1,0 +1,8 @@
+.outgoing-link-pane,
+.backlink-pane {
+  padding-bottom: 5rem;
+
+  > .tree-item-self > .tree-item-inner {
+    color: var(--text-muted);
+  }
+}
