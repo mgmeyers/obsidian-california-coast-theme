@@ -1,0 +1,126 @@
+.hider-ribbon {
+  .nav-files-container {
+    padding-bottom: 50px;
+  }
+
+  .search-result-container.mod-global-search .search-results-children {
+    padding-bottom: 3rem;
+  }
+
+  .side-dock-settings {
+    padding: 5px 5px 5px 0;
+  }
+
+  .workspace-ribbon-collapse-btn {
+    display: none;
+  }
+  .workspace-ribbon.mod-right {
+    pointer-events: none;
+  }
+  .workspace-ribbon.mod-left {
+    position: absolute;
+    margin: 0;
+    overflow: visible;
+    flex-basis: 0;
+    bottom: 0;
+    top: auto;
+    display: flex !important;
+    flex-direction: row;
+    z-index: var(--layer-status-bar);
+    opacity: 0;
+    transition: opacity 0.25s ease-in-out;
+
+    padding: 0;
+
+    width: 30px;
+    height: unset;
+    filter: drop-shadow(0px 2px 10px rgba(0, 0, 0, 0.1));
+  }
+
+  .side-dock-actions,
+  .side-dock-settings {
+    background: rgb(245, 245, 245);
+    border-top: 1px solid var(--shade-10);
+
+    display: flex;
+    margin: 0;
+    position: relative;
+  }
+
+  &.theme-dark .side-dock-actions,
+  &.theme-dark .side-dock-settings {
+    background: rgb(60, 60, 60);
+    border-color: var(--shade-2);
+  }
+
+  .side-dock-settings {
+    border-right: 1px solid var(--shade-10);
+    border-top-right-radius: var(--radius-m);
+  }
+
+  .side-dock-actions {
+    padding: 5px 0 5px 5px;
+    z-index: var(--layer-status-bar);
+  }
+
+  .workspace-ribbon.mod-left:after {
+    content: none;
+  }
+
+  .workspace-ribbon.mod-left .side-dock-ribbon-action {
+    margin-bottom: 0;
+    margin-right: 5px;
+    margin-top: 0;
+  }
+  .workspace-ribbon.mod-left:hover {
+    opacity: 1;
+    transition: opacity 0.25s ease-in-out;
+  }
+  .workspace-ribbon.mod-left .workspace-ribbon-collapse-btn {
+    border-top: 1px solid var(--background-modifier-border);
+  }
+  .workspace-split.mod-left-split {
+    margin: 0;
+  }
+  .workspace-ribbon {
+    padding: 0;
+  }
+}
+
+.hider-frameless {
+  .workspace-ribbon.mod-left .workspace-ribbon-collapse-btn {
+    margin-top: 32px;
+  }
+
+  .workspace-split.mod-left-split > div.workspace-tabs {
+    padding-top: 26px;
+  }
+
+  .workspace-ribbon.mod-left.is-collapsed {
+    background-color: var(--shade-0);
+    border-right-color: var(--shade-0);
+  }
+
+  &.mod-macos.hider-ribbon:not(.plugin-sliding-panes-rotate-header):not(.is-fullscreen)
+    .workspace-split.mod-left-split.is-collapsed
+    + .mod-root
+    .workspace-leaf:first-of-type
+    .view-header {
+    padding-left: 70px !important;
+  }
+  
+  &.mod-macos:not(.plugin-sliding-panes-rotate-header):not(.is-fullscreen)
+    .workspace-split.mod-left-split.is-collapsed
+    + .mod-root
+    .workspace-leaf:first-of-type
+    .view-header {
+    padding-left: 34px !important;
+  }
+}
+
+
+.hider-scroll {
+  .search-result-container.mod-global-search {
+    padding-right: 10px;
+  }
+}

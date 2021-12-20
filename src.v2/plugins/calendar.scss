@@ -1,0 +1,195 @@
+#calendar-container {
+  --color-background-day-empty: var(--background-secondary-alt);
+  --color-background-day-active: var(--background-tertiary);
+  --color-background-day-hover: var(--background-tertiary);
+  --color-dot: var(--text-faint);
+  --color-text-title: var(--text-normal);
+  --color-text-heading: var(--text-muted);
+  --color-text-day: var(--text-normal);
+  --color-text-today: var(--text-normal);
+  --color-arrow: var(--text-faint);
+  --color-background-day-empty: transparent;
+
+  .right-nav {
+    align-items: center;
+  }
+
+  .calendar {
+    background-color: var(--shade-3);
+    border-spacing: 0;
+    box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.1);
+    border-radius: var(--radius-l);
+    padding: 5px;
+    border-collapse: separate;
+  }
+
+  h2 {
+    font-weight: 400;
+    font-size: 16px;
+
+    .arrow {
+      color: var(--text-faint);
+      cursor: var(--cursor);
+    }
+    .arrow:hover,
+    .arrow:hover .arrow {
+      fill: var(--text-muted);
+      color: var(--text-muted);
+    }
+  }
+
+  .mod-root & {
+    width: var(--line-width);
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  tr {
+    th {
+      font-weight: 500;
+      font-size: 11px;
+      text-transform: none;
+      color: var(--text-normal);
+      padding: 5px 0 10px;
+      letter-spacing: 0;
+    }
+
+    td {
+      border-radius: 4px;
+      cursor: var(--cursor);
+      transition: none;
+
+      border: none;
+      padding: 0;
+      width: calc(100% / 7);
+
+      .dot {
+        margin: 0;
+      }
+
+      &:not(:empty):hover {
+        background: none;
+      }
+    }
+  }
+
+  .nav {
+    padding: 0;
+  }
+
+  .arrow {
+    width: auto;
+    display: flex;
+    line-height: 1;
+    padding: 4px 6px;
+    border-radius: var(--radius-s);
+
+    &:hover {
+      background-color: var(--shade-plus-darker);
+    }
+
+    > svg {
+      color: var(--text-muted);
+      width: 13px;
+      height: 13px;
+    }
+  }
+
+  .reset-button {
+    color: var(--text-muted);
+    font-size: var(--font-smaller);
+    line-height: 1;
+    padding: 4px 6px;
+    margin: 0 5px;
+    border-radius: var(--radius-s);
+
+    &:hover {
+      color: var(--text-muted);
+      background-color: var(--shade-plus-darker);
+    }
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .month,
+  .title,
+  .reset-button {
+    letter-spacing: 0;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: none;
+  }
+
+  .today {
+    color: var(--text-accent);
+    font-weight: 700;
+  }
+
+  .active {
+    color: var(--text-normal);
+
+    &,
+    &.today {
+      background: var(--shade-0);
+      font-weight: 500;
+      box-shadow: inset 0 0 0 2px hsla(var(--accent-hsl), 0.5),
+        0px 0.5px 1px 0.5px rgba(0, 0, 0, 0.1);
+    }
+
+    &.today {
+      color: var(--text-accent);
+      font-weight: 700;
+    }
+
+    &.day:hover {
+      background: var(--shade-0);
+      box-shadow: inset 0 0 0 2px hsla(var(--accent-hsl), 0.5),
+        0px 0.5px 1px 0.5px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .week-num:hover,
+  .day:hover {
+    background: var(--shade-0);
+    box-shadow: 0px 0.5px 1px 0.5px rgba(0, 0, 0, 0.1);
+  }
+
+  svg.dot,
+  .active svg.dot {
+    fill: var(--text-accent);
+  }
+
+  svg.task,
+  .active svg.task {
+    stroke: var(--text-accent);
+    stroke-width: 1px;
+  }
+
+  svg.dot,
+  svg.task {
+    width: 4px;
+    height: 4px;
+  }
+  .year {
+    color: var(--text-normal);
+  }
+
+  .day {
+    font-size: 14px;
+    line-height: 1;
+    padding: 10px 0;
+    margin: 1px;
+    border-radius: var(--radius-s);
+    transition: box-shadow 100ms ease-out, background-color 100ms ease-out;
+    > .dot-container {
+      position: absolute;
+      bottom: 3px;
+      left: 0;
+      right: 0;
+      height: 4px;
+    }
+  }
+}

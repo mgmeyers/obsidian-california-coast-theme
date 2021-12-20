@@ -64,6 +64,11 @@ settings:
         type: heading
         level: 3
     - 
+        id: cc-transparent-popover
+        title: Translucent popovers
+        description: Menus and notifications will take on a translucent background. Turning this setting on might slow down obsidian on some computers.
+        type: class-toggle
+    - 
         id: scale-small
         title: Page preview scale
         description: Percentage amount to scale hover preview and sidebar document font

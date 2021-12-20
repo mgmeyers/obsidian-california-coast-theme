@@ -1,0 +1,32 @@
+body.plugin-sliding-panes-rotate-header
+  .workspace
+  > .mod-root
+  > .workspace-leaf
+  > .workspace-leaf-content
+  > .view-header
+  > .view-header-title-container:before,
+body.plugin-sliding-panes-rotate-header
+  .workspace
+  > .mod-root
+  > .workspace-leaf.mod-active
+  > .workspace-leaf-content
+  > .view-header
+  > .view-header-title-container:before {
+  background: transparent !important;
+}
+
+body.plugin-sliding-panes-stacking .workspace>.mod-root>.workspace-leaf {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header {
+    border-right: none !important;
+}
+
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > .view-header-title-container > .view-header-title {
+    margin-left: 0;
+}
+
+body.hider-frameless.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-mixed .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header {
+    padding-top: 25px;
+}

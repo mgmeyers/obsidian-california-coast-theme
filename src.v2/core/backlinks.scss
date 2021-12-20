@@ -6,6 +6,10 @@
     @include vertical-scroll-shadow(var(--background-primary), 0.5);
   }
 
+  .workspace-fake-target-overlay & {
+    background: none !important;
+  }
+
   padding-bottom: 5rem;
 
   .search-result-file-matches {

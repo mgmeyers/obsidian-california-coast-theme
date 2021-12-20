@@ -122,6 +122,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 2em;
+
+  > * {
+    width: 100%;
+  }
 
   .modal-container.mod-confirmation & {
     justify-content: center;

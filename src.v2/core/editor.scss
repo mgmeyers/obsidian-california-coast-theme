@@ -7,6 +7,8 @@
     font-feature-settings: var(--editor-font-features);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    padding: 2.5em 2em;
   }
 
   &.is-line-wrap.is-readable-line-width .cm-line:not(.HyperMD-table-row) {

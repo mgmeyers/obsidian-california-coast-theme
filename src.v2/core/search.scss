@@ -115,6 +115,10 @@
   &.is-loading:before {
     background-color: var(--background-modifier-accent);
   }
+
+  .workspace-fake-target-overlay & {
+    background: none !important;
+  }
 }
 
 .search-result {

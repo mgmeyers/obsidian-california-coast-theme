@@ -1,0 +1,47 @@
+body {
+  .kanban-plugin {
+    background-color: var(--shade-0);
+  }
+
+  .kanban-plugin__checkbox-label,
+  .kanban-plugin__meta-table {
+    font-size: 0.9rem;
+  }
+
+  .kanban-plugin__grow-wrap > textarea,
+  .kanban-plugin__grow-wrap:after,
+  .kanban-plugin__markdown-preview-view {
+    font-size: 1rem;
+  }
+
+  .kanban-plugin__new-item-button:hover {
+    color: var(--text-muted);
+    background-color: var(--shade-plus-darker);
+  }
+
+  .kanban-plugin__grow-wrap > textarea:focus {
+    border-color: hsla(var(--accent-hsl), 0.5);
+  }
+
+  button.kanban-plugin__new-item-button {
+    border: none;
+    box-shadow: none;
+  }
+
+  .kanban-plugin__item button.kanban-plugin__item-prefix-button,
+  .kanban-plugin__item button.kanban-plugin__item-postfix-button,
+  .kanban-plugin__lane button.kanban-plugin__lane-settings-button {
+    border: none;
+    box-shadow: none;
+
+    &:hover {
+      background-color: var(--shade-plus-darker);
+    }
+  }
+
+  .kanban-plugin__item button.kanban-plugin__item-prefix-button.is-enabled,
+  .kanban-plugin__item button.kanban-plugin__item-postfix-button.is-enabled,
+  .kanban-plugin__lane button.kanban-plugin__lane-settings-button.is-enabled {
+    color: var(--text-muted);
+  }
+}

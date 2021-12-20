@@ -89,23 +89,20 @@
 }
 
 .community-plugin-name {
-  @include flex-align-center;
-  
   font-size: 14px;
   font-weight: 500;
-  justify-content: flex-start;
   width: 100%;
 
   .flair {
+    display: block;
     font-size: 12px;
     line-height: 1;
     padding: 5px;
-    background-color: var(--shade-plus-darker);
-    color: var(--text-normal);
     letter-spacing: 0;
     text-transform: none;
-    vertical-align: unset;
     position: static;
+    margin: 5px 0;
+    width: fit-content;
   }
 }
 

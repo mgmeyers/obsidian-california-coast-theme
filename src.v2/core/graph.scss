@@ -9,7 +9,7 @@
 
   font-weight: 500;
   border-radius: var(--radius-m);
-  padding: 18px;
+  padding: 10px;
 
   &.is-close {
     background: transparent;
@@ -66,6 +66,10 @@
     padding: 4px;
   }
 
+  .setting-item {
+    border-top: none;
+  }
+
   .setting-item-name {
     font-size: 13px;
     color: var(--text-normal);
@@ -109,14 +113,19 @@
   &:hover {
     background-color: var(--shade-plus-darker);
   }
+
   &.mod-close {
     align-items: center;
-    top: 4px;
-    right: 4px;
+    top: 2px;
+    right: 2px;
   }
 
   &.mod-reset {
-    top: 4px;
-    right: 26px;
+    top: 2px;
+    right: 24px;
   }
+}
+
+.graph-color-button-container {
+  text-align: left;
 }

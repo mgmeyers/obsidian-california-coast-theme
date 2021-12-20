@@ -9,6 +9,10 @@
   .theme-dark & {
     @include vertical-scroll-shadow(var(--shade-5-opaque), 0.5);
   }
+
+  .workspace-fake-target-overlay & {
+    background: none !important;
+  }
 }
 
 .nav-folder.mod-root > .nav-folder-title .nav-folder-title-content {

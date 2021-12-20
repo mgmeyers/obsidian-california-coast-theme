@@ -83,4 +83,8 @@
   .theme-dark & {
     @include vertical-scroll-shadow(var(--background-primary), 0.5);
   }
+
+  .workspace-fake-target-overlay & {
+    background: none !important;
+  }
 }
