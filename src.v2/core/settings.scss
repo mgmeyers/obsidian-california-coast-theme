@@ -1,0 +1,88 @@
+.setting-item-name {
+  font-weight: 500;
+}
+
+.checkbox-container {
+  background: var(--shade-plus-darker);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+  box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.03);
+
+  &:after {
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    margin: 0;
+    background: #fff;
+    border: none;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.06);
+    transform: translate3d(0, 0, 0);
+  }
+
+  &.is-enabled {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.03);
+  }
+
+  &.is-enabled:after {
+    transform: translate3d(20px, 0, 0);
+  }
+
+  .theme-dark & {
+    border: 1px solid var(--shade-plus-darker);
+  }
+
+  .theme-dark &.is-enabled {
+    border: 1px solid var(--shade-10);
+  }
+
+  .theme-dark &:after {
+    background-color: #c8c8c8;
+  }
+}
+
+.modal.mod-settings button:not(.mod-cta):not(.mod-warning) {
+  background: var(--shade-0);
+
+  .theme-dark & {
+    color: #dfdedf;
+  }
+}
+
+.hotkey-search-container {
+  padding: 0 0 1.3em;
+}
+
+.hotkey-list-container {
+  @include vertical-scroll-shadow(var(--shade-0));
+
+  .theme-dark & {
+    @include vertical-scroll-shadow(var(--shade-0), 0.5);
+  }
+
+  padding: 0 0 1.5em;
+}
+
+.setting-hotkey {
+  display: flex;
+  align-items: center;
+  background-color: var(--background-modifier-border);
+  padding: 4px 4px 4px 10px;
+  line-height: 18px;
+  min-height: 0;
+}
+
+.setting-add-hotkey-button,
+.setting-restore-hotkey-button {
+  color: var(--text-muted);
+}
+
+.setting-hotkey.mod-empty {
+  background: transparent;
+}
+
+.setting-delete-hotkey:hover {
+  color: var(--text-error);
+  background-color: transparent;
+}
+

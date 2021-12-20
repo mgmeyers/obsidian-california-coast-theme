@@ -1,0 +1,122 @@
+.graph-controls {
+  top: 10px;
+  left: 10px;
+
+  color: var(--shade-90);
+  border: 1px solid var(--shade-10);
+  background: rgb(245, 245, 245);
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+
+  font-weight: 500;
+  border-radius: var(--radius-m);
+  padding: 18px;
+
+  &.is-close {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    line-height: 1;
+  }
+
+  .theme-dark & {
+    border: 1px solid var(--shade-20);
+    background: rgba(60, 60, 60, 0.5);
+  }
+
+  .theme-dark &.is-close {
+    background: transparent;
+    border: none;
+  }
+
+  .collapse-icon {
+    font-size: 14px;
+    margin-left: -3px;
+  }
+
+  .tree-item-self {
+    cursor: pointer;
+    color: var(--text-normal);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    padding: 0;
+    margin: 5px 0;
+  }
+
+  .search-input-container {
+    padding: 0;
+    margin-bottom: 10px !important;
+  }
+
+  .tree-item-collapse {
+    color: var(--text-normal);
+    padding: 0;
+    position: static;
+    line-height: 1;
+    display: flex;
+  }
+
+  > .tree-item > .tree-item-self .right-triangle {
+    opacity: unset;
+  }
+
+  .graph-control-section-header {
+    padding: 4px;
+  }
+
+  .setting-item-name {
+    font-size: 13px;
+    color: var(--text-normal);
+  }
+
+  .setting-item.mod-toggle .setting-item-control {
+    margin-top: 0;
+  }
+
+  &.is-close .graph-controls-button.mod-open,
+  &:not(.is-close) .graph-controls-button.mod-reset,
+  &:not(.is-close) .graph-controls-button.mod-close,
+  &:not(.is-close):hover .graph-controls-button.mod-reset,
+  &:not(.is-close):hover .graph-controls-button.mod-close {
+    display: flex;
+  }
+
+  &.is-close .graph-controls-button {
+    padding: 6px 7px;
+    opacity: 1;
+  }
+}
+
+.graph-control-section {
+  &:not(:last-child) .tree-item-children {
+    border-bottom: none;
+  }
+  .tree-item-children {
+    margin: 0 !important;
+    padding-bottom: 16px;
+  }
+}
+
+.graph-controls-button {
+  padding: 3px 3px;
+  font-size: 16px;
+  line-height: 1;
+  border-radius: var(--radius-s);
+  color: var(--text-muted);
+
+  &:hover {
+    background-color: var(--shade-plus-darker);
+  }
+  &.mod-close {
+    align-items: center;
+    top: 4px;
+    right: 4px;
+  }
+
+  &.mod-reset {
+    top: 4px;
+    right: 26px;
+  }
+}

@@ -41,6 +41,26 @@
   align-items: center;
 }
 
+.view-action {
+  @include radius-s;
+
+  top: 0;
+  display: flex;
+
+  color: var(--shade-40);
+  margin: 0 0 0 5px;
+  padding: 4px 6px;
+
+  &:last-child {
+    margin-left: 5px;
+  }
+
+  &:hover {
+    color: var(--text-muted);
+    background-color: var(--shade-plus-darker);
+  }
+}
+
 .workspace-leaf-content .view-content {
-  padding: 10px
+  padding: 10px;
 }

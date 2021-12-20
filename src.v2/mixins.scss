@@ -28,6 +28,26 @@
   line-height: 1;
 }
 
-@mixin svg-mask($path, $viewbox: '0 0 100 100') {
+@mixin svg-mask($path, $viewbox: "0 0 100 100") {
   -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="#{$viewbox}">#{$path}</svg>');
+}
+
+@mixin vertical-scroll-shadow($bg, $strength: 0.15) {
+  background:
+    /* Shadow Cover TOP */ linear-gradient(
+        $bg 30%,
+        rgba(255, 255, 255, 0)
+      )
+      center top -1px,
+    /* Shadow TOP */
+      radial-gradient(
+        farthest-side at 50% 0,
+        rgba(0, 0, 0, $strength),
+        rgba(0, 0, 0, 0)
+      )
+      center top;
+
+  background-repeat: no-repeat;
+  background-size: 100% 40px, 140% 3px;
+  background-attachment: local, scroll;
 }

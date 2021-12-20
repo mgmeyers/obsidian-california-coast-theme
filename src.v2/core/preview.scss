@@ -1,0 +1,222 @@
+body {
+  --preview-font: var(--editor-font);
+  --preview-font-size: var(--editor-font-size);
+  --preview-line-height: var(--editor-line-height);
+  --preview-line-height-rem: calc(var(--preview-line-height) * 1rem);
+  --preview-font-weight: var(--editor-font-weight);
+  --preview-font-features: var(--editor-font-features);
+
+  --hr-spacing-top: calc(var(--editor-line-height-rem) / 2);
+  --hr-spacing-bottom: calc(var(--editor-line-height-rem) * 1.5);
+}
+
+.markdown-preview-view {
+  font-family: var(--preview-font);
+  font-size: var(--preview-font-size);
+  font-weight: var(--preview-font-weight);
+  line-height: var(--preview-line-height);
+  font-feature-settings: var(--preview-font-features);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &.is-readable-line-width .markdown-preview-sizer {
+    max-width: var(--line-width);
+  }
+
+  hr {
+    margin-bottom: var(--hr-spacing-bottom);
+    box-sizing: content-box;
+    border: 0;
+    color: transparent;
+    display: block;
+    width: 100%;
+    height: var(--hr-spacing-top);
+    border-bottom: 1px solid var(--shade-10);
+  }
+
+  li > p {
+    margin: 0;
+  }
+
+  .footnotes li > p {
+    display: block;
+    margin-bottom: 0;
+  }
+
+  .footnotes li > p + p {
+    margin-top: 0.3rem;
+  }
+
+  blockquote {
+    font-style: italic;
+    border: unset;
+    border-width: unset;
+    padding: 0 0 0 1.4375rem;
+    margin-inline-start: unset;
+    border-left: 2px solid var(--shade-plus-darker);
+
+    p {
+      margin: 0;
+    }
+  }
+
+  ul,
+  ol {
+    margin-left: 0;
+    padding-inline-start: 1.2em;
+  }
+
+  ul.contains-task-list {
+    padding-inline-start: 1.5em;
+  }
+
+  .task-list-item-checkbox {
+    font-size: inherit;
+    width: 1em;
+    height: 1em;
+    top: 2px;
+    margin-right: 8px;
+  }
+
+  ul > li.task-list-item {
+    text-indent: calc(-1em - 8px);
+
+    &.is-checked {
+      color: inherit;
+      text-decoration: line-through;
+      text-decoration-color: var(--shade-50);
+      text-decoration-thickness: 2px;
+    }
+  }
+
+  strong {
+    font-weight: var(--strong-weight);
+    color: var(--strong-color);
+  }
+
+  em {
+    color: var(--em-color);
+  }
+
+  img {
+    border: 0;
+    max-width: 100%;
+    display: block;
+    margin: inherit auto;
+
+    &.emoji {
+      display: inline;
+      margin: 0;
+    }
+  }
+
+  code {
+    color: inherit;
+  }
+
+  th {
+    background-color: var(--shade-2);
+    font-weight: 500;
+    text-align: left;
+
+    &[align="right"] {
+      text-align: right;
+    }
+  }
+
+  th,
+  td {
+    font-family: var(--default-font);
+    border-color: var(--shade-10-opaque);
+  }
+
+  .theme-dark & {
+    th {
+      background-color: var(--shade-5);
+    }
+
+    th,
+    td {
+      border-color: var(--shade-20-opaque);
+    }
+  }
+
+  a.tag {
+    text-decoration: none;
+  }
+}
+
+.theme-light :not(pre) > code[class*="language-"],
+.theme-light pre[class*="language-"] {
+  background-color: var(--background-secondary-alt);
+}
+
+.markdown-embed .markdown-preview-view {
+  padding: 10px;
+}
+
+.markdown-embed-title {
+  font-size: 1em;
+  font-weight: var(--bold-weight);
+  color: var(--text-faint);
+  text-align: left;
+  line-height: inherit;
+  padding: 10px 10px 0;
+
+  + div > .markdown-preview-view {
+    padding-top: 0;
+  }
+}
+
+.is-live-preview .markdown-embed-title {
+  padding: 0;
+}
+
+.markdown-embed, .file-embed {
+  padding: 0; 
+}
+
+.markdown-embed-link,
+.file-embed-link {
+  line-height: 1;
+  right: unset;
+  left: 0;
+  transform: translateX(-100%);
+  padding-right: 10px;
+}
+
+
+.markdown-preview-view .file-embed {
+  @include radius-l;
+
+  box-shadow: 0px 0.5px 1px 0.5px rgba(0, 0, 0, 0.1);
+  background-color: var(--shade-3);
+  border: 3px solid transparent;
+  margin: 0;
+  padding: 10px;
+  transition: 150ms border-color ease;
+
+  &:hover {
+    border-color: hsla(var(--accent-hsl), 0.5);
+  }
+}
+
+.file-embed-title {
+  @include flex-align-center;
+  line-height: 1;
+
+  font-size: 1em;
+  line-height: inherit;
+  svg {
+    line-height: 1;
+    width: 1em;
+    height: 1em;
+  }
+}
+
+.file-embed-icon {
+  color: var(--text-normal);
+  margin-right: 5px;
+  display: flex;
+  line-height: 1;
+}

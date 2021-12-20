@@ -3,6 +3,22 @@
   box-shadow: inset -10px 0 4px -10px rgb(0, 0, 0, 0.04);
 }
 
+.nav-files-container {
+  @include vertical-scroll-shadow(var(--shade-5-opaque));
+
+  .theme-dark & {
+    @include vertical-scroll-shadow(var(--shade-5-opaque), 0.5);
+  }
+}
+
+.nav-folder.mod-root > .nav-folder-title .nav-folder-title-content {
+  border-radius: 0;
+  color: transparent;
+  overflow: hidden;
+  height: 0px;
+  padding: 3px 0;
+}
+
 .nav-file-title,
 .nav-folder-title {
   font-size: var(--ui-font-size);
@@ -108,6 +124,65 @@
 
 // Style setting
 .cc-truncated-explorer-titles {
+  .nav-files-container {
+    overflow-x: hidden;
+  }
+
+  .nav-file-title,
+  .nav-folder-title {
+    width: 100%;
+    white-space: normal;
+    display: flex;
+  }
+
+  .nav-file-title-content,
+  .nav-folder-title-content {
+    display: inline-block;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+  }
+
+  &:not(.cc-no-folder-icons) .nav-folder-title-content::before {
+    top: 0.15em;
+  }
 }
+
+// Style setting
 .cc-wrapped-explorer-titles {
+  .nav-files-container {
+    overflow-x: hidden;
+  }
+
+  .nav-file-title,
+  .nav-folder-title {
+    width: 100%;
+    white-space: normal;
+    display: flex;
+  }
+
+  .nav-file-title-content,
+  .nav-folder-title-content {
+    width: 100%;
+    white-space: normal;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &:not(.cc-no-folder-icons) .nav-file-title-content::before,
+  &:not(.cc-no-folder-icons) .nav-folder-title-content::before {
+    top: 0;
+  }
+}
+
+// Style setting
+.cc-show-vault-name {
+  .nav-folder.mod-root > .nav-folder-title .nav-folder-title-content {
+    color: inherit;
+    overflow: visible;
+    height: unset;
+    padding: 4px;
+  }
 }

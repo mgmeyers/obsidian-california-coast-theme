@@ -36,37 +36,6 @@
   content: none;
 }
 
-// Tag pane
-
-.tag-container {
-  padding-bottom: 5rem;
-
-  .tree-item-self .collapse-icon {
-    padding: 4px;
-    margin: -4px 0 -4px -6px;
-  }
-}
-
-.tag-pane-tag {
-  padding: 0 6px;
-  line-height: 1;
-
-  > .tree-item-inner:first-child {
-    margin-left: 14px;
-  }
-}
-
-.tag-pane-tag-text {
-  color: var(--text-accent);
-  padding: 6px 0;
-
-  &::before {
-    content: "#";
-  }
-}
-
-// Outline
-
 .outline {
   padding: 0 0 5rem;
 
@@ -105,5 +74,13 @@
 
   .tree-item-children {
     margin-left: 22px;
+  }
+}
+
+.workspace-leaf-content[data-type="outline"] .view-content {
+  @include vertical-scroll-shadow(var(--background-primary));
+
+  .theme-dark & {
+    @include vertical-scroll-shadow(var(--background-primary), 0.5);
   }
 }

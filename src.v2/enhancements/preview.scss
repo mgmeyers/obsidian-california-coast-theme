@@ -1,0 +1,157 @@
+.contextual-typography {
+  .markdown-preview-section {
+    > div > * {
+      line-height: var(--editor-line-height);
+      margin: 0 0 var(--editor-line-height-rem);
+    }
+
+    > div:last-child > * {
+      margin: 0;
+    }
+
+    > div .math * {
+      letter-spacing: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  // Style setting
+  &.cc-header-spacing {
+    .markdown-preview-view {
+      div[data-tag-name="h1"] + div > h2 {
+        margin-top: var(--editor-line-height-rem);
+      }
+
+      div[data-tag-name="h2"] + div > h3,
+      div[data-tag-name="h3"] + div > h4,
+      div[data-tag-name="h4"] + div > h5 {
+        margin-top: calc(var(--editor-line-height-rem) / 2);
+      }
+
+      div[data-tag-name="h5"] + div > h6 {
+        margin-top: 0;
+      }
+    }
+
+    .community-plugin-readme.markdown-preview-view h1:first-child,
+    .community-plugin-readme.markdown-preview-view h2:first-child,
+    .community-plugin-readme.markdown-preview-view h3:first-child,
+    .community-plugin-readme.markdown-preview-view h4:first-child,
+    .community-plugin-readme.markdown-preview-view h5:first-child,
+    .community-plugin-readme.markdown-preview-view h6:first-child,
+    .markdown-preview-pusher + div > h1,
+    .markdown-preview-pusher + div > h2,
+    .markdown-preview-pusher + div > h3,
+    .markdown-preview-pusher + div > h4,
+    .markdown-preview-pusher + div > h5,
+    .markdown-preview-pusher + div > h6,
+    .markdown-preview-pusher + div:empty + div > h1,
+    .markdown-preview-pusher + div:empty + div > h2,
+    .markdown-preview-pusher + div:empty + div > h3,
+    .markdown-preview-pusher + div:empty + div > h4,
+    .markdown-preview-pusher + div:empty + div > h5,
+    .markdown-preview-pusher + div:empty + div > h6,
+    .markdown-preview-pusher + div[data-tag-name="pre"] + div > h1,
+    .markdown-preview-pusher + div[data-tag-name="pre"] + div > h2,
+    .markdown-preview-pusher + div[data-tag-name="pre"] + div > h3,
+    .markdown-preview-pusher + div[data-tag-name="pre"] + div > h4,
+    .markdown-preview-pusher + div[data-tag-name="pre"] + div > h5,
+    .markdown-preview-pusher + div[data-tag-name="pre"] + div > h6 {
+      margin-top: 0 !important;
+    }
+  }
+
+  .markdown-preview-view {
+    mjx-container[jax="CHTML"][display="true"] {
+      margin: 0;
+    }
+
+    li blockquote,
+    ol ol,
+    ul ul {
+      margin-bottom: 0;
+    }
+
+    ul li,
+    ol li {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+// Style setting
+.cc-header-spacing {
+  .markdown-preview-view {
+    h1 {
+      margin-top: calc(var(--h1-margin-top) * var(--editor-line-height-rem));
+      margin-bottom: calc(
+        var(--h1-margin-bottom) * var(--editor-line-height-rem)
+      );
+    }
+
+    h2 {
+      margin-top: calc(var(--h2-margin-top) * var(--editor-line-height-rem));
+      margin-bottom: calc(
+        var(--h2-margin-bottom) * var(--editor-line-height-rem)
+      );
+    }
+
+    h3 {
+      margin-top: calc(var(--h3-margin-top) * var(--editor-line-height-rem));
+      margin-bottom: calc(
+        var(--h3-margin-bottom) * var(--editor-line-height-rem)
+      );
+    }
+
+    h4 {
+      margin-top: calc(var(--h4-margin-top) * var(--editor-line-height-rem));
+      margin-bottom: calc(
+        var(--h4-margin-bottom) * var(--editor-line-height-rem)
+      );
+    }
+
+    h5 {
+      margin-top: calc(var(--h5-margin-top) * var(--editor-line-height-rem));
+      margin-bottom: calc(
+        var(--h5-margin-bottom) * var(--editor-line-height-rem)
+      );
+    }
+
+    h6 {
+      margin-top: calc(var(--h6-margin-top) * var(--editor-line-height-rem));
+      margin-bottom: calc(
+        var(--h6-margin-bottom) * var(--editor-line-height-rem)
+      );
+    }
+  }
+}
+
+// Style setting
+.cc-soft-wrap-code-blocks {
+  code[class*="language-"],
+  pre[class*="language-"] {
+    overflow: hidden;
+    white-space: pre-wrap;
+  }
+}
+
+.cc-seamless-embed {
+  .markdown-embed .markdown-preview-view {
+    padding: 0;
+  }
+
+  .markdown-embed {
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .markdown-embed-title {
+    display: none;
+  }
+
+  .is-live-preview .markdown-embed-title {
+    display: block;
+  }
+}
