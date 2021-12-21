@@ -5161,14 +5161,14 @@ body:not(.cc-no-custom-icons) .view-action[aria-label^=Preview] > svg {
   display: block;
 }
 
-.cc-transparent-popover:not(.is-mobile) .notice,
-.cc-transparent-popover:not(.is-mobile) .menu {
+.cc-transparent-popover:not(.is-mobile):not(.is-translucent) .notice,
+.cc-transparent-popover:not(.is-mobile):not(.is-translucent) .menu {
   background: rgba(245, 245, 245, 0.7);
   backdrop-filter: blur(20px);
   background-blend-mode: hard-light;
 }
-.cc-transparent-popover:not(.is-mobile).theme-dark .notice,
-.cc-transparent-popover:not(.is-mobile).theme-dark .menu {
+.cc-transparent-popover:not(.is-mobile):not(.is-translucent).theme-dark .notice,
+.cc-transparent-popover:not(.is-mobile):not(.is-translucent).theme-dark .menu {
   background-blend-mode: luminosity;
   background: rgba(60, 60, 60, 0.6);
 }

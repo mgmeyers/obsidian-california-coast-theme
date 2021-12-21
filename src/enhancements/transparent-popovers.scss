@@ -1,4 +1,4 @@
-.cc-transparent-popover:not(.is-mobile) {
+.cc-transparent-popover:not(.is-mobile):not(.is-translucent) {
   .notice,
   .menu {
     background: rgba(245, 245, 245, 0.7);
