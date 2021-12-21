@@ -1,0 +1,76 @@
+body:not(.hider-frameless):not(.is-fullscreen):not(.is-mobile) {
+  // Override inline styles
+  padding-top: var(--titlebar-height) !important;
+}
+
+.titlebar {
+  @include remove-line-height;
+
+  // Override inline styles
+  height: var(--titlebar-height) !important;
+  padding-top: 0 !important;
+
+  background-color: var(--shade-5);
+
+  .is-translucent & {
+    background-color: var(--background-translucent);
+  }
+}
+
+.titlebar-inner {
+  color: var(--text-muted);
+  height: 100%;
+}
+
+.titlebar-text {
+  @include flex-align-center;
+
+  justify-content: center;
+  color: var(--text-faint);
+  display: none;
+  letter-spacing: 0;
+  font-weight: 500;
+
+  // Style setting
+  .cc-show-titlebar & {
+    display: block;
+  }
+}
+
+.titlebar-button {
+  @include flex-align-center;
+  @include radius-s;
+
+  margin-right: 5px;
+  opacity: 0;
+  padding: 2px 4px;
+  transition: 100ms opacity ease-out;
+
+  &:hover {
+    background-color: var(--shade-plus-darker);
+  }
+
+  .titlebar:hover & {
+    opacity: 1;
+  }
+}
+
+.titlebar-button-container {
+  @include flex-align-center;
+
+  height: 100%;
+  top: 0;
+
+  &.mod-right .titlebar-button {
+    margin-left: 0;
+    border-radius: 0;
+    height: 100%;
+    align-items: center;
+    padding: 2px 15px;
+  }
+}
+
+.titlebar-button.mod-close:hover {
+  background-color: rgb(var(--red-rgb));
+  color: rgb(var(--color-white-rgb));
+}

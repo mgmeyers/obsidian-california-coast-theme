@@ -1,0 +1,23 @@
+.workspace-leaf-content[data-type="starred"] {
+  .item-list {
+    padding-top: 12px;
+  }
+
+  .nav-file {
+    padding-left: 5px;
+  }
+}
+
+.item-list {
+  @include vertical-scroll-shadow(var(--shade-5-opaque));
+
+  .theme-dark & {
+    @include vertical-scroll-shadow(var(--shade-5-opaque), 0.5);
+  }
+
+  .is-translucent &,
+  .is-mobile &,
+  .workspace-fake-target-overlay & {
+    background: none !important;
+  }
+}

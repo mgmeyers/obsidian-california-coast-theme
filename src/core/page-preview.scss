@@ -1,0 +1,39 @@
+.popover {
+  &.hover-popover div.markdown-embed {
+    height: auto;
+
+    .markdown-preview-view {
+      font-size: calc(var(--editor-font-size) * var(--scale-small) / 100);
+      padding: 1.5em;
+
+      .markdown-preview-view {
+        padding: 0;
+      }
+    }
+  }
+
+  .markdown-embed-link,
+  .file-embed-link {
+    display: none;
+  }
+}
+
+.workspace-tabs {
+  .markdown-embed-link,
+  .file-embed-link {
+    display: none;
+  }
+
+  div.markdown-embed {
+    height: auto;
+  }
+
+  .markdown-preview-view {
+    font-size: calc(var(--editor-font-size) * var(--scale-small) / 100);
+    padding: 1.5em;
+
+    .markdown-preview-view {
+      padding: 0;
+    }
+  }
+}

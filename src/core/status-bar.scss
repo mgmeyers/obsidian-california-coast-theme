@@ -1,0 +1,42 @@
+.status-bar,
+.is-translucent .status-bar {
+  align-items: center;
+  background: rgb(255, 255, 255);
+  border-left: 1px solid var(--shade-plus-darker);
+  border-top-left-radius: var(--radius-m);
+  border-top: 1px solid var(--shade-plus-darker);
+  bottom: 0;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.08);
+  color: var(--text-muted);
+  font-size: 11px;
+  line-height: 1;
+  max-height: unset;
+  padding: 8px 12px 8px 0;
+  position: absolute;
+  right: 0;
+  margin: 0;
+
+  .theme-dark & {
+    background: rgb(50, 50, 50);
+    border-color: var(--shade-3);
+  }
+}
+
+.status-bar-item {
+  padding: 0 0 0 10px;
+}
+
+.status-bar-item-segment {
+  margin-right: 10px;
+}
+
+.status-bar-item-icon {
+  display: block;
+}
+
+.status-bar-item-icon svg {
+  display: block;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}

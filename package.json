@@ -16,7 +16,6 @@
   },
   "scripts": {
     "build": "gulp css",
-    "dev": "gulp css:watch",
-    "dev2": "gulp css2:watch"
+    "dev": "gulp css:watch"
   }
 }
