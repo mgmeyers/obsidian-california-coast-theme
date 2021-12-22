@@ -85,6 +85,18 @@
   border: none;
   line-height: 1.3;
   border-radius: 0;
+
+  &.is-being-renamed {
+    @include radius-s;
+
+    background-color: var(--background-primary);
+    box-shadow: inset 0 0 0 3px var(--shade-50-opaque);
+    padding: 4px;
+
+    &::before {
+      display: none !important;
+    }
+  }
 }
 
 .nav-folder-title-content {
