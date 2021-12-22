@@ -11,6 +11,10 @@
     padding: 2.5em 2em;
   }
 
+  .cm-gutter {
+    font-family: var(--default-font);
+  }
+
   &.is-line-wrap.is-readable-line-width .cm-line:not(.HyperMD-table-row) {
     max-width: var(--line-width);
   }
@@ -190,9 +194,9 @@
     font-weight: 800;
   }
 
-  .list-bullet {
-    font-size: 1.4em;
-    line-height: 1;
+  span.list-bullet {
+    font-size: var(--live-preview-bullet-size-adjust);
+    line-height: calc(var(--editor-font-size) * var(--editor-line-height));
   }
 
   &.is-live-preview .HyperMD-quote {

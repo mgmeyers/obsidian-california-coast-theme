@@ -78,14 +78,20 @@ body {
     margin-right: 8px;
   }
 
-  ul > li.task-list-item {
-    text-indent: calc(-1em - 8px);
+  ul > li {
+    &::marker {
+      font-size: var(--preview-bullet-size-adjust);
+    }
 
-    &.is-checked {
-      color: inherit;
-      text-decoration: line-through;
-      text-decoration-color: var(--shade-50);
-      text-decoration-thickness: 2px;
+    .task-list-item {
+      text-indent: calc(-1em - 8px);
+  
+      &.is-checked {
+        color: inherit;
+        text-decoration: line-through;
+        text-decoration-color: var(--shade-50);
+        text-decoration-thickness: 2px;
+      }
     }
   }
 
