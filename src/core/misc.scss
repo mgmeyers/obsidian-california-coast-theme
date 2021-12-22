@@ -56,3 +56,23 @@
 .progress-bar-message {
   color: var(--text-muted);
 }
+
+.empty-state-title {
+  font-size: 1.6rem;
+  margin: 0 0 0.5rem;
+  font-weight: 500;
+}
+
+.empty-state-action {
+  font-weight: 500;
+  line-height: 1.7;
+  font-size: 1.2rem;
+
+  &:hover {
+    color: var(--text-normal);
+  }
+}
+
+.empty-state-action-list {
+  margin-top: 0;
+}
