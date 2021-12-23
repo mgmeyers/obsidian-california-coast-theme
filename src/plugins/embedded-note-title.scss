@@ -1,0 +1,11 @@
+.markdown-preview-view .embedded-note-title {
+    padding-left: 4px;
+    padding-right: 2px;
+}
+
+.cc-header-spacing 
+    .markdown-preview-view:not(.kanban-plugin__markdown-preview-view)
+      h1.embedded-note-title__preview {
+        margin-top: 0;
+        margin-bottom: 0;
+      }

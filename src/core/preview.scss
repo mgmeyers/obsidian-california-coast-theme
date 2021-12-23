@@ -18,9 +18,16 @@ body {
   font-feature-settings: var(--preview-font-features);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding-top: 2.5em;
+  padding-bottom: 2.5em;
 
   &.is-readable-line-width .markdown-preview-sizer {
     max-width: var(--line-width);
+  }
+
+  .markdown-preview-sizer {
+    padding-left: 4px;
+    padding-right: 2px;
   }
 
   hr {

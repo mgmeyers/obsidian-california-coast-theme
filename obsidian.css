@@ -4358,9 +4358,15 @@ body {
   font-feature-settings: var(--preview-font-features);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding-top: 2.5em;
+  padding-bottom: 2.5em;
 }
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
   max-width: var(--line-width);
+}
+.markdown-preview-view .markdown-preview-sizer {
+  padding-left: 4px;
+  padding-right: 2px;
 }
 .markdown-preview-view hr {
   margin-bottom: var(--hr-spacing-bottom);
@@ -5450,6 +5456,16 @@ body:not(.hider-frameless):not(.is-fullscreen):not(.is-mobile) {
 .contextual-typography .markdown-preview-view ol li {
   margin-top: 5px;
   margin-bottom: 5px;
+}
+
+.markdown-preview-view .embedded-note-title {
+  padding-left: 4px;
+  padding-right: 2px;
+}
+
+.cc-header-spacing .markdown-preview-view:not(.kanban-plugin__markdown-preview-view) h1.embedded-note-title__preview {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .hider-ribbon .nav-files-container {
