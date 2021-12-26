@@ -10,8 +10,12 @@
   }
 }
 
-.workspace-split .workspace-tabs {
-  background: var(--background-primary);
+.workspace-tabs {
+  padding-right: 0;
+
+  .workspace-split & {
+    background: var(--background-primary);
+  }
 }
 
 .workspace-split.mod-left-split,
