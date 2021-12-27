@@ -103,6 +103,10 @@ body {
   }
 }
 
+h1.embedded-note-title {
+  color: var(--h1-color);
+}
+
 .markdown-preview-view {
   h1 {
     color: var(--h1-color);

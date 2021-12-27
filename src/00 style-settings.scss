@@ -179,6 +179,14 @@ settings:
         level: 4
         collapsed: true
     - 
+        id: h1-color
+        title: H1 Color
+        type: variable-themed-color
+        format: hex
+        opacity: false
+        default-light: '#1f1f1f'
+        default-dark: '#bababa'
+    - 
         id: h1-size
         title: H1 font size
         description: Accepts any CSS font-size value
@@ -221,6 +229,14 @@ settings:
         type: heading
         level: 4
         collapsed: true
+    - 
+        id: h2-color
+        title: H2 Color
+        type: variable-themed-color
+        format: hex
+        opacity: false
+        default-light: '#1f1f1f'
+        default-dark: '#bababa'
     - 
         id: h2-size
         title: H2 font size
@@ -265,6 +281,14 @@ settings:
         level: 4
         collapsed: true
     - 
+        id: h3-color
+        title: H3 Color
+        type: variable-themed-color
+        format: hex
+        opacity: false
+        default-light: '#1f1f1f'
+        default-dark: '#bababa'
+    - 
         id: h3-size
         title: H3 font size
         description: Accepts any CSS font-size value
@@ -307,6 +331,14 @@ settings:
         type: heading
         level: 4
         collapsed: true
+    - 
+        id: h4-color
+        title: H4 Color
+        type: variable-themed-color
+        format: hex
+        opacity: false
+        default-light: '#1f1f1f'
+        default-dark: '#bababa'
     - 
         id: h4-size
         title: H4 font size
@@ -351,6 +383,14 @@ settings:
         level: 4
         collapsed: true
     - 
+        id: h5-color
+        title: H5 Color
+        type: variable-themed-color
+        format: hex
+        opacity: false
+        default-light: '#1f1f1f'
+        default-dark: '#bababa'
+    - 
         id: h5-size
         title: H5 font size
         description: Accepts any CSS font-size value
@@ -393,6 +433,14 @@ settings:
         type: heading
         level: 4
         collapsed: true
+    - 
+        id: h6-color
+        title: H6 Color
+        type: variable-themed-color
+        format: hex
+        opacity: false
+        default-light: '#1f1f1f'
+        default-dark: '#bababa'
     - 
         id: h6-size
         title: H6 font size
