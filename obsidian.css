@@ -5999,6 +5999,52 @@ body .lt-status-bar-btn.lt-loading svg {
   display: block;
 }
 
+.theme-dark.native-scrollbars .backlink-pane,
+.theme-dark.native-scrollbars .cm-scroller,
+.theme-dark.native-scrollbars .community-plugin-details,
+.theme-dark.native-scrollbars .community-plugin-info,
+.theme-dark.native-scrollbars .community-theme-screenshot,
+.theme-dark.native-scrollbars .hotkey-list-container,
+.theme-dark.native-scrollbars .internal-query .search-result-container,
+.theme-dark.native-scrollbars .item-list,
+.theme-dark.native-scrollbars .markdown-embed-content,
+.theme-dark.native-scrollbars .markdown-preview-view,
+.theme-dark.native-scrollbars .markdown-source-view.mod-cm6 .math-block > mjx-container,
+.theme-dark.native-scrollbars .modal-content,
+.theme-dark.native-scrollbars .modal.mod-image-lightbox,
+.theme-dark.native-scrollbars .open-vault-options-container,
+.theme-dark.native-scrollbars .open-vault-options,
+.theme-dark.native-scrollbars .outgoing-link-pane,
+.theme-dark.native-scrollbars .pdf-scroll-container,
+.theme-dark.native-scrollbars .plugin-list-plugins,
+.theme-dark.native-scrollbars .prompt-results,
+.theme-dark.native-scrollbars .publish-sections-container,
+.theme-dark.native-scrollbars .publish-site-settings-container,
+.theme-dark.native-scrollbars .recent-vaults-list,
+.theme-dark.native-scrollbars .search-result-container.mod-global-search,
+.theme-dark.native-scrollbars .side-dock-plugin-panel.mod-backlinks .side-dock-plugin-panel-inner,
+.theme-dark.native-scrollbars .spellchecker-dictionary-container,
+.theme-dark.native-scrollbars .sync-file-tree-container,
+.theme-dark.native-scrollbars .sync-history-content,
+.theme-dark.native-scrollbars .sync-history-list-item-container,
+.theme-dark.native-scrollbars .sync-history-list,
+.theme-dark.native-scrollbars .sync-log-container,
+.theme-dark.native-scrollbars .tag-container,
+.theme-dark.native-scrollbars .upload-progress-container,
+.theme-dark.native-scrollbars .vertical-tab-content,
+.theme-dark.native-scrollbars .workspace-split.mod-left-split .view-content,
+.theme-dark.native-scrollbars .workspace-split.mod-right-split .view-content {
+  background-color: rgba(var(--background-rgb), 0.01);
+}
+.theme-dark.native-scrollbars .community-plugin-search-results,
+.theme-dark.native-scrollbars .graph-controls,
+.theme-dark.native-scrollbars .modal.mod-settings .vertical-tab-header,
+.theme-dark.native-scrollbars .nav-files-container,
+.theme-dark.native-scrollbars .suggestion,
+.theme-dark.native-scrollbars code[class*=language-] {
+  background-color: rgba(38, 38, 38, 0.01);
+}
+
 body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > .view-header-title-container:before,
 body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > .view-header-title-container:before {
   background: transparent !important;
