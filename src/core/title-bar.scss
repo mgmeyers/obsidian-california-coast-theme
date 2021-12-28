@@ -37,7 +37,7 @@ body:not(.hider-frameless):not(.is-fullscreen):not(.is-mobile) {
   }
 }
 
-.titlebar-button {
+.mod-left .titlebar-button {
   @include flex-align-center;
   @include radius-s;
 

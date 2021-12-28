@@ -3736,7 +3736,7 @@ body:not(.hider-frameless):not(.is-fullscreen):not(.is-mobile) {
   display: block;
 }
 
-.titlebar-button {
+.mod-left .titlebar-button {
   display: flex;
   align-items: center;
   border-radius: var(--radius-s);
@@ -3745,10 +3745,10 @@ body:not(.hider-frameless):not(.is-fullscreen):not(.is-mobile) {
   padding: 2px 4px;
   transition: 100ms opacity ease-out;
 }
-.titlebar-button:hover {
+.mod-left .titlebar-button:hover {
   background-color: var(--shade-plus-darker);
 }
-.titlebar:hover .titlebar-button {
+.titlebar:hover .mod-left .titlebar-button {
   opacity: 1;
 }
 
