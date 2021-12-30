@@ -3287,6 +3287,12 @@ body {
 .markdown-preview-view th[align=right] {
   text-align: right;
 }
+.markdown-preview-view th[align=left] {
+  text-align: left;
+}
+.markdown-preview-view th[align=center] {
+  text-align: center;
+}
 .markdown-preview-view th,
 .markdown-preview-view td {
   font-family: var(--default-font);
