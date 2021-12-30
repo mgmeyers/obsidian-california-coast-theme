@@ -113,6 +113,8 @@
   --background-modifier-border-hover: var(--shade-plus-darker);
   --background-modifier-border-focus: var(--shade-plus-darker);
   --text-normal: var(--shade-90-opaque);
+  --text-normal-bold: var(--shade-90-opaque);
+  --text-normal-em: var(--shade-90-opaque);
   --text-muted: var(--shade-50-opaque);
   --text-faint: var(--shade-30-opaque);
   --text-error: rgb(var(--red-rgb));
@@ -214,6 +216,8 @@
   --background-modifier-border-focus: var(--shade-plus-darker);
   --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
   --text-normal: var(--shade-90-opaque);
+  --text-normal-bold: var(--shade-90-opaque);
+  --text-normal-em: var(--shade-90-opaque);
   --text-muted: var(--shade-50-opaque);
   --text-faint: var(--shade-30-opaque);
   --text-error: rgb(var(--red-rgb));

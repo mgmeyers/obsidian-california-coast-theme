@@ -5,21 +5,93 @@ id: obsidian-california-coast-theme
 settings:
     - 
         id: accent-color-title
-        title: Accent Color
+        title: Colors
         type: heading
         level: 3
+        collapsed: true
     - 
         id: accent
         title: Accent Color
         type: variable-color
         format: hsl-split
         default: '#007AFF'
+    - 
+        id: text-highlight-bg
+        title: Highlight Color
+        type: variable-themed-color
+        format: rgb
+        opacity: true
+        default-light: 'rgba(255, 224, 0, 0.5)'
+        default-dark: 'rgba(255, 177, 80, 0.3)'
+    - 
+        id: strong-color
+        title: Bold Color
+        type: variable-themed-color
+        format: hex
+        default-light: '#1a1a1a'
+        default-dark: '#bababa'
+    - 
+        id: em-color
+        title: Italic Color
+        type: variable-themed-color
+        format: hex
+        default-light: '#1a1a1a'
+        default-dark: '#bababa'
+    - 
+        id: h1-color
+        title: H1 Color
+        type: variable-themed-color
+        format: hex
+        opacity: false
+        default-light: '#1f1f1f'
+        default-dark: '#bababa'
+    - 
+        id: h2-color
+        title: H2 Color
+        type: variable-themed-color
+        format: hex
+        opacity: false
+        default-light: '#1f1f1f'
+        default-dark: '#bababa'
+    - 
+        id: h3-color
+        title: H3 Color
+        type: variable-themed-color
+        format: hex
+        opacity: false
+        default-light: '#1f1f1f'
+        default-dark: '#bababa'
+    - 
+        id: h4-color
+        title: H4 Color
+        type: variable-themed-color
+        format: hex
+        opacity: false
+        default-light: '#1f1f1f'
+        default-dark: '#bababa'
+    - 
+        id: h5-color
+        title: H5 Color
+        type: variable-themed-color
+        format: hex
+        opacity: false
+        default-light: '#1f1f1f'
+        default-dark: '#bababa'
+    - 
+        id: h6-color
+        title: H6 Color
+        type: variable-themed-color
+        format: hex
+        opacity: false
+        default-light: '#1f1f1f'
+        default-dark: '#bababa'
 
     - 
         id: custom-fonts
         title: Fonts
         type: heading
         level: 3
+        collapsed: true
     - 
         id: default-font
         title: UI font
@@ -63,6 +135,7 @@ settings:
         title: Misc
         type: heading
         level: 3
+        collapsed: true
     - 
         id: cc-show-vault-name
         title: Show vault name in file explorer
@@ -101,6 +174,7 @@ settings:
         title: Editor Customization
         type: heading
         level: 3
+        collapsed: true
     - 
         id: cc-fancy-cursor
         title: Accented cursor
@@ -149,6 +223,7 @@ settings:
         title: Preview Customization
         type: heading
         level: 3
+        collapsed: true
     - 
         id: cc-header-spacing
         title: Dynamic Header Spacing
@@ -178,14 +253,6 @@ settings:
         type: heading
         level: 4
         collapsed: true
-    - 
-        id: h1-color
-        title: H1 Color
-        type: variable-themed-color
-        format: hex
-        opacity: false
-        default-light: '#1f1f1f'
-        default-dark: '#bababa'
     - 
         id: h1-size
         title: H1 font size
@@ -230,14 +297,6 @@ settings:
         level: 4
         collapsed: true
     - 
-        id: h2-color
-        title: H2 Color
-        type: variable-themed-color
-        format: hex
-        opacity: false
-        default-light: '#1f1f1f'
-        default-dark: '#bababa'
-    - 
         id: h2-size
         title: H2 font size
         description: Accepts any CSS font-size value
@@ -280,14 +339,6 @@ settings:
         type: heading
         level: 4
         collapsed: true
-    - 
-        id: h3-color
-        title: H3 Color
-        type: variable-themed-color
-        format: hex
-        opacity: false
-        default-light: '#1f1f1f'
-        default-dark: '#bababa'
     - 
         id: h3-size
         title: H3 font size
@@ -332,14 +383,6 @@ settings:
         level: 4
         collapsed: true
     - 
-        id: h4-color
-        title: H4 Color
-        type: variable-themed-color
-        format: hex
-        opacity: false
-        default-light: '#1f1f1f'
-        default-dark: '#bababa'
-    - 
         id: h4-size
         title: H4 font size
         description: Accepts any CSS font-size value
@@ -382,14 +425,6 @@ settings:
         type: heading
         level: 4
         collapsed: true
-    - 
-        id: h5-color
-        title: H5 Color
-        type: variable-themed-color
-        format: hex
-        opacity: false
-        default-light: '#1f1f1f'
-        default-dark: '#bababa'
     - 
         id: h5-size
         title: H5 font size
@@ -434,14 +469,6 @@ settings:
         level: 4
         collapsed: true
     - 
-        id: h6-color
-        title: H6 Color
-        type: variable-themed-color
-        format: hex
-        opacity: false
-        default-light: '#1f1f1f'
-        default-dark: '#bababa'
-    - 
         id: h6-size
         title: H6 font size
         description: Accepts any CSS font-size value
@@ -483,6 +510,7 @@ settings:
         title: Icons
         type: heading
         level: 3
+        collapsed: true
     - 
         id: cc-no-custom-icons
         title: Use Obsidian's default icons
