@@ -1,8 +1,12 @@
 body {
+  .lt-predictions-container.cm-tooltip,
   .lt-predictions-container {
     font-family: var(--text);
     font-size: 14px;
-    border: 1px solid var(--shade-10);
+    border: none;
+    box-shadow: none;
+    filter: drop-shadow(0px 0px 1px var(--shade-20))
+      drop-shadow(0px 0 10px rgba(0, 0, 0, 0.1));
   }
 
   .lt-buttoncontainer > button {
@@ -25,20 +29,23 @@ body {
 
   .lt-ignore-btn {
     background-color: var(--background-primary);
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
     font-size: 13px;
     font-weight: 500;
     color: var(--text-muted);
     transition: 100ms color, 100ms background-color;
-  }
 
-  .lt-ignore-btn:hover {
-    background-color: var(--shade-3);
-    color: var(--text-normal);
-  }
+    svg {
+      width: 1em;
+      height: 1em;
+    }
 
-  .lt-ignore-btn svg {
-    width: 1em;
-    height: 1em;
+    &:hover {
+      background-color: var(--shade-3);
+      color: var(--text-normal);
+    }
   }
 
   .lt-title:not(:empty) {
@@ -47,15 +54,15 @@ body {
 
   .lt-status-bar-btn {
     margin: -2px 0;
-  }
 
-  .lt-status-bar-btn svg {
-    display: none;
-    width: 14px;
-    height: 14px;
-  }
+    svg {
+      display: none;
+      width: 14px;
+      height: 14px;
+    }
 
-  .lt-status-bar-btn.lt-loading svg {
-    display: block;
+    &.lt-loading svg {
+      display: block;
+    }
   }
 }
