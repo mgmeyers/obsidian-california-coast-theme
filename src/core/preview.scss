@@ -92,7 +92,7 @@ body {
 
     .task-list-item {
       text-indent: calc(-1em - 8px);
-  
+
       &.is-checked {
         color: inherit;
         text-decoration: line-through;
@@ -193,8 +193,9 @@ body {
   padding: 0;
 }
 
-.markdown-embed, .file-embed {
-  padding: 0; 
+.markdown-embed,
+.file-embed {
+  padding: 0;
 }
 
 .markdown-embed-link,
@@ -210,7 +211,6 @@ body {
     height: 1em;
   }
 }
-
 
 .markdown-preview-view .file-embed {
   @include radius-l;
@@ -233,6 +233,7 @@ body {
 
   font-size: 1em;
   line-height: inherit;
+
   svg {
     line-height: 1;
     width: 1em;
