@@ -15,15 +15,11 @@
     font-family: var(--default-font);
   }
 
+
+  &.is-line-wrap.is-readable-line-width .cm-content,
+  &.is-readable-line-width:not(.is-rtl) .cm-contentContainer,
+  &.is-readable-line-width.is-rtl .cm-contentContainer,
   &.is-line-wrap.is-readable-line-width .cm-line:not(.HyperMD-table-row) {
-    max-width: var(--line-width);
-  }
-
-  &.is-readable-line-width:not(.is-rtl) .cm-contentContainer {
-    max-width: var(--line-width);
-  }
-
-  &.is-readable-line-width.is-rtl .cm-contentContainer {
     max-width: var(--line-width);
   }
 
