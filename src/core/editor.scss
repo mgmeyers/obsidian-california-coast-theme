@@ -15,6 +15,23 @@
     font-family: var(--default-font);
   }
 
+  .cm-line {
+    position: relative;
+  }
+
+  
+  .cm-fold-indicator {
+    position: static;
+    display: inline-block;
+
+    .collapse-indicator {
+      right: unset;
+      left: -4px;
+      height: unset;
+      transform: translateX(-100%);
+      flex-direction: row-reverse;
+    }
+  }
 
   &.is-line-wrap.is-readable-line-width .cm-content,
   &.is-readable-line-width:not(.is-rtl) .cm-contentContainer,

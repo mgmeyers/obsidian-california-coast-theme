@@ -2014,6 +2014,919 @@ body:not(.cc-no-custom-icons) .view-action[aria-label^=Preview] > svg {
   background: rgba(60, 60, 60, 0.6);
 }
 
+#calendar-container {
+  --color-background-day-empty: var(--background-secondary-alt);
+  --color-background-day-active: var(--background-tertiary);
+  --color-background-day-hover: var(--background-tertiary);
+  --color-dot: var(--text-faint);
+  --color-text-title: var(--text-normal);
+  --color-text-heading: var(--text-muted);
+  --color-text-day: var(--text-normal);
+  --color-text-today: var(--text-normal);
+  --color-arrow: var(--text-faint);
+  --color-background-day-empty: transparent;
+}
+#calendar-container .right-nav {
+  align-items: center;
+}
+#calendar-container .calendar {
+  background-color: var(--shade-3);
+  border-spacing: 0;
+  box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.1);
+  border-radius: var(--radius-l);
+  padding: 5px;
+  border-collapse: separate;
+}
+#calendar-container h2 {
+  font-weight: 400;
+  font-size: 16px;
+}
+#calendar-container h2 .arrow {
+  color: var(--text-faint);
+  cursor: var(--cursor);
+}
+#calendar-container h2 .arrow:hover,
+#calendar-container h2 .arrow:hover .arrow {
+  fill: var(--text-muted);
+  color: var(--text-muted);
+}
+.mod-root #calendar-container {
+  width: var(--line-width);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0;
+}
+#calendar-container tr th {
+  font-weight: 500;
+  font-size: 11px;
+  text-transform: none;
+  color: var(--text-normal);
+  padding: 5px 0 10px;
+  letter-spacing: 0;
+}
+#calendar-container tr td {
+  border-radius: 4px;
+  cursor: var(--cursor);
+  transition: none;
+  border: none;
+  padding: 0;
+  width: 14.2857142857%;
+}
+#calendar-container tr td .dot {
+  margin: 0;
+}
+#calendar-container tr td:not(:empty):hover {
+  background: none;
+}
+#calendar-container .nav {
+  padding: 0;
+}
+#calendar-container .arrow {
+  width: auto;
+  display: flex;
+  line-height: 1;
+  padding: 4px 6px;
+  border-radius: var(--radius-s);
+}
+#calendar-container .arrow:hover {
+  background-color: var(--shade-plus-darker);
+}
+#calendar-container .arrow > svg {
+  color: var(--text-muted);
+  width: 13px;
+  height: 13px;
+}
+#calendar-container .reset-button {
+  color: var(--text-muted);
+  font-size: var(--font-smaller);
+  line-height: 1;
+  padding: 4px 6px;
+  margin: 0 5px;
+  border-radius: var(--radius-s);
+}
+#calendar-container .reset-button:hover {
+  color: var(--text-muted);
+  background-color: var(--shade-plus-darker);
+}
+#calendar-container .title {
+  font-size: 18px;
+}
+#calendar-container .month,
+#calendar-container .title,
+#calendar-container .reset-button {
+  letter-spacing: 0;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: none;
+}
+#calendar-container .today {
+  color: var(--text-accent);
+  font-weight: 700;
+}
+#calendar-container .active {
+  color: var(--text-normal);
+}
+#calendar-container .active, #calendar-container .active.today {
+  background: var(--shade-0);
+  font-weight: 500;
+  box-shadow: inset 0 0 0 2px hsla(var(--accent-hsl), 0.5), 0px 0.5px 1px 0.5px rgba(0, 0, 0, 0.1);
+}
+#calendar-container .active.today {
+  color: var(--text-accent);
+  font-weight: 700;
+}
+#calendar-container .active.day:hover {
+  background: var(--shade-0);
+  box-shadow: inset 0 0 0 2px hsla(var(--accent-hsl), 0.5), 0px 0.5px 1px 0.5px rgba(0, 0, 0, 0.1);
+}
+#calendar-container .week-num:hover,
+#calendar-container .day:hover {
+  background: var(--shade-0);
+  box-shadow: 0px 0.5px 1px 0.5px rgba(0, 0, 0, 0.1);
+}
+#calendar-container svg.dot,
+#calendar-container .active svg.dot {
+  fill: var(--text-accent);
+}
+#calendar-container svg.task,
+#calendar-container .active svg.task {
+  stroke: var(--text-accent);
+  stroke-width: 1px;
+}
+#calendar-container svg.dot,
+#calendar-container svg.task {
+  width: 4px;
+  height: 4px;
+}
+#calendar-container .year {
+  color: var(--text-normal);
+}
+#calendar-container .day {
+  font-size: 14px;
+  line-height: 1;
+  padding: 10px 0;
+  margin: 1px;
+  border-radius: var(--radius-s);
+  transition: box-shadow 100ms ease-out, background-color 100ms ease-out;
+}
+#calendar-container .day > .dot-container {
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  right: 0;
+  height: 4px;
+}
+
+.contextual-typography .markdown-preview-section > div > * {
+  line-height: var(--editor-line-height);
+  margin: 0 0 var(--editor-line-height-rem);
+}
+.contextual-typography .markdown-preview-section > div:last-child > * {
+  margin: 0;
+}
+.contextual-typography .markdown-preview-section > div .math * {
+  letter-spacing: 0;
+  margin-bottom: 0;
+}
+.contextual-typography.cc-header-spacing .markdown-preview-view div[data-tag-name=h1] + div > h2 {
+  margin-top: var(--editor-line-height-rem);
+}
+.contextual-typography.cc-header-spacing .markdown-preview-view div[data-tag-name=h2] + div > h3,
+.contextual-typography.cc-header-spacing .markdown-preview-view div[data-tag-name=h3] + div > h4,
+.contextual-typography.cc-header-spacing .markdown-preview-view div[data-tag-name=h4] + div > h5 {
+  margin-top: calc(var(--editor-line-height-rem) / 2);
+}
+.contextual-typography.cc-header-spacing .markdown-preview-view div[data-tag-name=h5] + div > h6 {
+  margin-top: 0;
+}
+.contextual-typography.cc-header-spacing .community-plugin-readme.markdown-preview-view h1:first-child,
+.contextual-typography.cc-header-spacing .community-plugin-readme.markdown-preview-view h2:first-child,
+.contextual-typography.cc-header-spacing .community-plugin-readme.markdown-preview-view h3:first-child,
+.contextual-typography.cc-header-spacing .community-plugin-readme.markdown-preview-view h4:first-child,
+.contextual-typography.cc-header-spacing .community-plugin-readme.markdown-preview-view h5:first-child,
+.contextual-typography.cc-header-spacing .community-plugin-readme.markdown-preview-view h6:first-child,
+.contextual-typography.cc-header-spacing .markdown-preview-pusher + div > h1,
+.contextual-typography.cc-header-spacing .markdown-preview-pusher + div > h2,
+.contextual-typography.cc-header-spacing .markdown-preview-pusher + div > h3,
+.contextual-typography.cc-header-spacing .markdown-preview-pusher + div > h4,
+.contextual-typography.cc-header-spacing .markdown-preview-pusher + div > h5,
+.contextual-typography.cc-header-spacing .markdown-preview-pusher + div > h6,
+.contextual-typography.cc-header-spacing .markdown-preview-pusher + div:empty + div > h1,
+.contextual-typography.cc-header-spacing .markdown-preview-pusher + div:empty + div > h2,
+.contextual-typography.cc-header-spacing .markdown-preview-pusher + div:empty + div > h3,
+.contextual-typography.cc-header-spacing .markdown-preview-pusher + div:empty + div > h4,
+.contextual-typography.cc-header-spacing .markdown-preview-pusher + div:empty + div > h5,
+.contextual-typography.cc-header-spacing .markdown-preview-pusher + div:empty + div > h6,
+.contextual-typography.cc-header-spacing .markdown-preview-pusher + div[data-tag-name=pre] + div > h1,
+.contextual-typography.cc-header-spacing .markdown-preview-pusher + div[data-tag-name=pre] + div > h2,
+.contextual-typography.cc-header-spacing .markdown-preview-pusher + div[data-tag-name=pre] + div > h3,
+.contextual-typography.cc-header-spacing .markdown-preview-pusher + div[data-tag-name=pre] + div > h4,
+.contextual-typography.cc-header-spacing .markdown-preview-pusher + div[data-tag-name=pre] + div > h5,
+.contextual-typography.cc-header-spacing .markdown-preview-pusher + div[data-tag-name=pre] + div > h6 {
+  margin-top: 0 !important;
+}
+.contextual-typography .markdown-preview-view mjx-container[jax=CHTML][display=true] {
+  margin: 0;
+}
+.contextual-typography .markdown-preview-view li blockquote,
+.contextual-typography .markdown-preview-view ol ol,
+.contextual-typography .markdown-preview-view ul ul {
+  margin-bottom: 0;
+}
+.contextual-typography .markdown-preview-view ul li,
+.contextual-typography .markdown-preview-view ol li {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.markdown-preview-view .embedded-note-title {
+  padding-left: 4px;
+  padding-right: 2px;
+}
+
+.cc-header-spacing .markdown-preview-view:not(.kanban-plugin__markdown-preview-view) h1.embedded-note-title__preview {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.hider-ribbon .nav-files-container {
+  padding-bottom: 50px;
+}
+.hider-ribbon .search-result-container.mod-global-search .search-results-children {
+  padding-bottom: 3rem;
+}
+.hider-ribbon .side-dock-settings {
+  padding: 5px 5px 5px 0;
+}
+.hider-ribbon .workspace-ribbon-collapse-btn {
+  display: none;
+}
+.hider-ribbon .workspace-ribbon.mod-right {
+  pointer-events: none;
+}
+.hider-ribbon .workspace-ribbon.mod-left {
+  position: absolute;
+  margin: 0;
+  overflow: visible;
+  flex-basis: 0;
+  bottom: 0;
+  top: auto;
+  display: flex !important;
+  flex-direction: row;
+  z-index: var(--layer-status-bar);
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
+  padding: 0;
+  width: 30px;
+  height: unset;
+  filter: drop-shadow(0px 2px 10px rgba(0, 0, 0, 0.1));
+}
+.hider-ribbon .side-dock-actions,
+.hider-ribbon .side-dock-settings {
+  background: whitesmoke;
+  border-top: 1px solid var(--shade-10);
+  display: flex;
+  margin: 0;
+  position: relative;
+}
+.hider-ribbon.theme-dark .side-dock-actions, .hider-ribbon.theme-dark .side-dock-settings {
+  background: #3c3c3c;
+  border-color: var(--shade-2);
+}
+.hider-ribbon .side-dock-settings {
+  border-right: 1px solid var(--shade-10);
+  border-top-right-radius: var(--radius-m);
+}
+.hider-ribbon .side-dock-actions {
+  padding: 5px 0 5px 5px;
+  z-index: var(--layer-status-bar);
+}
+.hider-ribbon .workspace-ribbon.mod-left:after {
+  content: none;
+}
+.hider-ribbon .workspace-ribbon.mod-left .side-dock-ribbon-action {
+  margin-bottom: 0;
+  margin-right: 5px;
+  margin-top: 0;
+}
+.hider-ribbon .workspace-ribbon.mod-left:hover {
+  opacity: 1;
+  transition: opacity 0.25s ease-in-out;
+}
+.hider-ribbon .workspace-ribbon.mod-left .workspace-ribbon-collapse-btn {
+  border-top: 1px solid var(--background-modifier-border);
+}
+.hider-ribbon .workspace-split.mod-left-split {
+  margin: 0;
+}
+.hider-ribbon .workspace-ribbon {
+  padding: 0;
+}
+
+.hider-frameless .workspace-ribbon.mod-left .workspace-ribbon-collapse-btn {
+  margin-top: 32px;
+}
+.hider-frameless .workspace-split.mod-left-split > div.workspace-tabs {
+  padding-top: 26px;
+}
+.hider-frameless .workspace-ribbon.mod-left.is-collapsed {
+  background-color: var(--shade-0);
+  border-right-color: var(--shade-0);
+}
+.hider-frameless.mod-macos.hider-ribbon:not(.plugin-sliding-panes-rotate-header):not(.is-fullscreen) .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type .view-header {
+  padding-left: 70px !important;
+}
+.hider-frameless.mod-macos:not(.plugin-sliding-panes-rotate-header):not(.is-fullscreen) .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type .view-header {
+  padding-left: 34px !important;
+}
+
+.hider-scroll .search-result-container.mod-global-search {
+  padding-right: 10px;
+}
+
+body .kanban-plugin {
+  background-color: var(--shade-0);
+}
+body .kanban-plugin__checkbox-label,
+body .kanban-plugin__meta-table {
+  font-size: 0.9rem;
+}
+body .kanban-plugin__grow-wrap > textarea,
+body .kanban-plugin__grow-wrap:after,
+body .kanban-plugin__markdown-preview-view {
+  font-size: 1rem;
+}
+body .kanban-plugin__new-item-button:hover {
+  color: var(--text-muted);
+  background-color: var(--shade-plus-darker);
+}
+body .kanban-plugin__grow-wrap > textarea:focus {
+  border-color: hsla(var(--accent-hsl), 0.5);
+}
+body button.kanban-plugin__new-item-button {
+  border: none;
+  box-shadow: none;
+}
+body .kanban-plugin__item button.kanban-plugin__item-prefix-button,
+body .kanban-plugin__item button.kanban-plugin__item-postfix-button,
+body .kanban-plugin__lane button.kanban-plugin__lane-settings-button {
+  border: none;
+  box-shadow: none;
+}
+body .kanban-plugin__item button.kanban-plugin__item-prefix-button:hover,
+body .kanban-plugin__item button.kanban-plugin__item-postfix-button:hover,
+body .kanban-plugin__lane button.kanban-plugin__lane-settings-button:hover {
+  background-color: var(--shade-plus-darker);
+}
+body .kanban-plugin__item button.kanban-plugin__item-prefix-button.is-enabled,
+body .kanban-plugin__item button.kanban-plugin__item-postfix-button.is-enabled,
+body .kanban-plugin__lane button.kanban-plugin__lane-settings-button.is-enabled {
+  color: var(--text-muted);
+}
+body .kanban-plugin__search-wrapper {
+  background-color: var(--background-primary);
+  border-bottom: 1px solid var(--shade-plus-darker);
+}
+body button.kanban-plugin__search-cancel-button {
+  color: var(--text-normal);
+  border: 1px solid transparent;
+  border-radius: var(--radius-m);
+  font-weight: 500;
+  background-color: var(--shade-plus-darker);
+  box-shadow: 0px 0.5px 1px 0.5px rgba(0, 0, 0, 0.1);
+  padding: 7px;
+  position: relative;
+  top: -1px;
+  margin-left: 6px;
+}
+body button.kanban-plugin__search-cancel-button:hover {
+  background-color: var(--shade-10);
+}
+body .kanban-plugin__markdown-preview-view {
+  font: var(--text);
+  font-size: 14px;
+}
+body .kanban-plugin__lane-title-text > .kanban-plugin__markdown-preview-view.markdown-preview-view {
+  font-weight: 500;
+}
+body .kanban-plugin__lane {
+  background: var(--shade-0);
+  border: none;
+  padding: 2px;
+}
+body .kanban-plugin__lane-header-wrapper {
+  border-bottom: 0;
+}
+body .kanban-plugin__drag-container > .kanban-plugin__lane-wrapper > .kanban-plugin__lane {
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2), 0 0 0 3px hsla(var(--accent-hsl), 0.5);
+}
+body .kanban-plugin__lane-items {
+  background-color: var(--shade-5);
+  box-shadow: 0 0 0 4px var(--shade-5);
+  padding: 0 3px;
+  border-radius: var(--radius-l);
+}
+body.theme-dark .kanban-plugin__lane-items {
+  background-color: var(--shade-3);
+}
+body .kanban-plugin__lane-items:empty {
+  border-radius: 0;
+  padding: 4px;
+}
+body .kanban-plugin__lane-items > .kanban-plugin__placeholder:only-child {
+  border-radius: var(--radius-l);
+}
+body .is-sorting .kanban-plugin__lane-items > .kanban-plugin__placeholder:only-child {
+  border-color: var(--shade-20);
+}
+body .kanban-plugin__item-form {
+  border-top: none;
+  padding-top: 10px;
+}
+body .kanban-plugin__lane-header-wrapper + .kanban-plugin__item-form {
+  padding-bottom: 12px;
+}
+body .kanban-plugin__lane-header-wrapper + .kanban-plugin__item-form,
+body .kanban-plugin__lane-header-wrapper + .kanban-plugin__item-button-wrapper {
+  padding-top: 0;
+  border-bottom: none;
+}
+body .kanban-plugin__item {
+  border-radius: var(--radius-l);
+  background-color: var(--background-primary);
+  border: none;
+  margin-bottom: 6px;
+  font-size: 14px;
+  box-shadow: 0px 0.5px 1px 0.5px rgba(0, 0, 0, 0.1);
+}
+body.theme-dark .kanban-plugin__item-content-wrapper {
+  background-color: var(--shade-10);
+}
+body .kanban-plugin__item:last-child {
+  margin-bottom: 0;
+}
+body .kanban-plugin__drag-container > .kanban-plugin__item-wrapper > .kanban-plugin__item {
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2), 0 0 0 3px hsla(var(--accent-hsl), 0.8);
+}
+body .kanban-plugin__item.is-search-hit {
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2), 0 0 0 2px var(--text-highlight-bg-active);
+}
+body .kanban-plugin__drag-container > .kanban-plugin__item-wrapper .kanban-plugin__item-content-wrapper {
+  background-color: var(--background-primary);
+}
+body .markdown-preview-view.kanban-plugin__item-markdown {
+  font-family: var(--text);
+  line-height: 1.4;
+}
+body .is-dragging .markdown-preview-view.kanban-plugin__item-markdown,
+body .kanban-plugin .kanban-plugin__item .markdown-preview-view.kanban-plugin__item-markdown {
+  font-size: 1em;
+}
+body .is-dragging .markdown-preview-view.kanban-plugin__lane-title-text,
+body .kanban-plugin .markdown-preview-view.kanban-plugin__lane-title-text {
+  font-family: var(--text-normal);
+  font-size: 14px;
+  font-weight: 500;
+}
+body .kanban-plugin__markdown-preview-view .task-list-item-checkbox {
+  margin-left: 4px;
+}
+body .kanban-plugin__item-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body .kanban-plugin__item-title-wrapper {
+  padding: 8px 10px;
+}
+body .kanban-plugin__item-metadata:empty {
+  display: none;
+}
+body .kanban-plugin__item-tags .kanban-plugin__item-tag {
+  font-weight: 500;
+  color: var(--text-muted);
+  background-color: var(--shade-plus-darker);
+  padding: 4px 5px !important;
+  border-radius: var(--radius-s);
+  line-height: 1;
+}
+body .kanban-plugin__item-tags .kanban-plugin__item-tag:hover {
+  color: var(--text-accent);
+}
+body .kanban-plugin__item-tags .kanban-plugin__item-tag > span {
+  display: inline-block;
+  margin-right: 1px;
+  color: var(--text-faint);
+}
+body .kanban-plugin__item-tags .kanban-plugin__item-tag:hover > span {
+  color: hsla(var(--accent-hsl), 0.5);
+}
+body .kanban-plugin__item-button-wrapper {
+  border-top: none;
+}
+body .kanban-plugin button {
+  background-color: var(--shade-3);
+  font-weight: 500;
+}
+body .kanban-plugin .kanban-plugin__item-edit-button-wrapper button {
+  background-color: var(--shade-0);
+}
+body .kanban-plugin__lane-setting-wrapper > div:last-child {
+  border-bottom: none;
+}
+body .kanban-plugin__lane-action-wrapper button {
+  box-shadow: none;
+}
+body .kanban-plugin button:hover {
+  color: var(--text-on-accent);
+  background-color: var(--interactive-accent);
+}
+body .kanban-plugin__item button.kanban-plugin__item-edit-button,
+body .kanban-plugin__lane button.kanban-plugin__lane-settings-button {
+  margin-top: -1px;
+  margin-bottom: -1px;
+  font-size: 14px;
+}
+body .kanban-plugin__item button.kanban-plugin__item-edit-button.is-enabled,
+body .kanban-plugin__lane button.kanban-plugin__lane-settings-button.is-enabled {
+  color: var(--text-muted);
+}
+body .kanban-plugin__item button.kanban-plugin__item-edit-button:hover,
+body .kanban-plugin__lane button.kanban-plugin__lane-settings-button:hover {
+  color: var(--text-muted);
+  background-color: var(--shade-plus-darker);
+}
+body .kanban-plugin__checkbox-wrapper {
+  border: none;
+}
+body .kanban-plugin__new-lane-button,
+body .kanban-plugin__new-item-button {
+  font-weight: 500;
+  font-size: 14px;
+  background-color: var(--shade-plus-darker);
+  border: 1px solid transparent;
+}
+body button.kanban-plugin__new-lane-button:hover,
+body button.kanban-plugin__new-item-button:hover {
+  background-color: var(--shade-plus-darker);
+  color: var(--text-muted);
+}
+body button.kanban-plugin__new-lane-button {
+  background-color: var(--shade-0);
+  box-shadow: none;
+  border: none;
+  border-radius: var(--radius-m);
+  width: auto;
+}
+body button.kanban-plugin__new-item-button {
+  background-color: transparent;
+}
+body button.kanban-plugin__confirm-action-button:hover,
+body button.kanban-plugin__item-button-delete:hover,
+body button.kanban-plugin__delete-lane-button:hover {
+  color: var(--text-error);
+  background-color: rgba(var(--background-modifier-error-rgb), 0.2);
+}
+body .kanban-plugin__action-confirm-wrapper button {
+  margin-bottom: 5px;
+}
+body .kanban-plugin__grow-wrap > textarea:focus {
+  border-color: hsla(var(--accent-hsl), 0.5);
+}
+body .kanban-plugin__item-input-wrapper {
+  border-top: none;
+}
+body .kanban-plugin__item-input-wrapper .kanban-plugin__grow-wrap > textarea,
+body .kanban-plugin__item-input-wrapper .kanban-plugin__grow-wrap::after {
+  font-size: 14px;
+}
+body .kanban-plugin__item-content-wrapper .kanban-plugin__grow-wrap > textarea,
+body .kanban-plugin__item-content-wrapper .kanban-plugin__grow-wrap::after,
+body .kanban-plugin__lane-input-wrapper .kanban-plugin__grow-wrap > textarea,
+body .kanban-plugin__lane-input-wrapper .kanban-plugin__grow-wrap::after,
+body .kanban-plugin__lane-title .kanban-plugin__grow-wrap > textarea,
+body .kanban-plugin__lane-title .kanban-plugin__grow-wrap::after {
+  font-size: 14px;
+}
+body button.kanban-plugin__item-action-add,
+body button.kanban-plugin__lane-action-add {
+  background-color: var(--interactive-accent);
+}
+body .kanban-plugin__item-settings-actions button,
+body .kanban-plugin__lane-action-wrapper button,
+body .kanban-plugin__action-confirm-wrapper button,
+body .kanban-plugin__lane-input-actions button,
+body .kanban-plugin__item-input-actions button {
+  font-size: 13px;
+}
+body .kanban-plugin__lane-input-actions button,
+body .kanban-plugin__item-input-actions button {
+  box-shadow: 0px 0.5px 1px 0.5px rgba(0, 0, 0, 0.1);
+}
+body .kanban-plugin__lane-grip {
+  margin-left: -5px;
+  margin-right: 4px;
+}
+body .kanban-plugin__autocomplete {
+  font-weight: 500;
+  font-size: 14px;
+  border: none;
+}
+body .kanban-plugin__autocomplete-item-active,
+body .kanban-plugin__autocomplete-item {
+  padding: 4px 8px;
+}
+body .kanban-plugin__autocomplete-item:hover,
+body .kanban-plugin__autocomplete-item-active {
+  border-top: 1px solid transparent;
+  background-color: var(--shade-5);
+  color: var(--text-normal);
+}
+body .kanban-plugin__action-confirm-wrapper {
+  margin: 5px 0;
+  border-radius: var(--radius-l);
+  border-width: 3px;
+}
+body .kanban-plugin__action-confirm-text {
+  font-size: 14px;
+  padding-bottom: 5px;
+}
+body .kanban-plugin__setting-item {
+  background-color: var(--background-primary);
+}
+body .kanban-plugin__icon[data-icon=cross] {
+  color: var(--text-muted);
+}
+body .kanban-plugin__icon[data-icon=cross] > svg {
+  width: 1.2em;
+  height: 1.2em;
+}
+body .kanban-plugin__lane-form-wrapper {
+  background-color: var(--background-primary);
+}
+body .kanban-plugin__item-markdown .external-link::after {
+  top: 0;
+}
+body .kanban-plugin__scroll-container::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+body .internal-link.kanban-plugin__embed-link {
+  color: var(--text-muted);
+}
+
+body .lt-predictions-container.cm-tooltip,
+body .lt-predictions-container {
+  font-family: var(--text);
+  font-size: 14px;
+  border: none;
+  box-shadow: none;
+  filter: drop-shadow(0px 0px 1px var(--shade-20)) drop-shadow(0px 0 10px rgba(0, 0, 0, 0.1));
+}
+body .lt-buttoncontainer > button {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-normal);
+  padding: 4px 14px;
+  background: var(--background-primary);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.08);
+  border-radius: var(--radius-m);
+}
+body.theme-dark .lt-buttoncontainer > button {
+  color: #dfdedf;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), inset 0px 1px 1px rgba(255, 255, 255, 0.3);
+  background-color: var(--shade-20);
+}
+body .lt-ignore-btn {
+  background-color: var(--background-primary);
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: 100ms color, 100ms background-color;
+}
+body .lt-ignore-btn svg {
+  width: 1em;
+  height: 1em;
+}
+body .lt-ignore-btn:hover {
+  background-color: var(--shade-3);
+  color: var(--text-normal);
+}
+body .lt-title:not(:empty) {
+  font-weight: 500;
+}
+body .lt-status-bar-btn {
+  margin: -2px 0;
+}
+body .lt-status-bar-btn svg {
+  display: none;
+  width: 14px;
+  height: 14px;
+}
+body .lt-status-bar-btn.lt-loading svg {
+  display: block;
+}
+
+.theme-dark.native-scrollbars .backlink-pane,
+.theme-dark.native-scrollbars .cm-scroller,
+.theme-dark.native-scrollbars .community-plugin-details,
+.theme-dark.native-scrollbars .community-plugin-info,
+.theme-dark.native-scrollbars .community-theme-screenshot,
+.theme-dark.native-scrollbars .hotkey-list-container,
+.theme-dark.native-scrollbars .internal-query .search-result-container,
+.theme-dark.native-scrollbars .item-list,
+.theme-dark.native-scrollbars .markdown-embed-content,
+.theme-dark.native-scrollbars .markdown-preview-view,
+.theme-dark.native-scrollbars .markdown-source-view.mod-cm6 .math-block > mjx-container,
+.theme-dark.native-scrollbars .modal-content,
+.theme-dark.native-scrollbars .modal.mod-image-lightbox,
+.theme-dark.native-scrollbars .open-vault-options-container,
+.theme-dark.native-scrollbars .open-vault-options,
+.theme-dark.native-scrollbars .outgoing-link-pane,
+.theme-dark.native-scrollbars .pdf-scroll-container,
+.theme-dark.native-scrollbars .plugin-list-plugins,
+.theme-dark.native-scrollbars .prompt-results,
+.theme-dark.native-scrollbars .publish-sections-container,
+.theme-dark.native-scrollbars .publish-site-settings-container,
+.theme-dark.native-scrollbars .recent-vaults-list,
+.theme-dark.native-scrollbars .search-result-container.mod-global-search,
+.theme-dark.native-scrollbars .side-dock-plugin-panel.mod-backlinks .side-dock-plugin-panel-inner,
+.theme-dark.native-scrollbars .spellchecker-dictionary-container,
+.theme-dark.native-scrollbars .sync-file-tree-container,
+.theme-dark.native-scrollbars .sync-history-content,
+.theme-dark.native-scrollbars .sync-history-list-item-container,
+.theme-dark.native-scrollbars .sync-history-list,
+.theme-dark.native-scrollbars .sync-log-container,
+.theme-dark.native-scrollbars .tag-container,
+.theme-dark.native-scrollbars .upload-progress-container,
+.theme-dark.native-scrollbars .vertical-tab-content,
+.theme-dark.native-scrollbars .workspace-split.mod-left-split .view-content,
+.theme-dark.native-scrollbars .workspace-split.mod-right-split .view-content {
+  background-color: rgba(var(--background-rgb), 0.01);
+}
+.theme-dark.native-scrollbars .community-plugin-search-results,
+.theme-dark.native-scrollbars .graph-controls,
+.theme-dark.native-scrollbars .modal.mod-settings .vertical-tab-header,
+.theme-dark.native-scrollbars .nav-files-container,
+.theme-dark.native-scrollbars .suggestion,
+.theme-dark.native-scrollbars code[class*=language-] {
+  background-color: rgba(38, 38, 38, 0.01);
+}
+
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > .view-header-title-container:before,
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > .view-header-title-container:before {
+  background: transparent !important;
+}
+
+body.plugin-sliding-panes-stacking .workspace > .mod-root > .workspace-leaf {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header {
+  border-right: none !important;
+}
+
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > .view-header-title-container > .view-header-title {
+  margin-left: 0;
+}
+
+body.hider-frameless.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-mixed .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header {
+  padding-top: 25px;
+}
+
+body #wordsprint {
+  padding-top: 2rem;
+}
+body #wordsprint .status {
+  margin: 0;
+  padding: 0;
+  border-radius: var(--radius-m);
+  background-color: var(--shade-0);
+  color: var(--text-normal);
+  font-weight: 500;
+  line-height: 1;
+}
+body #wordsprint .danger {
+  color: rgb(var(--red-rgb));
+  font-weight: 800;
+}
+body #wordsprint .danger + .secondsLeft {
+  color: rgb(var(--red-rgb));
+}
+body #wordsprint .warning {
+  color: rgb(var(--orange-rgb));
+  font-weight: 800;
+}
+body #wordsprint .warning + .secondsLeft {
+  color: rgb(var(--orange-rgb));
+}
+body #wordsprint .success {
+  color: rgb(var(--green-rgb));
+  font-weight: 800;
+}
+body #wordsprint .secondsLeft {
+  line-height: 1;
+  padding: 0.5rem 0 0;
+  margin: 0;
+}
+body #wordsprint #sprintActionPanel {
+  line-height: 1;
+  padding: 0;
+  margin: 1rem 0 2.5rem;
+}
+body #wordsprint #sprintActionPanel .sprintStop,
+body #wordsprint #sprintActionPanel .sprintStart {
+  margin: 0;
+  line-height: 1.3;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-normal);
+  padding: 4px 14px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.08);
+  border-radius: var(--radius-m);
+}
+body #wordsprint #sprintActionPanel .sprintStart {
+  margin: 0 2px 0 0;
+}
+body #wordsprint #sprintActionPanel .sprintStop {
+  margin: 0 0 0 2px;
+}
+body #wordsprint #sprintViewStats .viewStats {
+  box-shadow: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0;
+  background-color: transparent;
+  color: var(--text-accent);
+  margin: 0;
+}
+body #wordsprint > hr {
+  margin-bottom: 10px !important;
+}
+body #wordsprint .wordsWritten {
+  font-style: italic;
+  color: var(--shade-30);
+}
+body #wordsprint #sectionTab {
+  background: var(--shade-plus-darker);
+  flex-grow: 0;
+  flex-shrink: 1;
+  width: unset;
+  max-width: unset;
+  border-bottom: none;
+  margin: 0;
+  padding: 1px;
+  border-radius: var(--radius-s);
+  box-shadow: inset 0px 0px 4px rgba(var(--color-black-rgb), 0.04);
+}
+body #wordsprint #sectionTab button {
+  border-radius: var(--radius-s);
+  padding: 4px 6px;
+  line-height: 1;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: none;
+  border: none;
+}
+body #wordsprint #sectionTab button:not(.active):not(:hover) {
+  background-color: transparent;
+  color: var(--text-normal);
+}
+body #wordsprint #sectionTab button:hover:not(.active) {
+  background: var(--shade-plus-darker);
+}
+body #wordsprint #sectionTab button.active {
+  color: var(--text-normal);
+  background-color: var(--shade-0);
+  box-shadow: 0px 0.5px 1px 0.5px rgba(var(--color-black-rgb), 0.1);
+}
+body #wordsprint #sprintViewStats {
+  padding: 10px 0 0;
+}
+body #wordsprint #goalsPanel,
+body #wordsprint #statsPanel {
+  align-items: flex-start;
+  padding: 0 5px;
+}
+
+.theme-dark #wordsprint #sprintActionPanel .sprintStart {
+  color: #dfdedf;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), inset 0px 1px 1px rgba(255, 255, 255, 0.3);
+  background-color: var(--shade-50);
+}
+.theme-dark #wordsprint #sprintActionPanel .sprintStop {
+  color: #dfdedf;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), inset 0px 1px 1px rgba(255, 255, 255, 0.3);
+  background-color: var(--shade-10);
+}
+
 html,
 body,
 input,
@@ -2747,6 +3660,20 @@ input.document-search-input.mod-no-match:not(:placeholder-shown):focus {
 }
 .markdown-source-view.mod-cm6 .cm-gutter {
   font-family: var(--default-font);
+}
+.markdown-source-view.mod-cm6 .cm-line {
+  position: relative;
+}
+.markdown-source-view.mod-cm6 .cm-fold-indicator {
+  position: static;
+  display: inline-block;
+}
+.markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator {
+  right: unset;
+  left: -4px;
+  height: unset;
+  transform: translateX(-100%);
+  flex-direction: row-reverse;
 }
 .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-content, .markdown-source-view.mod-cm6.is-readable-line-width:not(.is-rtl) .cm-contentContainer, .markdown-source-view.mod-cm6.is-readable-line-width.is-rtl .cm-contentContainer, .markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-line:not(.HyperMD-table-row) {
   max-width: var(--line-width);
@@ -5331,917 +6258,4 @@ body:not(.hider-frameless):not(.is-fullscreen):not(.is-mobile) {
 
 .workspace-split.mod-root > .workspace-leaf:last-of-type .workspace-leaf-content {
   border-top-right-radius: unset;
-}
-
-#calendar-container {
-  --color-background-day-empty: var(--background-secondary-alt);
-  --color-background-day-active: var(--background-tertiary);
-  --color-background-day-hover: var(--background-tertiary);
-  --color-dot: var(--text-faint);
-  --color-text-title: var(--text-normal);
-  --color-text-heading: var(--text-muted);
-  --color-text-day: var(--text-normal);
-  --color-text-today: var(--text-normal);
-  --color-arrow: var(--text-faint);
-  --color-background-day-empty: transparent;
-}
-#calendar-container .right-nav {
-  align-items: center;
-}
-#calendar-container .calendar {
-  background-color: var(--shade-3);
-  border-spacing: 0;
-  box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.1);
-  border-radius: var(--radius-l);
-  padding: 5px;
-  border-collapse: separate;
-}
-#calendar-container h2 {
-  font-weight: 400;
-  font-size: 16px;
-}
-#calendar-container h2 .arrow {
-  color: var(--text-faint);
-  cursor: var(--cursor);
-}
-#calendar-container h2 .arrow:hover,
-#calendar-container h2 .arrow:hover .arrow {
-  fill: var(--text-muted);
-  color: var(--text-muted);
-}
-.mod-root #calendar-container {
-  width: var(--line-width);
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0;
-}
-#calendar-container tr th {
-  font-weight: 500;
-  font-size: 11px;
-  text-transform: none;
-  color: var(--text-normal);
-  padding: 5px 0 10px;
-  letter-spacing: 0;
-}
-#calendar-container tr td {
-  border-radius: 4px;
-  cursor: var(--cursor);
-  transition: none;
-  border: none;
-  padding: 0;
-  width: 14.2857142857%;
-}
-#calendar-container tr td .dot {
-  margin: 0;
-}
-#calendar-container tr td:not(:empty):hover {
-  background: none;
-}
-#calendar-container .nav {
-  padding: 0;
-}
-#calendar-container .arrow {
-  width: auto;
-  display: flex;
-  line-height: 1;
-  padding: 4px 6px;
-  border-radius: var(--radius-s);
-}
-#calendar-container .arrow:hover {
-  background-color: var(--shade-plus-darker);
-}
-#calendar-container .arrow > svg {
-  color: var(--text-muted);
-  width: 13px;
-  height: 13px;
-}
-#calendar-container .reset-button {
-  color: var(--text-muted);
-  font-size: var(--font-smaller);
-  line-height: 1;
-  padding: 4px 6px;
-  margin: 0 5px;
-  border-radius: var(--radius-s);
-}
-#calendar-container .reset-button:hover {
-  color: var(--text-muted);
-  background-color: var(--shade-plus-darker);
-}
-#calendar-container .title {
-  font-size: 18px;
-}
-#calendar-container .month,
-#calendar-container .title,
-#calendar-container .reset-button {
-  letter-spacing: 0;
-  font-size: 13px;
-  font-weight: 500;
-  text-transform: none;
-}
-#calendar-container .today {
-  color: var(--text-accent);
-  font-weight: 700;
-}
-#calendar-container .active {
-  color: var(--text-normal);
-}
-#calendar-container .active, #calendar-container .active.today {
-  background: var(--shade-0);
-  font-weight: 500;
-  box-shadow: inset 0 0 0 2px hsla(var(--accent-hsl), 0.5), 0px 0.5px 1px 0.5px rgba(0, 0, 0, 0.1);
-}
-#calendar-container .active.today {
-  color: var(--text-accent);
-  font-weight: 700;
-}
-#calendar-container .active.day:hover {
-  background: var(--shade-0);
-  box-shadow: inset 0 0 0 2px hsla(var(--accent-hsl), 0.5), 0px 0.5px 1px 0.5px rgba(0, 0, 0, 0.1);
-}
-#calendar-container .week-num:hover,
-#calendar-container .day:hover {
-  background: var(--shade-0);
-  box-shadow: 0px 0.5px 1px 0.5px rgba(0, 0, 0, 0.1);
-}
-#calendar-container svg.dot,
-#calendar-container .active svg.dot {
-  fill: var(--text-accent);
-}
-#calendar-container svg.task,
-#calendar-container .active svg.task {
-  stroke: var(--text-accent);
-  stroke-width: 1px;
-}
-#calendar-container svg.dot,
-#calendar-container svg.task {
-  width: 4px;
-  height: 4px;
-}
-#calendar-container .year {
-  color: var(--text-normal);
-}
-#calendar-container .day {
-  font-size: 14px;
-  line-height: 1;
-  padding: 10px 0;
-  margin: 1px;
-  border-radius: var(--radius-s);
-  transition: box-shadow 100ms ease-out, background-color 100ms ease-out;
-}
-#calendar-container .day > .dot-container {
-  position: absolute;
-  bottom: 3px;
-  left: 0;
-  right: 0;
-  height: 4px;
-}
-
-.contextual-typography .markdown-preview-section > div > * {
-  line-height: var(--editor-line-height);
-  margin: 0 0 var(--editor-line-height-rem);
-}
-.contextual-typography .markdown-preview-section > div:last-child > * {
-  margin: 0;
-}
-.contextual-typography .markdown-preview-section > div .math * {
-  letter-spacing: 0;
-  margin-bottom: 0;
-}
-.contextual-typography.cc-header-spacing .markdown-preview-view div[data-tag-name=h1] + div > h2 {
-  margin-top: var(--editor-line-height-rem);
-}
-.contextual-typography.cc-header-spacing .markdown-preview-view div[data-tag-name=h2] + div > h3,
-.contextual-typography.cc-header-spacing .markdown-preview-view div[data-tag-name=h3] + div > h4,
-.contextual-typography.cc-header-spacing .markdown-preview-view div[data-tag-name=h4] + div > h5 {
-  margin-top: calc(var(--editor-line-height-rem) / 2);
-}
-.contextual-typography.cc-header-spacing .markdown-preview-view div[data-tag-name=h5] + div > h6 {
-  margin-top: 0;
-}
-.contextual-typography.cc-header-spacing .community-plugin-readme.markdown-preview-view h1:first-child,
-.contextual-typography.cc-header-spacing .community-plugin-readme.markdown-preview-view h2:first-child,
-.contextual-typography.cc-header-spacing .community-plugin-readme.markdown-preview-view h3:first-child,
-.contextual-typography.cc-header-spacing .community-plugin-readme.markdown-preview-view h4:first-child,
-.contextual-typography.cc-header-spacing .community-plugin-readme.markdown-preview-view h5:first-child,
-.contextual-typography.cc-header-spacing .community-plugin-readme.markdown-preview-view h6:first-child,
-.contextual-typography.cc-header-spacing .markdown-preview-pusher + div > h1,
-.contextual-typography.cc-header-spacing .markdown-preview-pusher + div > h2,
-.contextual-typography.cc-header-spacing .markdown-preview-pusher + div > h3,
-.contextual-typography.cc-header-spacing .markdown-preview-pusher + div > h4,
-.contextual-typography.cc-header-spacing .markdown-preview-pusher + div > h5,
-.contextual-typography.cc-header-spacing .markdown-preview-pusher + div > h6,
-.contextual-typography.cc-header-spacing .markdown-preview-pusher + div:empty + div > h1,
-.contextual-typography.cc-header-spacing .markdown-preview-pusher + div:empty + div > h2,
-.contextual-typography.cc-header-spacing .markdown-preview-pusher + div:empty + div > h3,
-.contextual-typography.cc-header-spacing .markdown-preview-pusher + div:empty + div > h4,
-.contextual-typography.cc-header-spacing .markdown-preview-pusher + div:empty + div > h5,
-.contextual-typography.cc-header-spacing .markdown-preview-pusher + div:empty + div > h6,
-.contextual-typography.cc-header-spacing .markdown-preview-pusher + div[data-tag-name=pre] + div > h1,
-.contextual-typography.cc-header-spacing .markdown-preview-pusher + div[data-tag-name=pre] + div > h2,
-.contextual-typography.cc-header-spacing .markdown-preview-pusher + div[data-tag-name=pre] + div > h3,
-.contextual-typography.cc-header-spacing .markdown-preview-pusher + div[data-tag-name=pre] + div > h4,
-.contextual-typography.cc-header-spacing .markdown-preview-pusher + div[data-tag-name=pre] + div > h5,
-.contextual-typography.cc-header-spacing .markdown-preview-pusher + div[data-tag-name=pre] + div > h6 {
-  margin-top: 0 !important;
-}
-.contextual-typography .markdown-preview-view mjx-container[jax=CHTML][display=true] {
-  margin: 0;
-}
-.contextual-typography .markdown-preview-view li blockquote,
-.contextual-typography .markdown-preview-view ol ol,
-.contextual-typography .markdown-preview-view ul ul {
-  margin-bottom: 0;
-}
-.contextual-typography .markdown-preview-view ul li,
-.contextual-typography .markdown-preview-view ol li {
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-
-.markdown-preview-view .embedded-note-title {
-  padding-left: 4px;
-  padding-right: 2px;
-}
-
-.cc-header-spacing .markdown-preview-view:not(.kanban-plugin__markdown-preview-view) h1.embedded-note-title__preview {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.hider-ribbon .nav-files-container {
-  padding-bottom: 50px;
-}
-.hider-ribbon .search-result-container.mod-global-search .search-results-children {
-  padding-bottom: 3rem;
-}
-.hider-ribbon .side-dock-settings {
-  padding: 5px 5px 5px 0;
-}
-.hider-ribbon .workspace-ribbon-collapse-btn {
-  display: none;
-}
-.hider-ribbon .workspace-ribbon.mod-right {
-  pointer-events: none;
-}
-.hider-ribbon .workspace-ribbon.mod-left {
-  position: absolute;
-  margin: 0;
-  overflow: visible;
-  flex-basis: 0;
-  bottom: 0;
-  top: auto;
-  display: flex !important;
-  flex-direction: row;
-  z-index: var(--layer-status-bar);
-  opacity: 0;
-  transition: opacity 0.25s ease-in-out;
-  padding: 0;
-  width: 30px;
-  height: unset;
-  filter: drop-shadow(0px 2px 10px rgba(0, 0, 0, 0.1));
-}
-.hider-ribbon .side-dock-actions,
-.hider-ribbon .side-dock-settings {
-  background: whitesmoke;
-  border-top: 1px solid var(--shade-10);
-  display: flex;
-  margin: 0;
-  position: relative;
-}
-.hider-ribbon.theme-dark .side-dock-actions, .hider-ribbon.theme-dark .side-dock-settings {
-  background: #3c3c3c;
-  border-color: var(--shade-2);
-}
-.hider-ribbon .side-dock-settings {
-  border-right: 1px solid var(--shade-10);
-  border-top-right-radius: var(--radius-m);
-}
-.hider-ribbon .side-dock-actions {
-  padding: 5px 0 5px 5px;
-  z-index: var(--layer-status-bar);
-}
-.hider-ribbon .workspace-ribbon.mod-left:after {
-  content: none;
-}
-.hider-ribbon .workspace-ribbon.mod-left .side-dock-ribbon-action {
-  margin-bottom: 0;
-  margin-right: 5px;
-  margin-top: 0;
-}
-.hider-ribbon .workspace-ribbon.mod-left:hover {
-  opacity: 1;
-  transition: opacity 0.25s ease-in-out;
-}
-.hider-ribbon .workspace-ribbon.mod-left .workspace-ribbon-collapse-btn {
-  border-top: 1px solid var(--background-modifier-border);
-}
-.hider-ribbon .workspace-split.mod-left-split {
-  margin: 0;
-}
-.hider-ribbon .workspace-ribbon {
-  padding: 0;
-}
-
-.hider-frameless .workspace-ribbon.mod-left .workspace-ribbon-collapse-btn {
-  margin-top: 32px;
-}
-.hider-frameless .workspace-split.mod-left-split > div.workspace-tabs {
-  padding-top: 26px;
-}
-.hider-frameless .workspace-ribbon.mod-left.is-collapsed {
-  background-color: var(--shade-0);
-  border-right-color: var(--shade-0);
-}
-.hider-frameless.mod-macos.hider-ribbon:not(.plugin-sliding-panes-rotate-header):not(.is-fullscreen) .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type .view-header {
-  padding-left: 70px !important;
-}
-.hider-frameless.mod-macos:not(.plugin-sliding-panes-rotate-header):not(.is-fullscreen) .workspace-split.mod-left-split.is-collapsed + .mod-root .workspace-leaf:first-of-type .view-header {
-  padding-left: 34px !important;
-}
-
-.hider-scroll .search-result-container.mod-global-search {
-  padding-right: 10px;
-}
-
-body .kanban-plugin {
-  background-color: var(--shade-0);
-}
-body .kanban-plugin__checkbox-label,
-body .kanban-plugin__meta-table {
-  font-size: 0.9rem;
-}
-body .kanban-plugin__grow-wrap > textarea,
-body .kanban-plugin__grow-wrap:after,
-body .kanban-plugin__markdown-preview-view {
-  font-size: 1rem;
-}
-body .kanban-plugin__new-item-button:hover {
-  color: var(--text-muted);
-  background-color: var(--shade-plus-darker);
-}
-body .kanban-plugin__grow-wrap > textarea:focus {
-  border-color: hsla(var(--accent-hsl), 0.5);
-}
-body button.kanban-plugin__new-item-button {
-  border: none;
-  box-shadow: none;
-}
-body .kanban-plugin__item button.kanban-plugin__item-prefix-button,
-body .kanban-plugin__item button.kanban-plugin__item-postfix-button,
-body .kanban-plugin__lane button.kanban-plugin__lane-settings-button {
-  border: none;
-  box-shadow: none;
-}
-body .kanban-plugin__item button.kanban-plugin__item-prefix-button:hover,
-body .kanban-plugin__item button.kanban-plugin__item-postfix-button:hover,
-body .kanban-plugin__lane button.kanban-plugin__lane-settings-button:hover {
-  background-color: var(--shade-plus-darker);
-}
-body .kanban-plugin__item button.kanban-plugin__item-prefix-button.is-enabled,
-body .kanban-plugin__item button.kanban-plugin__item-postfix-button.is-enabled,
-body .kanban-plugin__lane button.kanban-plugin__lane-settings-button.is-enabled {
-  color: var(--text-muted);
-}
-body .kanban-plugin__search-wrapper {
-  background-color: var(--background-primary);
-  border-bottom: 1px solid var(--shade-plus-darker);
-}
-body button.kanban-plugin__search-cancel-button {
-  color: var(--text-normal);
-  border: 1px solid transparent;
-  border-radius: var(--radius-m);
-  font-weight: 500;
-  background-color: var(--shade-plus-darker);
-  box-shadow: 0px 0.5px 1px 0.5px rgba(0, 0, 0, 0.1);
-  padding: 7px;
-  position: relative;
-  top: -1px;
-  margin-left: 6px;
-}
-body button.kanban-plugin__search-cancel-button:hover {
-  background-color: var(--shade-10);
-}
-body .kanban-plugin__markdown-preview-view {
-  font: var(--text);
-  font-size: 14px;
-}
-body .kanban-plugin__lane-title-text > .kanban-plugin__markdown-preview-view.markdown-preview-view {
-  font-weight: 500;
-}
-body .kanban-plugin__lane {
-  background: var(--shade-0);
-  border: none;
-  padding: 2px;
-}
-body .kanban-plugin__lane-header-wrapper {
-  border-bottom: 0;
-}
-body .kanban-plugin__drag-container > .kanban-plugin__lane-wrapper > .kanban-plugin__lane {
-  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2), 0 0 0 3px hsla(var(--accent-hsl), 0.5);
-}
-body .kanban-plugin__lane-items {
-  background-color: var(--shade-5);
-  box-shadow: 0 0 0 4px var(--shade-5);
-  padding: 0 3px;
-  border-radius: var(--radius-l);
-}
-body.theme-dark .kanban-plugin__lane-items {
-  background-color: var(--shade-3);
-}
-body .kanban-plugin__lane-items:empty {
-  border-radius: 0;
-  padding: 4px;
-}
-body .kanban-plugin__lane-items > .kanban-plugin__placeholder:only-child {
-  border-radius: var(--radius-l);
-}
-body .is-sorting .kanban-plugin__lane-items > .kanban-plugin__placeholder:only-child {
-  border-color: var(--shade-20);
-}
-body .kanban-plugin__item-form {
-  border-top: none;
-  padding-top: 10px;
-}
-body .kanban-plugin__lane-header-wrapper + .kanban-plugin__item-form {
-  padding-bottom: 12px;
-}
-body .kanban-plugin__lane-header-wrapper + .kanban-plugin__item-form,
-body .kanban-plugin__lane-header-wrapper + .kanban-plugin__item-button-wrapper {
-  padding-top: 0;
-  border-bottom: none;
-}
-body .kanban-plugin__item {
-  border-radius: var(--radius-l);
-  background-color: var(--background-primary);
-  border: none;
-  margin-bottom: 6px;
-  font-size: 14px;
-  box-shadow: 0px 0.5px 1px 0.5px rgba(0, 0, 0, 0.1);
-}
-body.theme-dark .kanban-plugin__item-content-wrapper {
-  background-color: var(--shade-10);
-}
-body .kanban-plugin__item:last-child {
-  margin-bottom: 0;
-}
-body .kanban-plugin__drag-container > .kanban-plugin__item-wrapper > .kanban-plugin__item {
-  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2), 0 0 0 3px hsla(var(--accent-hsl), 0.8);
-}
-body .kanban-plugin__item.is-search-hit {
-  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2), 0 0 0 2px var(--text-highlight-bg-active);
-}
-body .kanban-plugin__drag-container > .kanban-plugin__item-wrapper .kanban-plugin__item-content-wrapper {
-  background-color: var(--background-primary);
-}
-body .markdown-preview-view.kanban-plugin__item-markdown {
-  font-family: var(--text);
-  line-height: 1.4;
-}
-body .is-dragging .markdown-preview-view.kanban-plugin__item-markdown,
-body .kanban-plugin .kanban-plugin__item .markdown-preview-view.kanban-plugin__item-markdown {
-  font-size: 1em;
-}
-body .is-dragging .markdown-preview-view.kanban-plugin__lane-title-text,
-body .kanban-plugin .markdown-preview-view.kanban-plugin__lane-title-text {
-  font-family: var(--text-normal);
-  font-size: 14px;
-  font-weight: 500;
-}
-body .kanban-plugin__markdown-preview-view .task-list-item-checkbox {
-  margin-left: 4px;
-}
-body .kanban-plugin__item-title {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-body .kanban-plugin__item-title-wrapper {
-  padding: 8px 10px;
-}
-body .kanban-plugin__item-metadata:empty {
-  display: none;
-}
-body .kanban-plugin__item-tags .kanban-plugin__item-tag {
-  font-weight: 500;
-  color: var(--text-muted);
-  background-color: var(--shade-plus-darker);
-  padding: 4px 5px !important;
-  border-radius: var(--radius-s);
-  line-height: 1;
-}
-body .kanban-plugin__item-tags .kanban-plugin__item-tag:hover {
-  color: var(--text-accent);
-}
-body .kanban-plugin__item-tags .kanban-plugin__item-tag > span {
-  display: inline-block;
-  margin-right: 1px;
-  color: var(--text-faint);
-}
-body .kanban-plugin__item-tags .kanban-plugin__item-tag:hover > span {
-  color: hsla(var(--accent-hsl), 0.5);
-}
-body .kanban-plugin__item-button-wrapper {
-  border-top: none;
-}
-body .kanban-plugin button {
-  background-color: var(--shade-3);
-  font-weight: 500;
-}
-body .kanban-plugin .kanban-plugin__item-edit-button-wrapper button {
-  background-color: var(--shade-0);
-}
-body .kanban-plugin__lane-setting-wrapper > div:last-child {
-  border-bottom: none;
-}
-body .kanban-plugin__lane-action-wrapper button {
-  box-shadow: none;
-}
-body .kanban-plugin button:hover {
-  color: var(--text-on-accent);
-  background-color: var(--interactive-accent);
-}
-body .kanban-plugin__item button.kanban-plugin__item-edit-button,
-body .kanban-plugin__lane button.kanban-plugin__lane-settings-button {
-  margin-top: -1px;
-  margin-bottom: -1px;
-  font-size: 14px;
-}
-body .kanban-plugin__item button.kanban-plugin__item-edit-button.is-enabled,
-body .kanban-plugin__lane button.kanban-plugin__lane-settings-button.is-enabled {
-  color: var(--text-muted);
-}
-body .kanban-plugin__item button.kanban-plugin__item-edit-button:hover,
-body .kanban-plugin__lane button.kanban-plugin__lane-settings-button:hover {
-  color: var(--text-muted);
-  background-color: var(--shade-plus-darker);
-}
-body .kanban-plugin__checkbox-wrapper {
-  border: none;
-}
-body .kanban-plugin__new-lane-button,
-body .kanban-plugin__new-item-button {
-  font-weight: 500;
-  font-size: 14px;
-  background-color: var(--shade-plus-darker);
-  border: 1px solid transparent;
-}
-body button.kanban-plugin__new-lane-button:hover,
-body button.kanban-plugin__new-item-button:hover {
-  background-color: var(--shade-plus-darker);
-  color: var(--text-muted);
-}
-body button.kanban-plugin__new-lane-button {
-  background-color: var(--shade-0);
-  box-shadow: none;
-  border: none;
-  border-radius: var(--radius-m);
-  width: auto;
-}
-body button.kanban-plugin__new-item-button {
-  background-color: transparent;
-}
-body button.kanban-plugin__confirm-action-button:hover,
-body button.kanban-plugin__item-button-delete:hover,
-body button.kanban-plugin__delete-lane-button:hover {
-  color: var(--text-error);
-  background-color: rgba(var(--background-modifier-error-rgb), 0.2);
-}
-body .kanban-plugin__action-confirm-wrapper button {
-  margin-bottom: 5px;
-}
-body .kanban-plugin__grow-wrap > textarea:focus {
-  border-color: hsla(var(--accent-hsl), 0.5);
-}
-body .kanban-plugin__item-input-wrapper {
-  border-top: none;
-}
-body .kanban-plugin__item-input-wrapper .kanban-plugin__grow-wrap > textarea,
-body .kanban-plugin__item-input-wrapper .kanban-plugin__grow-wrap::after {
-  font-size: 14px;
-}
-body .kanban-plugin__item-content-wrapper .kanban-plugin__grow-wrap > textarea,
-body .kanban-plugin__item-content-wrapper .kanban-plugin__grow-wrap::after,
-body .kanban-plugin__lane-input-wrapper .kanban-plugin__grow-wrap > textarea,
-body .kanban-plugin__lane-input-wrapper .kanban-plugin__grow-wrap::after,
-body .kanban-plugin__lane-title .kanban-plugin__grow-wrap > textarea,
-body .kanban-plugin__lane-title .kanban-plugin__grow-wrap::after {
-  font-size: 14px;
-}
-body button.kanban-plugin__item-action-add,
-body button.kanban-plugin__lane-action-add {
-  background-color: var(--interactive-accent);
-}
-body .kanban-plugin__item-settings-actions button,
-body .kanban-plugin__lane-action-wrapper button,
-body .kanban-plugin__action-confirm-wrapper button,
-body .kanban-plugin__lane-input-actions button,
-body .kanban-plugin__item-input-actions button {
-  font-size: 13px;
-}
-body .kanban-plugin__lane-input-actions button,
-body .kanban-plugin__item-input-actions button {
-  box-shadow: 0px 0.5px 1px 0.5px rgba(0, 0, 0, 0.1);
-}
-body .kanban-plugin__lane-grip {
-  margin-left: -5px;
-  margin-right: 4px;
-}
-body .kanban-plugin__autocomplete {
-  font-weight: 500;
-  font-size: 14px;
-  border: none;
-}
-body .kanban-plugin__autocomplete-item-active,
-body .kanban-plugin__autocomplete-item {
-  padding: 4px 8px;
-}
-body .kanban-plugin__autocomplete-item:hover,
-body .kanban-plugin__autocomplete-item-active {
-  border-top: 1px solid transparent;
-  background-color: var(--shade-5);
-  color: var(--text-normal);
-}
-body .kanban-plugin__action-confirm-wrapper {
-  margin: 5px 0;
-  border-radius: var(--radius-l);
-  border-width: 3px;
-}
-body .kanban-plugin__action-confirm-text {
-  font-size: 14px;
-  padding-bottom: 5px;
-}
-body .kanban-plugin__setting-item {
-  background-color: var(--background-primary);
-}
-body .kanban-plugin__icon[data-icon=cross] {
-  color: var(--text-muted);
-}
-body .kanban-plugin__icon[data-icon=cross] > svg {
-  width: 1.2em;
-  height: 1.2em;
-}
-body .kanban-plugin__lane-form-wrapper {
-  background-color: var(--background-primary);
-}
-body .kanban-plugin__item-markdown .external-link::after {
-  top: 0;
-}
-body .kanban-plugin__scroll-container::-webkit-scrollbar {
-  width: 12px;
-  height: 12px;
-}
-body .internal-link.kanban-plugin__embed-link {
-  color: var(--text-muted);
-}
-
-body .lt-predictions-container.cm-tooltip,
-body .lt-predictions-container {
-  font-family: var(--text);
-  font-size: 14px;
-  border: none;
-  box-shadow: none;
-  filter: drop-shadow(0px 0px 1px var(--shade-20)) drop-shadow(0px 0 10px rgba(0, 0, 0, 0.1));
-}
-body .lt-buttoncontainer > button {
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--text-normal);
-  padding: 4px 14px;
-  background: var(--background-primary);
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.08);
-  border-radius: var(--radius-m);
-}
-body.theme-dark .lt-buttoncontainer > button {
-  color: #dfdedf;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), inset 0px 1px 1px rgba(255, 255, 255, 0.3);
-  background-color: var(--shade-20);
-}
-body .lt-ignore-btn {
-  background-color: var(--background-primary);
-  border-left: none;
-  border-right: none;
-  border-bottom: none;
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--text-muted);
-  transition: 100ms color, 100ms background-color;
-}
-body .lt-ignore-btn svg {
-  width: 1em;
-  height: 1em;
-}
-body .lt-ignore-btn:hover {
-  background-color: var(--shade-3);
-  color: var(--text-normal);
-}
-body .lt-title:not(:empty) {
-  font-weight: 500;
-}
-body .lt-status-bar-btn {
-  margin: -2px 0;
-}
-body .lt-status-bar-btn svg {
-  display: none;
-  width: 14px;
-  height: 14px;
-}
-body .lt-status-bar-btn.lt-loading svg {
-  display: block;
-}
-
-.theme-dark.native-scrollbars .backlink-pane,
-.theme-dark.native-scrollbars .cm-scroller,
-.theme-dark.native-scrollbars .community-plugin-details,
-.theme-dark.native-scrollbars .community-plugin-info,
-.theme-dark.native-scrollbars .community-theme-screenshot,
-.theme-dark.native-scrollbars .hotkey-list-container,
-.theme-dark.native-scrollbars .internal-query .search-result-container,
-.theme-dark.native-scrollbars .item-list,
-.theme-dark.native-scrollbars .markdown-embed-content,
-.theme-dark.native-scrollbars .markdown-preview-view,
-.theme-dark.native-scrollbars .markdown-source-view.mod-cm6 .math-block > mjx-container,
-.theme-dark.native-scrollbars .modal-content,
-.theme-dark.native-scrollbars .modal.mod-image-lightbox,
-.theme-dark.native-scrollbars .open-vault-options-container,
-.theme-dark.native-scrollbars .open-vault-options,
-.theme-dark.native-scrollbars .outgoing-link-pane,
-.theme-dark.native-scrollbars .pdf-scroll-container,
-.theme-dark.native-scrollbars .plugin-list-plugins,
-.theme-dark.native-scrollbars .prompt-results,
-.theme-dark.native-scrollbars .publish-sections-container,
-.theme-dark.native-scrollbars .publish-site-settings-container,
-.theme-dark.native-scrollbars .recent-vaults-list,
-.theme-dark.native-scrollbars .search-result-container.mod-global-search,
-.theme-dark.native-scrollbars .side-dock-plugin-panel.mod-backlinks .side-dock-plugin-panel-inner,
-.theme-dark.native-scrollbars .spellchecker-dictionary-container,
-.theme-dark.native-scrollbars .sync-file-tree-container,
-.theme-dark.native-scrollbars .sync-history-content,
-.theme-dark.native-scrollbars .sync-history-list-item-container,
-.theme-dark.native-scrollbars .sync-history-list,
-.theme-dark.native-scrollbars .sync-log-container,
-.theme-dark.native-scrollbars .tag-container,
-.theme-dark.native-scrollbars .upload-progress-container,
-.theme-dark.native-scrollbars .vertical-tab-content,
-.theme-dark.native-scrollbars .workspace-split.mod-left-split .view-content,
-.theme-dark.native-scrollbars .workspace-split.mod-right-split .view-content {
-  background-color: rgba(var(--background-rgb), 0.01);
-}
-.theme-dark.native-scrollbars .community-plugin-search-results,
-.theme-dark.native-scrollbars .graph-controls,
-.theme-dark.native-scrollbars .modal.mod-settings .vertical-tab-header,
-.theme-dark.native-scrollbars .nav-files-container,
-.theme-dark.native-scrollbars .suggestion,
-.theme-dark.native-scrollbars code[class*=language-] {
-  background-color: rgba(38, 38, 38, 0.01);
-}
-
-body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > .view-header-title-container:before,
-body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > .view-header-title-container:before {
-  background: transparent !important;
-}
-
-body.plugin-sliding-panes-stacking .workspace > .mod-root > .workspace-leaf {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15) !important;
-}
-
-body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header {
-  border-right: none !important;
-}
-
-body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > .view-header-title-container > .view-header-title {
-  margin-left: 0;
-}
-
-body.hider-frameless.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-mixed .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header {
-  padding-top: 25px;
-}
-
-body #wordsprint {
-  padding-top: 2rem;
-}
-body #wordsprint .status {
-  margin: 0;
-  padding: 0;
-  border-radius: var(--radius-m);
-  background-color: var(--shade-0);
-  color: var(--text-normal);
-  font-weight: 500;
-  line-height: 1;
-}
-body #wordsprint .danger {
-  color: rgb(var(--red-rgb));
-  font-weight: 800;
-}
-body #wordsprint .danger + .secondsLeft {
-  color: rgb(var(--red-rgb));
-}
-body #wordsprint .warning {
-  color: rgb(var(--orange-rgb));
-  font-weight: 800;
-}
-body #wordsprint .warning + .secondsLeft {
-  color: rgb(var(--orange-rgb));
-}
-body #wordsprint .success {
-  color: rgb(var(--green-rgb));
-  font-weight: 800;
-}
-body #wordsprint .secondsLeft {
-  line-height: 1;
-  padding: 0.5rem 0 0;
-  margin: 0;
-}
-body #wordsprint #sprintActionPanel {
-  line-height: 1;
-  padding: 0;
-  margin: 1rem 0 2.5rem;
-}
-body #wordsprint #sprintActionPanel .sprintStop,
-body #wordsprint #sprintActionPanel .sprintStart {
-  margin: 0;
-  line-height: 1.3;
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--text-normal);
-  padding: 4px 14px;
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.08);
-  border-radius: var(--radius-m);
-}
-body #wordsprint #sprintActionPanel .sprintStart {
-  margin: 0 2px 0 0;
-}
-body #wordsprint #sprintActionPanel .sprintStop {
-  margin: 0 0 0 2px;
-}
-body #wordsprint #sprintViewStats .viewStats {
-  box-shadow: none;
-  border: none;
-  font-size: 14px;
-  font-weight: 500;
-  padding: 0;
-  background-color: transparent;
-  color: var(--text-accent);
-  margin: 0;
-}
-body #wordsprint > hr {
-  margin-bottom: 10px !important;
-}
-body #wordsprint .wordsWritten {
-  font-style: italic;
-  color: var(--shade-30);
-}
-body #wordsprint #sectionTab {
-  background: var(--shade-plus-darker);
-  flex-grow: 0;
-  flex-shrink: 1;
-  width: unset;
-  max-width: unset;
-  border-bottom: none;
-  margin: 0;
-  padding: 1px;
-  border-radius: var(--radius-s);
-  box-shadow: inset 0px 0px 4px rgba(var(--color-black-rgb), 0.04);
-}
-body #wordsprint #sectionTab button {
-  border-radius: var(--radius-s);
-  padding: 4px 6px;
-  line-height: 1;
-  font-size: 14px;
-  font-weight: 500;
-  box-shadow: none;
-  border: none;
-}
-body #wordsprint #sectionTab button:not(.active):not(:hover) {
-  background-color: transparent;
-  color: var(--text-normal);
-}
-body #wordsprint #sectionTab button:hover:not(.active) {
-  background: var(--shade-plus-darker);
-}
-body #wordsprint #sectionTab button.active {
-  color: var(--text-normal);
-  background-color: var(--shade-0);
-  box-shadow: 0px 0.5px 1px 0.5px rgba(var(--color-black-rgb), 0.1);
-}
-body #wordsprint #sprintViewStats {
-  padding: 10px 0 0;
-}
-body #wordsprint #goalsPanel,
-body #wordsprint #statsPanel {
-  align-items: flex-start;
-  padding: 0 5px;
-}
-
-.theme-dark #wordsprint #sprintActionPanel .sprintStart {
-  color: #dfdedf;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), inset 0px 1px 1px rgba(255, 255, 255, 0.3);
-  background-color: var(--shade-50);
-}
-.theme-dark #wordsprint #sprintActionPanel .sprintStop {
-  color: #dfdedf;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), inset 0px 1px 1px rgba(255, 255, 255, 0.3);
-  background-color: var(--shade-10);
 }
