@@ -47,6 +47,7 @@
   top: var(--titlebar-height);
 }
 
+.is-mobile .notice,
 .notice {
   border: 1px solid var(--shade-5);
   color: var(--shade-90);

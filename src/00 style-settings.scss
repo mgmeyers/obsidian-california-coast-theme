@@ -210,13 +210,6 @@ settings:
         title: Editor list bullets (source mode)
         description: 'Replace *, -, + with a bullet character when creating lists'
         type: class-toggle
-    - 
-        id: live-preview-bullet-size-adjust
-        title: Live preview bullet size adjust
-        description: Increase or decrease live preview mode bullet sizes. The default is 100%, or no change.
-        type: variable-number
-        default: 140
-        format: '%'
 
     - 
         id: preview-customization

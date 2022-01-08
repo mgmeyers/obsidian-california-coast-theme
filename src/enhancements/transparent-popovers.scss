@@ -2,15 +2,14 @@
   .notice,
   .menu {
     background: rgba(245, 245, 245, 0.7);
-    backdrop-filter: blur(20px);
-    background-blend-mode: hard-light;
+    backdrop-filter: blur(35px);
+    background-blend-mode: luminosity;
   }
 
   &.theme-dark {
     .notice,
     .menu {
-      background-blend-mode: luminosity;
-      background: rgba(60, 60, 60, 0.6);
+      background: rgba(30, 30, 30, 0.7);
     }
   }
 }

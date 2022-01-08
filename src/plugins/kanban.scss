@@ -95,14 +95,14 @@ body {
   }
 
   .kanban-plugin__lane-items {
-    background-color: var(--shade-5);
+    background-color: var(--shade-5-opaque);
     box-shadow: 0 0 0 4px var(--shade-5);
     padding: 0 3px;
     border-radius: var(--radius-l);
   }
 
   &.theme-dark .kanban-plugin__lane-items {
-    background-color: var(--shade-3);
+    background-color: var(--shade-3-opaque);
   }
 
   .kanban-plugin__lane-items:empty {
