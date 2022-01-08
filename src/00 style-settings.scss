@@ -167,7 +167,18 @@ settings:
             -
                 value: cc-wrapped-explorer-titles
                 label: Wrap file titles
-
+    - 
+        id: cc-trim-table-cols
+        title: Truncate table columns
+        description: Prevent table columns from wrapping to a new line in narrow panes
+        type: class-toggle
+    - 
+        id: table-min-cell-width
+        title: Minimum table column width
+        description: Table columns will not strink below this width
+        type: variable-number
+        default: 0
+        format: px
 
     - 
         id: editor-customization
@@ -546,4 +557,5 @@ settings:
         min: 50
         max: 150
         step: 1
+    
 */

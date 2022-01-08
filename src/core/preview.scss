@@ -145,10 +145,17 @@ body {
     }
   }
 
+  table {
+    width: 100%;
+  }
+
   th,
   td {
     font-family: var(--default-font);
+    font-size: 0.95em;
     border-color: var(--shade-10-opaque);
+    min-width: var(--table-min-cell-width);
+    line-height: 1.5;
   }
 
   .theme-dark & {

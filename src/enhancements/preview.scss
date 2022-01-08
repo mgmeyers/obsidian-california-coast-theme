@@ -130,3 +130,14 @@
     display: block;
   }
 }
+
+.cc-trim-table-cols {
+  td,
+  th {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    min-width: unset;
+    max-width: var(--table-min-cell-width) !important;
+  }
+}
