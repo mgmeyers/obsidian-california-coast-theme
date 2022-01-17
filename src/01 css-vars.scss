@@ -149,15 +149,6 @@
   --background-modifier-cover: rgba(170, 170, 170, 0.6);
 
   --opacity-translucency: 1;
-
-  --highlight-red: rgba(var(--red-rgb), 0.4);
-  --highlight-orange: rgba(var(--orange-rgb), 0.4);
-  --highlight-yellow: rgba(var(--yellow-rgb), 0.4);
-  --highlight-green: rgba(var(--green-rgb), 0.4);
-  --highlight-blue: rgba(var(--blue-rgb), 0.4);
-  --highlight-pink: rgba(var(--pink-rgb), 0.4);
-  --highlight-purple: rgba(var(--purple-rgb), 0.4);
-  --highlight-gray: var(--shade-20);
 }
 
 .theme-dark {
@@ -261,15 +252,6 @@
   --background-modifier-cover: rgba(20, 20, 20, 0.6);
 
   --opacity-translucency: 1;
-
-  --highlight-red: rgba(var(--red-rgb), 0.2);
-  --highlight-orange: rgba(var(--orange-rgb), 0.2);
-  --highlight-yellow: rgba(var(--yellow-rgb), 0.2);
-  --highlight-green: rgba(var(--green-rgb), 0.3);
-  --highlight-blue: rgba(var(--blue-rgb), 0.3);
-  --highlight-pink: rgba(var(--pink-rgb), 0.2);
-  --highlight-purple: rgba(var(--purple-rgb), 0.3);
-  --highlight-gray: var(--shade-20);
 }
 
 body {

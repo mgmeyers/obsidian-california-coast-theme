@@ -1,6 +1,10 @@
+.embedded-backlinks,
 .outgoing-link-pane,
 .backlink-pane {
   @include vertical-scroll-shadow(var(--background-primary));
+
+  font-family: var(--default-font);
+  font-size: var(--ui-font-size);
 
   .theme-dark & {
     @include vertical-scroll-shadow(var(--background-primary), 0.5);
@@ -83,4 +87,9 @@
   .search-result-file-match:hover &:hover {
     background-color: var(--shade-plus-darker);
   }
+}
+
+.embedded-backlinks {
+  border-top: 1px solid var(--background-modifier-border);
+  padding-top: 1.5em;
 }
