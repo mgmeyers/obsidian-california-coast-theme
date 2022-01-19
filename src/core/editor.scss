@@ -26,7 +26,7 @@
     .collapse-indicator {
       right: unset;
       left: -4px;
-      height: unset;
+      height: calc(var(--editor-line-height) * 1em);
       transform: translateX(-100%);
       flex-direction: row-reverse;
     }
