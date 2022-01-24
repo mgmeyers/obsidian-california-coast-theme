@@ -46,3 +46,9 @@
     background-color: hsla(0, 0%, 15%, 0.01);
   }
 }
+
+.native-scrollbars {
+  .search-result-container.mod-global-search {
+    padding-right: 10px;
+  }
+}

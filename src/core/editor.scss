@@ -524,6 +524,20 @@
     .cm-strong.cm-header {
       font-weight: 800;
     }
+
+    span.cm-em:not(.cm-formatting-em) {
+      color: var(--em-color);
+    }
+
+    span.cm-strong:not(.cm-formatting-strong) {
+      font-weight: var(--strong-weight);
+      color: var(--strong-color);
+    }
+
+    .cm-formatting-code-block,
+    span.cm-inline-code {
+      color: var(--text-normal);
+    }
   }
 
   .cm-formatting-list-ul:before {

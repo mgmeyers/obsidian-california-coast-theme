@@ -1036,6 +1036,22 @@ input[type=checkbox]:focus, input[type=checkbox]:hover {
   background-size: 100% 40px, 140% 3px;
   background-attachment: local, scroll;
 }
+.mod-left-split .embedded-backlinks,
+.mod-left-split .outgoing-link-pane,
+.mod-left-split .backlink-pane {
+  background: linear-gradient(var(--shade-5-opaque) 30%, rgba(255, 255, 255, 0)) center top, radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0)) center top 1px;
+  background-repeat: no-repeat;
+  background-size: 100% 40px, 140% 3px;
+  background-attachment: local, scroll;
+}
+.theme-dark .mod-left-split .embedded-backlinks,
+.theme-dark .mod-left-split .outgoing-link-pane,
+.theme-dark .mod-left-split .backlink-pane {
+  background: linear-gradient(var(--shade-5-opaque) 30%, rgba(255, 255, 255, 0)) center top, radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)) center top 1px;
+  background-repeat: no-repeat;
+  background-size: 100% 40px, 140% 3px;
+  background-attachment: local, scroll;
+}
 .is-translucent .embedded-backlinks, .is-mobile .embedded-backlinks, .workspace-fake-target-overlay .embedded-backlinks,
 .is-translucent .outgoing-link-pane,
 .is-mobile .outgoing-link-pane,
@@ -1974,6 +1990,17 @@ input.document-search-input.mod-no-match:not(:placeholder-shown):focus {
 }
 .markdown-source-view.mod-cm5 .cm-s-obsidian .cm-strong.cm-header {
   font-weight: 800;
+}
+.markdown-source-view.mod-cm5 .cm-s-obsidian span.cm-em:not(.cm-formatting-em) {
+  color: var(--em-color);
+}
+.markdown-source-view.mod-cm5 .cm-s-obsidian span.cm-strong:not(.cm-formatting-strong) {
+  font-weight: var(--strong-weight);
+  color: var(--strong-color);
+}
+.markdown-source-view.mod-cm5 .cm-s-obsidian .cm-formatting-code-block,
+.markdown-source-view.mod-cm5 .cm-s-obsidian span.cm-inline-code {
+  color: var(--text-normal);
 }
 .markdown-source-view.mod-cm5 .cm-formatting-list-ul:before {
   color: var(--text-normal);
@@ -3233,6 +3260,18 @@ h1.embedded-note-title {
   background-size: 100% 40px, 140% 3px;
   background-attachment: local, scroll;
 }
+.mod-left-split .workspace-leaf-content[data-type=outline] .view-content {
+  background: linear-gradient(var(--shade-5-opaque) 30%, rgba(255, 255, 255, 0)) center top, radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0)) center top 1px;
+  background-repeat: no-repeat;
+  background-size: 100% 40px, 140% 3px;
+  background-attachment: local, scroll;
+}
+.theme-dark .mod-left-split .workspace-leaf-content[data-type=outline] .view-content {
+  background: linear-gradient(var(--shade-5-opaque) 30%, rgba(255, 255, 255, 0)) center top, radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)) center top 1px;
+  background-repeat: no-repeat;
+  background-size: 100% 40px, 140% 3px;
+  background-attachment: local, scroll;
+}
 .is-translucent .workspace-leaf-content[data-type=outline] .view-content, .is-mobile .workspace-leaf-content[data-type=outline] .view-content, .workspace-fake-target-overlay .workspace-leaf-content[data-type=outline] .view-content {
   background: none !important;
 }
@@ -3788,6 +3827,18 @@ button + .checkbox-container {
 }
 .theme-dark .tag-container {
   background: linear-gradient(var(--background-primary) 30%, rgba(255, 255, 255, 0)) center top, radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)) center top 1px;
+  background-repeat: no-repeat;
+  background-size: 100% 40px, 140% 3px;
+  background-attachment: local, scroll;
+}
+.mod-left-split .tag-container {
+  background: linear-gradient(var(--shade-5-opaque) 30%, rgba(255, 255, 255, 0)) center top, radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0)) center top 1px;
+  background-repeat: no-repeat;
+  background-size: 100% 40px, 140% 3px;
+  background-attachment: local, scroll;
+}
+.theme-dark .mod-left-split .tag-container {
+  background: linear-gradient(var(--shade-5-opaque) 30%, rgba(255, 255, 255, 0)) center top, radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)) center top 1px;
   background-repeat: no-repeat;
   background-size: 100% 40px, 140% 3px;
   background-attachment: local, scroll;
@@ -6179,6 +6230,10 @@ body .lt-status-bar-btn.lt-loading svg {
 .theme-dark.native-scrollbars .suggestion,
 .theme-dark.native-scrollbars code[class*=language-] {
   background-color: rgba(38, 38, 38, 0.01);
+}
+
+.native-scrollbars .search-result-container.mod-global-search {
+  padding-right: 10px;
 }
 
 body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > .view-header-title-container:before,

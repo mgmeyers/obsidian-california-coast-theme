@@ -3,12 +3,21 @@
 .backlink-pane {
   @include vertical-scroll-shadow(var(--background-primary));
 
-  font-family: var(--default-font);
-  font-size: var(--ui-font-size);
-
   .theme-dark & {
     @include vertical-scroll-shadow(var(--background-primary), 0.5);
   }
+
+  .mod-left-split & {
+    @include vertical-scroll-shadow(var(--shade-5-opaque));
+
+    .theme-dark & {
+      @include vertical-scroll-shadow(var(--shade-5-opaque), 0.5);
+    }
+  }
+
+  font-family: var(--default-font);
+  font-size: var(--ui-font-size);
+
 
   .is-translucent &,
   .is-mobile &,

@@ -84,6 +84,14 @@
     @include vertical-scroll-shadow(var(--background-primary), 0.5);
   }
 
+  .mod-left-split & {
+    @include vertical-scroll-shadow(var(--shade-5-opaque));
+
+    .theme-dark & {
+      @include vertical-scroll-shadow(var(--shade-5-opaque), 0.5);
+    }
+  }
+
   .is-translucent &,
   .is-mobile &,
   .workspace-fake-target-overlay & {
