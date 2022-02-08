@@ -73,6 +73,7 @@
   }
 }
 
+.workspace-split.mod-vertical > .workspace-split,
 .workspace-split.mod-vertical > .workspace-leaf {
   padding-right: var(--resize-handle-width);
 }

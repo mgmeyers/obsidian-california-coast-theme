@@ -4220,6 +4220,7 @@ body:not(.hider-frameless):not(.is-fullscreen):not(.is-mobile) {
   box-shadow: 0 1px 0 var(--shade-10), 0 -1px 0 var(--shade-10);
 }
 
+.workspace-split.mod-vertical > .workspace-split,
 .workspace-split.mod-vertical > .workspace-leaf {
   padding-right: var(--resize-handle-width);
 }
