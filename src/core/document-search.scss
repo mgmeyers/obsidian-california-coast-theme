@@ -83,7 +83,7 @@ input.document-search-input.mod-no-match:not(:placeholder-shown):focus {
   line-height: 1;
   border: 1px solid var(--shade-plus-darker);
   border-radius: var(--radius-m);
-  font-weight: 500;
+  font-weight: var(--medium-weight);
   background-color: var(--shade-plus-darker);
   height: auto;
   padding: 4px 8px;

@@ -1,5 +1,5 @@
 body .table-view-table > thead > tr > th {
-  font-weight: 500;
+  font-weight: var(--medium-weight);
   font-size: inherit;
   border: 1px solid var(--shade-10-opaque);
 }

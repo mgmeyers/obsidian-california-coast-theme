@@ -11,7 +11,7 @@ body {
 
   .lt-buttoncontainer > button {
     font-size: 14px;
-    font-weight: 500;
+    font-weight: var(--medium-weight);
     color: var(--text-normal);
     padding: 4px 14px;
     background: var(--background-primary);
@@ -33,7 +33,7 @@ body {
     border-right: none;
     border-bottom: none;
     font-size: 13px;
-    font-weight: 500;
+    font-weight: var(--medium-weight);
     color: var(--text-muted);
     transition: 100ms color, 100ms background-color;
 
@@ -49,7 +49,7 @@ body {
   }
 
   .lt-title:not(:empty) {
-    font-weight: 500;
+    font-weight: var(--medium-weight);
   }
 
   .lt-status-bar-btn {

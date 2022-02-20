@@ -29,7 +29,7 @@ body:not(.hider-frameless):not(.is-fullscreen):not(.is-mobile) {
   color: var(--text-faint);
   display: none;
   letter-spacing: 0;
-  font-weight: 500;
+  font-weight: var(--medium-weight);
 
   // Style setting
   .cc-show-titlebar & {

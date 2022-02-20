@@ -7,7 +7,7 @@
   background: rgb(245, 245, 245);
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
 
-  font-weight: 500;
+  font-weight: var(--medium-weight);
   border-radius: var(--radius-m);
   padding: 10px;
 
@@ -37,7 +37,7 @@
   .tree-item-self {
     cursor: pointer;
     color: var(--text-normal);
-    font-weight: 500;
+    font-weight: var(--medium-weight);
     display: flex;
     align-items: center;
     line-height: 1;

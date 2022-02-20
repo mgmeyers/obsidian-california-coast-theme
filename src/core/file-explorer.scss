@@ -30,7 +30,7 @@
   font-size: var(--ui-font-size);
   color: var(--text-normal);
   border: none;
-  font-weight: 500;
+  font-weight: var(--medium-weight);
   line-height: 1;
   padding: 0 5px;
   border-radius: var(--radius-s);
@@ -38,7 +38,7 @@
 
   .nav-folder.mod-root > & {
     font-size: var(--ui-font-size);
-    font-weight: 600;
+    font-weight: var(--bold-weight);
     border-radius: 0;
   }
 

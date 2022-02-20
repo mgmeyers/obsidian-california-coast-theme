@@ -151,6 +151,21 @@ settings:
         type: variable-number
         default: 600
         format: px
+    - 
+        id: normal-weight
+        title: Base font weight
+        type: variable-number
+        default: 400
+    - 
+        id: medium-weight
+        title: Medium font weight
+        type: variable-number
+        default: 500
+    - 
+        id: bold-weight
+        title: Bold font weight
+        type: variable-number
+        default: 600
     
     -
         id: misc-title

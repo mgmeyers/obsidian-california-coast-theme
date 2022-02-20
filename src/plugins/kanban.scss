@@ -54,7 +54,7 @@ body {
     color: var(--text-normal);
     border: 1px solid transparent;
     border-radius: var(--radius-m);
-    font-weight: 500;
+    font-weight: var(--medium-weight);
     background-color: var(--shade-plus-darker);
     box-shadow: 0px 0.5px 1px 0.5px rgba(0, 0, 0, 0.1);
     padding: 7px;
@@ -74,7 +74,7 @@ body {
 
   .kanban-plugin__lane-title-text
     > .kanban-plugin__markdown-preview-view.markdown-preview-view {
-    font-weight: 500;
+    font-weight: var(--medium-weight);
   }
 
   .kanban-plugin__lane {
@@ -186,7 +186,7 @@ body {
   .kanban-plugin .markdown-preview-view.kanban-plugin__lane-title-text {
     font-family: var(--text-normal);
     font-size: 14px;
-    font-weight: 500;
+    font-weight: var(--medium-weight);
   }
 
   .kanban-plugin__markdown-preview-view .task-list-item-checkbox {
@@ -208,7 +208,7 @@ body {
   }
 
   .kanban-plugin__item-tags .kanban-plugin__item-tag {
-    font-weight: 500;
+    font-weight: var(--medium-weight);
     color: var(--text-muted);
     background-color: var(--shade-plus-darker);
     padding: 4px 5px !important;
@@ -236,7 +236,7 @@ body {
 
   .kanban-plugin button {
     background-color: var(--shade-3);
-    font-weight: 500;
+    font-weight: var(--medium-weight);
   }
 
   .kanban-plugin .kanban-plugin__item-edit-button-wrapper button {
@@ -280,7 +280,7 @@ body {
 
   .kanban-plugin__new-lane-button,
   .kanban-plugin__new-item-button {
-    font-weight: 500;
+    font-weight: var(--medium-weight);
     font-size: 14px;
     background-color: var(--shade-plus-darker);
     border: 1px solid transparent;
@@ -361,7 +361,7 @@ body {
   }
 
   .kanban-plugin__autocomplete {
-    font-weight: 500;
+    font-weight: var(--medium-weight);
     font-size: 14px;
     border: none;
   }

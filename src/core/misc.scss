@@ -1,6 +1,6 @@
 .tooltip {
   font-size: 13px;
-  font-weight: 500;
+  font-weight: var(--medium-weight);
   color: var(--shade-60);
   animation: unset !important;
   background-color: var(--background-primary);
@@ -55,7 +55,7 @@
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1),
     0px 0.5px 1px 0.5px rgba(0, 0, 0, 0.1);
 
-  font-weight: 500;
+  font-weight: var(--medium-weight);
   border-radius: var(--radius-m);
   padding: 10px 14px;
 
@@ -66,7 +66,7 @@
 }
 
 .mod-warning {
-  font-weight: 500;
+  font-weight: var(--medium-weight);
 }
 
 .progress-bar-message {
@@ -76,11 +76,11 @@
 .empty-state-title {
   font-size: 1.6rem;
   margin: 0 0 0.5rem;
-  font-weight: 500;
+  font-weight: var(--medium-weight);
 }
 
 .empty-state-action {
-  font-weight: 500;
+  font-weight: var(--medium-weight);
   line-height: 1.7;
   font-size: 1.2rem;
 

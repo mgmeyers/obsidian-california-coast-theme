@@ -69,7 +69,7 @@
     }
 
     span.cm-formatting-quote {
-      font-weight: 600;
+      font-weight: var(--bold-weight);
     }
 
     span.cm-url.cm-string:not(.cm-hmd-footnote-url) {
@@ -88,7 +88,7 @@
       color: var(--shade-10);
       display: inline-block;
       padding: 0 1px;
-      font-weight: 600;
+      font-weight: var(--bold-weight);
     }
 
     .HyperMD-task-line[data-task]:not([data-task=" "]),
@@ -118,7 +118,7 @@
 
     span.cm-formatting-list {
       color: var(--text-normal);
-      font-weight: 600;
+      font-weight: var(--bold-weight);
     }
 
     span.cm-hashtag {
@@ -128,7 +128,7 @@
 
     span.cm-formatting-task {
       color: var(--text-faint);
-      font-weight: 600;
+      font-weight: var(--bold-weight);
 
       &.cm-property + span {
         text-decoration: line-through;
@@ -337,7 +337,7 @@
     width: 0.9rem;
     height: 0.9rem;
     line-height: 1;
-    font-weight: 600;
+    font-weight: var(--bold-weight);
   }
 
   span[title="Fold line"]:after,
@@ -452,7 +452,7 @@
       color: var(--shade-10);
       display: inline-block;
       padding: 0 1px;
-      font-weight: 600;
+      font-weight: var(--bold-weight);
     }
 
     pre.HyperMD-footnote span.cm-link.cm-hmd-footnote {
@@ -503,7 +503,7 @@
 
     span.cm-formatting-task {
       display: inline-block;
-      font-weight: 500;
+      font-weight: var(--medium-weight);
       color: var(--text-normal);
       min-width: 1.3em;
       font-family: inherit;

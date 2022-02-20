@@ -128,7 +128,7 @@ body {
 
   th {
     background-color: var(--shade-2);
-    font-weight: 500;
+    font-weight: var(--medium-weight);
     text-align: left;
 
     &[align="right"] {

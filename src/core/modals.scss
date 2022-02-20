@@ -103,7 +103,7 @@
 }
 
 .modal-title {
-  font-weight: 500;
+  font-weight: var(--medium-weight);
   font-size: 13px;
   line-height: 1.2;
   padding: 6px 28px;
@@ -119,7 +119,7 @@
   }
 
   .is-mobile & {
-    font-weight: 500;
+    font-weight: var(--medium-weight);
     font-size: 1rem;
   }
 }
@@ -204,7 +204,7 @@
   color: var(--text-normal);
   border: none;
   background: transparent;
-  font-weight: 500;
+  font-weight: var(--medium-weight);
   border-radius: var(--radius-s);
   line-height: 1.4;
 }
