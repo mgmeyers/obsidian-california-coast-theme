@@ -5,8 +5,7 @@
     font-weight: var(--editor-font-weight);
     line-height: var(--editor-line-height);
     font-feature-settings: var(--editor-font-features);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: var(--editor-font-smoothing);
 
     padding: 2.5em 2em;
   }
@@ -419,8 +418,7 @@
     font-weight: var(--editor-font-weight);
     line-height: var(--editor-line-height);
     font-feature-settings: var(--editor-font-features);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: var(--editor-font-smoothing);
 
     .CodeMirror-code {
       padding-right: 0;

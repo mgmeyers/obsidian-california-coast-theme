@@ -99,12 +99,34 @@ settings:
         description: Font used for the user interface
         type: variable-text
         default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif
+    -
+        id: default-font-smoothing
+        title: UI font smoothing
+        description: Changes the antialiasing—or crispness—of the UI font
+        type: variable-select
+        default: antialiased
+        options:
+            - auto
+            - antialiased
+            - subpixel-antialiased
+            - none
     - 
         id: editor-font
         title: Editor font
         description: Font used for the editor and preview
         type: variable-text
         default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif
+    -
+        id: editor-font-smoothing
+        title: Editor font smoothing
+        description: Changes the antialiasing—or crispness—of the editor font
+        type: variable-select
+        default: antialiased
+        options:
+            - auto
+            - antialiased
+            - subpixel-antialiased
+            - none
     -
         id: editor-font-features
         title: Editor font features
@@ -576,6 +598,8 @@ settings:
   --editor-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   --font-monospace: Menlo, SFMono-Regular, Consolas, "Roboto Mono", monospace;
+  --default-font-smoothing: auto;
+  --editor-font-smoothing: auto;
   /* Sizes, weights, padding */
   --rem: 18px;
   --editor-font-size: var(--rem);
@@ -809,8 +833,7 @@ button {
   font-size: var(--ui-font-size);
   font-weight: var(--normal-weight);
   line-height: var(--line-height);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: var(--default-font-smoothing);
 }
 
 strong {
@@ -1564,8 +1587,7 @@ input.document-search-input.mod-no-match:not(:placeholder-shown):focus {
   font-weight: var(--editor-font-weight);
   line-height: var(--editor-line-height);
   font-feature-settings: var(--editor-font-features);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: var(--editor-font-smoothing);
   padding: 2.5em 2em;
 }
 .markdown-source-view.mod-cm6 .cm-gutter {
@@ -1904,8 +1926,7 @@ input.document-search-input.mod-no-match:not(:placeholder-shown):focus {
   font-weight: var(--editor-font-weight);
   line-height: var(--editor-line-height);
   font-feature-settings: var(--editor-font-features);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: var(--editor-font-smoothing);
 }
 .markdown-source-view.mod-cm5 .cm-s-obsidian .CodeMirror-code {
   padding-right: 0;
@@ -3323,8 +3344,7 @@ body {
   font-weight: var(--preview-font-weight);
   line-height: var(--preview-line-height);
   font-feature-settings: var(--preview-font-features);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: var(--editor-font-smoothing);
   padding-top: 2.5em;
   padding-bottom: 2.5em;
 }
@@ -6219,7 +6239,6 @@ body .lt-status-bar-btn.lt-loading svg {
 .theme-dark.native-scrollbars .sync-log-container,
 .theme-dark.native-scrollbars .tag-container,
 .theme-dark.native-scrollbars .upload-progress-container,
-.theme-dark.native-scrollbars .vertical-tab-content,
 .theme-dark.native-scrollbars .workspace-split.mod-left-split .view-content,
 .theme-dark.native-scrollbars .workspace-split.mod-right-split .view-content {
   background-color: rgba(var(--background-rgb), 0.01);

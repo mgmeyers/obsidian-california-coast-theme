@@ -98,12 +98,34 @@ settings:
         description: Font used for the user interface
         type: variable-text
         default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif
+    -
+        id: default-font-smoothing
+        title: UI font smoothing
+        description: Changes the antialiasing—or crispness—of the UI font
+        type: variable-select
+        default: antialiased
+        options:
+            - auto
+            - antialiased
+            - subpixel-antialiased
+            - none
     - 
         id: editor-font
         title: Editor font
         description: Font used for the editor and preview
         type: variable-text
         default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif
+    -
+        id: editor-font-smoothing
+        title: Editor font smoothing
+        description: Changes the antialiasing—or crispness—of the editor font
+        type: variable-select
+        default: antialiased
+        options:
+            - auto
+            - antialiased
+            - subpixel-antialiased
+            - none
     -
         id: editor-font-features
         title: Editor font features
