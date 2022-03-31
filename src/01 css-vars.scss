@@ -24,7 +24,7 @@
 
   /* Sizes, weights, padding */
 
-  --editor-font-size: var(--font-text-size);
+  --editor-font-size: var(--font-text-size, 18px);
   --editor-line-height: 1.88889;
   --editor-font-weight: 400;
   --editor-font-features: "";
