@@ -15,14 +15,16 @@
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   --font-monospace: Menlo, SFMono-Regular, Consolas, "Roboto Mono", monospace;
 
+  // TODO: when 0.14.4 is public, switch everything over to these
+  --font-interface-theme: var(--default-font);
+  --font-text-theme: var(--editor-font);
+
   --default-font-smoothing: auto;
   --editor-font-smoothing: auto;
 
   /* Sizes, weights, padding */
 
-  --rem: 18px;
-
-  --editor-font-size: var(--rem);
+  --editor-font-size: var(--font-text-size);
   --editor-line-height: 1.88889;
   --editor-font-weight: 400;
   --editor-font-features: "";
