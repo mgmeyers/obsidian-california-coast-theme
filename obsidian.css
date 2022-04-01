@@ -618,7 +618,6 @@ settings:
   --default-font-smoothing: auto;
   --editor-font-smoothing: auto;
   /* Sizes, weights, padding */
-  --editor-font-size: var(--font-text-size, 18px);
   --editor-line-height: 1.88889;
   --editor-font-weight: 400;
   --editor-font-features: "";
@@ -834,6 +833,7 @@ settings:
 }
 
 body {
+  --editor-font-size: var(--font-text-size, 18px);
   --editor-line-height-rem: calc(var(--editor-line-height) * 1rem);
   --editor-line-height-small: calc(
     var(--editor-line-height) * var(--scale-small) / 100
