@@ -265,7 +265,7 @@ body {
 
   .frontmatter-container-header {
     border-color: var(--shade-5-opaque);
-    background-color: var(--background-primary-alt);
+    background-color: var(--shade-5-opaque);
     color: var(--text-normal);
     font-weight: var(--medium-weight);
     padding: 5px 10px;
@@ -339,4 +339,9 @@ body {
     width: calc(100% - 80px);
     padding-right: 10px;
   }
+}
+
+.callout {
+  border-radius: var(--radius-m);
+  overflow: hidden;
 }
