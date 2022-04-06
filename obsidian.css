@@ -4790,6 +4790,84 @@ body {
   line-height: 1;
 }
 
+.frontmatter-container {
+  font-family: var(--default-font);
+  background-color: var(--background-primary);
+  font-size: var(--ui-font-size);
+  border-radius: var(--radius-m);
+  border-color: var(--shade-5-opaque);
+  padding: 0;
+  line-height: 1;
+}
+.frontmatter-container .frontmatter-container-header {
+  border-color: var(--shade-5-opaque);
+  background-color: var(--background-primary-alt);
+  color: var(--text-normal);
+  font-weight: var(--medium-weight);
+  padding: 5px 10px;
+  margin: 0 0 5px 0;
+  font-size: 1em;
+  text-transform: none;
+}
+.frontmatter-container.is-collapsed .frontmatter-container-header {
+  margin: 0;
+}
+.frontmatter-container .frontmatter-section {
+  align-items: flex-start;
+  padding: 15px 2px 5px;
+  margin: 0;
+  width: 100%;
+}
+.frontmatter-container .frontmatter-section-label {
+  color: var(--text-normal);
+  font-weight: var(--medium-weight);
+  line-height: 1;
+  padding: 0 15px 0 0;
+  font-size: 1em;
+  flex-basis: unset;
+  width: 80px;
+  text-align: right;
+}
+.frontmatter-container .tag {
+  font-weight: var(--medium-weight);
+  color: var(--text-accent);
+  background-color: transparent;
+  line-height: 1;
+  font-size: 1em;
+  padding: 0;
+  margin: 0 5px 12px 0;
+  border: none;
+  white-space: normal;
+  display: inline-block;
+}
+.frontmatter-container .tag:hover {
+  color: var(--text-accent-hover);
+}
+.frontmatter-container .tag:not(:last-child)::after {
+  color: var(--text-muted);
+  content: ", ";
+}
+.frontmatter-container .frontmatter-alias {
+  background-color: transparent;
+  display: block;
+  padding: 0 5px 10px 0;
+  margin: 0;
+  font-size: 1em;
+  border: 0;
+  line-height: 1;
+  max-width: 100%;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.frontmatter-container .frontmatter-section-tags,
+.frontmatter-container .frontmatter-section-aliases {
+  line-height: 1;
+  display: flex;
+  width: calc(100% - 80px);
+  padding-right: 10px;
+}
+
 .search-input-container {
   padding: 10px;
   margin: 0;
