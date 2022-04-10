@@ -90,8 +90,6 @@ body {
     }
 
     .task-list-item {
-      text-indent: calc(-1em - 8px);
-
       &.is-checked {
         color: inherit;
         text-decoration: line-through;

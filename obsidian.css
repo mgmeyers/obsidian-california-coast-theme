@@ -3436,9 +3436,6 @@ body {
 .markdown-preview-view ul > li::marker {
   font-size: var(--preview-bullet-size-adjust);
 }
-.markdown-preview-view ul > li .task-list-item {
-  text-indent: calc(-1em - 8px);
-}
 .markdown-preview-view ul > li .task-list-item.is-checked {
   color: inherit;
   text-decoration: line-through;
