@@ -259,7 +259,18 @@
       );
     }
   }
+
   &.mod-right {
     padding-right: env(safe-area-inset-right);
+  }
+
+  &.is-pinned {
+    box-shadow: none;
+
+    &.mod-left {
+      .workspace-drawer-inner {
+        background-color: var(--shade-5-opaque);
+      }
+    }
   }
 }

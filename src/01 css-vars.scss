@@ -124,6 +124,9 @@
   --text-faint: var(--shade-30-opaque);
   --text-error: rgb(var(--red-rgb));
   --text-error-hover: rgb(var(--red-rgb));
+  --background-modifier-error: rgb(var(--red-rgb));
+  --background-modifier-error-rgb: var(--red-rgb);
+  --background-modifier-error-hover: rgb(var(--red-rgb));
   --background-transparent: transparent;
   --background-translucent: rgba(245, 245, 245, 0.75);
   --background-match-highlight: hsla(var(--accent-hsl), 0.2);
@@ -227,6 +230,9 @@
   --text-faint: var(--shade-30-opaque);
   --text-error: rgb(var(--red-rgb));
   --text-error-hover: rgb(var(--red-rgb));
+  --background-modifier-error: rgb(var(--red-rgb));
+  --background-modifier-error-rgb: var(--red-rgb);
+  --background-modifier-error-hover: rgb(var(--red-rgb));
   --background-transparent: transparent;
   --background-translucent: rgba(40, 40, 40, 0.6);
   --background-match-highlight: hsla(var(--accent-hsl), 0.2);
@@ -267,4 +273,7 @@ body {
     var(--editor-line-height) * var(--scale-small) / 100
   );
   --editor-line-height-small-rem: calc(var(--editor-line-height-small) * 1rem);
+
+  --indentation-guide: var(--shade-5);
+  --indentation-guide-active: rgba(var(--foreground-rgb), 0.15);
 }
