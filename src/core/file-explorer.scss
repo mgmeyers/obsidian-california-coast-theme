@@ -157,10 +157,13 @@
   .nav-folder-title-content {
     display: inline-block;
     width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    vertical-align: middle;
+    
+    &:not(.is-being-renamed) {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      vertical-align: middle;
+    }
   }
 
   &:not(.cc-no-folder-icons) .nav-folder-title-content::before {
