@@ -10,6 +10,7 @@ body {
   --hr-spacing-bottom: calc(var(--editor-line-height-rem) * 1.5);
 }
 
+.markdown-rendered,
 .markdown-preview-view {
   font-family: var(--preview-font);
   font-size: var(--preview-font-size);
