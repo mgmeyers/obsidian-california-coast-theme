@@ -1031,6 +1031,8 @@ input[type=range] {
 input[type=checkbox] {
   -webkit-appearance: none;
   appearance: none;
+  width: 1em;
+  height: 1em;
   padding: 0;
   margin: 0;
   background: var(--shade-0);
