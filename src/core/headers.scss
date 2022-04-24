@@ -41,17 +41,13 @@ body {
   --h6-weight: 500;
   --h6-style: italic;
 
-  --h1-color: var(--text-normal);
-  --h2-color: var(--text-normal);
-  --h3-color: var(--text-normal);
-  --h4-color: var(--text-normal);
-  --h5-color: var(--text-normal);
-  --h6-color: var(--text-normal);
+  --header-editor-font: var(--editor-font);
 }
 
 .cm-s-obsidian {
   .cm-header {
     &.cm-header-1 {
+      font-family: var(--header-editor-font);
       color: var(--h1-color);
       font-size: var(--h1-size);
       line-height: var(--h1-line-height);
@@ -60,6 +56,7 @@ body {
     }
 
     &.cm-header-2 {
+      font-family: var(--header-editor-font);
       color: var(--h2-color);
       font-size: var(--h2-size);
       line-height: var(--h2-line-height);
@@ -68,6 +65,7 @@ body {
     }
 
     &.cm-header-3 {
+      font-family: var(--header-editor-font);
       color: var(--h3-color);
       font-size: var(--h3-size);
       line-height: var(--h3-line-height);
@@ -76,6 +74,7 @@ body {
     }
 
     &.cm-header-4 {
+      font-family: var(--header-editor-font);
       color: var(--h4-color);
       font-size: var(--h4-size);
       line-height: var(--h4-line-height);
@@ -84,6 +83,7 @@ body {
     }
 
     &.cm-header-5 {
+      font-family: var(--header-editor-font);
       color: var(--h5-color);
       font-size: var(--h5-size);
       line-height: var(--h5-line-height);
@@ -92,6 +92,7 @@ body {
     }
 
     &.cm-header-6 {
+      font-family: var(--header-editor-font);
       color: var(--h6-color);
       font-size: var(--h6-size);
       line-height: var(--h6-line-height);
@@ -107,6 +108,7 @@ h1.embedded-note-title {
 
 .markdown-preview-view {
   h1 {
+    font-family: var(--header-editor-font);
     color: var(--h1-color);
     font-size: var(--h1-size);
     line-height: var(--h1-line-height);
@@ -115,6 +117,7 @@ h1.embedded-note-title {
   }
 
   h2 {
+    font-family: var(--header-editor-font);
     color: var(--h2-color);
     font-size: var(--h2-size);
     line-height: var(--h2-line-height);
@@ -123,6 +126,7 @@ h1.embedded-note-title {
   }
 
   h3 {
+    font-family: var(--header-editor-font);
     color: var(--h3-color);
     font-size: var(--h3-size);
     line-height: var(--h3-line-height);
@@ -131,6 +135,7 @@ h1.embedded-note-title {
   }
 
   h4 {
+    font-family: var(--header-editor-font);
     color: var(--h4-color);
     font-size: var(--h4-size);
     line-height: var(--h4-line-height);
@@ -139,6 +144,7 @@ h1.embedded-note-title {
   }
 
   h5 {
+    font-family: var(--header-editor-font);
     color: var(--h5-color);
     font-size: var(--h5-size);
     line-height: var(--h5-line-height);
@@ -147,6 +153,7 @@ h1.embedded-note-title {
   }
 
   h6 {
+    font-family: var(--header-editor-font);
     color: var(--h6-color);
     font-size: var(--h6-size);
     line-height: var(--h6-line-height);
