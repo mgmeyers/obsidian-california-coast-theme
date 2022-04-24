@@ -17,7 +17,11 @@
 
 ## Contributing
 
-If you see any issue, or would like to contribute to this theme, please submit an issue or raise a PR.
+If you see any issues, or would like to contribute to this theme, please submit an issue or raise a PR.
+
+## Extra features
+
+- This theme supports @SlRvb's [image position controls](https://github.com/SlRvb/Obsidian--ITS-Theme/blob/main/Guide/Image-Positions.md)
 
 ## Support
 
