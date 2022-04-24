@@ -85,6 +85,14 @@ settings:
         opacity: false
         default-light: '#1f1f1f'
         default-dark: '#bababa'
+    - 
+        id: code-color
+        title: Indent Code Color
+        type: variable-themed-color
+        format: hex
+        opacity: false
+        default-light: '#1f1f1f'
+        default-dark: '#bababa'
 
     - 
         id: custom-fonts
