@@ -3371,6 +3371,9 @@ h1.embedded-note-title {
   background: none !important;
 }
 
+.popover {
+  display: flex;
+}
 .popover.hover-popover div.markdown-embed {
   height: auto;
 }

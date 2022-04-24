@@ -1,4 +1,6 @@
 .popover {
+  display: flex;
+
   &.hover-popover div.markdown-embed {
     height: auto;
 
