@@ -1,0 +1,24 @@
+body .popover.hover-editor {
+  .popover-content {
+    width: 100%;
+  }
+
+  &:not(.show-navbar) .view-header {
+    padding: 0;
+  }
+
+  .view-header {
+    transition: none;
+  }
+
+  .popover-title:after {
+    content: none;
+  }
+
+  .view-header,
+  .popover-titlebar .popover-title,
+  .popover-title,
+  &.is-active .popover-title {
+    transition: none;
+  }
+}

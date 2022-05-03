@@ -1,6 +1,6 @@
 .markdown-source-view.mod-cm6 {
   .cm-scroller {
-    font-family: var(--editor-font);
+    font-family: var(--font-text);
     font-size: var(--editor-font-size);
     font-weight: var(--editor-font-weight);
     line-height: var(--editor-line-height);
@@ -11,7 +11,7 @@
   }
 
   .cm-gutter {
-    font-family: var(--default-font);
+    font-family: var(--font-interface);
   }
 
   .cm-line {
@@ -393,7 +393,7 @@
   }
 
   .cm-s-obsidian .CodeMirror-linenumber {
-    font-family: var(--default-font);
+    font-family: var(--font-interface);
     width: 18px !important;
     min-width: 0;
     position: absolute;
@@ -420,7 +420,7 @@
   }
 
   .cm-s-obsidian {
-    font-family: var(--editor-font);
+    font-family: var(--font-text);
     font-size: var(--editor-font-size);
     font-weight: var(--editor-font-weight);
     line-height: var(--editor-line-height);
@@ -629,7 +629,7 @@
   }
 
   .cc-editor-heading-hash & .cm-formatting-header {
-    font-family: var(--default-font);
+    font-family: var(--font-interface);
     color: var(--text-faint) !important;
     font-weight: var(--normal-weight) !important;
   }

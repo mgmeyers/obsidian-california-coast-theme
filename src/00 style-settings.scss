@@ -101,7 +101,7 @@ settings:
         level: 3
         collapsed: true
     - 
-        id: default-font
+        id: font-interface-theme
         title: UI font
         description: Font used for the user interface
         type: variable-text
@@ -118,7 +118,7 @@ settings:
             - subpixel-antialiased
             - none
     - 
-        id: editor-font
+        id: font-text-theme
         title: Editor font
         description: Font used for the editor and preview
         type: variable-text
@@ -147,7 +147,7 @@ settings:
         type: variable-text
         default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif
     - 
-        id: font-monospace
+        id: font-monospace-theme
         title: Monospace font
         description: Used for code blocks, front matter, etc
         type: variable-text
@@ -241,11 +241,6 @@ settings:
         id: cc-fancy-cursor
         title: Accented cursor
         description: The editor cursor takes on your accent color
-        type: class-toggle
-    - 
-        id: cc-soft-blink-cursor
-        title: Soft-blink cursor
-        description: The editor cursor will fade in and out rather than blinking
         type: class-toggle
     - 
         id: cc-editor-heading-hash

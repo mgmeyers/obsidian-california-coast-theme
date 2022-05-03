@@ -9,16 +9,6 @@
   --color-black-rgb: 0, 0, 0;
   --color-white-rgb: 255, 255, 255;
 
-  --default-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  --editor-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  --font-monospace: Menlo, SFMono-Regular, Consolas, "Roboto Mono", monospace;
-
-  // TODO: when 0.14.4 is public, switch everything over to these
-  --font-interface-theme: var(--default-font);
-  --font-text-theme: var(--editor-font);
-
   --default-font-smoothing: auto;
   --editor-font-smoothing: auto;
 
@@ -266,6 +256,13 @@
 }
 
 body {
+  --font-interface-theme: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  --font-text-theme: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  --font-monospace-theme: Menlo, SFMono-Regular, Consolas, "Roboto Mono",
+    monospace;
+
   --editor-font-size: var(--font-text-size, 18px);
 
   --editor-line-height-rem: calc(var(--editor-line-height) * 1rem);

@@ -1,20 +1,12 @@
 // Style setting
 .cc-fancy-cursor .cm-s-obsidian.mod-cm6 {
+  .cm-line {
+    caret-color: var(--text-accent);
+  }
   .CodeMirror-cursor,
   .cm-cursor,
   .cm-dropCursor {
-    border-left: 1px solid var(--text-accent);
-    border-right: 1px solid var(--text-accent);
-    transform: translateX(-1px);
-    border-radius: 2px;
-    margin-left: 0;
-  }
-}
-
-// Style setting
-.cc-soft-blink-cursor .mod-cm6.cm-s-obsidian {
-  .cm-focused .cm-cursorLayer {
-    animation-timing-function: ease-out;
+    border-color: var(--text-accent);
   }
 }
 
@@ -104,7 +96,7 @@ body.cc-em-strong .markdown-source-view.cm-s-obsidian {
 
       &:after {
         background-color: var(--background-primary);
-        font-family: var(--default-font);
+        font-family: var(--font-interface);
         color: var(--text-faint);
         font-weight: var(--normal-weight);
         font-size: 10px;
@@ -177,7 +169,7 @@ body.cc-em-strong .markdown-source-view.cm-s-obsidian {
         background-color: var(--background-primary);
         bottom: 15%;
         color: var(--text-faint);
-        font-family: var(--default-font);
+        font-family: var(--font-interface);
         font-size: 10px;
         font-weight: var(--normal-weight);
         position: absolute;
@@ -215,47 +207,5 @@ body.cc-em-strong .markdown-source-view.cm-s-obsidian {
     .HyperMD-header
     .cm-formatting-header:not(:only-child):after {
     letter-spacing: -3px;
-  }
-}
-
-@keyframes cm-blink {
-  0% {
-    opacity: 1;
-  }
-  10% {
-    opacity: 1;
-  }
-  40% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  90% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes cm-blink2 {
-  0% {
-    opacity: 1;
-  }
-  10% {
-    opacity: 1;
-  }
-  40% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  90% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }

@@ -1,5 +1,5 @@
 body {
-  --preview-font: var(--editor-font);
+  --preview-font: var(--font-text);
   --preview-font-size: var(--editor-font-size);
   --preview-line-height: var(--editor-line-height);
   --preview-line-height-rem: calc(var(--preview-line-height) * 1rem);
@@ -149,7 +149,7 @@ body {
 
   th,
   td {
-    font-family: var(--default-font);
+    font-family: var(--font-interface);
     font-size: 0.95em;
     border-color: var(--shade-10-opaque);
     min-width: var(--table-min-cell-width);
@@ -254,7 +254,7 @@ body {
 }
 
 .frontmatter-container {
-  font-family: var(--default-font);
+  font-family: var(--font-interface);
   background-color: var(--background-primary);
   font-size: var(--ui-font-size);
   border-radius: var(--radius-m);
