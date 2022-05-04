@@ -25,6 +25,13 @@
   & > .workspace-leaf-resize-handle {
     height: 100%;
   }
+
+  &.is-collapsed,
+  &[style*="transition"] {
+    .workspace-tabs {
+      min-width: 200px;
+    }
+  }
 }
 
 .is-translucent .workspace-leaf-resize-handle,

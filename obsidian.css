@@ -4860,6 +4860,11 @@ body:not(.hider-frameless):not(.is-fullscreen):not(.is-mobile) {
 .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
   height: 100%;
 }
+.workspace-split.mod-left-split.is-collapsed .workspace-tabs, .workspace-split.mod-left-split[style*=transition] .workspace-tabs,
+.workspace-split.mod-right-split.is-collapsed .workspace-tabs,
+.workspace-split.mod-right-split[style*=transition] .workspace-tabs {
+  min-width: 200px;
+}
 
 .is-translucent .workspace-leaf-resize-handle,
 .workspace-leaf-resize-handle {
