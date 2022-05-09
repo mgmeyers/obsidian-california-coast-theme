@@ -263,14 +263,6 @@ body {
   --font-monospace-theme: Menlo, SFMono-Regular, Consolas, "Roboto Mono",
     monospace;
 
-  // TODO: remove these once mobile is updated
-  --font-interface: var(--font-interface-override), var(--font-interface-theme),
-    var(--default-font, ""), var(--font-default);
-  --font-text: var(--font-text-override), var(--font-text-theme),
-    var(--font-interface);
-  --font-monospace: var(--font-monospace-override), var(--font-monospace-theme),
-    "Source Code Pro", monospace;
-
   --editor-font-size: var(--font-text-size, 18px);
 
   --editor-line-height-rem: calc(var(--editor-line-height) * 1rem);
@@ -282,4 +274,11 @@ body {
   --indentation-guide: var(--shade-5);
   --indentation-guide-active: rgba(var(--foreground-rgb), 0.15);
   --code-color: var(--text-normal);
+}
+
+body.is-mobile {
+  // TODO: remove these once mobile is updated
+  --font-interface: var(--font-interface-theme);
+  --font-text: var(--font-text-theme);
+  --font-monospace: var(--font-monospace-theme)
 }
