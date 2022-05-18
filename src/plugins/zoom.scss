@@ -1,0 +1,40 @@
+body {
+  .zoom-plugin-header {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: var(--font-interface);
+    font-size: 1rem;
+    justify-content: flex-start;
+    margin: 0 auto;
+    max-width: calc(var(--line-width) + 4em);
+    padding: 10px 2em;
+  }
+
+  .is-folding .zoom-plugin-header {
+    padding-left: calc(2em + 12px);
+  }
+
+  .zoom-plugin-title {
+    color: var(--text-muted);
+    display: inline-block;
+    max-width: 200px;
+    overflow: hidden;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 2px 0;
+
+    &:hover {
+      color: var(--text-accent);
+    }
+  }
+
+  .zoom-plugin-delimiter {
+    font-size: 0.9em;
+    font-weight: var(--bold-weight);
+    color: var(--text-muted);
+    display: inline-block;
+    transform: scaleX(0.7);
+  }
+}

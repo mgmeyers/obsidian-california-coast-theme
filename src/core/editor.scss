@@ -1,4 +1,8 @@
 .markdown-source-view.mod-cm6 {
+  .cm-panels-top {
+    border-bottom: 1px solid var(--background-modifier-border);
+  }
+
   .cm-scroller {
     font-family: var(--font-text);
     font-size: var(--editor-font-size);
