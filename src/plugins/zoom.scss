@@ -1,18 +1,20 @@
 body {
+  .cm-panels-top {
+    box-shadow: 0px 1px 3px rgb(0 0 0 / 8%);
+    border-bottom: none;
+  }
+
   .zoom-plugin-header {
+    max-width: none;
     align-items: center;
     display: flex;
     flex-wrap: wrap;
     font-family: var(--font-interface);
+    font-weight: var(--medium-weight);
     font-size: 1rem;
     justify-content: flex-start;
     margin: 0 auto;
-    max-width: calc(var(--line-width) + 4em);
-    padding: 10px 2em;
-  }
-
-  .is-folding .zoom-plugin-header {
-    padding-left: calc(2em + 12px);
+    padding: 10px 20px;
   }
 
   .zoom-plugin-title {
@@ -31,10 +33,16 @@ body {
   }
 
   .zoom-plugin-delimiter {
-    font-size: 0.9em;
-    font-weight: var(--bold-weight);
-    color: var(--text-muted);
-    display: inline-block;
-    transform: scaleX(0.7);
+    font-size: 0;
+    color: transparent;
+    margin: 0 10px;
+    
+    &::after {
+      font-size: 1rem;
+      color: var(--text-muted);
+      display: inline-block;
+      transform: scale(0.5, 0.85);
+      content: "▶";
+    }
   }
 }
