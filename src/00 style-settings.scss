@@ -24,6 +24,14 @@ settings:
         default-light: 'rgba(255, 224, 0, 0.5)'
         default-dark: 'rgba(255, 177, 80, 0.3)'
     - 
+        id: text-selection
+        title: Text Selection Background Color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(0, 0%, 0%, 0.08)'
+        default-dark: 'hsla(211, 100%, 42%, 0.3)'
+    - 
         id: strong-color
         title: Bold Color
         type: variable-themed-color

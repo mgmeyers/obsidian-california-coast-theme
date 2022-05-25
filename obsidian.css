@@ -25,6 +25,14 @@ settings:
         default-light: 'rgba(255, 224, 0, 0.5)'
         default-dark: 'rgba(255, 177, 80, 0.3)'
     - 
+        id: text-selection
+        title: Text Selection Background Color
+        type: variable-themed-color
+        format: hsl
+        opacity: true
+        default-light: 'hsla(0, 0%, 0%, 0.08)'
+        default-dark: 'hsla(211, 100%, 42%, 0.3)'
+    - 
         id: strong-color
         title: Bold Color
         type: variable-themed-color
@@ -833,7 +841,7 @@ settings:
   );
   --quote-opening-modifier: var(--shade-70-opaque);
   --interactive-accent-rgb: var(--accent-rgb);
-  --text-selection: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) - 10%), 0.3);
+  --text-selection: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-d) - 10%), 0.3);
   --text-highlight-bg: rgba(255, 177, 80, 0.3);
   --text-highlight-bg-active: rgba(255, 255, 255, 0.1);
   --background-modifier-cover: rgba(20, 20, 20, 0.6);
