@@ -141,7 +141,7 @@
   );
   --quote-opening-modifier: var(--shade-70-opaque);
   --interactive-accent-rgb: var(--accent-rgb);
-  --text-selection: hsl(var(--accent-h), var(--accent-s), 96%);
+  --text-selection: rgba(var(--foreground-rgb), 0.08);
   --text-highlight-bg: rgba(255, 224, 0, 0.5);
   --text-highlight-bg-active: rgba(0, 0, 0, 0.1);
   --background-modifier-cover: rgba(170, 170, 170, 0.6);
@@ -247,7 +247,7 @@
   );
   --quote-opening-modifier: var(--shade-70-opaque);
   --interactive-accent-rgb: var(--accent-rgb);
-  --text-selection: hsl(var(--accent-h), calc(var(--accent-s) - 50%), 20%);
+  --text-selection: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) - 10%), 0.3);
   --text-highlight-bg: rgba(255, 177, 80, 0.3);
   --text-highlight-bg-active: rgba(255, 255, 255, 0.1);
   --background-modifier-cover: rgba(20, 20, 20, 0.6);
