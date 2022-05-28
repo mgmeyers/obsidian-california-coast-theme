@@ -49,10 +49,10 @@
     }
 
     .vertical-tab-header {
-      @include vertical-scroll-shadow(var(--shade-3-opaque));
+      @include vertical-scroll-shadow(var(--shade-3-opaque), 0.15, 1px);
 
       .theme-dark & {
-        @include vertical-scroll-shadow(var(--shade-3-opaque), 0.5);
+        @include vertical-scroll-shadow(var(--shade-3-opaque), 0.5, 1px);
       }
 
       .is-mobile & {
