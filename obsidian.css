@@ -888,19 +888,17 @@ strong {
   font-weight: var(--bold-weight);
 }
 
-::-webkit-scrollbar {
+body:not(.native-scrollbars) ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
   background-color: transparent;
 }
-
-.modal .vertical-tab-header::-webkit-scrollbar-track,
-.mod-left-split .workspace-tabs ::-webkit-scrollbar-track,
-::-webkit-scrollbar-track {
+body:not(.native-scrollbars) .modal .vertical-tab-header::-webkit-scrollbar-track,
+body:not(.native-scrollbars) .mod-left-split .workspace-tabs ::-webkit-scrollbar-track,
+body:not(.native-scrollbars) ::-webkit-scrollbar-track {
   background-color: transparent;
 }
-
-::-webkit-scrollbar-thumb {
+body:not(.native-scrollbars) ::-webkit-scrollbar-thumb {
   background-clip: padding-box;
   border: 3px solid transparent;
   min-height: 40px;
@@ -4356,6 +4354,7 @@ body {
   background-size: 100% 24px, 200% 4px;
   background-repeat: no-repeat;
   background-attachment: local, scroll;
+  padding-right: 10px;
 }
 .theme-dark .search-result-container {
   background: linear-gradient(var(--shade-5-opaque) 33%, rgba(255, 255, 255, 0)), radial-gradient(farthest-side at 25% 0, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
@@ -4618,6 +4617,7 @@ body:not(.hider-frameless):not(.is-fullscreen):not(.is-mobile) {
   height: var(--titlebar-height) !important;
   padding-top: 0 !important;
   background-color: var(--shade-5);
+  border-bottom: none;
 }
 .is-translucent .titlebar {
   background-color: var(--background-translucent);
@@ -4904,6 +4904,9 @@ body:not(.hider-frameless):not(.is-fullscreen):not(.is-mobile) {
 .workspace-split .workspace-tabs {
   background: var(--background-primary);
 }
+.workspace-tabs .workspace-leaf.mod-active {
+  border-color: transparent;
+}
 
 .workspace-split.mod-left-split,
 .workspace-split.mod-right-split {
@@ -4922,10 +4925,13 @@ body:not(.hider-frameless):not(.is-fullscreen):not(.is-mobile) {
 .is-translucent .workspace-leaf-resize-handle,
 .workspace-leaf-resize-handle {
   background-color: var(--shade-3-opaque);
+  border-color: transparent;
+  border-width: 0 !important;
 }
 .is-translucent .workspace-leaf-resize-handle:hover,
 .workspace-leaf-resize-handle:hover {
   background-color: var(--shade-5);
+  border-color: transparent;
 }
 .theme-dark .is-translucent .workspace-leaf-resize-handle,
 .theme-dark .workspace-leaf-resize-handle {
@@ -4938,6 +4944,10 @@ body:not(.hider-frameless):not(.is-fullscreen):not(.is-mobile) {
 .workspace-split.mod-left-split > .is-translucent .workspace-leaf-resize-handle,
 .workspace-split.mod-left-split > .workspace-leaf-resize-handle {
   background-color: transparent;
+}
+.workspace-split.mod-left-split > .is-translucent .workspace-leaf-resize-handle:hover,
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle:hover {
+  background-color: var(--shade-5);
 }
 .workspace-split.mod-left-split > .is-translucent .workspace-leaf-resize-handle, .workspace-split.mod-right-split > .is-translucent .workspace-leaf-resize-handle,
 .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
@@ -6843,7 +6853,7 @@ body .kanban-plugin__lane-form-wrapper {
 body .kanban-plugin__item-markdown .external-link::after {
   top: 0;
 }
-body .kanban-plugin__scroll-container::-webkit-scrollbar {
+body:not(.native-scrollbars) .kanban-plugin__scroll-container::-webkit-scrollbar {
   width: 12px;
   height: 12px;
 }
@@ -6905,55 +6915,6 @@ body .lt-status-bar-btn svg {
 }
 body .lt-status-bar-btn.lt-loading svg {
   display: block;
-}
-
-.theme-dark.native-scrollbars .backlink-pane,
-.theme-dark.native-scrollbars .cm-scroller,
-.theme-dark.native-scrollbars .community-plugin-details,
-.theme-dark.native-scrollbars .community-plugin-info,
-.theme-dark.native-scrollbars .community-theme-screenshot,
-.theme-dark.native-scrollbars .hotkey-list-container,
-.theme-dark.native-scrollbars .internal-query .search-result-container,
-.theme-dark.native-scrollbars .item-list,
-.theme-dark.native-scrollbars .markdown-embed-content,
-.theme-dark.native-scrollbars .markdown-preview-view,
-.theme-dark.native-scrollbars .markdown-source-view.mod-cm6 .math-block > mjx-container,
-.theme-dark.native-scrollbars .modal-content,
-.theme-dark.native-scrollbars .modal.mod-image-lightbox,
-.theme-dark.native-scrollbars .open-vault-options-container,
-.theme-dark.native-scrollbars .open-vault-options,
-.theme-dark.native-scrollbars .outgoing-link-pane,
-.theme-dark.native-scrollbars .pdf-scroll-container,
-.theme-dark.native-scrollbars .plugin-list-plugins,
-.theme-dark.native-scrollbars .prompt-results,
-.theme-dark.native-scrollbars .publish-sections-container,
-.theme-dark.native-scrollbars .publish-site-settings-container,
-.theme-dark.native-scrollbars .recent-vaults-list,
-.theme-dark.native-scrollbars .search-result-container.mod-global-search,
-.theme-dark.native-scrollbars .side-dock-plugin-panel.mod-backlinks .side-dock-plugin-panel-inner,
-.theme-dark.native-scrollbars .spellchecker-dictionary-container,
-.theme-dark.native-scrollbars .sync-file-tree-container,
-.theme-dark.native-scrollbars .sync-history-content,
-.theme-dark.native-scrollbars .sync-history-list-item-container,
-.theme-dark.native-scrollbars .sync-history-list,
-.theme-dark.native-scrollbars .sync-log-container,
-.theme-dark.native-scrollbars .tag-container,
-.theme-dark.native-scrollbars .upload-progress-container,
-.theme-dark.native-scrollbars .workspace-split.mod-left-split .view-content,
-.theme-dark.native-scrollbars .workspace-split.mod-right-split .view-content {
-  background-color: rgba(var(--background-rgb), 0.01);
-}
-.theme-dark.native-scrollbars .community-plugin-search-results,
-.theme-dark.native-scrollbars .graph-controls,
-.theme-dark.native-scrollbars .modal.mod-settings .vertical-tab-header,
-.theme-dark.native-scrollbars .nav-files-container,
-.theme-dark.native-scrollbars .suggestion,
-.theme-dark.native-scrollbars code[class*=language-] {
-  background-color: rgba(38, 38, 38, 0.01);
-}
-
-.native-scrollbars .search-result-container.mod-global-search {
-  padding-right: 10px;
 }
 
 body .settings-search-input {

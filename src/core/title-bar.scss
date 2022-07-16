@@ -11,6 +11,7 @@ body:not(.hider-frameless):not(.is-fullscreen):not(.is-mobile) {
   padding-top: 0 !important;
 
   background-color: var(--shade-5);
+  border-bottom: none;
 
   .is-translucent & {
     background-color: var(--background-translucent);

@@ -1,53 +1,53 @@
-.theme-dark.native-scrollbars {
-  .backlink-pane,
-  .cm-scroller,
-  .community-plugin-details,
-  .community-plugin-info,
-  .community-theme-screenshot,
-  .hotkey-list-container,
-  .internal-query .search-result-container,
-  .item-list,
-  .markdown-embed-content,
-  .markdown-preview-view,
-  .markdown-source-view.mod-cm6 .math-block > mjx-container,
-  .modal-content,
-  .modal.mod-image-lightbox,
-  .open-vault-options-container,
-  .open-vault-options,
-  .outgoing-link-pane,
-  .pdf-scroll-container,
-  .plugin-list-plugins,
-  .prompt-results,
-  .publish-sections-container,
-  .publish-site-settings-container,
-  .recent-vaults-list,
-  .search-result-container.mod-global-search,
-  .side-dock-plugin-panel.mod-backlinks .side-dock-plugin-panel-inner,
-  .spellchecker-dictionary-container,
-  .sync-file-tree-container,
-  .sync-history-content,
-  .sync-history-list-item-container,
-  .sync-history-list,
-  .sync-log-container,
-  .tag-container,
-  .upload-progress-container,
-  .workspace-split.mod-left-split .view-content,
-  .workspace-split.mod-right-split .view-content {
-    background-color: rgba(var(--background-rgb), 0.01);
-  }
+// .theme-dark.native-scrollbars {
+//   .backlink-pane,
+//   .cm-scroller,
+//   .community-plugin-details,
+//   .community-plugin-info,
+//   .community-theme-screenshot,
+//   .hotkey-list-container,
+//   .internal-query .search-result-container,
+//   .item-list,
+//   .markdown-embed-content,
+//   .markdown-preview-view,
+//   .markdown-source-view.mod-cm6 .math-block > mjx-container,
+//   .modal-content,
+//   .modal.mod-image-lightbox,
+//   .open-vault-options-container,
+//   .open-vault-options,
+//   .outgoing-link-pane,
+//   .pdf-scroll-container,
+//   .plugin-list-plugins,
+//   .prompt-results,
+//   .publish-sections-container,
+//   .publish-site-settings-container,
+//   .recent-vaults-list,
+//   .search-result-container.mod-global-search,
+//   .side-dock-plugin-panel.mod-backlinks .side-dock-plugin-panel-inner,
+//   .spellchecker-dictionary-container,
+//   .sync-file-tree-container,
+//   .sync-history-content,
+//   .sync-history-list-item-container,
+//   .sync-history-list,
+//   .sync-log-container,
+//   .tag-container,
+//   .upload-progress-container,
+//   .workspace-split.mod-left-split .view-content,
+//   .workspace-split.mod-right-split .view-content {
+//     background-color: rgba(var(--background-rgb), 0.01);
+//   }
 
-  .community-plugin-search-results,
-  .graph-controls,
-  .modal.mod-settings .vertical-tab-header,
-  .nav-files-container,
-  .suggestion,
-  code[class*="language-"] {
-    background-color: hsla(0, 0%, 15%, 0.01);
-  }
-}
+//   .community-plugin-search-results,
+//   .graph-controls,
+//   .modal.mod-settings .vertical-tab-header,
+//   .nav-files-container,
+//   .suggestion,
+//   code[class*="language-"] {
+//     background-color: hsla(0, 0%, 15%, 0.01);
+//   }
+// }
 
-.native-scrollbars {
-  .search-result-container.mod-global-search {
-    padding-right: 10px;
-  }
-}
+// .native-scrollbars {
+//   .search-result-container.mod-global-search {
+//     padding-right: 10px;
+//   }
+// }

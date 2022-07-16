@@ -108,6 +108,8 @@
 .search-result-container {
   @include vertical-scroll-shadow(var(--shade-5-opaque));
 
+  padding-right: 10px;
+
   .theme-dark & {
     @include vertical-scroll-shadow(var(--shade-5-opaque), 0.2);
   }

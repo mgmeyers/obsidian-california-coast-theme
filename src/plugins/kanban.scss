@@ -410,9 +410,11 @@ body {
     top: 0;
   }
 
-  .kanban-plugin__scroll-container::-webkit-scrollbar {
-    width: 12px;
-    height: 12px;
+  &:not(.native-scrollbars) {
+    .kanban-plugin__scroll-container::-webkit-scrollbar {
+      width: 12px;
+      height: 12px;
+    }
   }
 
   .internal-link.kanban-plugin__embed-link {

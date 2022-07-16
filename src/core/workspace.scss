@@ -16,6 +16,10 @@
   .workspace-split & {
     background: var(--background-primary);
   }
+
+  .workspace-leaf.mod-active {
+    border-color: transparent;
+  }
 }
 
 .workspace-split.mod-left-split,
@@ -37,9 +41,12 @@
 .is-translucent .workspace-leaf-resize-handle,
 .workspace-leaf-resize-handle {
   background-color: var(--shade-3-opaque);
+  border-color: transparent;
+  border-width: 0 !important;
 
   &:hover {
     background-color: var(--shade-5);
+    border-color: transparent;
   }
 
   .theme-dark & {
@@ -52,6 +59,10 @@
 
   .workspace-split.mod-left-split > & {
     background-color: transparent;
+
+    &:hover {
+      background-color: var(--shade-5);
+    }
   }
 
   .workspace-split.mod-left-split > &,
