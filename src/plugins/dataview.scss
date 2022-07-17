@@ -1,10 +1,23 @@
-body .table-view-table > thead > tr > th {
-  font-weight: var(--medium-weight);
-  font-size: inherit;
-  border: 1px solid var(--shade-10-opaque);
-}
+body {
+  .table-view-table > thead > tr > th {
+    font-weight: var(--medium-weight);
+    font-size: inherit;
+    border: 1px solid var(--shade-10-opaque);
+  }
 
-body .table-view-table > tbody > tr > td {
-  border: 1px solid var(--shade-10-opaque);
-}
+  .table-view-table > tbody > tr > td {
+    border: 1px solid var(--shade-10-opaque);
+  }
+  .dataview.task-list-item, .dataview.task-list-basic-item {
+    transition: none;
 
+    &:hover {
+      background: transparent;
+      box-shadow: none;
+
+      text-decoration: underline;
+      text-decoration-color: var(--text-accent);
+      text-decoration-thickness: 2px;
+    }
+  }
+}
