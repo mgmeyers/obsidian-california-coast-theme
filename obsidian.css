@@ -6405,12 +6405,17 @@ body .table-view-table > thead > tr > th {
 body .table-view-table > tbody > tr > td {
   border: 1px solid var(--shade-10-opaque);
 }
-body .dataview.task-list-item, body .dataview.task-list-basic-item {
+body .dataview.task-list-item,
+body .dataview.task-list-basic-item {
   transition: none;
 }
-body .dataview.task-list-item:hover, body .dataview.task-list-basic-item:hover {
+body .dataview.task-list-item:hover,
+body .dataview.task-list-basic-item:hover {
   background: transparent;
   box-shadow: none;
+}
+body .dataview.task-list-item > span:hover,
+body .dataview.task-list-basic-item > span:hover {
   text-decoration: underline;
   text-decoration-color: var(--text-accent);
   text-decoration-thickness: 2px;

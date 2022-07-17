@@ -9,13 +9,16 @@ body {
     border: 1px solid var(--shade-10-opaque);
   }
 
-  .dataview.task-list-item, .dataview.task-list-basic-item {
+  .dataview.task-list-item,
+  .dataview.task-list-basic-item {
     transition: none;
 
     &:hover {
       background: transparent;
       box-shadow: none;
+    }
 
+    > span:hover {
       text-decoration: underline;
       text-decoration-color: var(--text-accent);
       text-decoration-thickness: 2px;
