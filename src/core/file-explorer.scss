@@ -130,6 +130,7 @@
 }
 
 .nav-file {
+  border: none;
   padding: 0 5px 0 19px;
 }
 
@@ -205,5 +206,19 @@
     overflow: visible;
     height: unset;
     padding: 4px;
+  }
+}
+
+.workspace-leaf.mod-active {
+  .nav-folder.has-focus > .nav-folder-title,
+  .nav-file.has-focus {
+    border-radius: var(--radius-s);
+    border: none;
+    background-color: transparent;
+  }
+
+  .nav-folder.has-focus > .nav-folder-title,
+  .nav-file.has-focus .nav-file-title {
+    box-shadow: inset 0 0 0 2px var(--shade-30-opaque);
   }
 }
