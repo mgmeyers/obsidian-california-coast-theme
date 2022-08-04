@@ -1,6 +1,8 @@
 .markdown-source-view.mod-cm6 {
-  ::selection {
-    background-color: transparent;
+  .cm-contentContainer {
+    ::selection {
+      background-color: transparent;
+    }
   }
 
   .cm-panels-top {
@@ -190,6 +192,7 @@
     .HyperMD-codeblock {
       font-size: calc(var(--editor-font-size) - 2px);
       line-height: inherit;
+      z-index: -1;
     }
 
     .markdown-embed {

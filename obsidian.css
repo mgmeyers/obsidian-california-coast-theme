@@ -2828,7 +2828,7 @@ input.document-search-input.mod-no-match:not(:placeholder-shown):focus {
   padding-top: 10px;
 }
 
-.markdown-source-view.mod-cm6 ::selection {
+.markdown-source-view.mod-cm6 .cm-contentContainer ::selection {
   background-color: transparent;
 }
 .markdown-source-view.mod-cm6 .cm-panels-top {
@@ -2981,6 +2981,7 @@ input.document-search-input.mod-no-match:not(:placeholder-shown):focus {
 .markdown-source-view.mod-cm6.cm-s-obsidian .HyperMD-codeblock {
   font-size: calc(var(--editor-font-size) - 2px);
   line-height: inherit;
+  z-index: -1;
 }
 .markdown-source-view.mod-cm6.cm-s-obsidian .markdown-embed {
   padding-right: 1.5em;
