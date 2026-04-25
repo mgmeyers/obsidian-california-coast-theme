@@ -1,0 +1,149 @@
+.cm-s-obsidian .cm-line.HyperMD-header + .HyperMD-list-line.cm-line {
+  padding-top: var(--list-spacing) !important;
+}
+
+// body {
+//   --line-height-reading: 1.7;
+//   --line-height-reading-rem: calc(var(--line-height-reading) * 1rem);
+
+//   --list-spacing: 0.4em;
+// }
+
+body {
+  // --font-interface-override: "Readex Pro";
+  --font-text: "Readex Pro";
+  --heading-font: "Readex Pro";
+
+  --hexp-none: 0;
+  --hexp-s: 5;
+  --hexp-m: 10;
+  --hexp-l: 15;
+
+  --hexp-base: 0;
+  --wght-base: 390;
+
+  --line-height-reading: 1.6;
+  --line-height-reading-rem: calc(var(--line-height-reading) * 1rem);
+
+  --list-spacing: 0.5em;
+  // --bold-weight: 560;
+
+  --h1-weight: 490;
+  --h2-weight: 490;
+  --h3-weight: 490;
+  --h4-weight: 490;
+  --h5-weight: 460;
+  --h6-weight: 460;
+
+  // font-variation-settings: "wght" 400;
+}
+
+// .tree-item-self,
+// .nav-file-title,
+// .nav-folder-title {
+//   // font-variation-settings: "wght" 400;
+// }
+
+// .workspace-tab-header-inner-title {
+//   // font-variation-settings: "wght" 400;
+// }
+
+.inline-title,
+.HyperMD-header-1,
+.inline-title[data-level="1"],
+.HyperMD-list-line .cm-header-1 {
+  font-family: var(--heading-font);
+  letter-spacing: 0;
+  font-variation-settings: "wght" var(--h1-weight), "HEXP" var(--hexp-none);
+}
+
+.HyperMD-header-2,
+.inline-title[data-level="2"],
+.HyperMD-list-line .cm-header-2 {
+  font-family: var(--heading-font);
+  letter-spacing: 0;
+  font-variation-settings: "wght" var(--h2-weight), "HEXP" var(--hexp-none);
+}
+
+.HyperMD-header-3,
+.inline-title[data-level="3"],
+.HyperMD-list-line .cm-header-3 {
+  font-family: var(--heading-font);
+  letter-spacing: 0;
+  font-variation-settings: "wght" var(--h3-weight), "HEXP" var(--hexp-none);
+}
+
+.HyperMD-header-4,
+.inline-title[data-level="4"],
+.HyperMD-list-line .cm-header-4 {
+  font-family: var(--heading-font);
+  letter-spacing: 0;
+  font-variation-settings: "wght" var(--h4-weight), "HEXP" var(--hexp-none);
+}
+
+.HyperMD-header-5,
+.inline-title[data-level="5"],
+.HyperMD-list-line .cm-header-5 {
+  font-family: var(--heading-font);
+  letter-spacing: 0;
+  font-variation-settings: "wght" var(--h5-weight), "HEXP" var(--hexp-none);
+}
+
+.HyperMD-header-6,
+.inline-title[data-level="6"],
+.HyperMD-list-line .cm-header-6 {
+  font-family: var(--heading-font);
+  letter-spacing: 0;
+  font-variation-settings: "wght" var(--h6-weight), "HEXP" var(--hexp-none);
+}
+
+h1,
+.markdown-rendered h1 {
+  font-family: var(--heading-font);
+  letter-spacing: 0;
+  font-variation-settings: "wght" var(--h1-weight), "HEXP" var(--hexp-none);
+}
+h2,
+.markdown-rendered h2 {
+  font-family: var(--heading-font);
+  letter-spacing: 0;
+  font-variation-settings: "wght" var(--h2-weight), "HEXP" var(--hexp-none);
+}
+h3,
+.markdown-rendered h3 {
+  font-family: var(--heading-font);
+  letter-spacing: 0;
+  font-variation-settings: "wght" var(--h3-weight), "HEXP" var(--hexp-none);
+}
+h4,
+.markdown-rendered h4 {
+  font-family: var(--heading-font);
+  letter-spacing: 0;
+  font-variation-settings: "wght" var(--h4-weight), "HEXP" var(--hexp-none);
+}
+h5,
+.markdown-rendered h5 {
+  font-family: var(--heading-font);
+  //   letter-spacing: 0;
+  font-variation-settings: "wght" var(--h5-weight), "HEXP" var(--hexp-none);
+}
+h6,
+.markdown-rendered h6 {
+  font-family: var(--heading-font);
+  //   letter-spacing: 0;
+  font-variation-settings: "wght" var(--h6-weight), "HEXP" var(--hexp-none);
+}
+
+.markdown-preview-view,
+.markdown-source-view,
+.markdown-source-view.mod-cm6 .cm-scroller {
+  font-variation-settings: "wght" var(--wght-base), "HEXP" var(--hexp-base);
+}
+
+b,
+strong,
+.cm-strong,
+.cm-strong.cm-em,
+.callout-title-inner {
+  font-variation-settings: "wght" var(--bold-weight), "HEXP" var(--hexp-base);
+}

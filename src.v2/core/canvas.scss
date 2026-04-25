@@ -1,0 +1,13 @@
+.markdown-source-view.mod-cm6.mod-inside-iframe,
+.canvas-node-content.markdown-embed {
+    --line-height-reading: var(--line-height-normal); 
+    --line-height-reading-rem: calc(var(--line-height-normal) * 1rem); 
+}
+
+.canvas-group-label {
+    font-size: 1.2rem;
+}
+
+body.theme-dark {
+    --canvas-color: 65, 65, 65;
+}
